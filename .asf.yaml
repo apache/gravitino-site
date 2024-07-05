@@ -15,8 +15,9 @@
 # specific language governing permissions and limitations
 # under the License.
 
-features:
-  issues: true
+github:
+  features:
+    issues: true
 
 notifications:
   commits: commits@gravitino.apache.org
