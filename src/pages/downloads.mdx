@@ -1,0 +1,28 @@
+## Apache Gravitino Downloads
+
+Apache Gravitino hasn't released any ASF software.
+
+## Gravitino Downloads (non-ASF releases)
+
+Before entering the ASF incubator, the Gravitino project made several releases, the latest being 0.51.
+
+### Gravitino 0.51
+Download [Gravitino 0.51 source and binary](https://github.com/apache/gravitino/releases/tag/v0.5.1)
+
+Note that this non-ASF release, while provided under the Apache license, may not comply with ASF policies on releases or licensing.
+
+## Install Apache Gravitino using Docker
+
+### Get the non-ASF Gravitino Docker image
+
+Gravitino publishes the Docker image to [Docker Hub](https://hub.docker.com/r/datastrato/gravitino/tags).
+
+Run the Gravitino Docker image by running:
+
+```shell
+docker run -d -i -p 8090:8090 datastrato/gravitino:<version>
+```
+
+## Install non-ASF Gravitino using Docker compose
+
+The published Gravitino Docker image only contains the Gravitino server with basic configurations. To experience the whole Gravitino system with other components, use the Docker compose file in the [Gravitino playground repository](https://github.com/apache/gravitino-playground).
