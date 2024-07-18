@@ -77,6 +77,7 @@ const config: Config = {
         {to: '/', label: 'Apache Gravitino', position: 'left'},
         {to: '/community', label: 'Community', position: 'right'},
         {to: '/contrib', label: 'Contributing', position: 'right'},
+        {to: '/downloads', label: 'Downloads', position: 'right'},
         {type: 'docSidebar', sidebarId: 'docs', position: 'right', label: 'Docs'},
         {to: '/blog', label: 'Blog', position: 'right'},
         {
