@@ -6,3 +6,5 @@ sidebar_position: 1
 # Welcome to Apache Gravitino
 
 Gravitino is a high-performance, geo-distributed, and federated metadata lake. It manages the metadata directly in different sources, types, and regions. It also provides users with unified metadata access for data and AI assets.
+
+The Apache Gravitino website is under construction, to access the earlier version document, please visit [Datastrato website](https://datastrato.ai/docs/). 
