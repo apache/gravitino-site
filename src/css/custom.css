@@ -16,6 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.tw{
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  @tailwind screens;
+}
 
 :root {
   --ifm-color-primary: #3071a9;
@@ -50,9 +62,12 @@
   no-repeat;
 }
 
-.about {
-  font-size: 1.1em;
-  padding: 2em;
+.background-gradient {
+  background: linear-gradient(180deg, #FBF8F6 33.5%, #F3EBE3 100%);
+}
+
+.background-gradient-btn {
+  background: linear-gradient(90deg, #222222 0%, #3C3C3C 100%);
 }
 
 .footer__copyright {

@@ -17,7 +17,6 @@
  * under the License.
  */
 
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -44,6 +43,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    './src/plugins/postcss-tailwind-loader'
+  ],
+
   presets: [
     [
       'classic',
@@ -68,6 +71,10 @@ const config: Config = {
   themeConfig: {
     // TODO: Replace with your project's social card
     image: 'img/social-card.png',
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+    },
     navbar: {
       logo: {
         alt: 'Logo',
@@ -145,10 +152,6 @@ const config: Config = {
         Apache Gravitino, the names of other Apache projects, and the ASF logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
       </p>
       </div>`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 };

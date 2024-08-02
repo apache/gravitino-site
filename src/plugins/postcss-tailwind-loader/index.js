@@ -17,13 +17,17 @@
  * under the License.
  */
 
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+module.exports = function (context, options) {
+  return {
+    name: 'postcss-tailwindcss-loader',
+    configurePostCss(postcssOptions) {
+      postcssOptions.plugins.push(
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('postcss-nested'),
+        require('autoprefixer'),
+      )
+      return postcssOptions
+    },
+  }
 }
