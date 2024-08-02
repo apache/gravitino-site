@@ -17,9 +17,7 @@
  * under the License.
  */
 
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
@@ -28,7 +26,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Unified metadata management',
+    title: 'Unified Metadata Management',
     description: (
       <>
         Gravitino abstracts the unified metadata models and APIs for different kinds of metadata sources. For example, relational metadata models for tabular data, like Hive, MySQL, PostgreSQL, etc. File metadata model for all the unstructured data, like HDFS, S3, and other formats.
@@ -36,15 +34,15 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Unified metadata governance',
+    title: 'End-to-End Data Governance',
     description: (
       <>
-        Gravitino also provides a unified metadata governance layer (WIP) to manage the metadata in a unified way, including access control, auditing, discovery and other features.
+        Gravitino aims to provide a unified metadata governance layer to manage end-to-end metadata in a unified way, including access control, auditing, discovery and other features.
       </>
     ),
   },
   {
-    title: 'Direct metadata management',
+    title: 'Direct Metadata Management',
     description: (
       <>
         Unlike traditional metadata management systems, which need to collect the metadata actively or passively from underlying systems, Gravitino manages these systems directly. It provides a set of connectors to connect to different metadata sources. The changes in Gravitino directly reflect in the underlying systems, and vice versa.
@@ -52,7 +50,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Geo-distribution support',
+    title: 'Geo-Distribution Support',
     description: (
       <>
         Gravitino supports geo-distribution deployment, which means different instances of Gravitino can deploy in different regions or clouds, and they can connect to get the metadata from each other. With this, users can get a global view of metadata across the regions or clouds.
@@ -60,7 +58,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Multi-engine support',
+    title: 'Multi-Engine Support',
     description: (
       <>
         Gravitino supports different query engines to access the metadata. Currently, it supports Trino, users can use Trino to query the metadata and data without needing to change the existing SQL dialects. Other query engine support is on the roadmap, including Apache Spark, Apache Flink and others.
@@ -68,7 +66,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'AI asset management (WIP)',
+    title: 'AI Asset Management (WIP)',
     description: (
       <>
         The goal of Gravitino is to unify the data management in both data and AI assets. The support of AI assets like models, features, and others are under development.  
@@ -79,25 +77,33 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className='text-center px-2 py-10 bg-feature shadow-md rounded-sm background-gradient'>
+      <Heading as='h3' className='text-xl font-bold mb-2'>{title}</Heading>
+      <p>{description}</p>
     </div>
   );
 }
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+    <div>
+      <div className='background-gradient shadow-md mx-1 mb-4 py-4 text-center'>
+        <Heading as='h1' className='font-bold mb-4 text-center text-4xl'>
+          <span className='relative after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-1 after:left-[-20%] after:w-[140%] after:h-2'>
+            MAIN FEATURES
+          </span>
+        </Heading>
+        <div>
+          <img src='img/features.svg' />
+        </div>
+      </div>
+      <div className='mx-4 pt-4'>
+        <div className='grid grid-cols-2 gap-4 pb-10'>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

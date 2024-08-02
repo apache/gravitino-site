@@ -17,25 +17,49 @@
  * under the License.
  */
 
-import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import GravitinoInfo from '../components/GravitinoInfo';
+import Link from '@docusaurus/Link'
 
 export default function Home(): JSX.Element {
-    return (
-        <Layout title='Welcome'>
-            <header className={clsx('hero', styles.heroBanner)}>
-                <div className="container">
-                <img src="img/front.jpg" />
+  return (
+    <Layout title='Welcome'>
+      <div className='tw'>
+        <div className='bg-home'>
+          <div className='container'>
+            <div className='relative'>
+              <img src="img/background.png" />
+              <div className='absolute h-full inset-0 bg-[rgba(217,217,217,0.4)] p-[5%]'>
+                <div className='bg-[rgba(217,217,217,0.4)] p-[5%] text-center'>
+                  <img className='m-auto w-[60%]' src='/img/apache-gravitino.svg' />
+                  <div className='relative my-10 text-xl w-[60%] m-auto after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-4 after:left-[35%] after:w-[30%] after:h-2'>
+                    A unified metadata lake across all your sources, formats, cloud providers, and regions in a federated architecture. 
+                  </div>
+                  <div className='inline-flex flex-wrap gap-4 px-[15%] py-10'>
+                    <Link to={'/community'}>
+                      <span className='background-gradient-btn text-white px-6 py-2 rounded-full'>Community</span>
+                    </Link>
+                    <Link to={'https://github.com/apache/gravitino'} target='_blank'>
+                      <span className='background-gradient-btn text-white px-6 py-2 rounded-full'>GITHUB</span>
+                    </Link>
+                    <Link to={'/contrib#getting-started'}>
+                      <span className='background-gradient-btn text-white px-6 py-2 rounded-full'>GETTING STARTED</span>
+                    </Link>
+                    <Link to={'https://the-asf.slack.com/'} target='_blank'>
+                      <span className='background-gradient-btn text-white px-6 py-2 rounded-full'>SLACK</span>
+                    </Link>
+                  </div>
                 </div>
-            </header>
+              </div>
+            </div>
             <main>
-                <div className="about">
-                    Gravitino is a high-performance, geo-distributed, and federated metadata lake. It manages the metadata directly in different sources, types, and regions. It also provides users with unified metadata access for data and AI assets.
-                </div>
-                <HomepageFeatures/>
+              <GravitinoInfo />
+              <HomepageFeatures/>
             </main>
-        </Layout>
-    );
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
 }

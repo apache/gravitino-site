@@ -17,14 +17,29 @@
  * under the License.
  */
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
+module.exports = {
+  content: [
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  darkMode: 'class', 
+  theme: {
+    container: {
+      center: true,
+      padding: '1.5rem',
+      screens: {
+        '2xl': '1440px',
+      },
+    },
+    extend: {
+      backgroundColor: {
+        home: 'rgba(169, 188, 187, 0.3)',
+        feature: 'rgba(255, 255, 255, 0.4)',
+      }
+    }
+  },
+  variants: {
+      extend: {},
+  },
+  plugins: []
 }
