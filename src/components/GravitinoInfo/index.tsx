@@ -24,10 +24,10 @@ export default function GravitinoInfo(): JSX.Element {
   return (
     <div className='bg-feature shadow-md mx-1 my-8 background-gradient'>
       <div className='mx-10 py-4'>
-        <Heading as='h1' className='font-bold mb-4 text-center text-4xl'>
-          <span className='relative after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-1 after:left-0 after:w-full after:h-2'>
+        <Heading as='h1' className='font-bold mb-4 text-center text-xl md:text-4xl'>
+          <div className='relative after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-1 after:left-[35%] after:w-[30%] after:h-2'>
             WHAT IS GRAVITINO?
-          </span>
+          </div>
         </Heading>
         <div className='bg-black/[0.04] rounded-sm p-4 font-sans font-light text-sm'>
           Apache Gravitino is a high-performance, geo-distributed, and federated metadata lake. By using a technical data catalog and metadata lake, you can manage access and perform data governance for all your data sources (including filestores, relational databases, and event streams) while safely using multiple engines like Spark, Trino, or Flink on multiple formats on different cloud providers. 
@@ -37,7 +37,7 @@ export default function GravitinoInfo(): JSX.Element {
         </div>
         <div className='text-center mb-4'>
           <Link to={'/downloads'}>
-            <span className='background-gradient-btn text-white px-6 py-2 rounded-full'>DOWNLOAD</span>
+            <span className='background-gradient-btn text-white text-[10px] px-2 py-1 md:px-6 md:py-2 md:text-base rounded-full'>DOWNLOAD</span>
           </Link>
         </div>
       </div>
