@@ -88,10 +88,10 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <div>
       <div className='background-gradient shadow-md mx-1 mb-4 py-4 text-center'>
-        <Heading as='h1' className='font-bold mb-4 text-center text-4xl'>
-          <span className='relative after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-1 after:left-[-20%] after:w-[140%] after:h-2'>
+        <Heading as='h1' className='font-bold mb-4 text-center text-xl md:text-4xl'>
+          <div className='relative after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-1 after:left-[35%] after:w-[30%] after:h-2'>
             MAIN FEATURES
-          </span>
+          </div>
         </Heading>
         <div>
           <img src='img/features.svg' />
