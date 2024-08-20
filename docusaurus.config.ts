@@ -154,6 +154,12 @@ const config: Config = {
       </div>`,
     },
   } satisfies Preset.ThemeConfig,
+  scripts: [
+    {
+      src: 'js/matomo.js',
+      async: true,
+    },
+  ]
 };
 
 export default config;
