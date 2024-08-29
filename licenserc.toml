@@ -22,6 +22,7 @@ excludes = [
   "build",
   ".docusaurus",
   "static",
+  "theme",
 
   # Documents
   "**/*.md",
@@ -30,4 +31,5 @@ excludes = [
   # Meta files
   "NOTICE",
   ".nojekyll",
+  "CURRENT_VERSION",
 ]
