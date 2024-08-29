@@ -194,7 +194,13 @@ const config: Config = {
       </div>`,
     },
   } satisfies Preset.ThemeConfig,
-  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid']
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
+  scripts: [
+    {
+      src: 'js/matomo.js',
+      async: true,
+    },
+  ]
 };
 
 export default config;
