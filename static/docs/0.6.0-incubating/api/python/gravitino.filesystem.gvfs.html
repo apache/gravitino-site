@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.filesystem.gvfs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.filesystem.html"><font color="#ffffff">filesystem</font></a>.gvfs</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/filesystem/gvfs.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/filesystem/gvfs.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="fsspec.html">fsspec</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="readerwriterlock.rwlock.html">readerwriterlock.rwlock</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.filesystem.gvfs.html#FilesetContext">FilesetContext</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="enum.html#Enum">enum.Enum</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.filesystem.gvfs.html#StorageType">StorageType</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.filesystem.gvfs.html#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FilesetContext">class <strong>FilesetContext</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#FilesetContext">FilesetContext</a>(name_identifier:&nbsp;gravitino.name_identifier.NameIdentifier,&nbsp;fileset:&nbsp;gravitino.api.fileset.Fileset,&nbsp;fs:&nbsp;fsspec.spec.<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>,&nbsp;storage_type:&nbsp;gravitino.filesystem.gvfs.<a href="#StorageType">StorageType</a>,&nbsp;actual_path:&nbsp;str)<br>
+&nbsp;<br>
+A&nbsp;context&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;holds&nbsp;the&nbsp;information&nbsp;about&nbsp;the&nbsp;fileset&nbsp;and&nbsp;the&nbsp;file&nbsp;system&nbsp;which&nbsp;used&nbsp;in<br>
+the&nbsp;<a href="#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a>'s&nbsp;operations.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="FilesetContext-__init__"><strong>__init__</strong></a>(self, name_identifier: gravitino.name_identifier.NameIdentifier, fileset: gravitino.api.fileset.Fileset, fs: fsspec.spec.AbstractFileSystem, storage_type: gravitino.filesystem.gvfs.StorageType, actual_path: str)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="FilesetContext-get_actual_path"><strong>get_actual_path</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FilesetContext-get_fileset"><strong>get_fileset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FilesetContext-get_fs"><strong>get_fs</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FilesetContext-get_name_identifier"><strong>get_name_identifier</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FilesetContext-get_storage_type"><strong>get_storage_type</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GravitinoVirtualFileSystem">class <strong>GravitinoVirtualFileSystem</strong></a>(<a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;virtual&nbsp;file&nbsp;system&nbsp;which&nbsp;users&nbsp;can&nbsp;access&nbsp;`fileset`&nbsp;and<br>
+other&nbsp;resources.<br>
+&nbsp;<br>
+It&nbsp;obtains&nbsp;the&nbsp;actual&nbsp;storage&nbsp;location&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;resource&nbsp;from&nbsp;the<br>
+Gravitino&nbsp;server,&nbsp;and&nbsp;creates&nbsp;an&nbsp;independent&nbsp;file&nbsp;system&nbsp;for&nbsp;it&nbsp;to&nbsp;act&nbsp;as&nbsp;an&nbsp;agent&nbsp;for&nbsp;users&nbsp;to<br>
+access&nbsp;the&nbsp;underlying&nbsp;storage.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.filesystem.gvfs.html#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a></dd>
+<dd><a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GravitinoVirtualFileSystem-__init__"><strong>__init__</strong></a>(self, server_uri: str = None, metalake_name: str = None, options: Dict = None, **kwargs)</dt><dd><tt>Initialize&nbsp;the&nbsp;<a href="#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a>.<br>
+:param&nbsp;server_uri:&nbsp;Gravitino&nbsp;server&nbsp;URI<br>
+:param&nbsp;metalake_name:&nbsp;Gravitino&nbsp;metalake&nbsp;name<br>
+:param&nbsp;options:&nbsp;Options&nbsp;for&nbsp;the&nbsp;<a href="#GravitinoVirtualFileSystem">GravitinoVirtualFileSystem</a><br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args&nbsp;for&nbsp;super&nbsp;filesystem</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-cat_file"><strong>cat_file</strong></a>(self, path, start=None, end=None, **kwargs)</dt><dd><tt>Get&nbsp;the&nbsp;content&nbsp;of&nbsp;a&nbsp;file.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;start:&nbsp;The&nbsp;offset&nbsp;in&nbsp;bytes&nbsp;to&nbsp;start&nbsp;reading&nbsp;from.&nbsp;It&nbsp;can&nbsp;be&nbsp;None.<br>
+:param&nbsp;end:&nbsp;The&nbsp;offset&nbsp;in&nbsp;bytes&nbsp;to&nbsp;end&nbsp;reading&nbsp;at.&nbsp;It&nbsp;can&nbsp;be&nbsp;None.<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args<br>
+:return&nbsp;File&nbsp;content</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-cp_file"><strong>cp_file</strong></a>(self, path1, path2, **kwargs)</dt><dd><tt>Copy&nbsp;a&nbsp;file.<br>
+:param&nbsp;path1:&nbsp;Virtual&nbsp;src&nbsp;fileset&nbsp;path<br>
+:param&nbsp;path2:&nbsp;Virtual&nbsp;dst&nbsp;fileset&nbsp;path,&nbsp;should&nbsp;be&nbsp;consistent&nbsp;with&nbsp;the&nbsp;src&nbsp;path&nbsp;fileset&nbsp;identifier<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-created"><strong>created</strong></a>(self, path)</dt><dd><tt>Return&nbsp;the&nbsp;created&nbsp;timestamp&nbsp;of&nbsp;a&nbsp;file&nbsp;as&nbsp;a&nbsp;datetime.datetime<br>
+Only&nbsp;supports&nbsp;for&nbsp;`fsspec.LocalFileSystem`&nbsp;now.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:return&nbsp;Created&nbsp;time(datetime.datetime)</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-exists"><strong>exists</strong></a>(self, path, **kwargs)</dt><dd><tt>Check&nbsp;if&nbsp;a&nbsp;file&nbsp;or&nbsp;a&nbsp;directory&nbsp;exists.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args<br>
+:return&nbsp;If&nbsp;a&nbsp;file&nbsp;or&nbsp;directory&nbsp;exists,&nbsp;it&nbsp;returns&nbsp;True,&nbsp;otherwise&nbsp;False</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-get_file"><strong>get_file</strong></a>(self, rpath, lpath, callback=None, outfile=None, **kwargs)</dt><dd><tt>Copy&nbsp;single&nbsp;remote&nbsp;file&nbsp;to&nbsp;local.<br>
+:param&nbsp;rpath:&nbsp;Remote&nbsp;file&nbsp;path<br>
+:param&nbsp;lpath:&nbsp;Local&nbsp;file&nbsp;path<br>
+:param&nbsp;callback:&nbsp;The&nbsp;callback&nbsp;class<br>
+:param&nbsp;outfile:&nbsp;The&nbsp;output&nbsp;file&nbsp;path<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-info"><strong>info</strong></a>(self, path, **kwargs)</dt><dd><tt>Get&nbsp;file&nbsp;info.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args<br>
+:return&nbsp;A&nbsp;file&nbsp;info&nbsp;dict</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-ls"><strong>ls</strong></a>(self, path, detail=True, **kwargs)</dt><dd><tt>List&nbsp;the&nbsp;files&nbsp;and&nbsp;directories&nbsp;info&nbsp;of&nbsp;the&nbsp;path.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;detail:&nbsp;Whether&nbsp;to&nbsp;show&nbsp;the&nbsp;details&nbsp;for&nbsp;the&nbsp;files&nbsp;and&nbsp;directories&nbsp;info<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args<br>
+:return&nbsp;If&nbsp;details&nbsp;is&nbsp;true,&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;file&nbsp;info&nbsp;dicts,&nbsp;else&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;file&nbsp;paths</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-makedirs"><strong>makedirs</strong></a>(self, path, exist_ok=True)</dt><dd><tt>Make&nbsp;a&nbsp;directory&nbsp;recursively.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;exist_ok:&nbsp;Continue&nbsp;if&nbsp;a&nbsp;directory&nbsp;already&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-mkdir"><strong>mkdir</strong></a>(self, path, create_parents=True, **kwargs)</dt><dd><tt>Make&nbsp;a&nbsp;directory.<br>
+if&nbsp;create_parents=True,&nbsp;this&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;``makedirs``.<br>
+&nbsp;<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;create_parents:&nbsp;Create&nbsp;parent&nbsp;directories&nbsp;if&nbsp;missing&nbsp;when&nbsp;set&nbsp;to&nbsp;True<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-modified"><strong>modified</strong></a>(self, path)</dt><dd><tt>Returns&nbsp;the&nbsp;modified&nbsp;time&nbsp;of&nbsp;the&nbsp;path&nbsp;file&nbsp;if&nbsp;it&nbsp;exists.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:return&nbsp;Modified&nbsp;time(datetime.datetime)</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-mv"><strong>mv</strong></a>(self, path1, path2, recursive=False, maxdepth=None, **kwargs)</dt><dd><tt>Move&nbsp;a&nbsp;file&nbsp;to&nbsp;another&nbsp;directory.<br>
+&nbsp;This&nbsp;can&nbsp;move&nbsp;a&nbsp;file&nbsp;to&nbsp;another&nbsp;existing&nbsp;directory.<br>
+&nbsp;If&nbsp;the&nbsp;target&nbsp;path&nbsp;directory&nbsp;does&nbsp;not&nbsp;exist,&nbsp;an&nbsp;exception&nbsp;will&nbsp;be&nbsp;thrown.<br>
+:param&nbsp;path1:&nbsp;Virtual&nbsp;src&nbsp;fileset&nbsp;path<br>
+:param&nbsp;path2:&nbsp;Virtual&nbsp;dst&nbsp;fileset&nbsp;path,&nbsp;should&nbsp;be&nbsp;consistent&nbsp;with&nbsp;the&nbsp;src&nbsp;path&nbsp;fileset&nbsp;identifier<br>
+:param&nbsp;recursive:&nbsp;Whether&nbsp;to&nbsp;move&nbsp;recursively<br>
+:param&nbsp;maxdepth:&nbsp;Maximum&nbsp;depth&nbsp;of&nbsp;recursive&nbsp;move<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-open"><strong>open</strong></a>(self, path, mode='rb', block_size=None, cache_options=None, compression=None, **kwargs)</dt><dd><tt>Open&nbsp;a&nbsp;file&nbsp;to&nbsp;read/write/append.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;mode:&nbsp;The&nbsp;mode&nbsp;now&nbsp;supports:&nbsp;rb(read),&nbsp;wb(write),&nbsp;ab(append).&nbsp;See&nbsp;builtin&nbsp;``<a href="#GravitinoVirtualFileSystem-open">open</a>()``<br>
+:param&nbsp;block_size:&nbsp;Some&nbsp;indication&nbsp;of&nbsp;buffering&nbsp;-&nbsp;this&nbsp;is&nbsp;a&nbsp;value&nbsp;in&nbsp;bytes<br>
+:param&nbsp;cache_options:&nbsp;Extra&nbsp;arguments&nbsp;to&nbsp;pass&nbsp;through&nbsp;to&nbsp;the&nbsp;cache<br>
+:param&nbsp;compression:&nbsp;If&nbsp;given,&nbsp;open&nbsp;file&nbsp;using&nbsp;compression&nbsp;codec<br>
+:param&nbsp;kwargs:&nbsp;Extra&nbsp;args<br>
+:return&nbsp;A&nbsp;file-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;from&nbsp;the&nbsp;filesystem</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-rm"><strong>rm</strong></a>(self, path, recursive=False, maxdepth=None)</dt><dd><tt>Remove&nbsp;a&nbsp;file&nbsp;or&nbsp;directory.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path<br>
+:param&nbsp;recursive:&nbsp;Whether&nbsp;to&nbsp;remove&nbsp;the&nbsp;directory&nbsp;recursively.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;removing&nbsp;a&nbsp;directory,&nbsp;this&nbsp;parameter&nbsp;should&nbsp;be&nbsp;True.<br>
+:param&nbsp;maxdepth:&nbsp;The&nbsp;maximum&nbsp;depth&nbsp;to&nbsp;remove&nbsp;the&nbsp;directory&nbsp;recursively.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-rm_file"><strong>rm_file</strong></a>(self, path)</dt><dd><tt>Remove&nbsp;a&nbsp;file.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-rmdir"><strong>rmdir</strong></a>(self, path)</dt><dd><tt>Remove&nbsp;a&nbsp;directory.<br>
+It&nbsp;will&nbsp;delete&nbsp;a&nbsp;directory&nbsp;and&nbsp;all&nbsp;its&nbsp;contents&nbsp;recursively&nbsp;for&nbsp;PyArrow.HadoopFileSystem.<br>
+And&nbsp;it&nbsp;will&nbsp;throw&nbsp;an&nbsp;exception&nbsp;if&nbsp;delete&nbsp;a&nbsp;directory&nbsp;which&nbsp;is&nbsp;non-empty&nbsp;for&nbsp;LocalFileSystem.<br>
+:param&nbsp;path:&nbsp;Virtual&nbsp;fileset&nbsp;path</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-sign"><strong>sign</strong></a>(self, path, expiration=None, **kwargs)</dt><dd><tt>We&nbsp;do&nbsp;not&nbsp;support&nbsp;to&nbsp;create&nbsp;a&nbsp;signed&nbsp;URL&nbsp;representing&nbsp;the&nbsp;given&nbsp;path&nbsp;in&nbsp;gvfs.</tt></dd></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>cache</strong></dt>
+</dl>
+<dl><dt><strong>fsid</strong></dt>
+<dd><tt>Persistent&nbsp;filesystem&nbsp;id&nbsp;that&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;compare&nbsp;filesystems<br>
+across&nbsp;sessions.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>SLASH</strong> = '/'</dl>
+
+<dl><dt><strong>protocol</strong> = 'gvfs'</dl>
+
+<hr>
+Methods inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><a name="GravitinoVirtualFileSystem-__dask_tokenize__"><strong>__dask_tokenize__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-cat"><strong>cat</strong></a>(self, path, recursive=False, on_error='raise', **kwargs)</dt><dd><tt>Fetch&nbsp;(potentially&nbsp;multiple)&nbsp;paths'&nbsp;contents<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+recursive:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;True,&nbsp;assume&nbsp;the&nbsp;path(s)&nbsp;are&nbsp;directories,&nbsp;and&nbsp;get&nbsp;all&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contained&nbsp;files<br>
+on_error&nbsp;:&nbsp;"raise",&nbsp;"omit",&nbsp;"return"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;raise,&nbsp;an&nbsp;underlying&nbsp;exception&nbsp;will&nbsp;be&nbsp;raised&nbsp;(converted&nbsp;to&nbsp;KeyError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;type&nbsp;is&nbsp;in&nbsp;self.<strong>missing_exceptions</strong>);&nbsp;if&nbsp;omit,&nbsp;keys&nbsp;with&nbsp;exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;simply&nbsp;not&nbsp;be&nbsp;included&nbsp;in&nbsp;the&nbsp;output;&nbsp;if&nbsp;"return",&nbsp;all&nbsp;keys&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;included&nbsp;in&nbsp;the&nbsp;output,&nbsp;but&nbsp;the&nbsp;value&nbsp;will&nbsp;be&nbsp;bytes&nbsp;or&nbsp;an&nbsp;exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instance.<br>
+kwargs:&nbsp;passed&nbsp;to&nbsp;cat_file<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+dict&nbsp;of&nbsp;{path:&nbsp;contents}&nbsp;if&nbsp;there&nbsp;are&nbsp;multiple&nbsp;paths<br>
+or&nbsp;the&nbsp;path&nbsp;has&nbsp;been&nbsp;otherwise&nbsp;expanded</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-cat_ranges"><strong>cat_ranges</strong></a>(self, paths, starts, ends, max_gap=None, on_error='return', **kwargs)</dt><dd><tt>Get&nbsp;the&nbsp;contents&nbsp;of&nbsp;byte&nbsp;ranges&nbsp;from&nbsp;one&nbsp;or&nbsp;more&nbsp;files<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+paths:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;of&nbsp;filepaths&nbsp;on&nbsp;this&nbsp;filesystems<br>
+starts,&nbsp;ends:&nbsp;int&nbsp;or&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Bytes&nbsp;limits&nbsp;of&nbsp;the&nbsp;read.&nbsp;If&nbsp;using&nbsp;a&nbsp;single&nbsp;int,&nbsp;the&nbsp;same&nbsp;value&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;used&nbsp;to&nbsp;read&nbsp;all&nbsp;the&nbsp;specified&nbsp;files.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-checksum"><strong>checksum</strong></a>(self, path)</dt><dd><tt>Unique&nbsp;value&nbsp;for&nbsp;current&nbsp;version&nbsp;of&nbsp;file<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;checksum&nbsp;is&nbsp;the&nbsp;same&nbsp;from&nbsp;one&nbsp;moment&nbsp;to&nbsp;another,&nbsp;the&nbsp;contents<br>
+are&nbsp;guaranteed&nbsp;to&nbsp;be&nbsp;the&nbsp;same.&nbsp;If&nbsp;the&nbsp;checksum&nbsp;changes,&nbsp;the&nbsp;contents<br>
+*might*&nbsp;have&nbsp;changed.<br>
+&nbsp;<br>
+This&nbsp;should&nbsp;normally&nbsp;be&nbsp;overridden;&nbsp;default&nbsp;will&nbsp;probably&nbsp;capture<br>
+creation/modification&nbsp;timestamp&nbsp;(which&nbsp;would&nbsp;be&nbsp;good)&nbsp;or&nbsp;maybe<br>
+access&nbsp;timestamp&nbsp;(which&nbsp;would&nbsp;be&nbsp;bad)</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-copy"><strong>copy</strong></a>(self, path1, path2, recursive=False, maxdepth=None, on_error=None, **kwargs)</dt><dd><tt>Copy&nbsp;within&nbsp;two&nbsp;locations&nbsp;in&nbsp;the&nbsp;filesystem<br>
+&nbsp;<br>
+on_error&nbsp;:&nbsp;"raise",&nbsp;"ignore"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;raise,&nbsp;any&nbsp;not-found&nbsp;exceptions&nbsp;will&nbsp;be&nbsp;raised;&nbsp;if&nbsp;ignore&nbsp;any<br>
+&nbsp;&nbsp;&nbsp;&nbsp;not-found&nbsp;exceptions&nbsp;will&nbsp;cause&nbsp;the&nbsp;path&nbsp;to&nbsp;be&nbsp;skipped;&nbsp;defaults&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;raise&nbsp;unless&nbsp;recursive&nbsp;is&nbsp;true,&nbsp;where&nbsp;the&nbsp;default&nbsp;is&nbsp;ignore</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-cp"><strong>cp</strong></a>(self, path1, path2, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.copy`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-delete"><strong>delete</strong></a>(self, path, recursive=False, maxdepth=None)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.rm`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-disk_usage"><strong>disk_usage</strong></a>(self, path, total=True, maxdepth=None, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.du`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-download"><strong>download</strong></a>(self, rpath, lpath, recursive=False, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.get`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-du"><strong>du</strong></a>(self, path, total=True, maxdepth=None, withdirs=False, **kwargs)</dt><dd><tt>Space&nbsp;used&nbsp;by&nbsp;files&nbsp;and&nbsp;optionally&nbsp;directories&nbsp;within&nbsp;a&nbsp;path<br>
+&nbsp;<br>
+Directory&nbsp;size&nbsp;does&nbsp;not&nbsp;include&nbsp;the&nbsp;size&nbsp;of&nbsp;its&nbsp;contents.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;str<br>
+total:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;sum&nbsp;all&nbsp;the&nbsp;file&nbsp;sizes<br>
+maxdepth:&nbsp;int&nbsp;or&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum&nbsp;number&nbsp;of&nbsp;directory&nbsp;levels&nbsp;to&nbsp;descend,&nbsp;None&nbsp;for&nbsp;unlimited.<br>
+withdirs:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;include&nbsp;directory&nbsp;paths&nbsp;in&nbsp;the&nbsp;output.<br>
+kwargs:&nbsp;passed&nbsp;to&nbsp;``find``<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+Dict&nbsp;of&nbsp;{path:&nbsp;size}&nbsp;if&nbsp;total=False,&nbsp;or&nbsp;int&nbsp;otherwise,&nbsp;where&nbsp;numbers<br>
+refer&nbsp;to&nbsp;bytes&nbsp;used.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-end_transaction"><strong>end_transaction</strong></a>(self)</dt><dd><tt>Finish&nbsp;write&nbsp;transaction,&nbsp;non-context&nbsp;version</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-expand_path"><strong>expand_path</strong></a>(self, path, recursive=False, maxdepth=None, **kwargs)</dt><dd><tt>Turn&nbsp;one&nbsp;or&nbsp;more&nbsp;globs&nbsp;or&nbsp;directories&nbsp;into&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;matching&nbsp;paths<br>
+to&nbsp;files&nbsp;or&nbsp;directories.<br>
+&nbsp;<br>
+kwargs&nbsp;are&nbsp;passed&nbsp;to&nbsp;``glob``&nbsp;or&nbsp;``find``,&nbsp;which&nbsp;may&nbsp;in&nbsp;turn&nbsp;call&nbsp;``ls``</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-find"><strong>find</strong></a>(self, path, maxdepth=None, withdirs=False, detail=False, **kwargs)</dt><dd><tt>List&nbsp;all&nbsp;files&nbsp;below&nbsp;path.<br>
+&nbsp;<br>
+Like&nbsp;posix&nbsp;``find``&nbsp;command&nbsp;without&nbsp;conditions<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path&nbsp;:&nbsp;str<br>
+maxdepth:&nbsp;int&nbsp;or&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;not&nbsp;None,&nbsp;the&nbsp;maximum&nbsp;number&nbsp;of&nbsp;levels&nbsp;to&nbsp;descend<br>
+withdirs:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;include&nbsp;directory&nbsp;paths&nbsp;in&nbsp;the&nbsp;output.&nbsp;This&nbsp;is&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;used&nbsp;by&nbsp;glob,&nbsp;but&nbsp;users&nbsp;usually&nbsp;only&nbsp;want&nbsp;files.<br>
+kwargs&nbsp;are&nbsp;passed&nbsp;to&nbsp;``ls``.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-get"><strong>get</strong></a>(self, rpath, lpath, recursive=False, callback=&lt;fsspec.callbacks.NoOpCallback object at 0x1061ce040&gt;, maxdepth=None, **kwargs)</dt><dd><tt>Copy&nbsp;file(s)&nbsp;to&nbsp;local.<br>
+&nbsp;<br>
+Copies&nbsp;a&nbsp;specific&nbsp;file&nbsp;or&nbsp;tree&nbsp;of&nbsp;files&nbsp;(if&nbsp;recursive=True).&nbsp;If&nbsp;lpath<br>
+ends&nbsp;with&nbsp;a&nbsp;"/",&nbsp;it&nbsp;will&nbsp;be&nbsp;assumed&nbsp;to&nbsp;be&nbsp;a&nbsp;directory,&nbsp;and&nbsp;target&nbsp;files<br>
+will&nbsp;go&nbsp;within.&nbsp;Can&nbsp;submit&nbsp;a&nbsp;list&nbsp;of&nbsp;paths,&nbsp;which&nbsp;may&nbsp;be&nbsp;glob-patterns<br>
+and&nbsp;will&nbsp;be&nbsp;expanded.<br>
+&nbsp;<br>
+Calls&nbsp;get_file&nbsp;for&nbsp;each&nbsp;source.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-get_mapper"><strong>get_mapper</strong></a>(self, root='', check=False, create=False, missing_exceptions=None)</dt><dd><tt>Create&nbsp;key/value&nbsp;store&nbsp;based&nbsp;on&nbsp;this&nbsp;file-system<br>
+&nbsp;<br>
+Makes&nbsp;a&nbsp;MutableMapping&nbsp;interface&nbsp;to&nbsp;the&nbsp;FS&nbsp;at&nbsp;the&nbsp;given&nbsp;root&nbsp;path.<br>
+See&nbsp;``fsspec.mapping.FSMap``&nbsp;for&nbsp;further&nbsp;details.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-glob"><strong>glob</strong></a>(self, path, maxdepth=None, **kwargs)</dt><dd><tt>Find&nbsp;files&nbsp;by&nbsp;glob-matching.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;path&nbsp;ends&nbsp;with&nbsp;'/',&nbsp;only&nbsp;folders&nbsp;are&nbsp;returned.<br>
+&nbsp;<br>
+We&nbsp;support&nbsp;``"**"``,<br>
+``"?"``&nbsp;and&nbsp;``"[..]"``.&nbsp;We&nbsp;do&nbsp;not&nbsp;support&nbsp;^&nbsp;for&nbsp;pattern&nbsp;negation.<br>
+&nbsp;<br>
+The&nbsp;`maxdepth`&nbsp;option&nbsp;is&nbsp;applied&nbsp;on&nbsp;the&nbsp;first&nbsp;`**`&nbsp;found&nbsp;in&nbsp;the&nbsp;path.<br>
+&nbsp;<br>
+kwargs&nbsp;are&nbsp;passed&nbsp;to&nbsp;``ls``.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-head"><strong>head</strong></a>(self, path, size=1024)</dt><dd><tt>Get&nbsp;the&nbsp;first&nbsp;``size``&nbsp;bytes&nbsp;from&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-invalidate_cache"><strong>invalidate_cache</strong></a>(self, path=None)</dt><dd><tt>Discard&nbsp;any&nbsp;cached&nbsp;directory&nbsp;information<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;string&nbsp;or&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;None,&nbsp;clear&nbsp;all&nbsp;listings&nbsp;cached&nbsp;else&nbsp;listings&nbsp;at&nbsp;or&nbsp;under&nbsp;given<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-isdir"><strong>isdir</strong></a>(self, path)</dt><dd><tt>Is&nbsp;this&nbsp;entry&nbsp;directory-like?</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-isfile"><strong>isfile</strong></a>(self, path)</dt><dd><tt>Is&nbsp;this&nbsp;entry&nbsp;file-like?</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-lexists"><strong>lexists</strong></a>(self, path, **kwargs)</dt><dd><tt>If&nbsp;there&nbsp;is&nbsp;a&nbsp;file&nbsp;at&nbsp;the&nbsp;given&nbsp;path&nbsp;(including<br>
+broken&nbsp;links)</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-listdir"><strong>listdir</strong></a>(self, path, detail=True, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.ls`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-makedir"><strong>makedir</strong></a>(self, path, create_parents=True, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.mkdir`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-mkdirs"><strong>mkdirs</strong></a>(self, path, exist_ok=False)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.makedirs`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-move"><strong>move</strong></a>(self, path1, path2, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.mv`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-pipe"><strong>pipe</strong></a>(self, path, value=None, **kwargs)</dt><dd><tt>Put&nbsp;value&nbsp;into&nbsp;path<br>
+&nbsp;<br>
+(counterpart&nbsp;to&nbsp;``cat``)<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;string&nbsp;or&nbsp;dict(str,&nbsp;bytes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;a&nbsp;string,&nbsp;a&nbsp;single&nbsp;remote&nbsp;location&nbsp;to&nbsp;put&nbsp;``value``&nbsp;bytes;&nbsp;if&nbsp;a&nbsp;dict,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;mapping&nbsp;of&nbsp;{path:&nbsp;bytesvalue}.<br>
+value:&nbsp;bytes,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;using&nbsp;a&nbsp;single&nbsp;path,&nbsp;these&nbsp;are&nbsp;the&nbsp;bytes&nbsp;to&nbsp;put&nbsp;there.&nbsp;Ignored&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;``path``&nbsp;is&nbsp;a&nbsp;dict</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-pipe_file"><strong>pipe_file</strong></a>(self, path, value, **kwargs)</dt><dd><tt>Set&nbsp;the&nbsp;bytes&nbsp;of&nbsp;given&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-put"><strong>put</strong></a>(self, lpath, rpath, recursive=False, callback=&lt;fsspec.callbacks.NoOpCallback object at 0x1061ce040&gt;, maxdepth=None, **kwargs)</dt><dd><tt>Copy&nbsp;file(s)&nbsp;from&nbsp;local.<br>
+&nbsp;<br>
+Copies&nbsp;a&nbsp;specific&nbsp;file&nbsp;or&nbsp;tree&nbsp;of&nbsp;files&nbsp;(if&nbsp;recursive=True).&nbsp;If&nbsp;rpath<br>
+ends&nbsp;with&nbsp;a&nbsp;"/",&nbsp;it&nbsp;will&nbsp;be&nbsp;assumed&nbsp;to&nbsp;be&nbsp;a&nbsp;directory,&nbsp;and&nbsp;target&nbsp;files<br>
+will&nbsp;go&nbsp;within.<br>
+&nbsp;<br>
+Calls&nbsp;put_file&nbsp;for&nbsp;each&nbsp;source.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-put_file"><strong>put_file</strong></a>(self, lpath, rpath, callback=&lt;fsspec.callbacks.NoOpCallback object at 0x1061ce040&gt;, **kwargs)</dt><dd><tt>Copy&nbsp;single&nbsp;file&nbsp;to&nbsp;remote</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-read_block"><strong>read_block</strong></a>(self, fn, offset, length, delimiter=None)</dt><dd><tt>Read&nbsp;a&nbsp;block&nbsp;of&nbsp;bytes&nbsp;from<br>
+&nbsp;<br>
+Starting&nbsp;at&nbsp;``offset``&nbsp;of&nbsp;the&nbsp;file,&nbsp;read&nbsp;``length``&nbsp;bytes.&nbsp;&nbsp;If<br>
+``delimiter``&nbsp;is&nbsp;set&nbsp;then&nbsp;we&nbsp;ensure&nbsp;that&nbsp;the&nbsp;read&nbsp;starts&nbsp;and&nbsp;stops&nbsp;at<br>
+delimiter&nbsp;boundaries&nbsp;that&nbsp;follow&nbsp;the&nbsp;locations&nbsp;``offset``&nbsp;and&nbsp;``offset<br>
++&nbsp;length``.&nbsp;&nbsp;If&nbsp;``offset``&nbsp;is&nbsp;zero&nbsp;then&nbsp;we&nbsp;start&nbsp;at&nbsp;zero.&nbsp;&nbsp;The<br>
+bytestring&nbsp;returned&nbsp;WILL&nbsp;include&nbsp;the&nbsp;end&nbsp;delimiter&nbsp;string.<br>
+&nbsp;<br>
+If&nbsp;offset+length&nbsp;is&nbsp;beyond&nbsp;the&nbsp;eof,&nbsp;reads&nbsp;to&nbsp;eof.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+fn:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Path&nbsp;to&nbsp;filename<br>
+offset:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Byte&nbsp;offset&nbsp;to&nbsp;start&nbsp;read<br>
+length:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;bytes&nbsp;to&nbsp;read.&nbsp;If&nbsp;None,&nbsp;read&nbsp;to&nbsp;end.<br>
+delimiter:&nbsp;bytes&nbsp;(optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ensure&nbsp;reading&nbsp;starts&nbsp;and&nbsp;stops&nbsp;at&nbsp;delimiter&nbsp;bytestring<br>
+&nbsp;<br>
+Examples<br>
+--------<br>
+&gt;&gt;&gt;&nbsp;fs.<a href="#GravitinoVirtualFileSystem-read_block">read_block</a>('data/file.csv',&nbsp;0,&nbsp;13)&nbsp;&nbsp;#&nbsp;doctest:&nbsp;+SKIP<br>
+b'Alice,&nbsp;100\nBo'<br>
+&gt;&gt;&gt;&nbsp;fs.<a href="#GravitinoVirtualFileSystem-read_block">read_block</a>('data/file.csv',&nbsp;0,&nbsp;13,&nbsp;delimiter=b'\n')&nbsp;&nbsp;#&nbsp;doctest:&nbsp;+SKIP<br>
+b'Alice,&nbsp;100\nBob,&nbsp;200\n'<br>
+&nbsp;<br>
+Use&nbsp;``length=None``&nbsp;to&nbsp;read&nbsp;to&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;file.<br>
+&gt;&gt;&gt;&nbsp;fs.<a href="#GravitinoVirtualFileSystem-read_block">read_block</a>('data/file.csv',&nbsp;0,&nbsp;None,&nbsp;delimiter=b'\n')&nbsp;&nbsp;#&nbsp;doctest:&nbsp;+SKIP<br>
+b'Alice,&nbsp;100\nBob,&nbsp;200\nCharlie,&nbsp;300'<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+--------<br>
+:func:`fsspec.utils.read_block`</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-read_bytes"><strong>read_bytes</strong></a>(self, path, start=None, end=None, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.cat_file`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-read_text"><strong>read_text</strong></a>(self, path, encoding=None, errors=None, newline=None, **kwargs)</dt><dd><tt>Get&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;file&nbsp;as&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;URL&nbsp;of&nbsp;file&nbsp;on&nbsp;this&nbsp;filesystems<br>
+encoding,&nbsp;errors,&nbsp;newline:&nbsp;same&nbsp;as&nbsp;`open`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-rename"><strong>rename</strong></a>(self, path1, path2, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.mv`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-size"><strong>size</strong></a>(self, path)</dt><dd><tt>Size&nbsp;in&nbsp;bytes&nbsp;of&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-sizes"><strong>sizes</strong></a>(self, paths)</dt><dd><tt>Size&nbsp;in&nbsp;bytes&nbsp;of&nbsp;each&nbsp;file&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;paths</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-start_transaction"><strong>start_transaction</strong></a>(self)</dt><dd><tt>Begin&nbsp;write&nbsp;transaction&nbsp;for&nbsp;deferring&nbsp;files,&nbsp;non-context&nbsp;version</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-stat"><strong>stat</strong></a>(self, path, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.info`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-tail"><strong>tail</strong></a>(self, path, size=1024)</dt><dd><tt>Get&nbsp;the&nbsp;last&nbsp;``size``&nbsp;bytes&nbsp;from&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-to_json"><strong>to_json</strong></a>(self)</dt><dd><tt>JSON&nbsp;representation&nbsp;of&nbsp;this&nbsp;filesystem&nbsp;instance<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str:&nbsp;JSON&nbsp;structure&nbsp;with&nbsp;keys&nbsp;cls&nbsp;(the&nbsp;python&nbsp;location&nbsp;of&nbsp;this&nbsp;class),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;protocol&nbsp;(text&nbsp;name&nbsp;of&nbsp;this&nbsp;class's&nbsp;protocol,&nbsp;first&nbsp;one&nbsp;in&nbsp;case&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;multiple),&nbsp;args&nbsp;(positional&nbsp;args,&nbsp;usually&nbsp;empty),&nbsp;and&nbsp;all&nbsp;other<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kwargs&nbsp;as&nbsp;their&nbsp;own&nbsp;keys.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-touch"><strong>touch</strong></a>(self, path, truncate=True, **kwargs)</dt><dd><tt>Create&nbsp;empty&nbsp;file,&nbsp;or&nbsp;update&nbsp;timestamp<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location<br>
+truncate:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;True,&nbsp;always&nbsp;set&nbsp;file&nbsp;size&nbsp;to&nbsp;0;&nbsp;if&nbsp;False,&nbsp;update&nbsp;timestamp&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;leave&nbsp;file&nbsp;unchanged,&nbsp;if&nbsp;backend&nbsp;allows&nbsp;this</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-ukey"><strong>ukey</strong></a>(self, path)</dt><dd><tt>Hash&nbsp;of&nbsp;file&nbsp;properties,&nbsp;to&nbsp;tell&nbsp;if&nbsp;it&nbsp;has&nbsp;changed</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-unstrip_protocol"><strong>unstrip_protocol</strong></a>(self, name: 'str') -&gt; 'str'</dt><dd><tt>Format&nbsp;FS-specific&nbsp;path&nbsp;to&nbsp;generic,&nbsp;including&nbsp;protocol</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-upload"><strong>upload</strong></a>(self, lpath, rpath, recursive=False, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.put`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-walk"><strong>walk</strong></a>(self, path, maxdepth=None, topdown=True, on_error='omit', **kwargs)</dt><dd><tt>Return&nbsp;all&nbsp;files&nbsp;belows&nbsp;path<br>
+&nbsp;<br>
+List&nbsp;all&nbsp;files,&nbsp;recursing&nbsp;into&nbsp;subdirectories;&nbsp;output&nbsp;is&nbsp;iterator-style,<br>
+like&nbsp;``os.<a href="#GravitinoVirtualFileSystem-walk">walk</a>()``.&nbsp;For&nbsp;a&nbsp;simple&nbsp;list&nbsp;of&nbsp;files,&nbsp;``<a href="#GravitinoVirtualFileSystem-find">find</a>()``&nbsp;is&nbsp;available.<br>
+&nbsp;<br>
+When&nbsp;topdown&nbsp;is&nbsp;True,&nbsp;the&nbsp;caller&nbsp;can&nbsp;modify&nbsp;the&nbsp;dirnames&nbsp;list&nbsp;in-place&nbsp;(perhaps<br>
+using&nbsp;del&nbsp;or&nbsp;slice&nbsp;assignment),&nbsp;and&nbsp;<a href="#GravitinoVirtualFileSystem-walk">walk</a>()&nbsp;will<br>
+only&nbsp;recurse&nbsp;into&nbsp;the&nbsp;subdirectories&nbsp;whose&nbsp;names&nbsp;remain&nbsp;in&nbsp;dirnames;<br>
+this&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;prune&nbsp;the&nbsp;search,&nbsp;impose&nbsp;a&nbsp;specific&nbsp;order&nbsp;of&nbsp;visiting,<br>
+or&nbsp;even&nbsp;to&nbsp;inform&nbsp;<a href="#GravitinoVirtualFileSystem-walk">walk</a>()&nbsp;about&nbsp;directories&nbsp;the&nbsp;caller&nbsp;creates&nbsp;or&nbsp;renames&nbsp;before<br>
+it&nbsp;resumes&nbsp;<a href="#GravitinoVirtualFileSystem-walk">walk</a>()&nbsp;again.<br>
+Modifying&nbsp;dirnames&nbsp;when&nbsp;topdown&nbsp;is&nbsp;False&nbsp;has&nbsp;no&nbsp;effect.&nbsp;(see&nbsp;os.walk)<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;the&nbsp;"files"&nbsp;outputted&nbsp;will&nbsp;include&nbsp;anything&nbsp;that&nbsp;is&nbsp;not<br>
+a&nbsp;directory,&nbsp;such&nbsp;as&nbsp;links.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Root&nbsp;to&nbsp;recurse&nbsp;into<br>
+maxdepth:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum&nbsp;recursion&nbsp;depth.&nbsp;None&nbsp;means&nbsp;limitless,&nbsp;but&nbsp;not&nbsp;recommended<br>
+&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;link-based&nbsp;file-systems.<br>
+topdown:&nbsp;bool&nbsp;(True)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;walk&nbsp;the&nbsp;directory&nbsp;tree&nbsp;from&nbsp;the&nbsp;top&nbsp;downwards&nbsp;or&nbsp;from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;bottom&nbsp;upwards.<br>
+on_error:&nbsp;"omit",&nbsp;"raise",&nbsp;a&nbsp;collable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;omit&nbsp;(default),&nbsp;path&nbsp;with&nbsp;exception&nbsp;will&nbsp;simply&nbsp;be&nbsp;empty;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;raise,&nbsp;an&nbsp;underlying&nbsp;exception&nbsp;will&nbsp;be&nbsp;raised;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;callable,&nbsp;it&nbsp;will&nbsp;be&nbsp;called&nbsp;with&nbsp;a&nbsp;single&nbsp;OSError&nbsp;instance&nbsp;as&nbsp;argument<br>
+kwargs:&nbsp;passed&nbsp;to&nbsp;``ls``</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-write_bytes"><strong>write_bytes</strong></a>(self, path, value, **kwargs)</dt><dd><tt>Alias&nbsp;of&nbsp;`<a href="fsspec.spec.html#AbstractFileSystem">AbstractFileSystem</a>.pipe_file`.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-write_text"><strong>write_text</strong></a>(self, path, value, encoding=None, errors=None, newline=None, **kwargs)</dt><dd><tt>Write&nbsp;the&nbsp;text&nbsp;to&nbsp;the&nbsp;given&nbsp;file.<br>
+&nbsp;<br>
+An&nbsp;existing&nbsp;file&nbsp;will&nbsp;be&nbsp;overwritten.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;URL&nbsp;of&nbsp;file&nbsp;on&nbsp;this&nbsp;filesystems<br>
+value:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Text&nbsp;to&nbsp;write.<br>
+encoding,&nbsp;errors,&nbsp;newline:&nbsp;same&nbsp;as&nbsp;`open`.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><a name="GravitinoVirtualFileSystem-clear_instance_cache"><strong>clear_instance_cache</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="fsspec.spec.html#_Cached">fsspec.spec._Cached</a></font></font></dt><dd><tt>Clear&nbsp;the&nbsp;cache&nbsp;of&nbsp;filesystem&nbsp;instances.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+Unless&nbsp;overridden&nbsp;by&nbsp;setting&nbsp;the&nbsp;``cachable``&nbsp;class&nbsp;attribute&nbsp;to&nbsp;False,<br>
+the&nbsp;filesystem&nbsp;class&nbsp;stores&nbsp;a&nbsp;reference&nbsp;to&nbsp;newly&nbsp;created&nbsp;instances.&nbsp;This<br>
+prevents&nbsp;Python's&nbsp;normal&nbsp;rules&nbsp;around&nbsp;garbage&nbsp;collection&nbsp;from&nbsp;working,<br>
+since&nbsp;the&nbsp;instances&nbsp;refcount&nbsp;will&nbsp;not&nbsp;drop&nbsp;to&nbsp;zero&nbsp;until<br>
+``clear_instance_cache``&nbsp;is&nbsp;called.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoVirtualFileSystem-current"><strong>current</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="fsspec.spec.html#_Cached">fsspec.spec._Cached</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;most&nbsp;recently&nbsp;instantiated&nbsp;FileSystem<br>
+&nbsp;<br>
+If&nbsp;no&nbsp;instance&nbsp;has&nbsp;been&nbsp;created,&nbsp;then&nbsp;create&nbsp;one&nbsp;with&nbsp;defaults</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><a name="GravitinoVirtualFileSystem-from_json"><strong>from_json</strong></a>(blob)</dt><dd><tt>Recreate&nbsp;a&nbsp;filesystem&nbsp;instance&nbsp;from&nbsp;JSON&nbsp;representation<br>
+&nbsp;<br>
+See&nbsp;``.<a href="#GravitinoVirtualFileSystem-to_json">to_json</a>()``&nbsp;for&nbsp;the&nbsp;expected&nbsp;structure&nbsp;of&nbsp;the&nbsp;input<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+blob:&nbsp;str<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+file&nbsp;system&nbsp;instance,&nbsp;not&nbsp;necessarily&nbsp;of&nbsp;this&nbsp;particular&nbsp;class.</tt></dd></dl>
+
+<hr>
+Readonly properties inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><strong>transaction</strong></dt>
+<dd><tt>A&nbsp;context&nbsp;within&nbsp;which&nbsp;files&nbsp;are&nbsp;committed&nbsp;together&nbsp;upon&nbsp;exit<br>
+&nbsp;<br>
+Requires&nbsp;the&nbsp;file&nbsp;class&nbsp;to&nbsp;implement&nbsp;`.commit()`&nbsp;and&nbsp;`.discard()`<br>
+for&nbsp;the&nbsp;normal&nbsp;and&nbsp;exception&nbsp;cases.</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="fsspec.spec.html#AbstractFileSystem">fsspec.spec.AbstractFileSystem</a>:<br>
+<dl><dt><strong>__annotations__</strong> = {'protocol': 'ClassVar[str | tuple[str, ...]]'}</dl>
+
+<dl><dt><strong>async_impl</strong> = False</dl>
+
+<dl><dt><strong>blocksize</strong> = 4194304</dl>
+
+<dl><dt><strong>cachable</strong> = True</dl>
+
+<dl><dt><strong>mirror_sync_methods</strong> = False</dl>
+
+<dl><dt><strong>root_marker</strong> = ''</dl>
+
+<dl><dt><strong>sep</strong> = '/'</dl>
+
+<dl><dt><strong>transaction_type</strong> = &lt;class 'fsspec.transaction.Transaction'&gt;<dd><tt>Filesystem&nbsp;transaction&nbsp;write&nbsp;context<br>
+&nbsp;<br>
+Gathers&nbsp;files&nbsp;for&nbsp;deferred&nbsp;commit&nbsp;or&nbsp;discard,&nbsp;so&nbsp;that&nbsp;several&nbsp;write<br>
+operations&nbsp;can&nbsp;be&nbsp;finalized&nbsp;semi-atomically.&nbsp;This&nbsp;works&nbsp;by&nbsp;having&nbsp;this<br>
+instance&nbsp;as&nbsp;the&nbsp;``.transaction``&nbsp;attribute&nbsp;of&nbsp;the&nbsp;given&nbsp;filesystem</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StorageType">class <strong>StorageType</strong></a>(<a href="enum.html#Enum">enum.Enum</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#StorageType">StorageType</a>(value,&nbsp;names=None,&nbsp;*,&nbsp;module=None,&nbsp;qualname=None,&nbsp;type=None,&nbsp;start=1)<br>
+&nbsp;<br>
+An&nbsp;enumeration.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.filesystem.gvfs.html#StorageType">StorageType</a></dd>
+<dd><a href="enum.html#Enum">enum.Enum</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>HDFS</strong> = &lt;StorageType.HDFS: 'hdfs'&gt;</dl>
+
+<dl><dt><strong>LOCAL</strong> = &lt;StorageType.LOCAL: 'file'&gt;</dl>
+
+<hr>
+Data descriptors inherited from <a href="enum.html#Enum">enum.Enum</a>:<br>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>The&nbsp;name&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<dl><dt><strong>value</strong></dt>
+<dd><tt>The&nbsp;value&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<hr>
+Readonly properties inherited from <a href="enum.html#EnumMeta">enum.EnumMeta</a>:<br>
+<dl><dt><strong>__members__</strong></dt>
+<dd><tt>Returns&nbsp;a&nbsp;mapping&nbsp;of&nbsp;member&nbsp;name-&gt;value.<br>
+&nbsp;<br>
+This&nbsp;mapping&nbsp;lists&nbsp;all&nbsp;enum&nbsp;members,&nbsp;including&nbsp;aliases.&nbsp;Note&nbsp;that&nbsp;this<br>
+is&nbsp;a&nbsp;read-only&nbsp;view&nbsp;of&nbsp;the&nbsp;internal&nbsp;mapping.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Dict</strong> = typing.Dict<br>
+<strong>PROTOCOL_NAME</strong> = 'gvfs'<br>
+<strong>Tuple</strong> = typing.Tuple</td></tr></table>
+</body></html>

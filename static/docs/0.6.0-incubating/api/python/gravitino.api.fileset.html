@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.api.fileset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.api.html"><font color="#ffffff">api</font></a>.fileset</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/api/fileset.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/api/fileset.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>(<a href="abc.html#ABC">abc.ABC</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.api.fileset.html#Fileset">Fileset</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Fileset">class <strong>Fileset</strong></a>(<a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;interface&nbsp;representing&nbsp;a&nbsp;fileset&nbsp;under&nbsp;a&nbsp;schema&nbsp;Namespace.&nbsp;A&nbsp;fileset&nbsp;is&nbsp;a&nbsp;virtual<br>
+concept&nbsp;of&nbsp;the&nbsp;file&nbsp;or&nbsp;directory&nbsp;that&nbsp;is&nbsp;managed&nbsp;by&nbsp;Gravitino.&nbsp;Users&nbsp;can&nbsp;create&nbsp;a&nbsp;fileset&nbsp;object<br>
+to&nbsp;manage&nbsp;the&nbsp;non-tabular&nbsp;data&nbsp;on&nbsp;the&nbsp;FS-like&nbsp;storage.&nbsp;The&nbsp;typical&nbsp;use&nbsp;case&nbsp;is&nbsp;to&nbsp;manage&nbsp;the<br>
+training&nbsp;data&nbsp;for&nbsp;AI&nbsp;workloads.&nbsp;The&nbsp;major&nbsp;difference&nbsp;compare&nbsp;to&nbsp;the&nbsp;relational&nbsp;table&nbsp;is&nbsp;that&nbsp;the<br>
+fileset&nbsp;is&nbsp;schema-free,&nbsp;the&nbsp;main&nbsp;property&nbsp;of&nbsp;the&nbsp;fileset&nbsp;is&nbsp;the&nbsp;storage&nbsp;location&nbsp;of&nbsp;the<br>
+underlying&nbsp;data.<br>
+&nbsp;<br>
+<a href="#Fileset">Fileset</a>&nbsp;defines&nbsp;the&nbsp;basic&nbsp;properties&nbsp;of&nbsp;a&nbsp;fileset&nbsp;object.&nbsp;A&nbsp;catalog&nbsp;implementation<br>
+with&nbsp;FilesetCatalog&nbsp;should&nbsp;implement&nbsp;this&nbsp;interface.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.api.fileset.html#Fileset">Fileset</a></dd>
+<dd><a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Fileset-comment"><strong>comment</strong></a>(self) -&gt; Union[str, NoneType]</dt><dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;comment&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.&nbsp;Null&nbsp;is&nbsp;returned&nbsp;if&nbsp;no&nbsp;comment&nbsp;is&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Fileset-name"><strong>name</strong></a>(self) -&gt; str</dt><dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="Fileset-properties"><strong>properties</strong></a>(self) -&gt; Dict[str, str]</dt><dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;properties&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.&nbsp;Empty&nbsp;map&nbsp;is&nbsp;returned&nbsp;if&nbsp;no&nbsp;properties&nbsp;are&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="Fileset-storage_location"><strong>storage_location</strong></a>(self) -&gt; str</dt><dd><tt>Get&nbsp;the&nbsp;storage&nbsp;location&nbsp;of&nbsp;the&nbsp;file&nbsp;or&nbsp;directory&nbsp;path&nbsp;that&nbsp;is&nbsp;managed&nbsp;by&nbsp;this&nbsp;fileset&nbsp;object.<br>
+&nbsp;<br>
+The&nbsp;returned&nbsp;storageLocation&nbsp;can&nbsp;either&nbsp;be&nbsp;the&nbsp;one&nbsp;specified&nbsp;when&nbsp;creating&nbsp;the&nbsp;fileset<br>
+object,&nbsp;or&nbsp;the&nbsp;one&nbsp;specified&nbsp;in&nbsp;the&nbsp;catalog&nbsp;/&nbsp;schema&nbsp;level&nbsp;if&nbsp;the&nbsp;fileset&nbsp;object&nbsp;is&nbsp;created<br>
+under&nbsp;this&nbsp;catalog&nbsp;/&nbsp;schema.<br>
+&nbsp;<br>
+For&nbsp;managed&nbsp;fileset,&nbsp;the&nbsp;storageLocation&nbsp;can&nbsp;be:<br>
+&nbsp;<br>
+1)&nbsp;The&nbsp;one&nbsp;specified&nbsp;when&nbsp;creating&nbsp;the&nbsp;fileset&nbsp;object.<br>
+&nbsp;<br>
+2)&nbsp;When&nbsp;catalog&nbsp;property&nbsp;"location"&nbsp;is&nbsp;specified&nbsp;but&nbsp;schema&nbsp;property&nbsp;"location"&nbsp;is&nbsp;not<br>
+specified,&nbsp;then&nbsp;the&nbsp;storageLocation&nbsp;will&nbsp;be&nbsp;"{catalog&nbsp;location}/schemaName/filesetName".<br>
+&nbsp;<br>
+3)&nbsp;When&nbsp;catalog&nbsp;property&nbsp;"location"&nbsp;is&nbsp;not&nbsp;specified&nbsp;but&nbsp;schema&nbsp;property&nbsp;"location"&nbsp;is<br>
+specified,&nbsp;then&nbsp;the&nbsp;storageLocation&nbsp;will&nbsp;be&nbsp;"{schema&nbsp;location}/filesetName".<br>
+&nbsp;<br>
+4)&nbsp;When&nbsp;both&nbsp;catalog&nbsp;property&nbsp;"location"&nbsp;and&nbsp;schema&nbsp;property&nbsp;"location"&nbsp;are&nbsp;specified,&nbsp;then<br>
+the&nbsp;storageLocation&nbsp;will&nbsp;be&nbsp;"{schema&nbsp;location}/filesetName".<br>
+&nbsp;<br>
+5)&nbsp;When&nbsp;both&nbsp;catalog&nbsp;property&nbsp;"location"&nbsp;and&nbsp;schema&nbsp;property&nbsp;"location"&nbsp;are&nbsp;not&nbsp;specified,<br>
+and&nbsp;storageLocation&nbsp;specified&nbsp;when&nbsp;creating&nbsp;the&nbsp;fileset&nbsp;object&nbsp;is&nbsp;null,&nbsp;this&nbsp;situation&nbsp;is<br>
+illegal.<br>
+&nbsp;<br>
+For&nbsp;external&nbsp;fileset,&nbsp;the&nbsp;storageLocation&nbsp;can&nbsp;be:<br>
+&nbsp;<br>
+1)&nbsp;The&nbsp;one&nbsp;specified&nbsp;when&nbsp;creating&nbsp;the&nbsp;fileset&nbsp;object.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;storage&nbsp;location&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="Fileset-type"><strong>type</strong></a>(self) -&gt; gravitino.api.fileset.Fileset.Type</dt><dd><tt>@Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;type&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>Type</strong> = &lt;enum 'Type'&gt;<dd><tt>An&nbsp;enum&nbsp;representing&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;fileset&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'audit_info', 'comment', 'name', 'properties', 'storage_location', 'type'})</dl>
+
+<hr>
+Methods inherited from <a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>:<br>
+<dl><dt><a name="Fileset-audit_info"><strong>audit_info</strong></a>(self) -&gt; gravitino.api.audit.Audit</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Dict</strong> = typing.Dict<br>
+<strong>Optional</strong> = typing.Optional</td></tr></table>
+</body></html>

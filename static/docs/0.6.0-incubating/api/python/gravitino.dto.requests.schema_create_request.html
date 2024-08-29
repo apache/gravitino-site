@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.dto.requests.schema_create_request</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.dto.html"><font color="#ffffff">dto</font></a>.<a href="gravitino.dto.requests.html"><font color="#ffffff">requests</font></a>.schema_create_request</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/dto/requests/schema_create_request.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/dto/requests/schema_create_request.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="gravitino.rest.rest_message.html#RESTRequest">gravitino.rest.rest_message.RESTRequest</a>(<a href="gravitino.rest.rest_message.html#RESTMessage">gravitino.rest.rest_message.RESTMessage</a>, <a href="abc.html#ABC">abc.ABC</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.dto.requests.schema_create_request.html#SchemaCreateRequest">SchemaCreateRequest</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SchemaCreateRequest">class <strong>SchemaCreateRequest</strong></a>(<a href="gravitino.rest.rest_message.html#RESTRequest">gravitino.rest.rest_message.RESTRequest</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SchemaCreateRequest">SchemaCreateRequest</a>(name:&nbsp;str,&nbsp;comment:&nbsp;Union[str,&nbsp;NoneType],&nbsp;properties:&nbsp;Union[Dict[str,&nbsp;str],&nbsp;NoneType])<br>
+&nbsp;<br>
+Represents&nbsp;a&nbsp;request&nbsp;to&nbsp;create&nbsp;a&nbsp;schema.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.dto.requests.schema_create_request.html#SchemaCreateRequest">SchemaCreateRequest</a></dd>
+<dd><a href="gravitino.rest.rest_message.html#RESTRequest">gravitino.rest.rest_message.RESTRequest</a></dd>
+<dd><a href="gravitino.rest.rest_message.html#RESTMessage">gravitino.rest.rest_message.RESTMessage</a></dd>
+<dd><a href="dataclasses_json.api.html#DataClassJsonMixin">dataclasses_json.api.DataClassJsonMixin</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SchemaCreateRequest-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="SchemaCreateRequest-__init__"><strong>__init__</strong></a>(self, name: str, comment: Union[str, NoneType], properties: Union[Dict[str, str], NoneType])</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="SchemaCreateRequest-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SchemaCreateRequest-validate"><strong>validate</strong></a>(self)</dt><dd><tt>Ensures&nbsp;that&nbsp;a&nbsp;constructed&nbsp;instance&nbsp;of&nbsp;a&nbsp;REST&nbsp;message&nbsp;is&nbsp;valid&nbsp;according&nbsp;to&nbsp;the&nbsp;REST&nbsp;spec.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;needed&nbsp;when&nbsp;parsing&nbsp;data&nbsp;that&nbsp;comes&nbsp;from&nbsp;external&nbsp;sources&nbsp;and&nbsp;the&nbsp;object&nbsp;might&nbsp;have<br>
+been&nbsp;constructed&nbsp;without&nbsp;all&nbsp;the&nbsp;required&nbsp;fields&nbsp;present.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;IllegalArgumentException:&nbsp;If&nbsp;the&nbsp;message&nbsp;is&nbsp;not&nbsp;valid.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'_comment': typing.Union[str, NoneType], '_name': &lt;class 'str'&gt;, '_properties': typing.Union[typing.Dict[str, str], NoneType]}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'_comment': Field(name='_comment',type=typing.Union[str, Non...&gt;.override at 0x105e27d30&gt;}}),_field_type=_FIELD), '_name': Field(name='_name',type=&lt;class 'str'&gt;,default=&lt;d...&gt;.override at 0x105e27dc0&gt;}}),_field_type=_FIELD), '_properties': Field(name='_properties',type=typing.Union[typin...&gt;.override at 0x105e27ee0&gt;}}),_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="dataclasses_json.api.html#DataClassJsonMixin">dataclasses_json.api.DataClassJsonMixin</a>:<br>
+<dl><dt><a name="SchemaCreateRequest-to_dict"><strong>to_dict</strong></a>(self, encode_json=False) -&gt; Dict[str, Union[dict, list, str, int, float, bool, NoneType]]</dt></dl>
+
+<dl><dt><a name="SchemaCreateRequest-to_json"><strong>to_json</strong></a>(self, *, skipkeys: bool = False, ensure_ascii: bool = True, check_circular: bool = True, allow_nan: bool = True, indent: Union[int, str, NoneType] = None, separators: Union[Tuple[str, str], NoneType] = None, default: Union[Callable, NoneType] = None, sort_keys: bool = False, **kw) -&gt; str</dt></dl>
+
+<hr>
+Class methods inherited from <a href="dataclasses_json.api.html#DataClassJsonMixin">dataclasses_json.api.DataClassJsonMixin</a>:<br>
+<dl><dt><a name="SchemaCreateRequest-from_dict"><strong>from_dict</strong></a>(kvs: Union[dict, list, str, int, float, bool, NoneType], *, infer_missing=False) -&gt; ~A<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="SchemaCreateRequest-from_json"><strong>from_json</strong></a>(s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw) -&gt; ~A<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="SchemaCreateRequest-schema"><strong>schema</strong></a>(*, infer_missing: bool = False, only=None, exclude=(), many: bool = False, context=None, load_only=(), dump_only=(), partial: bool = False, unknown=None) -&gt; 'SchemaType[A]'<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="dataclasses_json.api.html#DataClassJsonMixin">dataclasses_json.api.DataClassJsonMixin</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="dataclasses_json.api.html#DataClassJsonMixin">dataclasses_json.api.DataClassJsonMixin</a>:<br>
+<dl><dt><strong>dataclass_json_config</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Dict</strong> = typing.Dict<br>
+<strong>Optional</strong> = typing.Optional</td></tr></table>
+</body></html>

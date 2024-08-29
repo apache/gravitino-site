@@ -24,6 +24,9 @@ const projectName = "Gravitino";
 const mainRepoName = "gravitino";
 const siteRepoName = "gravitino-site";
 
+const fs = require('fs')
+const currentVersion = fs.readFileSync('CURRENT_VERSION', 'utf-8').replace(/\n/g, '').trim()
+
 const config: Config = {
   title: `Apache ${projectName}`,
   tagline: `Welcome to Apache ${projectName}!`,
@@ -44,7 +47,34 @@ const config: Config = {
   },
 
   plugins: [
-    './src/plugins/postcss-tailwind-loader'
+    './src/plugins/postcss-tailwind-loader',
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+        disableInDev: false
+      }
+    ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          gravitino: {
+            specPath: 'docs/open-api/openapi.yaml',
+            outputDir: 'docs/api/rest',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag'
+            }
+          }
+        }
+      }
+    ],
   ],
 
   presets: [
@@ -53,13 +83,23 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './docs/sidebars.ts',
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: ({ docPath }) => `https://github.com/apache/${siteRepoName}/tree/main/docs/${docPath}`,
+          docItemComponent: '@theme/ApiItem',
+          lastVersion: 'latest',
+          versions: {
+            'latest': {
+              label: currentVersion,
+              path: 'latest'
+            }
+          },
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true
         },
         blog: {
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All our posts',
           showReadingTime: true,
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: ({ blogPath }) => `https://github.com/apache/${siteRepoName}/tree/main/blog/${blogPath}`,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -154,6 +194,7 @@ const config: Config = {
       </div>`,
     },
   } satisfies Preset.ThemeConfig,
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid']
 };
 
 export default config;

@@ -1,0 +1,572 @@
+---
+id: revoke-role-from-group
+title: "Revoke roles to a group"
+description: "Revoke roles to a group"
+sidebar_label: "Revoke roles to a group"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Revoke roles to a group
+</h1>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/metalakes/{metalake}/permissions/groups/{group}/revoke"}
+>
+  
+</MethodEndpoint>
+
+
+
+Revoke roles to a group
+
+## Request
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"group","in":"path","description":"The name of the group","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"roleNames"}
+          required={true}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","description":"The role names need to revoke","items":{"type":"string"}}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns the revoked group object
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                group
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The name of the group"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"roles"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string"},"description":"The roles of the group"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      audit
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Audit information for a Gravitino resource.
+                                    
+                                    
+                                  </div><SchemaItem
+                                    collapsible={false}
+                                    name={"creator"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The user who created the resource"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"createTime"}
+                                    required={false}
+                                    schemaName={"date-time"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"date-time","description":"The time the resource was created"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"lastModifier"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The user who last modified the resource"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"lastModifiedTime"}
+                                    required={false}
+                                    schemaName={"date-time"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"date-time","description":"The time the resource was last modified"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"group\": {\n    \"name\": \"string\",\n    \"roles\": [\n      \"string\"\n    ],\n    \"audit\": {\n      \"creator\": \"string\",\n      \"createTime\": \"2024-08-26T09:58:28.947Z\",\n      \"lastModifier\": \"string\",\n      \"lastModifiedTime\": \"2024-08-26T09:58:28.947Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"GroupResponse"}
+                  value={"GroupResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"group\": {\n    \"name\": \"group1\",\n    \"roles\": [],\n    \"audit\": {\n      \"creator\": \"gravitino\",\n      \"createTime\": \"2023-12-08T06:41:25.595Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found - The specified group or role does not exist in the specified metalake
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetalakeException"}
+                  value={"NoSuchMetalakeException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetalakeException\",\n  \"message\": \"Failed to operate metalake(s) [test] operation [LOAD], reason [NoSuchMetalakeException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetalakeException: Metalake test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchGroupException"}
+                  value={"NoSuchGroupException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchGroupException\",\n  \"message\": \"Group does not exist\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchGroupException: Group does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchRoleException"}
+                  value={"NoSuchRoleException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchRoleException\",\n  \"message\": \"Role does not exist\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchRoleException: Role does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

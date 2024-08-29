@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.api.fileset_change</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.api.html"><font color="#ffffff">api</font></a>.fileset_change</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/api/fileset_change.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/api/fileset_change.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="abc.html#ABC">abc.ABC</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.api.fileset_change.html#FilesetChange">FilesetChange</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FilesetChange">class <strong>FilesetChange</strong></a>(<a href="abc.html#ABC">abc.ABC</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;fileset&nbsp;change&nbsp;is&nbsp;a&nbsp;change&nbsp;to&nbsp;a&nbsp;fileset.&nbsp;It&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;rename&nbsp;a&nbsp;fileset,&nbsp;update&nbsp;the&nbsp;comment<br>
+of&nbsp;a&nbsp;fileset,&nbsp;set&nbsp;a&nbsp;property&nbsp;and&nbsp;value&nbsp;pair&nbsp;for&nbsp;a&nbsp;fileset,&nbsp;or&nbsp;remove&nbsp;a&nbsp;property&nbsp;from&nbsp;a&nbsp;fileset.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.api.fileset_change.html#FilesetChange">FilesetChange</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="FilesetChange-remove_comment"><strong>remove_comment</strong></a>()</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;fileset&nbsp;change&nbsp;to&nbsp;remove&nbsp;comment&nbsp;from&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;fileset&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="FilesetChange-remove_property"><strong>remove_property</strong></a>(fileset_property)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;fileset&nbsp;change&nbsp;to&nbsp;remove&nbsp;a&nbsp;property&nbsp;from&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fileset_property:&nbsp;The&nbsp;property&nbsp;name&nbsp;to&nbsp;remove.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;fileset&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="FilesetChange-rename"><strong>rename</strong></a>(new_name)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;fileset&nbsp;change&nbsp;to&nbsp;rename&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_name:&nbsp;The&nbsp;new&nbsp;name&nbsp;of&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;fileset&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="FilesetChange-set_property"><strong>set_property</strong></a>(fileset_property, value)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;fileset&nbsp;change&nbsp;to&nbsp;set&nbsp;the&nbsp;property&nbsp;and&nbsp;value&nbsp;for&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fileset_property:&nbsp;The&nbsp;property&nbsp;name&nbsp;to&nbsp;set.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;The&nbsp;value&nbsp;to&nbsp;set&nbsp;the&nbsp;property&nbsp;to.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;fileset&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="FilesetChange-update_comment"><strong>update_comment</strong></a>(new_comment)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;fileset&nbsp;change&nbsp;to&nbsp;update&nbsp;the&nbsp;fileset&nbsp;comment.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_comment:&nbsp;The&nbsp;new&nbsp;comment&nbsp;for&nbsp;the&nbsp;fileset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;fileset&nbsp;change.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>RemoveComment</strong> = &lt;class 'gravitino.api.fileset_change.FilesetChange.RemoveComment'&gt;<dd><tt>A&nbsp;fileset&nbsp;change&nbsp;to&nbsp;remove&nbsp;comment&nbsp;from&nbsp;the&nbsp;fileset.</tt></dl>
+
+<dl><dt><strong>RemoveProperty</strong> = &lt;class 'gravitino.api.fileset_change.FilesetChange.RemoveProperty'&gt;<dd><tt>A&nbsp;fileset&nbsp;change&nbsp;to&nbsp;remove&nbsp;a&nbsp;property&nbsp;from&nbsp;the&nbsp;fileset.</tt></dl>
+
+<dl><dt><strong>RenameFileset</strong> = &lt;class 'gravitino.api.fileset_change.FilesetChange.RenameFileset'&gt;<dd><tt>A&nbsp;fileset&nbsp;change&nbsp;to&nbsp;rename&nbsp;the&nbsp;fileset.</tt></dl>
+
+<dl><dt><strong>SetProperty</strong> = &lt;class 'gravitino.api.fileset_change.FilesetChange.SetProperty'&gt;<dd><tt>A&nbsp;fileset&nbsp;change&nbsp;to&nbsp;set&nbsp;the&nbsp;property&nbsp;and&nbsp;value&nbsp;for&nbsp;the&nbsp;fileset.</tt></dl>
+
+<dl><dt><strong>UpdateFilesetComment</strong> = &lt;class 'gravitino.api.fileset_change.FilesetChange.UpdateFilesetComment'&gt;<dd><tt>A&nbsp;fileset&nbsp;change&nbsp;to&nbsp;update&nbsp;the&nbsp;fileset&nbsp;comment.</tt></dl>
+
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

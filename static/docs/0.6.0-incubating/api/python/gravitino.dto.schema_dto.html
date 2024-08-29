@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.dto.schema_dto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.dto.html"><font color="#ffffff">dto</font></a>.schema_dto</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/dto/schema_dto.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/dto/schema_dto.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="gravitino.api.schema.html#Schema">gravitino.api.schema.Schema</a>(<a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.dto.schema_dto.html#SchemaDTO">SchemaDTO</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SchemaDTO">class <strong>SchemaDTO</strong></a>(<a href="gravitino.api.schema.html#Schema">gravitino.api.schema.Schema</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SchemaDTO">SchemaDTO</a>(_name:&nbsp;str,&nbsp;_comment:&nbsp;Union[str,&nbsp;NoneType],&nbsp;_properties:&nbsp;Union[Dict[str,&nbsp;str],&nbsp;NoneType],&nbsp;_audit:&nbsp;gravitino.dto.audit_dto.AuditDTO)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Represents&nbsp;a&nbsp;<a href="gravitino.api.schema.html#Schema">Schema</a>&nbsp;DTO&nbsp;(Data&nbsp;Transfer&nbsp;Object).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gravitino.dto.schema_dto.html#SchemaDTO">SchemaDTO</a></dd>
+<dd><a href="gravitino.api.schema.html#Schema">gravitino.api.schema.Schema</a></dd>
+<dd><a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SchemaDTO-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="SchemaDTO-__init__"><strong>__init__</strong></a>(self, _name: str, _comment: Union[str, NoneType], _properties: Union[Dict[str, str], NoneType], _audit: gravitino.dto.audit_dto.AuditDTO) -&gt; None</dt></dl>
+
+<dl><dt><a name="SchemaDTO-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SchemaDTO-audit_info"><strong>audit_info</strong></a>(self) -&gt; gravitino.api.audit.Audit</dt></dl>
+
+<dl><dt><a name="SchemaDTO-comment"><strong>comment</strong></a>(self) -&gt; Union[str, NoneType]</dt><dd><tt>Returns&nbsp;the&nbsp;comment&nbsp;of&nbsp;the&nbsp;<a href="gravitino.api.schema.html#Schema">Schema</a>.&nbsp;None&nbsp;is&nbsp;returned&nbsp;if&nbsp;the&nbsp;comment&nbsp;is&nbsp;not&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="SchemaDTO-name"><strong>name</strong></a>(self) -&gt; str</dt><dd><tt>Returns&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;<a href="gravitino.api.schema.html#Schema">Schema</a>.</tt></dd></dl>
+
+<dl><dt><a name="SchemaDTO-properties"><strong>properties</strong></a>(self) -&gt; Dict[str, str]</dt><dd><tt>Returns&nbsp;the&nbsp;properties&nbsp;of&nbsp;the&nbsp;<a href="gravitino.api.schema.html#Schema">Schema</a>.&nbsp;An&nbsp;empty&nbsp;dictionary&nbsp;is&nbsp;returned&nbsp;if&nbsp;no&nbsp;properties&nbsp;are&nbsp;set.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'_audit': &lt;class 'gravitino.dto.audit_dto.AuditDTO'&gt;, '_comment': typing.Union[str, NoneType], '_name': &lt;class 'str'&gt;, '_properties': typing.Union[typing.Dict[str, str], NoneType]}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'_audit': Field(name='_audit',type=&lt;class 'gravitino.dto.a...&gt;.override at 0x105e53700&gt;}}),_field_type=_FIELD), '_comment': Field(name='_comment',type=typing.Union[str, Non...&gt;.override at 0x105e535e0&gt;}}),_field_type=_FIELD), '_name': Field(name='_name',type=&lt;class 'str'&gt;,default=&lt;d...&gt;.override at 0x105e53550&gt;}}),_field_type=_FIELD), '_properties': Field(name='_properties',type=typing.Union[typin...&gt;.override at 0x105e53670&gt;}}),_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<hr>
+Data descriptors inherited from <a href="gravitino.api.auditable.html#Auditable">gravitino.api.auditable.Auditable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Dict</strong> = typing.Dict<br>
+<strong>Optional</strong> = typing.Optional</td></tr></table>
+</body></html>

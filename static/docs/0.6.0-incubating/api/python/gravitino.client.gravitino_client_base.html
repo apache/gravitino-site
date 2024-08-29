@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gravitino.client.gravitino_client_base</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="gravitino.html"><font color="#ffffff">gravitino</font></a>.<a href="gravitino.client.html"><font color="#ffffff">client</font></a>.gravitino_client_base</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/client/gravitino_client_base.py">/Users/jerryshao/Projects/release/gravitino-0.6.0-incubating-docs/clients/client-python/gravitino/client/gravitino_client_base.py</a></font></td></tr></table>
+    <p><tt>Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one<br>
+or&nbsp;more&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file<br>
+distributed&nbsp;with&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information<br>
+regarding&nbsp;copyright&nbsp;ownership.&nbsp;&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file<br>
+to&nbsp;you&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0&nbsp;(the<br>
+"License");&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance<br>
+with&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br>
+&nbsp;<br>
+Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,<br>
+software&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an<br>
+"AS&nbsp;IS"&nbsp;BASIS,&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY<br>
+KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.&nbsp;&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the<br>
+specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and&nbsp;limitations<br>
+under&nbsp;the&nbsp;License.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="configparser.html">configparser</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gravitino.client.gravitino_client_base.html#GravitinoClientBase">GravitinoClientBase</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GravitinoClientBase">class <strong>GravitinoClientBase</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#GravitinoClientBase">GravitinoClientBase</a>(uri:&nbsp;str,&nbsp;check_version:&nbsp;bool&nbsp;=&nbsp;True,&nbsp;auth_data_provider:&nbsp;gravitino.auth.auth_data_provider.AuthDataProvider&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Base&nbsp;class&nbsp;for&nbsp;Gravitino&nbsp;Java&nbsp;client;<br>
+It&nbsp;uses&nbsp;an&nbsp;underlying&nbsp;{@link&nbsp;RESTClient}&nbsp;to&nbsp;send&nbsp;HTTP&nbsp;requests&nbsp;and&nbsp;receive&nbsp;responses&nbsp;from&nbsp;the&nbsp;API.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GravitinoClientBase-__init__"><strong>__init__</strong></a>(self, uri: str, check_version: bool = True, auth_data_provider: gravitino.auth.auth_data_provider.AuthDataProvider = None)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoClientBase-check_metalake_name"><strong>check_metalake_name</strong></a>(self, metalake_name: str)</dt></dl>
+
+<dl><dt><a name="GravitinoClientBase-check_version"><strong>check_version</strong></a>(self)</dt><dd><tt>Check&nbsp;the&nbsp;compatibility&nbsp;of&nbsp;the&nbsp;client&nbsp;with&nbsp;the&nbsp;target&nbsp;server.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GravitinoRuntimeException&nbsp;If&nbsp;the&nbsp;client&nbsp;version&nbsp;is&nbsp;greater&nbsp;than&nbsp;the&nbsp;server&nbsp;version.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoClientBase-close"><strong>close</strong></a>(self)</dt><dd><tt>Closes&nbsp;the&nbsp;GravitinoClient&nbsp;and&nbsp;releases&nbsp;any&nbsp;underlying&nbsp;resources.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoClientBase-get_client_version"><strong>get_client_version</strong></a>(self) -&gt; gravitino.client.gravitino_version.GravitinoVersion</dt><dd><tt>Retrieves&nbsp;the&nbsp;version&nbsp;of&nbsp;the&nbsp;Gravitino&nbsp;Python&nbsp;Client.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;GravitinoVersion&nbsp;instance&nbsp;representing&nbsp;the&nbsp;version&nbsp;of&nbsp;the&nbsp;Gravitino&nbsp;Python&nbsp;Client.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoClientBase-get_server_version"><strong>get_server_version</strong></a>(self) -&gt; gravitino.client.gravitino_version.GravitinoVersion</dt><dd><tt>Retrieves&nbsp;the&nbsp;version&nbsp;of&nbsp;the&nbsp;Gravitino&nbsp;API.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;GravitinoVersion&nbsp;instance&nbsp;representing&nbsp;the&nbsp;version&nbsp;of&nbsp;the&nbsp;Gravitino&nbsp;API.</tt></dd></dl>
+
+<dl><dt><a name="GravitinoClientBase-load_metalake"><strong>load_metalake</strong></a>(self, name: str) -&gt; gravitino.client.gravitino_metalake.GravitinoMetalake</dt><dd><tt>Loads&nbsp;a&nbsp;specific&nbsp;Metalake&nbsp;from&nbsp;the&nbsp;Gravitino&nbsp;API.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;Metalake&nbsp;to&nbsp;be&nbsp;loaded.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;GravitinoMetalake&nbsp;instance&nbsp;representing&nbsp;the&nbsp;loaded&nbsp;Metalake.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;NoSuchMetalakeException&nbsp;If&nbsp;the&nbsp;specified&nbsp;Metalake&nbsp;does&nbsp;not&nbsp;exist.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>API_METALAKES_IDENTIFIER_PATH</strong> = 'api/metalakes/'</dl>
+
+<dl><dt><strong>API_METALAKES_LIST_PATH</strong> = 'api/metalakes'</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'_rest_client': &lt;class 'gravitino.utils.http_client.HTTPClient'&gt;}</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>METALAKE_ERROR_HANDLER</strong> = &lt;gravitino.exceptions.handlers.metalake_error_handler.MetalakeErrorHandler object&gt;<br>
+<strong>REST_ERROR_HANDLER</strong> = &lt;gravitino.exceptions.handlers.rest_error_handler.RestErrorHandler object&gt;<br>
+<strong>VERSION_INI</strong> = PosixPath('/Users/jerryshao/Projects/release/gra...ocs/clients/client-python/gravitino/version.ini')<br>
+<strong>logger</strong> = &lt;Logger gravitino.client.gravitino_client_base (WARNING)&gt;</td></tr></table>
+</body></html>
