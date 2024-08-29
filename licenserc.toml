@@ -21,6 +21,7 @@ excludes = [
   # Website generated files
   "build",
   ".docusaurus",
+  "static"
 
   # Documents
   "**/*.md",
