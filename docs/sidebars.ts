@@ -414,6 +414,11 @@ const sidebars: SidebarsConfig = {
           id: 'docker-image-details',
           label: 'Docker image details',
           type: 'doc'
+        },
+        {
+          id: 'how-to-upgrade',
+          label: 'How to upgrade',
+          type: 'doc'
         }
       ]
     },
