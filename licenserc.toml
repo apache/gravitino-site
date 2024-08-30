@@ -23,6 +23,8 @@ excludes = [
   ".docusaurus",
   "static",
   "theme",
+  "docs",
+  "versioned_docs",
 
   # Documents
   "**/*.md",
