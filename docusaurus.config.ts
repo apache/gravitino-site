@@ -49,6 +49,19 @@ const config: Config = {
   plugins: [
     './src/plugins/postcss-tailwind-loader',
     [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes(`/docs/${currentVersion}`)) {
+            return [
+              existingPath.replace(`/docs/${currentVersion}`, '/docs/latest'),
+            ];
+          }
+          return undefined;
+        },
+      }
+    ],
+    [
       '@docusaurus/plugin-ideal-image',
       {
         quality: 70,
@@ -85,11 +98,11 @@ const config: Config = {
           sidebarPath: './docs/sidebars.ts',
           editUrl: ({ docPath }) => `https://github.com/apache/${siteRepoName}/tree/main/docs/${docPath}`,
           docItemComponent: '@theme/ApiItem',
-          lastVersion: 'latest',
+          lastVersion: currentVersion,
           versions: {
-            'latest': {
+            [currentVersion]: {
               label: currentVersion,
-              path: 'latest'
+              path: currentVersion
             }
           },
           showLastUpdateTime: true,
