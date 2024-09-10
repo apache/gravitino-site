@@ -2,27 +2,40 @@
 
 Apache Gravitino hasn't released any ASF software.
 
-## Gravitino Downloads (non-ASF releases)
+## Apache Gravitino Downloads
 
-Before entering the ASF incubator, the Gravitino project made several releases, the latest being 0.51.
+[Gravitino 0.6.0 source](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-src.tar.gz) [ASC](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-src.tar.gz.asc) [SHA](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-src.tar.gz.sha512)
 
-### Gravitino 0.51
-Download [Gravitino 0.51 source and binary](https://github.com/apache/gravitino/releases/tag/v0.5.1)
+[Gravitino 0.6.0 binary](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-bin.tar.gz) [ASC](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-bin.tar.gz.asc) [SHA](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-0.6.0-incubating-bin.tar.gz.sha512)
 
-Note that this non-ASF release, while provided under the Apache license, may not comply with ASF policies on releases or licensing.
+[Gravitino 0.6.0 Iceberg REST server](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-iceberg-rest-server-0.6.0-incubating-bin.tar.gz) [ASC](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-iceberg-rest-server-0.6.0-incubating-bin.tar.gz.asc) [SHA](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-iceberg-rest-server-0.6.0-incubating-bin.tar.gz.sha512)
+
+[Gravitino 0.6.0 Trino connector](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-trino-connector-0.6.0-incubating.tar.gz) [ASC](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-trino-connector-0.6.0-incubating.tar.gz.asc) [SHA](https://downloads.apache.org/incubator/gravitino/0.6.0-incubating/gravitino-trino-connector-0.6.0-incubating.tar.gz.sha512)
+
+The [KEYS file](https://downloads.apache.org/incubator/gravitino/KEYS) used to verify the release.
 
 ## Install Apache Gravitino using Docker
 
-### Get the non-ASF Gravitino Docker image
+### Get the ASF Gravitino Docker image
 
-Gravitino publishes the Docker image to [Docker Hub](https://hub.docker.com/r/datastrato/gravitino/tags).
+Gravitino publishes the Docker image to [Docker Hub](https://hub.docker.com/r/apache/gravitino/tags).
 
 Run the Gravitino Docker image by running:
 
 ```shell
-docker run -d -i -p 8090:8090 datastrato/gravitino:<version>
+docker run -d -i -p 8090:8090 apache/gravitino:<version>
 ```
 
-## Install non-ASF Gravitino using Docker compose
+## Install ASF Gravitino using Docker compose
 
 The published Gravitino Docker image only contains the Gravitino server with basic configurations. To experience the whole Gravitino system with other components, use the Docker compose file in the [Gravitino playground repository](https://github.com/apache/gravitino-playground).
+
+## Gravitino Downloads (non-ASF releases)
+
+### Gravitino 0.5.1
+
+Before entering the ASF incubator, the Gravitino project made several releases, the latest being 0.5.1.
+
+Download [Gravitino 0.5.1 source and binary](https://github.com/apache/gravitino/releases/tag/v0.5.1)
+
+Note that this non-ASF release, while provided under the Apache license, may not comply with ASF policies on releases or licensing.
