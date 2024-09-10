@@ -46,6 +46,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true
+  },
+
   plugins: [
     './src/plugins/postcss-tailwind-loader',
     [

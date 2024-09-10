@@ -20,6 +20,9 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 import apiDocSidebar from './api/rest/sidebar'
 
+const fs = require('fs')
+const currentVersion = fs.readFileSync('CURRENT_VERSION', 'utf-8').replace(/\n/g, '').trim()
+
 // Check https://docusaurus.io/docs/sidebar/ for more information.
 const sidebars: SidebarsConfig = {
   docs: [
@@ -60,17 +63,17 @@ const sidebars: SidebarsConfig = {
         {
           label: 'Local',
           type: 'link',
-          href: 'getting-started#getting-started-locally'
+          href: `/docs/${currentVersion}/getting-started#getting-started-locally`
         },
         {
           label: 'Amazon Web Services',
           type: 'link',
-          href: 'getting-started#getting-started-on-amazon-web-services'
+          href: `/docs/${currentVersion}/getting-started#getting-started-on-amazon-web-services`
         },
         {
           label: 'Google Cloud Platform',
           type: 'link',
-          href: 'getting-started#getting-started-on-google-cloud-platform'
+          href: `/docs/${currentVersion}/getting-started#getting-started-on-google-cloud-platform`
         }
       ]
     },
@@ -311,7 +314,7 @@ const sidebars: SidebarsConfig = {
         {
           label: 'Install on AWS or GCP',
           type: 'link',
-          href: 'getting-started#installing-gravitino-playground-on-aws-or-google-cloud-platform'
+          href: `/docs/${currentVersion}/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform`
         }
       ]
     },
@@ -378,11 +381,6 @@ const sidebars: SidebarsConfig = {
           label: 'Gravitino Java doc',
           type: 'link',
           href: 'pathname:///docs/0.6.0-incubating/api/java/index.html'
-        },
-        {
-          label: 'Gravitino Python doc',
-          type: 'link',
-          href: 'pathname:///docs/0.6.0-incubating/api/python/gravitino.html'
         }
       ]
     },
