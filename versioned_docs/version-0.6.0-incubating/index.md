@@ -91,7 +91,7 @@ complete environment. To experience all the features, see
 
 * [Install Gravitino playground on AWS or GCP](./getting-started.md#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform):
   a quick guide to starting and using the Gravitino playground on AWS or GCP.
-* [Install Gravitino playground locally](./getting-started.md#installing-gravitino-playground-locally):
+* [Install Gravitino playground locally](./getting-started.md#installing-apache-gravitino-playground-locally):
   a quick guide to starting and using the Gravitino playground locally.
 * [How to use the Gravitino playground](./how-to-use-the-playground.md): provides an example of how
   to use Gravitino and other components together.
