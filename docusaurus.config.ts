@@ -24,6 +24,9 @@ const projectName = "Gravitino";
 const mainRepoName = "gravitino";
 const siteRepoName = "gravitino-site";
 
+const fs = require('fs')
+const currentVersion = fs.readFileSync('CURRENT_VERSION', 'utf-8').replace(/\n/g, '').trim()
+
 const config: Config = {
   title: `Apache ${projectName}`,
   tagline: `Welcome to Apache ${projectName}!`,
@@ -32,8 +35,8 @@ const config: Config = {
   url: `https://${projectName.toLowerCase()}.apache.org/`,
   baseUrl: '/',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -43,8 +46,52 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true
+  },
+
   plugins: [
-    './src/plugins/postcss-tailwind-loader'
+    './src/plugins/postcss-tailwind-loader',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes(`/docs/${currentVersion}`)) {
+            return [
+              existingPath.replace(`/docs/${currentVersion}`, '/docs/latest'),
+            ];
+          }
+          return undefined;
+        },
+      }
+    ],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+        disableInDev: false
+      }
+    ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          gravitino: {
+            specPath: 'docs/open-api/openapi.yaml',
+            outputDir: 'docs/api/rest',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag'
+            }
+          }
+        }
+      }
+    ],
   ],
 
   presets: [
@@ -53,13 +100,23 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './docs/sidebars.ts',
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: ({ docPath }) => `https://github.com/apache/${siteRepoName}/tree/main/docs/${docPath}`,
+          docItemComponent: '@theme/ApiItem',
+          lastVersion: currentVersion,
+          versions: {
+            [currentVersion]: {
+              label: currentVersion,
+              path: currentVersion
+            }
+          },
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true
         },
         blog: {
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All our posts',
           showReadingTime: true,
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: ({ blogPath }) => `https://github.com/apache/${siteRepoName}/tree/main/blog/${blogPath}`,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -154,6 +211,7 @@ const config: Config = {
       </div>`,
     },
   } satisfies Preset.ThemeConfig,
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
   scripts: [
     {
       src: 'js/matomo.js',

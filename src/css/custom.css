@@ -20,7 +20,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
  
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, Helvetica, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Android Emoji', EmojiSymbols, 'EmojiOne Mozilla', 'Twemoji Mozilla',
+  'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 14px;
 }
 
 .tw{
@@ -77,4 +80,24 @@ body {
 
 .footer__links {
   text-align: center;
+}
+
+/* openapi plugin overrides */
+
+pre.openapi__method-endpoint {
+  background-color: unset !important;
+}
+
+.theme-doc-markdown .tabs-container,
+.theme-doc-markdown form,
+.openapi-explorer__response-container {
+  background-color: unset !important;
+}
+
+.theme-doc-markdown.markdown * svg.iconify {
+  vertical-align: middle;
+}
+
+.theme-doc-markdown .theme-doc-version-badge {
+  display: none;
 }

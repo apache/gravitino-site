@@ -1,0 +1,863 @@
+---
+id: alter-schema
+title: "Update schema"
+description: "Updates the specified schema in the specified catalog and metalake"
+sidebar_label: "Update schema"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Update schema
+</h1>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/metalakes/{metalake}/catalogs/{catalog}/schemas/{schema}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the specified schema in the specified catalog and metalake
+
+## Request
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"catalog","in":"path","description":"The name of the catalog","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"schema","in":"path","description":"The name of the schema","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  updates
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><div>
+                <span
+                  className={"badge badge--info"}
+                >
+                  oneOf
+                </span><SchemaTabs>
+                  <TabItem
+                    label={"SetSchemaPropertyRequest"}
+                    value={"0-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`setProperty`]"}
+                      schema={{"type":"string","enum":["setProperty"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"property"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The name of the property to set"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The value of the property to set"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"RemoveSchemaPropertyRequest"}
+                    value={"1-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`removeProperty`]"}
+                      schema={{"type":"string","enum":["removeProperty"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"property"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The name of the property to remove"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem>
+                </SchemaTabs>
+              </div><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns include the schema object
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                schema
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              A schema
+                              
+                              
+                            </div><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The name of the schema"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"comment"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"A comment describing the schema","nullable":true}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      audit
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__required"}
+                                    >
+                                      required
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Audit information for a Gravitino resource.
+                                    
+                                    
+                                  </div><SchemaItem
+                                    collapsible={false}
+                                    name={"creator"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The user who created the resource"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"createTime"}
+                                    required={false}
+                                    schemaName={"date-time"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"date-time","description":"The time the resource was created"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"lastModifier"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The user who last modified the resource"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"lastModifiedTime"}
+                                    required={false}
+                                    schemaName={"date-time"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"date-time","description":"The time the resource was last modified"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      properties
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__nullable"}
+                                    >
+                                      nullable
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    A map of properties for the schema
+                                    
+                                    
+                                  </div><SchemaItem
+                                    name={"property name*"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                    collapsible={false}
+                                    discriminator={false}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"schema\": {\n    \"name\": \"string\",\n    \"comment\": \"string\",\n    \"audit\": {\n      \"creator\": \"string\",\n      \"createTime\": \"2024-09-10T02:59:42.162Z\",\n      \"lastModifier\": \"string\",\n      \"lastModifiedTime\": \"2024-09-10T02:59:42.162Z\"\n    },\n    \"properties\": {}\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"SchemaResponse"}
+                  value={"SchemaResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"schema\": {\n    \"name\": \"my_hive_schema\",\n    \"comment\": \"This is my Hive schema\",\n    \"properties\": {\n      \"key1\": \"value1\",\n      \"key2\": \"value2\",\n      \"location\": \"hdfs://0.0.0.0:9000/user/hive/warehouse\"\n    },\n    \"audit\": {\n      \"creator\": \"gravitino\",\n      \"createTime\": \"2023-12-08T08:37:43.531Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found - The target schema does not exist
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetalakeException"}
+                  value={"NoSuchMetalakeException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetalakeException\",\n  \"message\": \"Failed to operate metalake(s) [test] operation [LOAD], reason [NoSuchMetalakeException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetalakeException: Metalake test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchCatalogException"}
+                  value={"NoSuchCatalogException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchCatalogException\",\n  \"message\": \"Failed to operate catalog(s) [test] operation [LOAD] under metalake [my_test_metalake], reason [NoSuchCatalogException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchCatalogException: Catalog my_test_metalake.test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchSchemaException"}
+                  value={"NoSuchSchemaException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchSchemaException\",\n  \"message\": \"Failed to operate schema(s) [my_hive_schema1] operation [LOAD] under catalog [my_hive_catalog], reason [NoSuchSchemaException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchSchemaException: Hive schema (database) does not exist: my_hive_schema1 in Hive Metastore\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"409"}
+        value={"409"}
+      >
+        <div>
+          
+          
+          Conflict - The target schema already exists
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"SchemaAlreadyExistsExistsException"}
+                  value={"SchemaAlreadyExistsExistsException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1004,\n  \"type\": \"SchemaAlreadyExistsException\",\n  \"message\": \"Failed to operate schema(s) [my_hive_schema] operation [CREATE] under catalog [my_hive_catalog], reason [SchemaAlreadyExistsException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.SchemaAlreadyExistsException: Hive schema (database) 'my_hive_schema' already exists in Hive Metastore\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

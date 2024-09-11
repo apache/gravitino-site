@@ -21,6 +21,10 @@ excludes = [
   # Website generated files
   "build",
   ".docusaurus",
+  "static",
+  "theme",
+  "docs",
+  "versioned_docs",
 
   # Documents
   "**/*.md",
@@ -29,4 +33,5 @@ excludes = [
   # Meta files
   "NOTICE",
   ".nojekyll",
+  "CURRENT_VERSION",
 ]

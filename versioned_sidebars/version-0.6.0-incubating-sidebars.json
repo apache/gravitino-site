@@ -1,0 +1,812 @@
+{
+  "docs": [
+    {
+      "id": "index",
+      "label": "What's Apache Gravitino?",
+      "type": "doc"
+    },
+    {
+      "id": "overview",
+      "label": "Overview",
+      "type": "doc"
+    },
+    {
+      "id": "getting-started",
+      "label": "Getting started",
+      "type": "doc"
+    },
+    {
+      "id": "how-to-install",
+      "label": "How to install Gravitino",
+      "type": "doc"
+    },
+    {
+      "id": "iceberg-rest-service",
+      "label": "Iceberg REST catalog service",
+      "type": "doc"
+    },
+    {
+      "id": "webui",
+      "label": "Web UI",
+      "type": "doc"
+    },
+    {
+      "label": "Running Gravitino on",
+      "type": "category",
+      "items": [
+        {
+          "label": "Local",
+          "type": "link",
+          "href": "/docs/0.6.0-incubating/getting-started#getting-started-locally"
+        },
+        {
+          "label": "Amazon Web Services",
+          "type": "link",
+          "href": "/docs/0.6.0-incubating/getting-started#getting-started-on-amazon-web-services"
+        },
+        {
+          "label": "Google Cloud Platform",
+          "type": "link",
+          "href": "/docs/0.6.0-incubating/getting-started#getting-started-on-google-cloud-platform"
+        }
+      ]
+    },
+    {
+      "label": "Catalogs",
+      "type": "category",
+      "items": [
+        {
+          "label": "Relational",
+          "type": "category",
+          "items": [
+            {
+              "id": "lakehouse-iceberg-catalog",
+              "label": "Iceberg catalog",
+              "type": "doc"
+            },
+            {
+              "id": "apache-hive-catalog",
+              "label": "Hive catalog",
+              "type": "doc"
+            },
+            {
+              "id": "jdbc-mysql-catalog",
+              "label": "MySQL catalog",
+              "type": "doc"
+            },
+            {
+              "id": "jdbc-postgresql-catalog",
+              "label": "PostgreSQL catalog",
+              "type": "doc"
+            },
+            {
+              "id": "jdbc-doris-catalog",
+              "label": "Doris catalog",
+              "type": "doc"
+            },
+            {
+              "id": "lakehouse-paimon-catalog",
+              "label": "Paimon catalog",
+              "type": "doc"
+            }
+          ]
+        },
+        {
+          "label": "Fileset",
+          "type": "category",
+          "items": [
+            {
+              "id": "hadoop-catalog",
+              "label": "Hadoop catalog",
+              "type": "doc"
+            }
+          ]
+        },
+        {
+          "label": "Messaging",
+          "type": "category",
+          "items": [
+            {
+              "id": "kafka-catalog",
+              "label": "Kafka catalog",
+              "type": "doc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Trino connector",
+      "type": "category",
+      "items": [
+        {
+          "id": "trino-connector/index",
+          "label": "Index",
+          "type": "doc"
+        },
+        {
+          "id": "trino-connector/trino-connector",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "id": "trino-connector/requirements",
+          "label": "Requirements",
+          "type": "doc"
+        },
+        {
+          "id": "trino-connector/installation",
+          "label": "Installation",
+          "type": "doc"
+        },
+        {
+          "id": "trino-connector/configuration",
+          "label": "Configuration",
+          "type": "doc"
+        },
+        {
+          "label": "Supported catalogs",
+          "type": "category",
+          "items": [
+            {
+              "id": "trino-connector/supported-catalog",
+              "label": "Introduction",
+              "type": "doc"
+            },
+            {
+              "id": "trino-connector/catalog-hive",
+              "label": "Hive",
+              "type": "doc"
+            },
+            {
+              "id": "trino-connector/catalog-iceberg",
+              "label": "Iceberg",
+              "type": "doc"
+            },
+            {
+              "id": "trino-connector/catalog-mysql",
+              "label": "MySQL",
+              "type": "doc"
+            },
+            {
+              "id": "trino-connector/catalog-postgresql",
+              "label": "PostgreSQL",
+              "type": "doc"
+            }
+          ]
+        },
+        {
+          "id": "trino-connector/sql-support",
+          "label": "Supported SQL",
+          "type": "doc"
+        },
+        {
+          "id": "trino-connector/development",
+          "label": "Development",
+          "type": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Spark connector",
+      "type": "category",
+      "items": [
+        {
+          "id": "spark-connector/spark-connector",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "id": "spark-connector/spark-catalog-hive",
+          "label": "Hive",
+          "type": "doc"
+        },
+        {
+          "id": "spark-connector/spark-catalog-iceberg",
+          "label": "Iceberg",
+          "type": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Flink connector",
+      "type": "category",
+      "items": [
+        {
+          "id": "flink-connector/flink-connector",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "id": "flink-connector/flink-catalog-hive",
+          "label": "Hive",
+          "type": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Server administration",
+      "type": "category",
+      "items": [
+        {
+          "id": "gravitino-server-config",
+          "label": "Configurations",
+          "type": "doc"
+        },
+        {
+          "id": "metrics",
+          "label": "Metrics",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-use-relational-backend-storage",
+          "label": "How to use relational backend storage",
+          "type": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Security",
+      "type": "category",
+      "items": [
+        {
+          "id": "security/security",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "id": "security/access-control",
+          "label": "Access Control",
+          "type": "doc"
+        },
+        {
+          "id": "security/how-to-authenticate",
+          "label": "How to authenticate",
+          "type": "doc"
+        },
+        {
+          "id": "security/how-to-use-cors",
+          "label": "How to use CORS",
+          "type": "doc"
+        },
+        {
+          "id": "security/how-to-use-https",
+          "label": "How to use HTTPS",
+          "type": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Gravitino playground",
+      "type": "category",
+      "items": [
+        {
+          "id": "how-to-use-the-playground",
+          "label": "Use Gravitino playground",
+          "type": "doc"
+        },
+        {
+          "label": "Install on AWS or GCP",
+          "type": "link",
+          "href": "/docs/0.6.0-incubating/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform"
+        }
+      ]
+    },
+    {
+      "label": "Programming guides",
+      "type": "category",
+      "items": [
+        {
+          "id": "manage-metalake-using-gravitino",
+          "label": "Manage metalake",
+          "type": "doc"
+        },
+        {
+          "id": "manage-relational-metadata-using-gravitino",
+          "label": "Manage relational metadata",
+          "type": "doc"
+        },
+        {
+          "id": "manage-table-partition-using-gravitino",
+          "label": "Manage table partition",
+          "type": "doc"
+        },
+        {
+          "id": "table-partitioning-bucketing-sort-order-indexes",
+          "label": "Table partitioning, bucketing, sort ordering and indexes",
+          "type": "doc"
+        },
+        {
+          "id": "expression",
+          "label": "Expression system",
+          "type": "doc"
+        },
+        {
+          "id": "manage-fileset-metadata-using-gravitino",
+          "label": "Manage fileset metadata",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-use-gvfs",
+          "label": "Use Gravitino Virtual File System with Filesets",
+          "type": "doc"
+        },
+        {
+          "id": "manage-messaging-metadata-using-gravitino",
+          "label": "Manage messaging metadata",
+          "type": "doc"
+        },
+        {
+          "id": "manage-tags-in-gravitino",
+          "label": "Manage tags in Gravitino",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-use-python-client",
+          "label": "Use Gravitino Python Client",
+          "type": "doc"
+        },
+        {
+          "label": "Gravitino Open API",
+          "type": "category",
+          "items": [
+            {
+              "type": "doc",
+              "id": "api/rest/gravitino-rest-api"
+            },
+            {
+              "type": "category",
+              "label": "metalake",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-metalakes",
+                  "label": "List metalakes",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-metalake",
+                  "label": "Create metalake",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-metalake",
+                  "label": "Get metalake",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-metalake",
+                  "label": "Update metalake",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-metalake",
+                  "label": "Drop metalake",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "tag",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-tags",
+                  "label": "List tags (names)",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-tag",
+                  "label": "Create tag",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-tag",
+                  "label": "Get tag",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-tag",
+                  "label": "Update tag",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/delete-tag",
+                  "label": "Delete tag",
+                  "className": "api-method delete"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-object-tags",
+                  "label": "List tags (names) for metadata object",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/associate-tags",
+                  "label": "Associate tags with metadata object",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-object-tag",
+                  "label": "Get tag for metadata object",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-tag-objects",
+                  "label": "list metadata objects for tag",
+                  "className": "api-method get"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "catalog",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-catalogs",
+                  "label": "List catalogs (names)",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-catalog",
+                  "label": "Create catalog",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/test-connection",
+                  "label": "Test catalog connection",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-catalog",
+                  "label": "Get catalog",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-catalog",
+                  "label": "Update catalog",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-catalog",
+                  "label": "Drop catalog",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "schema",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-schemas",
+                  "label": "List schemas",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-schema",
+                  "label": "Create schema",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-schema",
+                  "label": "Get schema",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-schema",
+                  "label": "Update schema",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-schema",
+                  "label": "Drop schema",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "table",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-tables",
+                  "label": "List tables",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-table",
+                  "label": "Create table",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-table",
+                  "label": "Get table",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-table",
+                  "label": "Update table",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-table",
+                  "label": "Drop table",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "partition",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-partitions",
+                  "label": "List partitions (names)",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/add-partitions",
+                  "label": "Add partitions",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-partition",
+                  "label": "Get partition by name",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-partition",
+                  "label": "Drop partition by name",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "fileset",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-filesets",
+                  "label": "List filesets",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-fileset",
+                  "label": "Create fileset",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-fileset",
+                  "label": "Get fileset",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-fileset",
+                  "label": "Update fileset",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-fileset",
+                  "label": "Drop fileset",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "topic",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-topics",
+                  "label": "List topics",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-topic",
+                  "label": "Create topic",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/load-topic",
+                  "label": "Get topic",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-topic",
+                  "label": "Update topic",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/drop-topic",
+                  "label": "Delete topic",
+                  "className": "api-method delete"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "access control",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/add-user",
+                  "label": "Add user",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-user",
+                  "label": "Get user",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/remove-user",
+                  "label": "Remove user",
+                  "className": "api-method delete"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/add-group",
+                  "label": "Add group",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-group",
+                  "label": "Get group",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/remove-group",
+                  "label": "Remove group",
+                  "className": "api-method delete"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-role",
+                  "label": "Create role",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-role",
+                  "label": "Get Role",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/delete-role",
+                  "label": "Delete role",
+                  "className": "api-method delete"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/set-owner",
+                  "label": "Set owner",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-owner",
+                  "label": "Get owner",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/grant-role-to-user",
+                  "label": "Grant roles to a user",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/revoke-role-from-user",
+                  "label": "Revoke roles to a user",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/grant-role-to-group",
+                  "label": "Grant roles to a group",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/revoke-role-from-group",
+                  "label": "Revoke roles to a group",
+                  "className": "api-method put"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Gravitino Java doc",
+          "type": "link",
+          "href": "pathname:///docs/0.6.0-incubating/api/java/index.html"
+        }
+      ]
+    },
+    {
+      "label": "Development guides",
+      "type": "category",
+      "items": [
+        {
+          "id": "how-to-build",
+          "label": "How to build",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-test",
+          "label": "How to test",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-sign-releases",
+          "label": "How to sign and verify",
+          "type": "doc"
+        },
+        {
+          "id": "publish-docker-images",
+          "label": "Publish Docker images",
+          "type": "doc"
+        },
+        {
+          "id": "docker-image-details",
+          "label": "Docker image details",
+          "type": "doc"
+        },
+        {
+          "id": "how-to-upgrade",
+          "label": "How to upgrade",
+          "type": "doc"
+        }
+      ]
+    },
+    "glossary"
+  ]
+}
