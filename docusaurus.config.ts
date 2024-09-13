@@ -59,6 +59,7 @@ const config: Config = {
           if (existingPath.includes(`/docs/${currentVersion}`)) {
             return [
               existingPath.replace(`/docs/${currentVersion}`, '/docs/latest'),
+              existingPath.replace(`/docs/${currentVersion}`, '/docs/'),
             ];
           }
           return undefined;
