@@ -1,0 +1,88 @@
+---
+title: Apache Gravitino 0.6.1 release for Apache Gravitino™ (incubating)
+slug: gravitino-0-6-1-release-notes
+authors: [Minghuang Li]
+tags: [apache,gravitino,metadata,multicloud]
+---
+
+We are pleased to announce the stable release of Gravitino 0.6.1-incubating, based on branch-0.6.
+This release brings a suite of new features and enhancements, particularly focusing on the unified
+access control system. Additionally, it includes various bug fixes and optimizations across other 
+components.
+
+## Security
+
+- Supports list users [#3348](https://github.com/apache/gravitino/issues/3348)
+- Supports list roles [#3346](https://github.com/apache/gravitino/issues/3346)
+- Supports list roles by object [#4886](https://github.com/apache/gravitino/issues/4886)
+- Supports list group [#4873](https://github.com/apache/gravitino/issues/4873)
+- Supports grant or revoke privileges for a role [#4903](https://github.com/apache/gravitino/issues/4903)
+- Improved security with additional checks for privilege APIs [#5054](https://github.com/apache/gravitino/issues/5054) [#5070](https://github.com/apache/gravitino/issues/5070)
+- Fix Hive metastore authentication failed when creating a role [#4960](https://github.com/apache/gravitino/issues/4960)
+- Remove role local cache [#4246](https://github.com/apache/gravitino/issues/4246)
+- Addressed a response error in Ranger when calling the Ranger CREATE_GROUP API [#4975](https://github.com/apache/gravitino/issues/4975)
+
+## Gravitino Core
+
+- Fixed an issue with updating comments in metalake or catalog operations [#4845](https://github.com/apache/gravitino/issues/4845)
+- Introduced a basic framework to support multiple JDBC backends [#4832](https://github.com/apache/gravitino/issues/4832) [#4868](https://github.com/apache/gravitino/issues/4868)
+- Fixed a cleanup bug occurring after failed catalog creation attempts [#5082](https://github.com/apache/gravitino/issues/5082)
+
+## Tag
+
+- Transitioned Tag REST APIs to Object path for improved management [#5000](https://github.com/apache/gravitino/issues/5000)
+
+## Catalogs
+
+### Iceberg
+
+- Use unified logic to transform catalog backend name to handle the renaming of catalog [#4718](https://github.com/apache/gravitino/issues/4718)
+
+### Doris
+
+- Fix the missing distribution information when loading Doris tables [#4988](https://github.com/apache/gravitino/issues/4988)
+
+## Trino Connector
+
+- Corrected the default precision settings for Time and Timestamp column types in the Iceberg catalog [#4743](https://github.com/apache/gravitino/issues/4743)
+
+## UI
+
+- Supports creating Paimon catalog [#4742](https://github.com/apache/gravitino/issues/4742)
+- Improved user experience by showing an expand arrow when reloading tree nodes [#5042](https://github.com/apache/gravitino/issues/5042)
+
+## Build and Others
+
+- Fix the env of openAPI lint plugin [#4876](https://github.com/apache/gravitino/issues/4876)
+- Addressed an Out Of Memory (OOM) issue during Trino connector tests [#4871](https://github.com/apache/gravitino/issues/4871)
+- Resolved a test failure in testCheckLinkDocs for the web module [#4914](https://github.com/apache/gravitino/issues/4914)
+- Increase the Python timeout minutes to 45 minutes [#5038](https://github.com/apache/gravitino/issues/5038)
+- Ensured that TestHiveTableOperations can be run independently [#4851](https://github.com/apache/gravitino/issues/4851)
+- Added LICENSE and NOTICE files for the Iceberg REST binary to comply with licensing requirements [#5010](https://github.com/apache/gravitino/issues/5010)
+
+## Limitations and Known Issues
+
+- Please be aware that the Ranger authorization plugin within the unified access control system may exhibit some limitations and known issues. For detailed information, refer to issue [#5115](https://github.com/apache/gravitino/issues/5115).
+
+## Credits
+
+We would like to thank the following contributors for their valuable contributions to this release:
+
+[@diqiu50](https://github.com/diqiu50)
+[@FANNG1](https://github.com/FANNG1)
+[@jerqi](https://github.com/jerqi)
+[@jerryshao](https://github.com/jerryshao)
+[@justinmclean](https://github.com/justinmclean)
+[@LauraXia123](https://github.com/LauraXia123)
+[@LindaSummer](https://github.com/LindaSummer)
+[@LiuQhahah](https://github.com/LiuQhahah)
+[@lsyulong](https://github.com/lsyulong)
+[@lw-yang](https://github.com/lw-yang)
+[@mchades](https://github.com/mchades)
+[@tyoushinya](https://github.com/tyoushinya)
+[@yangyuxia](https://github.com/yangyuxia)
+[@yuqi1129](https://github.com/yuqi1129)
+
+<sub>Apache, Apache Iceberg, Apache Hive, Apache Fink, Apache Paimon and Apache Gravitino are either
+registered trademarks or trademarks of the Apache Software Foundation in the United States 
+and/or other countries.</sub>
