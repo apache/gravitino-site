@@ -1,0 +1,758 @@
+---
+id: grant-privilege-to-role
+title: "Grant privileges to a role"
+description: "Grant privileges to a role"
+sidebar_label: "Grant privileges to a role"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Grant privileges to a role
+</h1>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/metalakes/{metalake}/permissions/roles/{role}/{metadataObjectType}/{metadataObjectFullName}/grant"}
+>
+  
+</MethodEndpoint>
+
+
+
+Grant privileges to a role
+
+## Request
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"role","in":"path","description":"The name of the role","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metadataObjectType","in":"path","description":"The type of the metadata object","required":true,"schema":{"type":"string","enum":["CATALOG","SCHEMA","TABLE","FILESET","TOPIC","ROLE","METALAKE"]}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metadataObjectFullName","in":"path","description":"The full name of the metadata object","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  privileges
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
+              >
+                
+                
+                The privileges need to grant
+                
+                
+              </div><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"name"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={"**Possible values:** [`CREATE_CATALOG`, `USE_CATALOG`, `CREATE_SCHEMA`, `USE_SCHEMA`, `CREATE_TABLE`, `MODIFY_TABLE`, `SELECT_TABLE`, `CREATE_FILESET`, `WRITE_FILESET`, `READ_FILESET`, `CREATE_TOPIC`, `PRODUCE_TOPIC`, `CONSUME_TOPIC`, `MANAGE_USERS`, `MANAGE_GROUPS`, `CREATE_ROLE`, `MANAGE_GRANTS`]"}
+                schema={{"type":"string","enum":["CREATE_CATALOG","USE_CATALOG","CREATE_SCHEMA","USE_SCHEMA","CREATE_TABLE","MODIFY_TABLE","SELECT_TABLE","CREATE_FILESET","WRITE_FILESET","READ_FILESET","CREATE_TOPIC","PRODUCE_TOPIC","CONSUME_TOPIC","MANAGE_USERS","MANAGE_GROUPS","CREATE_ROLE","MANAGE_GRANTS"],"description":"The name of the privilege"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"condition"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={"**Possible values:** [`ALLOW`, `DENY`]"}
+                schema={{"type":"string","enum":["ALLOW","DENY"],"description":"The condition of the privilege, `ALLOW` or `DENY`"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns the granted role object
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                role
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The name of the role"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      properties
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__nullable"}
+                                    >
+                                      nullable
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    A map of properties for the role
+                                    
+                                    
+                                  </div><SchemaItem
+                                    name={"property name*"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                    collapsible={false}
+                                    discriminator={false}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      securableObjects
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    A list of securable objects
+                                    
+                                    
+                                  </div><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"fullName"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The full name of the securable object"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"type"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={"**Possible values:** [`CATALOG`, `SCHEMA`, `TABLE`, `FILESET`, `TOPIC`, `METALAKE`]"}
+                                    schema={{"type":"string","enum":["CATALOG","SCHEMA","TABLE","FILESET","TOPIC","METALAKE"],"description":"The type of the securable object"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            privileges
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object[]
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <div
+                                          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                        >
+                                          
+                                          
+                                          A list of privileges
+                                          
+                                          
+                                        </div><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
+                                          collapsible={false}
+                                          name={"name"}
+                                          required={true}
+                                          schemaName={"string"}
+                                          qualifierMessage={"**Possible values:** [`CREATE_CATALOG`, `USE_CATALOG`, `CREATE_SCHEMA`, `USE_SCHEMA`, `CREATE_TABLE`, `MODIFY_TABLE`, `SELECT_TABLE`, `CREATE_FILESET`, `WRITE_FILESET`, `READ_FILESET`, `CREATE_TOPIC`, `PRODUCE_TOPIC`, `CONSUME_TOPIC`, `MANAGE_USERS`, `MANAGE_GROUPS`, `CREATE_ROLE`, `MANAGE_GRANTS`]"}
+                                          schema={{"type":"string","enum":["CREATE_CATALOG","USE_CATALOG","CREATE_SCHEMA","USE_SCHEMA","CREATE_TABLE","MODIFY_TABLE","SELECT_TABLE","CREATE_FILESET","WRITE_FILESET","READ_FILESET","CREATE_TOPIC","PRODUCE_TOPIC","CONSUME_TOPIC","MANAGE_USERS","MANAGE_GROUPS","CREATE_ROLE","MANAGE_GRANTS"],"description":"The name of the privilege"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"condition"}
+                                          required={true}
+                                          schemaName={"string"}
+                                          qualifierMessage={"**Possible values:** [`ALLOW`, `DENY`]"}
+                                          schema={{"type":"string","enum":["ALLOW","DENY"],"description":"The condition of the privilege, `ALLOW` or `DENY`"}}
+                                        >
+                                          
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"role\": {\n    \"name\": \"string\",\n    \"properties\": {},\n    \"securableObjects\": [\n      {\n        \"fullName\": \"string\",\n        \"type\": \"CATALOG\",\n        \"privileges\": [\n          {\n            \"name\": \"CREATE_CATALOG\",\n            \"condition\": \"ALLOW\"\n          }\n        ]\n      }\n    ]\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"GroupResponse"}
+                  value={"GroupResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"role\": {\n    \"name\": \"role1\",\n    \"properties\": {\n      \"k1\": \"v1\"\n    },\n    \"securableObjects\": [\n      {\n        \"fullName\": \"catalog1.schema1.table1\",\n        \"type\": \"TABLE\",\n        \"privileges\": [\n          {\n            \"name\": \"SELECT_TABLE\",\n            \"condition\": \"ALLOW\"\n          }\n        ]\n      }\n    ]\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found - The specified medata object or role does not exist in the specified metalake
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetalakeException"}
+                  value={"NoSuchMetalakeException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetalakeException\",\n  \"message\": \"Failed to operate metalake(s) [test] operation [LOAD], reason [NoSuchMetalakeException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetalakeException: Metalake test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetadataObjectException"}
+                  value={"NoSuchMetadataObjectException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetadataObjectException\",\n  \"message\": \"Metadata object does not exist\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchUserException: Metadata object does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchRoleException"}
+                  value={"NoSuchRoleException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchRoleException\",\n  \"message\": \"Role does not exist\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchRoleException: Role does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
