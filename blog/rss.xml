@@ -4,10 +4,97 @@
         <title>Apache Gravitino Blog</title>
         <link>https://gravitino.apache.org/blog</link>
         <description>Apache Gravitino Blog</description>
-        <lastBuildDate>Mon, 09 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 21 Oct 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Apache Gravitino 0.6.1 release for Apache Gravitino™ (incubating)]]></title>
+            <link>https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes</link>
+            <guid>https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes</guid>
+            <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are pleased to announce the stable release of Gravitino 0.6.1-incubating, based on branch-0.6.]]></description>
+            <content:encoded><![CDATA[<p>We are pleased to announce the stable release of Gravitino 0.6.1-incubating, based on branch-0.6.
+This release brings a suite of new features and enhancements, particularly focusing on the unified
+access control system. Additionally, it includes various bug fixes and optimizations across other
+components.</p>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#security">​</a></h2>
+<ul>
+<li>Supports list users <a href="https://github.com/apache/gravitino/issues/3348" target="_blank" rel="noopener noreferrer">#3348</a></li>
+<li>Supports list roles <a href="https://github.com/apache/gravitino/issues/3346" target="_blank" rel="noopener noreferrer">#3346</a></li>
+<li>Supports list roles by object <a href="https://github.com/apache/gravitino/issues/4886" target="_blank" rel="noopener noreferrer">#4886</a></li>
+<li>Supports list group <a href="https://github.com/apache/gravitino/issues/4873" target="_blank" rel="noopener noreferrer">#4873</a></li>
+<li>Supports grant or revoke privileges for a role <a href="https://github.com/apache/gravitino/issues/4903" target="_blank" rel="noopener noreferrer">#4903</a></li>
+<li>Improved security with additional checks for privilege APIs <a href="https://github.com/apache/gravitino/issues/5054" target="_blank" rel="noopener noreferrer">#5054</a> <a href="https://github.com/apache/gravitino/issues/5070" target="_blank" rel="noopener noreferrer">#5070</a></li>
+<li>Fix Hive metastore authentication failed when creating a role <a href="https://github.com/apache/gravitino/issues/4960" target="_blank" rel="noopener noreferrer">#4960</a></li>
+<li>Remove role local cache <a href="https://github.com/apache/gravitino/issues/4246" target="_blank" rel="noopener noreferrer">#4246</a></li>
+<li>Addressed a response error in Ranger when calling the Ranger CREATE_GROUP API <a href="https://github.com/apache/gravitino/issues/4975" target="_blank" rel="noopener noreferrer">#4975</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="gravitino-core">Gravitino Core<a class="hash-link" aria-label="Direct link to Gravitino Core" title="Direct link to Gravitino Core" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#gravitino-core">​</a></h2>
+<ul>
+<li>Fixed an issue with updating comments in metalake or catalog operations <a href="https://github.com/apache/gravitino/issues/4845" target="_blank" rel="noopener noreferrer">#4845</a></li>
+<li>Introduced a basic framework to support multiple JDBC backends <a href="https://github.com/apache/gravitino/issues/4832" target="_blank" rel="noopener noreferrer">#4832</a> <a href="https://github.com/apache/gravitino/issues/4868" target="_blank" rel="noopener noreferrer">#4868</a></li>
+<li>Fixed a cleanup bug occurring after failed catalog creation attempts <a href="https://github.com/apache/gravitino/issues/5082" target="_blank" rel="noopener noreferrer">#5082</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="tag">Tag<a class="hash-link" aria-label="Direct link to Tag" title="Direct link to Tag" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#tag">​</a></h2>
+<ul>
+<li>Transitioned Tag REST APIs to Object path for improved management <a href="https://github.com/apache/gravitino/issues/5000" target="_blank" rel="noopener noreferrer">#5000</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="catalogs">Catalogs<a class="hash-link" aria-label="Direct link to Catalogs" title="Direct link to Catalogs" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#catalogs">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_ShBs" id="iceberg">Iceberg<a class="hash-link" aria-label="Direct link to Iceberg" title="Direct link to Iceberg" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#iceberg">​</a></h3>
+<ul>
+<li>Use unified logic to transform catalog backend name to handle the renaming of catalog <a href="https://github.com/apache/gravitino/issues/4718" target="_blank" rel="noopener noreferrer">#4718</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_ShBs" id="doris">Doris<a class="hash-link" aria-label="Direct link to Doris" title="Direct link to Doris" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#doris">​</a></h3>
+<ul>
+<li>Fix the missing distribution information when loading Doris tables <a href="https://github.com/apache/gravitino/issues/4988" target="_blank" rel="noopener noreferrer">#4988</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="trino-connector">Trino Connector<a class="hash-link" aria-label="Direct link to Trino Connector" title="Direct link to Trino Connector" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#trino-connector">​</a></h2>
+<ul>
+<li>Corrected the default precision settings for Time and Timestamp column types in the Iceberg catalog <a href="https://github.com/apache/gravitino/issues/4743" target="_blank" rel="noopener noreferrer">#4743</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="ui">UI<a class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#ui">​</a></h2>
+<ul>
+<li>Supports creating Paimon catalog <a href="https://github.com/apache/gravitino/issues/4742" target="_blank" rel="noopener noreferrer">#4742</a></li>
+<li>Improved user experience by showing an expand arrow when reloading tree nodes <a href="https://github.com/apache/gravitino/issues/5042" target="_blank" rel="noopener noreferrer">#5042</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="build-and-others">Build and Others<a class="hash-link" aria-label="Direct link to Build and Others" title="Direct link to Build and Others" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#build-and-others">​</a></h2>
+<ul>
+<li>Fix the env of openAPI lint plugin <a href="https://github.com/apache/gravitino/issues/4876" target="_blank" rel="noopener noreferrer">#4876</a></li>
+<li>Addressed an Out Of Memory (OOM) issue during Trino connector tests <a href="https://github.com/apache/gravitino/issues/4871" target="_blank" rel="noopener noreferrer">#4871</a></li>
+<li>Resolved a test failure in testCheckLinkDocs for the web module <a href="https://github.com/apache/gravitino/issues/4914" target="_blank" rel="noopener noreferrer">#4914</a></li>
+<li>Increase the Python timeout minutes to 45 minutes <a href="https://github.com/apache/gravitino/issues/5038" target="_blank" rel="noopener noreferrer">#5038</a></li>
+<li>Ensured that TestHiveTableOperations can be run independently <a href="https://github.com/apache/gravitino/issues/4851" target="_blank" rel="noopener noreferrer">#4851</a></li>
+<li>Added LICENSE and NOTICE files for the Iceberg REST binary to comply with licensing requirements <a href="https://github.com/apache/gravitino/issues/5010" target="_blank" rel="noopener noreferrer">#5010</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="limitations-and-known-issues">Limitations and Known Issues<a class="hash-link" aria-label="Direct link to Limitations and Known Issues" title="Direct link to Limitations and Known Issues" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#limitations-and-known-issues">​</a></h2>
+<ul>
+<li>Please be aware that the Ranger authorization plugin within the unified access control system may exhibit some limitations and known issues. For detailed information, refer to issue <a href="https://github.com/apache/gravitino/issues/5115" target="_blank" rel="noopener noreferrer">#5115</a>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_ShBs" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#credits">​</a></h2>
+<p>We would like to thank the following contributors for their valuable contributions to this release:</p>
+<p><a href="https://github.com/diqiu50" target="_blank" rel="noopener noreferrer">@diqiu50</a>
+<a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">@FANNG1</a>
+<a href="https://github.com/jerqi" target="_blank" rel="noopener noreferrer">@jerqi</a>
+<a href="https://github.com/jerryshao" target="_blank" rel="noopener noreferrer">@jerryshao</a>
+<a href="https://github.com/justinmclean" target="_blank" rel="noopener noreferrer">@justinmclean</a>
+<a href="https://github.com/LauraXia123" target="_blank" rel="noopener noreferrer">@LauraXia123</a>
+<a href="https://github.com/LindaSummer" target="_blank" rel="noopener noreferrer">@LindaSummer</a>
+<a href="https://github.com/LiuQhahah" target="_blank" rel="noopener noreferrer">@LiuQhahah</a>
+<a href="https://github.com/lsyulong" target="_blank" rel="noopener noreferrer">@lsyulong</a>
+<a href="https://github.com/lw-yang" target="_blank" rel="noopener noreferrer">@lw-yang</a>
+<a href="https://github.com/mchades" target="_blank" rel="noopener noreferrer">@mchades</a>
+<a href="https://github.com/tyoushinya" target="_blank" rel="noopener noreferrer">@tyoushinya</a>
+<a href="https://github.com/yangyuxia" target="_blank" rel="noopener noreferrer">@yangyuxia</a>
+<a href="https://github.com/yuqi1129" target="_blank" rel="noopener noreferrer">@yuqi1129</a></p>
+<sub>Apache, Apache Iceberg, Apache Hive, Apache Fink, Apache Paimon and Apache Gravitino are either
+registered trademarks or trademarks of the Apache Software Foundation in the United States
+and/or other countries.</sub>]]></content:encoded>
+            <category>apache</category>
+            <category>gravitino</category>
+            <category>metadata</category>
+            <category>multicloud</category>
+        </item>
         <item>
             <title><![CDATA[Apache Gravitino 0.6.0 - First ASF release for Apache Gravitino™ (incubating)]]></title>
             <link>https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes</link>
