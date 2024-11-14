@@ -1,0 +1,123 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.filesystem.gvfs.GravitinoVirtualFileSystem
+====================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs
+
+.. autoclass:: GravitinoVirtualFileSystem
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoVirtualFileSystem.__init__
+      ~GravitinoVirtualFileSystem.cat
+      ~GravitinoVirtualFileSystem.cat_file
+      ~GravitinoVirtualFileSystem.cat_ranges
+      ~GravitinoVirtualFileSystem.checksum
+      ~GravitinoVirtualFileSystem.clear_instance_cache
+      ~GravitinoVirtualFileSystem.copy
+      ~GravitinoVirtualFileSystem.cp
+      ~GravitinoVirtualFileSystem.cp_file
+      ~GravitinoVirtualFileSystem.created
+      ~GravitinoVirtualFileSystem.current
+      ~GravitinoVirtualFileSystem.delete
+      ~GravitinoVirtualFileSystem.disk_usage
+      ~GravitinoVirtualFileSystem.download
+      ~GravitinoVirtualFileSystem.du
+      ~GravitinoVirtualFileSystem.end_transaction
+      ~GravitinoVirtualFileSystem.exists
+      ~GravitinoVirtualFileSystem.expand_path
+      ~GravitinoVirtualFileSystem.find
+      ~GravitinoVirtualFileSystem.from_json
+      ~GravitinoVirtualFileSystem.get
+      ~GravitinoVirtualFileSystem.get_file
+      ~GravitinoVirtualFileSystem.get_mapper
+      ~GravitinoVirtualFileSystem.glob
+      ~GravitinoVirtualFileSystem.head
+      ~GravitinoVirtualFileSystem.info
+      ~GravitinoVirtualFileSystem.invalidate_cache
+      ~GravitinoVirtualFileSystem.isdir
+      ~GravitinoVirtualFileSystem.isfile
+      ~GravitinoVirtualFileSystem.lazy_load_class
+      ~GravitinoVirtualFileSystem.lexists
+      ~GravitinoVirtualFileSystem.listdir
+      ~GravitinoVirtualFileSystem.ls
+      ~GravitinoVirtualFileSystem.makedir
+      ~GravitinoVirtualFileSystem.makedirs
+      ~GravitinoVirtualFileSystem.mkdir
+      ~GravitinoVirtualFileSystem.mkdirs
+      ~GravitinoVirtualFileSystem.modified
+      ~GravitinoVirtualFileSystem.move
+      ~GravitinoVirtualFileSystem.mv
+      ~GravitinoVirtualFileSystem.open
+      ~GravitinoVirtualFileSystem.pipe
+      ~GravitinoVirtualFileSystem.pipe_file
+      ~GravitinoVirtualFileSystem.put
+      ~GravitinoVirtualFileSystem.put_file
+      ~GravitinoVirtualFileSystem.read_block
+      ~GravitinoVirtualFileSystem.read_bytes
+      ~GravitinoVirtualFileSystem.read_text
+      ~GravitinoVirtualFileSystem.rename
+      ~GravitinoVirtualFileSystem.rm
+      ~GravitinoVirtualFileSystem.rm_file
+      ~GravitinoVirtualFileSystem.rmdir
+      ~GravitinoVirtualFileSystem.sign
+      ~GravitinoVirtualFileSystem.size
+      ~GravitinoVirtualFileSystem.sizes
+      ~GravitinoVirtualFileSystem.start_transaction
+      ~GravitinoVirtualFileSystem.stat
+      ~GravitinoVirtualFileSystem.tail
+      ~GravitinoVirtualFileSystem.to_json
+      ~GravitinoVirtualFileSystem.touch
+      ~GravitinoVirtualFileSystem.ukey
+      ~GravitinoVirtualFileSystem.unstrip_protocol
+      ~GravitinoVirtualFileSystem.upload
+      ~GravitinoVirtualFileSystem.walk
+      ~GravitinoVirtualFileSystem.write_bytes
+      ~GravitinoVirtualFileSystem.write_text
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GravitinoVirtualFileSystem.SLASH
+      ~GravitinoVirtualFileSystem.async_impl
+      ~GravitinoVirtualFileSystem.blocksize
+      ~GravitinoVirtualFileSystem.cachable
+      ~GravitinoVirtualFileSystem.cache
+      ~GravitinoVirtualFileSystem.fsid
+      ~GravitinoVirtualFileSystem.mirror_sync_methods
+      ~GravitinoVirtualFileSystem.protocol
+      ~GravitinoVirtualFileSystem.root_marker
+      ~GravitinoVirtualFileSystem.sep
+      ~GravitinoVirtualFileSystem.transaction
+   
+   

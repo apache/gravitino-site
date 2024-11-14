@@ -1,0 +1,80 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.catalog.fileset\_catalog.FilesetCatalog
+=================================================
+
+.. currentmodule:: gravitino.catalog.fileset_catalog
+
+.. autoclass:: FilesetCatalog
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FilesetCatalog.__init__
+      ~FilesetCatalog.alter_fileset
+      ~FilesetCatalog.alter_schema
+      ~FilesetCatalog.as_fileset_catalog
+      ~FilesetCatalog.as_schemas
+      ~FilesetCatalog.as_table_catalog
+      ~FilesetCatalog.as_topic_catalog
+      ~FilesetCatalog.audit_info
+      ~FilesetCatalog.builder
+      ~FilesetCatalog.check_fileset_name_identifier
+      ~FilesetCatalog.check_fileset_namespace
+      ~FilesetCatalog.comment
+      ~FilesetCatalog.create_fileset
+      ~FilesetCatalog.create_schema
+      ~FilesetCatalog.drop_fileset
+      ~FilesetCatalog.drop_schema
+      ~FilesetCatalog.format_file_location_request_path
+      ~FilesetCatalog.format_fileset_request_path
+      ~FilesetCatalog.format_schema_request_path
+      ~FilesetCatalog.get_file_location
+      ~FilesetCatalog.list_filesets
+      ~FilesetCatalog.list_schemas
+      ~FilesetCatalog.load_fileset
+      ~FilesetCatalog.load_schema
+      ~FilesetCatalog.name
+      ~FilesetCatalog.properties
+      ~FilesetCatalog.provider
+      ~FilesetCatalog.schema_exists
+      ~FilesetCatalog.to_fileset_update_request
+      ~FilesetCatalog.to_schema_update_request
+      ~FilesetCatalog.type
+      ~FilesetCatalog.validate
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FilesetCatalog.PROPERTY_PACKAGE
+      ~FilesetCatalog.rest_client
+   
+   
