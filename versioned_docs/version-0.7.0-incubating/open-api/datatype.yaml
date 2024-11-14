@@ -1,0 +1,220 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+---
+
+components:
+  schemas:
+    DataType:
+      oneOf:
+        - $ref: "#/components/schemas/PrimitiveType"
+        - $ref: "#/components/schemas/StructType"
+        - $ref: "#/components/schemas/ListType"
+        - $ref: "#/components/schemas/MapType"
+        - $ref: "#/components/schemas/UnionType"
+        - $ref: "#/components/schemas/UnparsedType"
+
+    PrimitiveType:
+      type: string
+      example:
+        - "boolean"
+        - "byte"
+        - "byte unsigned"
+        - "short"
+        - "short unsigned"
+        - "integer"
+        - "integer unsigned"
+        - "long"
+        - "long unsigned"
+        - "float"
+        - "double"
+        - "decimal(10,2)"
+        - "date"
+        - "time"
+        - "timestamp"
+        - "timestamp_tz"
+        - "string"
+        - "char(10)"
+        - "varchar(10)"
+        - "interval_day"
+        - "interval_year"
+        - "uuid"
+        - "fixed(16)"
+        - "binary"
+
+    UnionType:
+      type: object
+      required:
+        - type
+        - types
+      properties:
+        type:
+          type: string
+          enum:
+            - "union"
+        types:
+          type: array
+          items:
+            $ref: "#/components/schemas/DataType"
+      example: {
+        "type": "union",
+        "types": [
+          "string",
+          "integer"
+        ]
+      }
+
+    MapType:
+      type: object
+      required:
+        - type
+        - keyType
+        - valueType
+      properties:
+        type:
+          type: string
+          enum:
+            - "map"
+        keyType:
+          $ref: "#/components/schemas/DataType"
+        valueType:
+          $ref: "#/components/schemas/DataType"
+        valueContainsNull:
+          type: boolean
+          description: Whether the value of the map contains null values
+          nullable: true
+          default: true
+      example: {
+        "type": "map",
+        "keyType": "string",
+        "valueType": "integer",
+        "valueContainsNull": false
+      }
+
+    ListType:
+      type: object
+      required:
+        - type
+        - elementType
+      properties:
+        type:
+          type: string
+          enum:
+            - "list"
+        containsNull:
+          type: boolean
+          description: Whether the list contains null values
+          nullable: true
+          default: true
+        elementType:
+          $ref: "#/components/schemas/DataType"
+      example: {
+        "type": "list",
+        "elementType": "integer",
+        "containsNull": false
+      }
+
+    StructType:
+      type: object
+      required:
+        - type
+        - fields
+      properties:
+        type:
+          type: string
+          enum:
+            - "struct"
+        fields:
+          type: array
+          items:
+            $ref: "#/components/schemas/StructField"
+      example: {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "nullable": false,
+            "comment": "The id of the user"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "nullable": false,
+            "comment": "The name of the user"
+          }
+        ]
+      }
+
+    StructField:
+      type: object
+      required:
+        - name
+        - type
+      properties:
+        name:
+          type: string
+          description: The name of the struct field
+        type:
+          $ref: "#/components/schemas/DataType"
+        nullable:
+          type: boolean
+          description: Whether the struct field is nullable
+          nullable: true
+          default: true
+        comment:
+          type: string
+          description: The comment of the struct field
+          nullable: true
+
+    UnparsedType:
+      type: object
+      required:
+        - type
+        - unparsedType
+      properties:
+        type:
+          type: string
+          enum:
+            - "unparsed"
+        unparsedType:
+          type: string
+          description: The unparsed type
+      example: {
+        "type": "unparsed",
+        "unparsedType": [
+          "unknown-type"
+        ]
+      }
+
+  ExternalType:
+    type: object
+    required:
+      - type
+      - catalogString
+    properties:
+      type:
+        type: string
+        enum:
+          - "external"
+      catalogString:
+        type: string
+        description: The string representation of this type in the catalog
+    example: {
+      "type": "external",
+      "externalType": "user-defined"
+    }
