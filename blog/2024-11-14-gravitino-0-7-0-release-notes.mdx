@@ -15,19 +15,19 @@ significant features and improvements. Please keep reading to learn more about w
 
 As more and more users run their data stacks on the cloud and use cloud object storage, cloud
 storage support becomes an imperative requirement. In this release, the community mainly focuses on
-adding cloud storage support for Gravitino and makes sure Gravitino itself and its connectors/sources 
+adding cloud storage support for Gravitino and makes sure Gravitino itself and its connectors/sources
 can work smoothly with cloud storage.
 
 In this release:
 
-* Gravitino Iceberg REST catalog server now supports different cloud storages, including AWS S3, 
+* Gravitino Iceberg REST catalog server now supports different cloud storages, including AWS S3,
   Google GCS, Aliyun OSS. Users can simply configure it to make it work.
-* Gravitino Fileset catalog now supports managing files (objects) stored in S3, GCS, and OSS. 
-  Gravitino provides both server-side pluggable framework and client-side Java / Python GVFS 
-  (Gravitino Virtual File System) SDK. Users can easily use their existing tools with the 
-  Gravitino provided bundled packages to access the data in the cloud storage. Besides, 
+* Gravitino Fileset catalog now supports managing files (objects) stored in S3, GCS, and OSS.
+  Gravitino provides both server-side pluggable framework and client-side Java / Python GVFS
+  (Gravitino Virtual File System) SDK. Users can easily use their existing tools with the
+  Gravitino provided bundled packages to access the data in the cloud storage. Besides,
   Gravitino also provides a pluggable framework for users to implement their own storage support.
-* Gravitino’s Hive, Paimon, and Iceberg catalogs also adds and verifies the support with 
+* Gravitino’s Hive, Paimon, and Iceberg catalogs also adds and verifies the support with
   different cloud storage in this release.
 * Gravitino’s Spark, Trino connector also verifies to work with cloud storage.
 
@@ -55,7 +55,7 @@ and the [design document](https://docs.google.com/document/d/1fovK0ylSmI45ynrCPc
 
 ## Unified access control improvements
 
-In Gravitino 0.6.0, we introduced the alpha version of unified access control with Apache Ranger 
+In Gravitino 0.6.0, we introduced the alpha version of unified access control with Apache Ranger
 support ([here](https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#introducing-the-unified-rbac-model-for-gravitino)),
 but this feature still needs to improve a lot. In the version 0.7.0, we add lots of improvements
 and fix bunches of bugs to make this access control end to end workable. Now, with the release of
@@ -69,11 +69,11 @@ unified access control feature.
 Thanks to the community, Gravitino now supports centralized audit log. With this feature enabled,
 users can get the audit log in the centralized place, no matter they’re accessing tables or filesets from various sources.
 
-Gravitino’s audit log framework also supports to plugin different formatter and writer, so users 
+Gravitino’s audit log framework also supports to plugin different formatter and writer, so users
 can implement their own log format and output destinations.
 
 Please see the issues [#4887](https://github.com/apache/gravitino/issues/4887)
-and [#4021](https://github.com/apache/gravitino/issues/4021) to know more about Gravitino’s 
+and [#4021](https://github.com/apache/gravitino/issues/4021) to know more about Gravitino’s
 centralized audit log.
 
 ## New data sources support
@@ -88,14 +88,14 @@ manipulate Hudi and Oceanbase metadata in a unified manner.
 Apart from the features listed above, this version also improves a lot in its core, here lists several important features:
 
 * Add PostgreSQL support for storage backend [#4101](https://github.com/apache/gravitino/issues/4101).
-  Gravitino already supports using MySQL, H2 as its backend metadata storage. In 0.7.0, the 
+  Gravitino already supports using MySQL, H2 as its backend metadata storage. In 0.7.0, the
   community adds the PostgreSQL support to enlarge its adoption.
 * Unify the catalog and metalake drop behavior [#5031](https://github.com/apache/gravitino/issues/5031).
-  In the previous version, we didn’t enforce the behavior of catalog and metadata drop operation. 
+  In the previous version, we didn’t enforce the behavior of catalog and metadata drop operation.
   In this version, we redefine its behavior and make it much safer to use.
 * Manage the column in Gravitino [#4493](https://github.com/apache/gravitino/issues/4493).
   In 0.7.0, we introduce the column entity in Gravitino, and can be managed by Gravitino versionly.
-  With this feature introduced, Gravitino now can support tagging on columns, and in future it 
+  With this feature introduced, Gravitino now can support tagging on columns, and in future it
   can support column level operations.
 * Add event listener for Iceberg REST catalog server [#5204](https://github.com/apache/gravitino/issues/5204)
   and support pre-event for event listener [#5112](https://github.com/apache/gravitino/issues/5112).
