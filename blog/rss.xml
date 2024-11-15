@@ -13,81 +13,78 @@
             <link>https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes</link>
             <guid>https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes</guid>
             <pubDate>Thu, 14 Nov 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Gravitino 0.7.0 is the second major release after entering the ASF. In this release, the community]]></description>
-            <content:encoded><![CDATA[<p>Gravitino 0.7.0 is the second major release after entering the ASF. In this release, the community
-mainly focuses on strengthening cloud support, to make Gravitino work better in the cloud environment.</p>
-<p>This release blog will briefly introduce the new features related to cloud support, as well as other
+            <description><![CDATA[Apache Gravitino 0.7.0 is the second major release after entering the ASF. In this release, the community]]></description>
+            <content:encoded><![CDATA[<p>Apache Gravitino 0.7.0 is the second major release after entering the ASF. In this release, the community
+mainly focused on strengthening cloud support to make Gravitino work better in cloud environments.</p>
+<p>This release blog will briefly introduce the new features related to cloud support and other
 significant features and improvements. Please keep reading to learn more about what the community has worked on.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="cloud-storage-support-for-gravitino">Cloud storage support for Gravitino<a class="hash-link" aria-label="Direct link to Cloud storage support for Gravitino" title="Direct link to Cloud storage support for Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#cloud-storage-support-for-gravitino">​</a></h2>
-<p>As more and more users run their data stacks on the cloud and use cloud object storage, cloud
-storage support becomes an imperative requirement. In this release, the community mainly focuses on
-adding cloud storage support for Gravitino and makes sure Gravitino itself and its connectors/sources
+<p>As more and more users run their data stacks in the cloud and use cloud object storage, cloud
+storage support has become an imperative requirement. In this release, the community has mainly focused on
+adding cloud storage support for Gravitino to make sure Gravitino itself and its connectors/sources
 can work smoothly with cloud storage.</p>
 <p>In this release:</p>
 <ul>
-<li>Gravitino Iceberg REST catalog server now supports different cloud storages, including AWS S3,
+<li>Gravitino Iceberg REST catalog server now supports different cloud storage services, including AWS S3,
 Google GCS, Aliyun OSS. Users can simply configure it to make it work.</li>
 <li>Gravitino Fileset catalog now supports managing files (objects) stored in S3, GCS, and OSS.
 Gravitino provides both server-side pluggable framework and client-side Java / Python GVFS
 (Gravitino Virtual File System) SDK. Users can easily use their existing tools with the
-Gravitino provided bundled packages to access the data in the cloud storage. Besides,
-Gravitino also provides a pluggable framework for users to implement their own storage support.</li>
+Gravitino provided bundled packages to access the data in the cloud. Also,
+Gravitino provides a pluggable framework for users to implement their own storage support.</li>
 <li>Gravitino’s Hive, Paimon, and Iceberg catalogs also adds and verifies the support with
-different cloud storage in this release.</li>
-<li>Gravitino’s Spark, Trino connector also verifies to work with cloud storage.</li>
+different cloud storage.</li>
+<li>Gravitino’s Spark and Trino connectors also verifies cloud storage support.</li>
 </ul>
-<p>Overall, with 0.7.0 release Gravitino could generally support working with different cloud storages.
-You can check our issue <a href="https://github.com/apache/gravitino/issues/4396" target="_blank" rel="noopener noreferrer">#4396</a> to know more. Also,
-we’re continuing to add more cloud storage support in the following releases, please stay tuned.</p>
+<p>Overall, with the 0.7.0 release, Gravitino generally supports working with different cloud storage services.
+To know more, you can check our issue <a href="https://github.com/apache/gravitino/issues/4396" target="_blank" rel="noopener noreferrer">#4396</a>. Also,
+we’re continuing to add more cloud storage support in future releases. Please stay tuned.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="credential-vending-support-in-gravitino">Credential vending support in Gravitino<a class="hash-link" aria-label="Direct link to Credential vending support in Gravitino" title="Direct link to Credential vending support in Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credential-vending-support-in-gravitino">​</a></h2>
-<p>Besides the cloud storage support, credential vending support is also important for Gravitino,
-especially to work with cloud storage. The traditional way of using AKSK is not convenient and safe,
-with credential vending technology, Gravitino server will help users to get the temporary tokens for
-authentication, which will significantly simplify the client side configurations and centralized the
-authentications.</p>
-<p>In Gravitino 0.7.0, we introduce a framework to support Credential vending, also add S3 and GCS
-token support. Besides, we integrated this framework in Gravitino Iceberg REST catalog service. So
-users can smoothly access the Iceberg table on S3 and GCS with authentication.</p>
-<p>But, this is just the first step of credential vending, we will add more integrations with Gravitino,
+<p>Besides cloud storage support, credential vending support is also vital for Gravitino,
+especially to work with cloud storage. The traditional way of using AKSK is not convenient or safe.
+With credential vending technology, the Gravitino server will help users get temporary tokens for
+authentication, significantly simplifying the client-side configurations and centralizing authentications.</p>
+<p>Gravitino 0.7.0 introduces a framework to support Credential vending and also adds S3 and GCS
+token support. This framework is integrated into Gravitino's Iceberg REST catalog service. So
+users can smoothly access Iceberg tables on S3 and GCS with authentication.</p>
+<p>This is just the first step of credential vending, and we will add more integrations with Gravitino,
 like fileset support, connector support, etc, in the next release.</p>
 <p>For the details of credential vending, please check the issue <a href="https://github.com/apache/gravitino/issues/4398" target="_blank" rel="noopener noreferrer">#4398</a>
 and the <a href="https://docs.google.com/document/d/1fovK0ylSmI45ynrCPcnRZqzyPDn7DRNb_ExdbjVPq0k/edit?tab=t.0#heading=h.1cts6muko2j1" target="_blank" rel="noopener noreferrer">design document</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="unified-access-control-improvements">Unified access control improvements<a class="hash-link" aria-label="Direct link to Unified access control improvements" title="Direct link to Unified access control improvements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#unified-access-control-improvements">​</a></h2>
-<p>In Gravitino 0.6.0, we introduced the alpha version of unified access control with Apache Ranger
+<p>Gravitino 0.6.0 introduced the alpha version of unified access control with Apache Ranger
 support (<a href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#introducing-the-unified-rbac-model-for-gravitino" target="_blank" rel="noopener noreferrer">here</a>),
-but this feature still needs to improve a lot. In the version 0.7.0, we add lots of improvements
-and fix bunches of bugs to make this access control end to end workable. Now, with the release of
-0.7.0, the Gravitino unified access control can work well with Spark and Ranger to secure the table
-from end to end. To see what we have fixed, please check out our issue <a href="https://github.com/apache/gravitino/issues/4615" target="_blank" rel="noopener noreferrer">#4615</a>.
-You can also try our <a href="https://github.com/apache/gravitino-playground" target="_blank" rel="noopener noreferrer">playground</a> to experience the
+but this feature still needs improvement. In version 0.7.0, we added many improvements and bug fixes to make this end-to-end access control workable. Now, with the release of
+0.7.0, the Gravitino unified access control works well with Spark and Ranger to secure end-to-end table access. To see what we have fixed, please check out our issue <a href="https://github.com/apache/gravitino/issues/4615" target="_blank" rel="noopener noreferrer">#4615</a>.
+You can also try our <a href="https://github.com/apache/gravitino-playground" target="_blank" rel="noopener noreferrer">playground</a> to try out the
 unified access control feature.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="centralized-audit-log-support">Centralized audit log support<a class="hash-link" aria-label="Direct link to Centralized audit log support" title="Direct link to Centralized audit log support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#centralized-audit-log-support">​</a></h2>
-<p>Thanks to the community, Gravitino now supports centralized audit log. With this feature enabled,
-users can get the audit log in the centralized place, no matter they’re accessing tables or filesets from various sources.</p>
-<p>Gravitino’s audit log framework also supports to plugin different formatter and writer, so users
+<p>Thanks to the community, Gravitino now supports centralized audit logs. With this feature enabled,
+users can get the audit information in a centralized place, whether they’re accessing tables or filesets from various sources.</p>
+<p>Gravitino’s audit log framework also supports different plugin formatters and writers, and users
 can implement their own log format and output destinations.</p>
 <p>Please see the issues <a href="https://github.com/apache/gravitino/issues/4887" target="_blank" rel="noopener noreferrer">#4887</a>
 and <a href="https://github.com/apache/gravitino/issues/4021" target="_blank" rel="noopener noreferrer">#4021</a> to know more about Gravitino’s
 centralized audit log.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="new-data-sources-support">New data sources support<a class="hash-link" aria-label="Direct link to New data sources support" title="Direct link to New data sources support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#new-data-sources-support">​</a></h2>
-<p>As a unified data catalog, the community always pursue the target of adding more data sources. In
-this version, Gravitino adds two new data sources, one is <a href="https://hudi.apache.org/" target="_blank" rel="noopener noreferrer">Apache Hudi</a>,
-another is <a href="https://github.com/oceanbase/oceanbase" target="_blank" rel="noopener noreferrer">OceanBase</a>. You can now use Gravitino to
+<p>As a unified data catalog, the community always aims to add more data sources. In
+this version, Gravitino adds two new data sources. One is <a href="https://hudi.apache.org/" target="_blank" rel="noopener noreferrer">Apache Hudi</a>,
+the other is <a href="https://github.com/oceanbase/oceanbase" target="_blank" rel="noopener noreferrer">OceanBase</a>. You can now use Gravitino to
 manipulate Hudi and Oceanbase metadata in a unified manner.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="various-core-features">Various core features<a class="hash-link" aria-label="Direct link to Various core features" title="Direct link to Various core features" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#various-core-features">​</a></h2>
-<p>Apart from the features listed above, this version also improves a lot in its core, here lists several important features:</p>
+<p>Apart from the features listed above, this version also improves a lot at its core, here are several important features:</p>
 <ul>
 <li>Add PostgreSQL support for storage backend <a href="https://github.com/apache/gravitino/issues/4101" target="_blank" rel="noopener noreferrer">#4101</a>.
 Gravitino already supports using MySQL, H2 as its backend metadata storage. In 0.7.0, the
 community adds the PostgreSQL support to enlarge its adoption.</li>
 <li>Unify the catalog and metalake drop behavior <a href="https://github.com/apache/gravitino/issues/5031" target="_blank" rel="noopener noreferrer">#5031</a>.
-In the previous version, we didn’t enforce the behavior of catalog and metadata drop operation.
-In this version, we redefine its behavior and make it much safer to use.</li>
-<li>Manage the column in Gravitino <a href="https://github.com/apache/gravitino/issues/4493" target="_blank" rel="noopener noreferrer">#4493</a>.
-In 0.7.0, we introduce the column entity in Gravitino, and can be managed by Gravitino versionly.
-With this feature introduced, Gravitino now can support tagging on columns, and in future it
-can support column level operations.</li>
-<li>Add event listener for Iceberg REST catalog server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>
+In the previous version, we didn’t enforce the behavior of catalog and metadata drop operations.
+In this version, we redefine its behavior and make it much safer.</li>
+<li>Manage columns in Gravitino <a href="https://github.com/apache/gravitino/issues/4493" target="_blank" rel="noopener noreferrer">#4493</a>.
+In 0.7.0, we introduce the column entity in Gravitino, which Gravitino can manage.
+With this feature introduced, Gravitino can now support tagging on columns, and in future, it
+will support column-level operations.</li>
+<li>Add an event listener for Iceberg REST catalog server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>
 and support pre-event for event listener <a href="https://github.com/apache/gravitino/issues/5112" target="_blank" rel="noopener noreferrer">#5112</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="other-notable-enhancements">Other notable enhancements<a class="hash-link" aria-label="Direct link to Other notable enhancements" title="Direct link to Other notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#other-notable-enhancements">​</a></h2>
@@ -103,7 +100,7 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <h3 class="anchor anchorWithStickyNavbar_LZKP" id="iceberg-rest-catalog-server">Iceberg REST catalog server<a class="hash-link" aria-label="Direct link to Iceberg REST catalog server" title="Direct link to Iceberg REST catalog server" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#iceberg-rest-catalog-server">​</a></h3>
 <ul>
 <li>Add credential vending for Iceberg REST server. <a href="https://github.com/apache/gravitino/issues/4993" target="_blank" rel="noopener noreferrer">#4993</a>.</li>
-<li>Add event listener for Iceberg REST server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>.</li>
+<li>Add an event listener for Iceberg REST server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>.</li>
 <li>Support pre-event for event listener <a href="https://github.com/apache/gravitino/issues/5112" target="_blank" rel="noopener noreferrer">#5112</a>.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LZKP" id="catalog-related">Catalog related<a class="hash-link" aria-label="Direct link to Catalog related" title="Direct link to Catalog related" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#catalog-related">​</a></h3>
@@ -111,7 +108,7 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <li>Add OSS support for fileset catalog <a href="https://github.com/apache/gravitino/issues/5173" target="_blank" rel="noopener noreferrer">#5173</a>.</li>
 <li>Add GCS support for fileset catalog <a href="https://github.com/apache/gravitino/issues/5074" target="_blank" rel="noopener noreferrer">#5074</a>.</li>
 <li>Add S3 support for fileset catalog <a href="https://github.com/apache/gravitino/issues/3379" target="_blank" rel="noopener noreferrer">#3379</a>.</li>
-<li>Add pluggable storage support fro fileset catalog <a href="https://github.com/apache/gravitino/issues/5019" target="_blank" rel="noopener noreferrer">#5019</a>.</li>
+<li>Add pluggable storage support for fileset catalog <a href="https://github.com/apache/gravitino/issues/5019" target="_blank" rel="noopener noreferrer">#5019</a>.</li>
 <li>Add S3 support for Paimon catalog <a href="https://github.com/apache/gravitino/issues/4938" target="_blank" rel="noopener noreferrer">#4938</a>.</li>
 <li>Add catalog support for Hudi <a href="https://github.com/apache/gravitino/issues/4306" target="_blank" rel="noopener noreferrer">#4306</a>.</li>
 <li>Add catalog support for OceanBase<a href="https://github.com/apache/gravitino/issues/4848" target="_blank" rel="noopener noreferrer">#4848</a>.</li>
@@ -129,13 +126,12 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <li>Add UI support for operating fileset <a href="https://github.com/apache/gravitino/issues/5167" target="_blank" rel="noopener noreferrer">#5167</a>.</li>
 <li>Add UI support for operating schema <a href="https://github.com/apache/gravitino/issues/5140" target="_blank" rel="noopener noreferrer">#5140</a>.</li>
 </ul>
-<p>All the resolved issues targeting to the 0.7.0 release can be seen at <a href="https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+" target="_blank" rel="noopener noreferrer">https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+</a>.</p>
+<p>All the resolved issues targeting the 0.7.0 release can be seen at <a href="https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+" target="_blank" rel="noopener noreferrer">https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#overall">​</a></h2>
-<p>Apache Gravitino 0.7.0 is the second ASF release, this version add bunch of new features, we would
-like to show appreciation to the Gravitino community for their continued support and valuable
-contributions. Thanks to the feedback of our users, we are able to continue to innovate and build,
+<p>Apache Gravitino 0.7.0 is the second ASF release. This version adds a bunch of new features. We thank the Gravitino community for their continued support and valuable
+contributions. Thanks to our users' feedback, we can continue to innovate and build,
 so thanks to all those reading this!</p>
-<p>To explore Gravitino 0.7.0 release, please check <a href="https://gravitino.apache.org/docs/0.7.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
+<p>To further explore the Gravitino 0.7.0 release, please check <a href="https://gravitino.apache.org/docs/0.7.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
 Your feedback is invaluable to the community and the project.</p>
 <h2 class="anchor anchorWithStickyNavbar_LZKP" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credits">​</a></h2>
 <p>This release acknowledges the hard work and dedication of all contributors who have helped make this release possible.</p>
