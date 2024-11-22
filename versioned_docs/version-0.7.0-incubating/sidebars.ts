@@ -241,6 +241,11 @@ const sidebars: SidebarsConfig = {
           id: 'spark-connector/spark-catalog-iceberg',
           label: 'Iceberg',
           type: 'doc'
+        },
+        {
+          id: 'spark-connector/spark-authentication-with-gravitino',
+          label: 'Spark authentication',
+          type: 'doc'
         }
       ]
     },
@@ -293,6 +298,11 @@ const sidebars: SidebarsConfig = {
         {
           id: 'security/access-control',
           label: 'Access Control',
+          type: 'doc'
+        },
+        {
+          id: 'security/authorization-pushdown',
+          label: 'Authorization Push-down',
           type: 'doc'
         },
         {
