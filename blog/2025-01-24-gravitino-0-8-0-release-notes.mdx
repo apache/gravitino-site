@@ -1,0 +1,135 @@
+---
+title: Apache Gravitino 0.8.0 - strengthen the AI support for Apache Gravitino™ (incubating)
+slug: gravitino-0-8-0-release-notes
+authors: [FANNG]
+tags: [apache,gravitino,metadata,multicloud,model,fuse,credential-vending]
+---
+
+Apache Gravitino 0.8.0 is the third major release after entering the ASF. In this release, the community provides several exciting features like model catalog, Fuse for Fileset, credential vending for Fileset, Flink Iceberg and Paimon connector, Spark Paimon connector, and security enforcement.
+
+This release blog will briefly introduce the new significant features and improvements. Please keep reading to learn more about what the community has worked on.
+
+## Model Catalog
+
+Besides table and messaging metadata, Gravitino supports model metadata management in version 0.8. Gravitino allows a model to have multiple versions, and users can choose the best version. 0.8 provides basic functionality, and more features will be provided in the future, such as tagging models and better integration with machine learning workflows, to help users better manage models and extract more value from data and models.
+
+* Support model versioning metadata [#4783](https://github.com/apache/gravitino/issues/4783).
+
+## Credential vending
+
+Credential vending is a fundamental function in the cloud. In version 0.7, credential vending was supported for the Iceberg REST server. In version 0.8, we offer support for the Gravitino server and integrate it with Fileset. Based on Credential vending, Fileset can be used more securely and conveniently. The Gravitino server will centrally manage the security key and issue a temporary token, which is only valid for the Fileset that needs to be accessed by the request, making it more secure and eliminating the need for the user side to provide information such as AKSK.
+
+In addition to the support for GCS and S3, version 0.8 also has built-in support for OSS and ADLS credential vending, and can support other storage in a pluggable manner.
+
+* Support credential vending for fileset client [#5677](https://github.com/apache/gravitino/issues/5677).
+* Support credential vending for Gravitino [#4398](https://github.com/apache/gravitino/issues/4398).
+* Support Aliyun OSS credential provider [#5625](https://github.com/apache/gravitino/issues/5625).
+* Support ADLS credential provider [#5624](https://github.com/apache/gravitino/issues/5624).
+
+## Fuse for Fileset
+
+With the widespread use of Fileset in AI scenarios, how to improve usability and reduce user usage costs has become a major issue. In AI scenarios, users tend to access remote data in the way of local disks. Fuse for fileset is designed based on this, enabling users to access data managed by Fileset as if they were using local disks. Currently, basic alpha functionality is provided, which allows access to S3 data managed by Fileset. In subsequent versions, metadata caching functionality and support for more storage will be provided. Fuse for fileset is developed in Rust for performance considerations, and everyone is welcome to join the development.
+
+* Implement GVFS fuse to access Gravitino fileset in the POSIX Protocol [#5504](https://github.com/apache/gravitino/issues/5504).
+
+## Lakehouse Federation
+
+Gravitino provides a variety of catalogs, such as Apache Hive, Apache Iceberg, Apache Hudi, and Apache Paimon, etc. How can it be better connected to the surrounding ecosystem to facilitate user use? This iteration provides Flink Paimon connector, Flink Iceberg connector, and Spark Paimon connector to access data from Paimon and Iceberg. More connectors will be supported in the future. Let's look forward to it.
+
+* Support Iceberg catalog in Flink connector [#3515](https://github.com/apache/gravitino/issues/3515).
+* Support Paimon catalog in Flink connector [#5194](https://github.com/apache/gravitino/issues/5194) [#5193](https://github.com/apache/gravitino/issues/5193) [#5192](https://github.com/apache/gravitino/issues/5192).
+* Support Paimon catalog in Spark connector [#5722](https://github.com/apache/gravitino/pull/5722).
+
+## Security enforcement
+
+As a metadata management system, security is of the utmost importance. In this iteration, we managing security policies in chain authorization, and support the push-down of SQL security policies and path-based security policies. Additionally, the privilege policies of Iceberg and Paimon tables can be pushed down to Ranger. Based on Gravitino's security policies, a solid foundation is provided for your business development.
+
+* Chain authorization multiple underlying data source [#5774](https://github.com/apache/gravitino/issues/5774).
+* SQL based  authorization plugin  [#5530](https://github.com/apache/gravitino/issues/5530).
+* Add path-based authorization securable object and user-group mapping interface [#5966](https://github.com/apache/gravitino/issues/5966).
+* Use chain authorization to support Hive and HDFS authorization [#5956](https://github.com/apache/gravitino/issues/5956).
+* Ranger Authorization HDFS Plugin [#5731](https://github.com/apache/gravitino/issues/5731).
+
+## Other notable enhancements
+
+### Iceberg REST server
+
+* Generate credential according to the data path and metadata path [#5648](https://github.com/apache/gravitino/issues/5648).
+* Integrate audit log framework for Iceberg REST server [#5556](https://github.com/apache/gravitino/issues/5556).
+* Add schema and view event for Iceberg REST server [#5438](https://github.com/apache/gravitino/issues/5438) [#5437](https://github.com/apache/gravitino/issues/5437).
+Add HTTP header to Iceberg event [#5518](https://github.com/apache/gravitino/issues/5518).
+
+### Core
+
+* Optimization tree lock when drop and load Table/Schema  [#6044](https://github.com/apache/gravitino/issues/6044).
+* Support ADLS storage for Gravitino Iceberg catalog and Spark connector [#5954](https://github.com/apache/gravitino/issues/5954).
+* Support pre-event for Gravitino server [#5317](https://github.com/apache/gravitino/issues/5317).
+
+### Gravitino Client
+
+* Add CLI interface for Gravitino [#4943](https://github.com/apache/gravitino/issues/4943).
+* Support Python client for table operations [#5198](https://github.com/apache/gravitino/issues/5198).
+
+## BUG FIX
+
+Version 0.8 has fixed a large number of bugs, especially in terms of security and fileset usage. Some are listed below.
+
+* Can't load filesystem 'gs' when use spark to access Gravitino GCS bundles [#5609](https://github.com/apache/gravitino/issues/5609).
+* Invalid token issue happened in GVFS when Spark job long running [#5596](https://github.com/apache/gravitino/issues/5596).
+* Trino, hive catalog: COMMNET COLUMN with ' ' or NULL has ArrayIndexOutOfBoundsException error, [#5533](https://github.com/apache/gravitino/issues/5533).
+* Correct the behaviors when creating Iceberg table with none distribution [#6196](https://github.com/apache/gravitino/issues/6196)
+* Updable to create fileset with minio [#6156](https://github.com/apache/gravitino/issues/6156).
+* Grant privileges to a role, duplicated privilege name with different condition shouldn’t be allowed to grant [#6116](https://github.com/apache/gravitino/issues/6116).
+* The owner of the catalog is incorrect when using Basic Auth and Password is empty [#5968](https://github.com/apache/gravitino/issues/5968).
+* Grant a metalake level privilege won't take effect [#5892](https://github.com/apache/gravitino/issues/5892).
+
+## Overall
+
+Apache Gravitino 0.8.0 is the third ASF release. This version adds a bunch of new features. We thank the Gravitino community for their continued support and valuable contributions. Thanks to our users' feedback, we can continue to innovate and build,
+so thanks to all those reading this!
+
+To further explore the Gravitino 0.8.0 release, please check [the documentation](https://gravitino.apache.org/docs/0.8.0-incubating).
+Your feedback is invaluable to the community and the project.
+
+
+## Credits
+
+This release acknowledges the hard work and dedication of all contributors who have helped make this release possible.
+
+[@Abyss-lord](https://github.com/Abyss-lord)
+[@Aireed](https://github.com/Aireed)
+[@FANNG1](https://github.com/FANNG1)
+[@LauraXia123](https://github.com/LauraXia123)
+[@LindaSummer](https://github.com/LindaSummer)
+[@LiuQhahah](https://github.com/LiuQhahah)
+[@SophieTech88](https://github.com/SophieTech88)
+[@TungYuChiang](https://github.com/TungYuChiang)
+[@caican00](https://github.com/caican00)
+[@chenyuan99](https://github.com/chenyuan99)
+[@cool9850311](https://github.com/cool9850311)
+[@danhuawang](https://github.com/danhuawang)
+[@deeshantk](https://github.com/deeshantk)
+[@diqiu50](https://github.com/diqiu50)
+[@featherchen](https://github.com/featherchen)
+[@frankvicky](https://github.com/frankvicky)
+[@fsalhi2](https://github.com/fsalhi2)
+[@hdygxsj](https://github.com/hdygxsj)
+[@hienduyph](https://github.com/hienduyph)
+[@jerqi](https://github.com/jerqi)
+[@jerryshao](https://github.com/jerryshao)
+[@justinmclean](https://github.com/justinmclean)
+[@liangyouze](https://github.com/liangyouze)
+[@liuchunhao](https://github.com/liuchunhao)
+[@luoshipeng](https://github.com/luoshipeng)
+[@mchades](https://github.com/mchades)
+[@orenccl](https://github.com/orenccl)
+[@pithecuse527](https://github.com/pithecuse527)
+[@rud9192](https://github.com/rud9192)
+[@sunxiaojian](https://github.com/sunxiaojian)
+[@theoryxu](https://github.com/theoryxu)
+[@waukin](https://github.com/waukin)
+[@xloya](https://github.com/xloya)
+[@xunliu](https://github.com/xunliu)
+[@yuqi1129](https://github.com/yuqi1129)
+
+<sub>Apache, Apache Fink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
