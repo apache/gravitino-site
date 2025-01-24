@@ -1,0 +1,61 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.client.gravitino\_admin\_client.GravitinoAdminClient
+==============================================================
+
+.. currentmodule:: gravitino.client.gravitino_admin_client
+
+.. autoclass:: GravitinoAdminClient
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoAdminClient.__init__
+      ~GravitinoAdminClient.alter_metalake
+      ~GravitinoAdminClient.check_metalake_name
+      ~GravitinoAdminClient.check_version
+      ~GravitinoAdminClient.close
+      ~GravitinoAdminClient.create_metalake
+      ~GravitinoAdminClient.disable_metalake
+      ~GravitinoAdminClient.drop_metalake
+      ~GravitinoAdminClient.enable_metalake
+      ~GravitinoAdminClient.get_client_version
+      ~GravitinoAdminClient.get_server_version
+      ~GravitinoAdminClient.list_metalakes
+      ~GravitinoAdminClient.load_metalake
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GravitinoAdminClient.API_METALAKES_IDENTIFIER_PATH
+      ~GravitinoAdminClient.API_METALAKES_LIST_PATH
+   
+   
