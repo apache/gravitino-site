@@ -1,0 +1,6 @@
+gravitino.exceptions.base.SchemaAlreadyExistsException
+======================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: SchemaAlreadyExistsException
