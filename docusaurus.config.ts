@@ -168,7 +168,7 @@ const config: Config = {
             },
             {
               label: 'Security',
-              to: 'https://github.com/apache/gravitino/blob/main/SECURITY.md'
+              to: 'https://www.apache.org/security/'
             },
             {
               label: 'Sponsorship',
