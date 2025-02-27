@@ -110,8 +110,8 @@ const config: Config = {
               path: currentVersion
             }
           },
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false
         },
         blog: {
           blogSidebarCount: 'ALL',
