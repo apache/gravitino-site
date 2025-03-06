@@ -37,9 +37,51 @@ const sidebars: SidebarsConfig = {
       type: 'doc'
     },
     {
-      id: 'getting-started',
-      label: 'Getting started',
-      type: 'doc'
+      "label": "Getting Started",
+      "type": "category",
+      "items": [
+        {
+          "id": "getting-started/index",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "label": "Prepare Environment",
+          "type": "category",
+          "items": [
+            {
+              "label": "Amazon Web Services",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#aws"
+            },
+            {
+              "label": "Google Cloud Platform",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#gcp"
+            },
+            {
+              "label": "Local Workstation",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#local-workstation"
+            }
+          ]
+        },
+        {
+          "id": "getting-started/hive",
+          "label": "Install Apache Hive",
+          "type": "doc"
+        },
+        {
+          "id": "getting-started/aws-remote-access",
+          "label": "Remote Accesss on AWS",
+          "type": "doc"
+        },
+        {
+          "id": "getting-started/playground",
+          "label": "Install Gravitino Playground",
+          "type": "doc"
+        }
+      ]
     },
     {
       id: 'how-to-install',
@@ -55,27 +97,6 @@ const sidebars: SidebarsConfig = {
       id: 'webui',
       label: 'Web UI',
       type: 'doc'
-    },
-    {
-      label: 'Running Gravitino on',
-      type: 'category',
-      items: [
-        {
-          label: 'Local',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-locally`
-        },
-        {
-          label: 'Amazon Web Services',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-on-amazon-web-services`
-        },
-        {
-          label: 'Google Cloud Platform',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-on-google-cloud-platform`
-        }
-      ]
     },
     {
       label: 'Catalogs',
@@ -400,14 +421,14 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'how-to-use-the-playground',
-          label: 'Use Gravitino playground',
-          type: 'doc'
+          "id": "getting-started/playground",
+          "label": "Install on AWS or GCP",
+          "type": "doc"
         },
         {
-          label: 'Install on AWS or GCP',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform`
+          "id": "how-to-use-the-playground",
+          "label": "Use Gravitino playground",
+          "type": "doc"
         }
       ]
     },
