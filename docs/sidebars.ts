@@ -107,56 +107,68 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'lakehouse-iceberg-catalog',
-              label: 'Iceberg catalog',
-              type: 'doc'
-            },
-            {
               label: 'Hive catalog',
               type: 'category',
               items: [
                 {
-                  id: 'apache-hive-catalog',
+                  id: 'catalogs/relational/hive/index',
                   label: 'Hive catalog',
                   type: 'doc'
                 },
                 {
-                  id: 'hive-catalog-with-cloud-storage',
+                  id: 'catalogs/relational/hive/cloud-storage',
                   label: 'Hive catalog with cloud storage',
                   type: 'doc'
                 }
               ]
             },
             {
-              id: 'jdbc-mysql-catalog',
-              label: 'MySQL catalog',
-              type: 'doc'
+              label: 'Lakehouse catalog',
+              type: 'category',
+              items: [
+                {
+                  id: 'catalogs/relational/lakehouse/hudi',
+                  label: 'Hudi catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/lakehouse/iceberg',
+                  label: 'Iceberg catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/lakehouse/paimon',
+                  label: 'Paimon catalog',
+                  type: 'doc'
+                }
+              ],
             },
             {
-              id: 'jdbc-postgresql-catalog',
-              label: 'PostgreSQL catalog',
-              type: 'doc'
-            },
-            {
-              id: 'jdbc-doris-catalog',
-              label: 'Doris catalog',
-              type: 'doc'
-            },
-            {
-              id: 'lakehouse-paimon-catalog',
-              label: 'Paimon catalog',
-              type: 'doc'
-            },
-            {
-              id: 'lakehouse-hudi-catalog',
-              label: 'Hudi catalog',
-              type: 'doc'
-            },
-            {
-              id: 'jdbc-oceanbase-catalog',
-              label: 'OceanBase catalog',
-              type: 'doc'
-            },
+              label: 'JDBC catalog',
+              type: 'category',
+              items: [
+                {
+                  id: 'catalogs/relational/jdbc/doris',
+                  label: 'Doris catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/mysql',
+                  label: 'MySQL catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/oceanbase',
+                  label: 'OceanBase catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/postgresql',
+                  label: 'PostgreSQL catalog',
+                  type: 'doc'
+                }
+              ]
+            }
           ]
         },
         {
@@ -168,33 +180,33 @@ const sidebars: SidebarsConfig = {
               type: 'category',
               items: [
                 {
-                  id: 'hadoop-catalog-index',
+                  id: 'catalogs/fileset/hadoop/index',
                   label: 'Hadoop catalog index',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog',
+                  id: 'catalogs/fileset/hadoop/hadoop-catalog',
                   label: 'Hadoop catalog',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-s3',
-                  label: 'Hadoop catalog with s3',
+                  id: 'catalogs/fileset/hadoop/s3',
+                  label: 'Hadoop catalog with S3',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-gcs',
-                  label: 'Hadoop catalog with gcs',
+                  id: 'catalogs/fileset/hadoop/gcs',
+                  label: 'Hadoop catalog with GCS',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-oss',
-                  label: 'Hadoop catalog with oss',
+                  id: 'catalogs/fileset/hadoop/oss',
+                  label: 'Hadoop catalog with OSS',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-adls',
-                  label: 'Hadoop catalog with adls',
+                  id: 'catalogs/fileset/hadoop/adls',
+                  label: 'Hadoop catalog with ADLS',
                   type: 'doc'
                 }
               ]
@@ -206,7 +218,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'kafka-catalog',
+              id: 'catalogs/messaging/kafka/index',
               label: 'Kafka catalog',
               type: 'doc'
             }
@@ -217,7 +229,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'model-catalog',
+              id: 'catalogs/model/index',
               label: 'Model catalog',
               type: 'doc'
             }
@@ -226,132 +238,138 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      label: 'Trino connector',
+      label: 'Connectors',
       type: 'category',
       items: [
         {
-          id: 'trino-connector/index',
-          label: 'Index',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/trino-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/requirements',
-          label: 'Requirements',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/installation',
-          label: 'Installation',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/configuration',
-          label: 'Configuration',
-          type: 'doc'
-        },
-        {
-          label: 'Supported catalogs',
+          label: 'Trino connector',
           type: 'category',
           items: [
             {
-              id: 'trino-connector/supported-catalog',
-              label: 'Introduction',
+              id: 'connectors/trino/index',
+              label: 'Index',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-hive',
-              label: 'Hive',
+              id: 'connectors/trino/trino-connector',
+              label: 'Overview',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-iceberg',
-              label: 'Iceberg',
+              id: 'connectors/trino/requirements',
+              label: 'Requirements',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-mysql',
-              label: 'MySQL',
+              id: 'connectors/trino/installation',
+              label: 'Installation',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-postgresql',
-              label: 'PostgreSQL',
+              id: 'connectors/trino/configuration',
+              label: 'Configuration',
+              type: 'doc'
+            },
+            {
+              label: 'Supported catalogs',
+              type: 'category',
+              items: [
+                {
+                  id: 'connectors/trino/supported-catalog',
+                  label: 'Introduction',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-hive',
+                  label: 'Hive',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-iceberg',
+                  label: 'Iceberg',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-mysql',
+                  label: 'MySQL',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-postgresql',
+                  label: 'PostgreSQL',
+                  type: 'doc'
+                }
+              ]
+            },
+            {
+              id: 'connectors/trino/sql-support',
+              label: 'Supported SQL',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/trino/development',
+              label: 'Development',
               type: 'doc'
             }
           ]
         },
         {
-          id: 'trino-connector/sql-support',
-          label: 'Supported SQL',
-          type: 'doc'
+          label: 'Spark connector',
+          type: 'category',
+          items: [
+            {
+              id: 'connectors/spark/index',
+              label: 'Overview',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-hive',
+              label: 'Hive',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-iceberg',
+              label: 'Iceberg',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-paimon',
+              label: 'Paimon',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-authentication-with-gravitino',
+              label: 'Spark authentication',
+              type: 'doc'
+            }
+          ]
         },
         {
-          id: 'trino-connector/development',
-          label: 'Development',
-          type: 'doc'
+          label: 'Flink connector',
+          type: 'category',
+          items: [
+            {
+              id: 'connectors/flink/index',
+              label: 'Overview',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-hive',
+              label: 'Hive',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-iceberg',
+              label: 'Iceberg',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-paimon',
+              label: 'Paimon',
+              type: 'doc'
+            }
+          ]
         }
-      ]
-    },
-    {
-      label: 'Spark connector',
-      type: 'category',
-      items: [
-        {
-          id: 'spark-connector/spark-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-hive',
-          label: 'Hive',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-authentication-with-gravitino',
-          label: 'Spark authentication',
-          type: 'doc'
-        }
-      ]
-    },
-    {
-      label: 'Flink connector',
-      type: 'category',
-      items: [
-        {
-          id: 'flink-connector/flink-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-hive',
-          label: 'Hive',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
       ]
     },
     {
