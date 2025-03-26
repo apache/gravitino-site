@@ -26,8 +26,8 @@ your system `PATH`, or the `JAVA_HOME` environment variable pointing to a Java i
 See [How to install Gravitino](./how-to-install.md) to learn how to install the Gravitino server.
 
 Gravitino provides Docker images on [Docker Hub](https://hub.docker.com/u/apache).
-Pull the image and run it. For details of the Gravitino Docker image, see
-[Docker image details](./docker-image-details.md).
+Pull the image and run it.
+For details of the Gravitino Docker image, see [Docker image details](./develop/docker-image-details.md).
 
 Gravitino also provides a playground to experience the whole Gravitino system with other components.
 See the [Gravitino playground repository](https://github.com/apache/gravitino-playground)
@@ -170,6 +170,7 @@ Gravitino provides several ways to configure and manage the Gravitino server. Se
 
 * [Gravitino metrics](./metrics.md): provides metrics configurations and detailed a metrics list
   of the Gravitino server.
+* [How to upgrade Gravitino](./how-to-upgrade.md): a guide to upgrading the schema of Gravitino storage backend from one release version to another.
 
 ### Security
 
@@ -189,11 +190,10 @@ Gravitino provides security configurations for Gravitino, including HTTPS, authe
 ### Development guides
 
 * [How to build Gravitino](./how-to-build.md): a complete guide to building Gravitino from source.
-* [How to test Gravitino](./how-to-test.md): a complete guide to running Gravitino unit and integration tests.
-* [How to sign and verify Gravitino releases](./how-to-sign-releases.md): a guide to signing and verifying
+* [How to test Gravitino](./develop/testing.md): a complete guide to running Gravitino unit and integration tests.
+* [How to sign and verify Gravitino releases](./develop/release-signing.md): a guide to signing and verifying
   a Gravitino release.
-* [Publish Docker images](./publish-docker-images.md): a guide to publishing Gravitino Docker images;
+* [Publish Docker images](./develop/publish-docker-images.md): a guide to publishing Gravitino Docker images;
   also lists the change logs of Gravitino CI Docker images and release images.
-* [How to upgrade Gravitino](./how-to-upgrade.md): a guide to upgrading the schema of Gravitino storage backend from one release version to another.
 
 <img src="https://analytics.apache.org/matomo.php?idsite=62&rec=1&bots=1&action_name=Overview" alt="" />

@@ -390,6 +390,11 @@ const sidebars: SidebarsConfig = {
           id: 'how-to-use-relational-backend-storage',
           label: 'How to use relational backend storage',
           type: 'doc'
+        },
+        {
+          id: 'how-to-upgrade',
+          label: 'How to upgrade',
+          type: 'doc'
         }
       ]
     },
@@ -527,37 +532,32 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      label: 'Development guides',
+      label: 'Development guide',
       type: 'category',
       items: [
         {
-          id: 'how-to-build',
-          label: 'How to build',
+          id: 'develop/how-to-build',
+          label: 'Building packages',
           type: 'doc'
         },
         {
-          id: 'how-to-test',
-          label: 'How to test',
+          id: 'develop/testing',
+          label: 'Testing the server',
           type: 'doc'
         },
         {
-          id: 'how-to-sign-releases',
-          label: 'How to sign and verify',
+          id: 'develop/release-signing',
+          label: 'Signing release files',
           type: 'doc'
         },
         {
-          id: 'publish-docker-images',
-          label: 'Publish Docker images',
+          id: 'develop/publish-docker-images',
+          label: 'publishing Docker images',
           type: 'doc'
         },
         {
-          id: 'docker-image-details',
+          id: 'develop/docker-image-details',
           label: 'Docker image details',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-upgrade',
-          label: 'How to upgrade',
           type: 'doc'
         }
       ]
