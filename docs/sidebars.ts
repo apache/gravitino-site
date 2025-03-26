@@ -75,11 +75,6 @@ const sidebars: SidebarsConfig = {
           "id": "getting-started/aws-remote-access",
           "label": "Remote Accesss on AWS",
           "type": "doc"
-        },
-        {
-          "id": "getting-started/playground",
-          "label": "Install Gravitino Playground",
-          "type": "doc"
         }
       ]
     },
@@ -444,13 +439,13 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          "id": "getting-started/playground",
-          "label": "Install on AWS or GCP",
+          "id": "playground/install",
+          "label": "Installing the Playground",
           "type": "doc"
         },
         {
-          "id": "how-to-use-the-playground",
-          "label": "Use Gravitino playground",
+          "id": "playground/using-the-playground",
+          "label": "Using the playground",
           "type": "doc"
         }
       ]

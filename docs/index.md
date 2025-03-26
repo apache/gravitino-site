@@ -15,7 +15,7 @@ It also provides users with unified metadata access for data and AI assets.
 ## Downloading
 
 You can get Gravitino from the [download page](https://gravitino.apache.org/downloads),
-or you can build Gravitino from source code. See [How to build Gravitino](./how-to-build.md).
+or you can build Gravitino from source code. See [How to build Gravitino](./develop/how-to-build.md).
 
 Gravitino runs on both Linux and macOS platforms, and it requires the installation of
 Java 8, Java 11, or Java 17. Gravitino trino-connector runs with Trino, and requires Java 17.
@@ -29,9 +29,8 @@ Gravitino provides Docker images on [Docker Hub](https://hub.docker.com/u/apache
 Pull the image and run it.
 For details of the Gravitino Docker image, see [Docker image details](./develop/docker-image-details.md).
 
-Gravitino also provides a playground to experience the whole Gravitino system with other components.
-See the [Gravitino playground repository](https://github.com/apache/gravitino-playground)
-and [How to use the playground](./how-to-use-the-playground.md).
+Gravitino also provides a playground environment for your to experiment with the whole Gravitino system.
+For the details, check [installing the Apache Gravitino layground](./playground/install.md).
 
 ## Getting started
 
@@ -100,18 +99,12 @@ Gravitino currently supports the following catalogs:
 
 ## Apache Gravitino playground
 
-To experience Gravitino with other components easily, Gravitino provides a playground to run.
-It integrates Apache Hadoop, Apache Hive, Trino, MySQL, PostgreSQL, and Gravitino together as a
-complete environment. To experience all the features, see
-[Getting started](./getting-started/index.md) and
-[How to use the Gravitino playground](./how-to-use-the-playground.md).
-
-* [Install Gravitino playground on AWS or GCP](./getting-started/playground.md):
-  a quick guide to starting and using the Gravitino playground on AWS or GCP.
-* [Install Gravitino playground locally](./getting-started/playground.md):
-  a quick guide to starting and using the Gravitino playground locally.
-* [How to use the Gravitino playground](./how-to-use-the-playground.md): provides an example of how
-  to use Gravitino and other components together.
+Gravitino provides a playground environment for you To experiment Gravitino with other components.
+This environment comprises components like *Apache Hadoop*, *Apache Hive*, *Trino*, *MySQL*, *PostgreSQL*,
+and the *Apache Gravitino* server.
+For the details, please check [installing the Gravitino playground](./playground/install.md)
+and [using the playground](./playground/using-the-playground.md).
+The playground environment can be installed on AWS, GCP or your local environment.
 
 ## Where to go from here
 
@@ -189,7 +182,7 @@ Gravitino provides security configurations for Gravitino, including HTTPS, authe
 
 ### Development guides
 
-* [How to build Gravitino](./how-to-build.md): a complete guide to building Gravitino from source.
+* [How to build Gravitino](./develop/how-to-build.md): a complete guide to building Gravitino from source.
 * [How to test Gravitino](./develop/testing.md): a complete guide to running Gravitino unit and integration tests.
 * [How to sign and verify Gravitino releases](./develop/release-signing.md): a guide to signing and verifying
   a Gravitino release.
