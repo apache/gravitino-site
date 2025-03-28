@@ -557,8 +557,18 @@ const sidebars: SidebarsConfig = {
         }
       ]
     },
-    'glossary'
-  ],
+    {
+      "label": "References",
+      "type": "category",
+      "items": [
+        {
+          "id": "reference/glossary",
+          "label": "Glossary",
+          "type": "doc"
+        }
+      ]
+    }
+  ]
 };
 
 export default sidebars;
