@@ -562,6 +562,11 @@ const sidebars: SidebarsConfig = {
       "type": "category",
       "items": [
         {
+          "id": "reference/events",
+          "label": "Gravitino events",
+          "type": "doc"
+        },
+        {
           "id": "reference/glossary",
           "label": "Glossary",
           "type": "doc"
