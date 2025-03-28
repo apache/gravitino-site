@@ -377,6 +377,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
+          id: 'admin/metalake',
+          label: 'Manage metalake',
+          type: 'doc'
+        },
+        {
           id: 'metrics',
           label: 'Metrics',
           type: 'doc'
@@ -454,11 +459,6 @@ const sidebars: SidebarsConfig = {
       label: 'Programming guides',
       type: 'category',
       items: [
-        {
-          id: 'manage-metalake-using-gravitino',
-          label: 'Manage metalake',
-          type: 'doc'
-        },
         {
           id: 'metadata/relational',
           label: 'Manage relational metadata',
