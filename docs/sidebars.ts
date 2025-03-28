@@ -460,7 +460,7 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'manage-relational-metadata-using-gravitino',
+          id: 'metadata/relational',
           label: 'Manage relational metadata',
           type: 'doc'
         },
@@ -480,7 +480,7 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'manage-fileset-metadata-using-gravitino',
+          id: 'metadata/fileset',
           label: 'Manage fileset metadata',
           type: 'doc'
         },
@@ -490,12 +490,12 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'manage-messaging-metadata-using-gravitino',
+          id: 'metadata/messaging',
           label: 'Manage messaging metadata',
           type: 'doc'
         },
         {
-          id: 'manage-model-metadata-using-gravitino',
+          id: 'metadata/model',
           label: 'Manage model metadata',
           type: 'doc'
         },
