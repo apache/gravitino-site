@@ -372,8 +372,8 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'gravitino-server-config',
-          label: 'Configurations',
+          id: 'admin/server-config',
+          label: 'Gravitino Server Configurations',
           type: 'doc'
         },
         {
