@@ -95,13 +95,29 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      id: 'iceberg-rest-service',
-      label: 'Iceberg REST catalog service',
-      type: 'doc'
+      label: 'Using Gravitino',
+      type: 'category',
+      items: [
+        {
+          id: 'client/cli',
+          label: 'Command line interface (CLI)',
+          type: 'doc'
+        },
+        {
+          id: 'client/webui',
+          label: 'Web UI',
+          type: 'doc'
+        },
+        {
+          id: 'client/python-client',
+          label: 'Use Gravitino Python Client',
+          type: 'doc'
+        }
+      ]
     },
     {
-      id: 'webui',
-      label: 'Web UI',
+      id: 'iceberg-rest-service',
+      label: 'Iceberg REST catalog service',
       type: 'doc'
     },
     {
@@ -508,11 +524,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'manage-tags-in-gravitino',
           label: 'Manage tags in Gravitino',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-use-python-client',
-          label: 'Use Gravitino Python Client',
           type: 'doc'
         },
         {
