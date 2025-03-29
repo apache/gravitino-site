@@ -79,9 +79,20 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      id: 'how-to-install',
-      label: 'How to install Gravitino',
-      type: 'doc'
+      label: 'Installation',
+      type: 'category',
+      items: [
+        {
+          id: 'install/install',
+          label: 'Install Gravitino',
+          type: 'doc'
+        },
+        {
+          id: 'install/backend-storage',
+          label: 'Configure the backend storage',
+          type: 'doc'
+        },
+      ]
     },
     {
       id: 'iceberg-rest-service',
@@ -384,11 +395,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'metrics',
           label: 'Metrics',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-use-relational-backend-storage',
-          label: 'How to use relational backend storage',
           type: 'doc'
         },
         {
