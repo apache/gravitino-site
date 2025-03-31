@@ -583,18 +583,8 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'expression',
-          label: 'Expression system',
-          type: 'doc'
-        },
-        {
           id: 'metadata/fileset',
           label: 'Manage fileset metadata',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-use-gvfs',
-          label: 'Use Gravitino Virtual File System with Filesets',
           type: 'doc'
         },
         {
@@ -608,8 +598,18 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'manage-tags-in-gravitino',
+          id: 'metadata/tags',
           label: 'Manage tags in Gravitino',
+          type: 'doc'
+        },
+        {
+          id: 'expression',
+          label: 'Expression system',
+          type: 'doc'
+        },
+        {
+          id: 'how-to-use-gvfs',
+          label: 'Use Gravitino Virtual File System with Filesets',
           type: 'doc'
         },
         {
