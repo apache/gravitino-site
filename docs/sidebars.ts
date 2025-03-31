@@ -268,8 +268,23 @@ const sidebars: SidebarsConfig = {
               ]
             },
             {
-              id: 'catalogs/relational/partitions',
-              label: 'Manage table partition',
+              id: 'catalogs/relational/partitioned-table',
+              label: 'Manage partitioned tables',
+              type: 'doc'
+            },
+            {
+              id: 'catalogs/relational/indexed-table',
+              label: 'Manage indexed tables',
+              type: 'doc'
+            },
+            {
+              id: 'catalogs/relational/distributed-table',
+              label: 'Manage distributed tables',
+              type: 'doc'
+            },
+            {
+              id: 'catalogs/relational/sorted-table',
+              label: 'Manage sorted tables',
               type: 'doc'
             }
           ]
@@ -565,11 +580,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'metadata/relational',
           label: 'Manage relational metadata',
-          type: 'doc'
-        },
-        {
-          id: 'table-partitioning-bucketing-sort-order-indexes',
-          label: 'Table partitioning, bucketing, sort ordering and indexes',
           type: 'doc'
         },
         {
