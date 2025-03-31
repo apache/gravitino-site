@@ -99,9 +99,85 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'client/cli',
           label: 'Command line interface (CLI)',
-          type: 'doc'
+          type: 'category',
+          items: [
+            {
+              id: 'client/cli',
+              label: "Overview",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/generic',
+              label: "Generic commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/auth',
+              label: "Authentication commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/metalake',
+              label: "Metalake commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/catalog',
+              label: "Catalog commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/schema',
+              label: "Schema commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/table',
+              label: "Table commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/fileset',
+              label: "Fileset commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/topic',
+              label: "Topic commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/column',
+              label: "Column commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/tag',
+              label: "Tag commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/user',
+              label: "User commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/group',
+              label: "Group commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/role',
+              label: "Role commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/owner',
+              label: "Owner commands",
+              type: 'doc'
+            }
+          ]
         },
         {
           id: 'client/webui',
