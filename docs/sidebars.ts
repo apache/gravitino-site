@@ -510,8 +510,8 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'how-to-upgrade',
-          label: 'How to upgrade',
+          id: 'admin/upgrade',
+          label: 'Ugrade Gravitino',
           type: 'doc'
         }
       ]
