@@ -266,6 +266,11 @@ const sidebars: SidebarsConfig = {
                   type: 'doc'
                 }
               ]
+            },
+            {
+              id: 'catalogs/relational/partitions',
+              label: 'Manage table partition',
+              type: 'doc'
             }
           ]
         },
@@ -560,11 +565,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'metadata/relational',
           label: 'Manage relational metadata',
-          type: 'doc'
-        },
-        {
-          id: 'manage-table-partition-using-gravitino',
-          label: 'Manage table partition',
           type: 'doc'
         },
         {
