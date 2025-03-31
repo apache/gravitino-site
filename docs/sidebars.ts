@@ -603,8 +603,8 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'expression',
-          label: 'Expression system',
+          id: 'metadata/expression',
+          label: 'The Gravitino expression system',
           type: 'doc'
         },
         {
