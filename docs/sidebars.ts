@@ -328,6 +328,11 @@ const sidebars: SidebarsConfig = {
                   type: 'doc'
                 }
               ]
+            },
+            {
+              id: 'catalogs/fileset/gvfs/index',
+              label: 'Use Gravitino Virtual File System for Filesets',
+              type: 'doc'
             }
           ]
         },
@@ -605,11 +610,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'metadata/expression',
           label: 'The Gravitino expression system',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-use-gvfs',
-          label: 'Use Gravitino Virtual File System with Filesets',
           type: 'doc'
         },
         {
