@@ -505,13 +505,13 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'metrics',
-          label: 'Metrics',
+          id: 'admin/upgrade',
+          label: 'Ugrade Gravitino',
           type: 'doc'
         },
         {
-          id: 'admin/upgrade',
-          label: 'Ugrade Gravitino',
+          id: 'admin/metrics',
+          label: 'Metrics',
           type: 'doc'
         }
       ]
