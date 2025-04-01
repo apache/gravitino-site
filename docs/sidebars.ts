@@ -547,12 +547,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           id: 'security/cors',
-          label: 'How to use CORS',
+          label: 'Cross-Origin Resource Security (CORS)',
           type: 'doc'
         },
         {
-          id: 'security/how-to-use-https',
-          label: 'How to use HTTPS',
+          id: 'security/https',
+          label: 'Enabling HTTPS access',
           type: 'doc'
         },
         {
