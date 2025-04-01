@@ -526,23 +526,23 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'security/security',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'security/access-control',
-          label: 'Access Control',
-          type: 'doc'
-        },
-        {
-          id: 'security/authorization-pushdown',
-          label: 'Authorization Push-down',
+          id: 'security/index',
+          label: 'Security Overview',
           type: 'doc'
         },
         {
           id: 'security/authentication',
           label: 'How to authenticate',
+          type: 'doc'
+        },
+        {
+          id: 'security/authorization',
+          label: 'Authorization',
+          type: 'doc'
+        },
+        {
+          id: 'security/authorization-pushdown',
+          label: 'Authorization Push-down',
           type: 'doc'
         },
         {
