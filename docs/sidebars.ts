@@ -192,11 +192,6 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      id: 'iceberg-rest-service',
-      label: 'Iceberg REST catalog service',
-      type: 'doc'
-    },
-    {
       label: 'Catalogs',
       type: 'category',
       items: [
@@ -502,6 +497,11 @@ const sidebars: SidebarsConfig = {
         {
           id: 'admin/server-config',
           label: 'Gravitino Server Configurations',
+          type: 'doc'
+        },
+        {
+          id: 'admin/iceberg-server',
+          label: 'Gravitino Iceberg REST service',
           type: 'doc'
         },
         {
