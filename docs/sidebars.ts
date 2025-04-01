@@ -546,7 +546,7 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'security/how-to-use-cors',
+          id: 'security/cors',
           label: 'How to use CORS',
           type: 'doc'
         },
