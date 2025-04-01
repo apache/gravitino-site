@@ -541,7 +541,7 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'security/how-to-authenticate',
+          id: 'security/authentication',
           label: 'How to authenticate',
           type: 'doc'
         },

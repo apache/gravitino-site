@@ -8,7 +8,7 @@ license: "This software is licensed under the Apache License version 2."
 
 *Fileset* in Apache Gravitinois a conceptual, logical collection of files and directories,
 In Gravitino, you can manage non-tabular data with filesets.
-For more details, refer to [managing fileset using Gravitino](../../metadata/fileset.md).
+For more details, refer to [managing fileset using Gravitino](../../../metadata/fileset.md).
 
 Gravitino provides a virtual file system layer called the Gravitino Virtual File System (GVFS),
 for managing filesets.
@@ -435,7 +435,7 @@ For Tensorflow to support GVFS, you need to recompile the [tensorflow-io](https:
 Currently, Gravitino Virtual File System supports two kinds of authentication types
 when accessing the Gravitino server: `simple` and `oauth2`.
 The type of `simple` is the default authentication type in Gravitino Virtual File System.
-See [authentication documentation](../../../security/how-to-authenticate.md) for more details.
+See [authentication documentation](../../../security/authentication.md) for more details.
 
 #### Using `simple` authentication
 
