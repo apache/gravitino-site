@@ -8,16 +8,16 @@ last_update:
 license: 'This software is licensed under the Apache License version 2.'
 ---
 
-This document primarily outlines how users can manage metadata within Apache Gravitino using the web UI.
-The Web UI is the graphical interface is accessible through a web browser
+This document shows how to manage metadata using Apache Gravitino Web UI.
+The Web UI is the graphical interface accessible through a web browser
 as an alternative to writing code or using the REST interface.
 
-Currently, you can integrate [OAuth settings](../security/index.md)
+Currently, you can integrate [OAuth authentication](../security/index.md)
 to view, add, modify, and delete metalakes, create catalogs,
 and view catalogs, schemas, and tables, among other functions.
 
 [Build](../develop/how-to-build.md) and [deploy](../getting-started/index.md#local-workstation)
-the Gravitino Web UI and open it in a browser at `http://<gravitino-host>:<gravitino-port>`,
+the Gravitino Web UI and open it in a browser at `http://<gravitino-host>:<gravitino-port>`.
 by default is [http://localhost:8090](http://localhost:8090).
 
 ## Initial page
@@ -32,7 +32,7 @@ If multiple authenticators are set, the first one is taken by default.
 :::tip
 After changing the configuration, make sure to restart the Gravitino server.
 
-`<path-to-gravitino>/bin/gravitino.sh restart`
+`${GRAVITINO_HOME}/bin/gravitino.sh restart`
 :::
 
 ### Simple mode
@@ -46,7 +46,7 @@ and the web UI displays the homepage (Metalakes).
 
 ![webui-metalakes-simple](../assets/webui/metalakes-simple.png)
 
-At the top-right, the UI displays the current Gravitino version.
+At the top-right, the UI shows the current Gravitino version.
 
 The main content displays the existing metalake list.
 

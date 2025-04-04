@@ -133,6 +133,32 @@ It also triggers a failure event if the operation failed.
   </td>
   <td>0.9.0-incubating</td>
 </tr>
+<tr>
+  <td>Gravitino server user operation</td>
+  <td>
+    `AddUserPreEvent`<br/>
+    `GetUserPreEvent`<br/>
+    `GrantUserRolesPreEvent`<br/>
+    `ListUserNamesPreEvent`<br/>
+    `ListUsersPreEvent`<br/>
+    `RemoveUserPreEvent`<br/>
+    `RevokeUserRolesPreEvent`
+  </td>
+  <td>0.9.0-incubating</td>
+</tr>
+<tr>
+  <td>Gravitino server group operation</td>
+  <td>
+    `AddGroupPreEvent`<br/>
+    `GetGroupPreEvent`<br/>
+    `GrantGroupRolesPreEvent`<br/>
+    `ListGroupNamesPreEvent`<br/>
+    `ListGroupsPreEvent`<br/>
+    `RemoveGroupPreEvent`<br/>
+    `RevokeGroupRolesPreEvent`
+  </td>
+  <td>0.9.0-incubating</td>
+</tr>
 </tbody>
 </table>
 
@@ -317,7 +343,46 @@ It also triggers a failure event if the operation failed.
   </td>
   <td>0.9.0-incubating</td>
 </tr>
+<tr>
+  <td>user operation</td>
+  <td>
+    `AddUserEvent`<br/>
+    `AddUserFailureEvent`<br/>
+    `GetUserEvent`<br/>
+    `GetUserFailureEvent`<br/>
+    `GrantUserRolesEvent`<br/>
+    `GrantUserRolesFailureEvent`<br/>
+    `ListUserNamesEvent`<br/>
+    `ListUserNamesFailureEvent`<br/>
+    `ListUsersEvent`<br/>
+    `ListUsersFailureEvent`<br/>
+    `RemoveUserEvent`<br/>
+    `RemoveUserFailureEvent`<br/>
+    `RevokeUserRolesEvent`<br/>
+    `RevokeUserRolesFailureEvent`
+  </td>
+  <td>0.9.0-incubating</td>
+</tr>
+<tr>
+  <td>group operation</td>
+  <td>
+    `AddGroupEvent`<br/>
+    `AddGroupFailureEvent`<br/>
+    `GetGroupEvent`<br/>
+    `GetGroupFailureEvent`<br/>
+    `GrantGroupRolesEvent`<br/>
+    `GrantGroupRolesFailureEvent`<br/>
+    `ListGroupNamesEvent`<br/>
+    `ListGroupNamesFailureEvent`<br/>
+    `ListGroupsEvent`<br/>
+    `ListGroupsFailureEvent`<br/>
+    `RemoveGroupEvent`<br/>
+    `RemoveGroupFailureEvent`<br/>
+    `RevokeGroupRolesEvent`<br/>
+    `RevokeGroupRolesFailureEvent`
+  </td>
+  <td>0.9.0-incubating</td>
+</tr>
 </tbody>
 </table>
-
 
