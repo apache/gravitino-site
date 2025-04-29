@@ -92,6 +92,11 @@ const sidebars: SidebarsConfig = {
           label: 'Configure the backend storage',
           type: 'doc'
         },
+        {
+          id: 'install/helm-chart',
+          label: 'Install Gravitino using Helm chart',
+          type: 'doc'
+        },
       ]
     },
     {
