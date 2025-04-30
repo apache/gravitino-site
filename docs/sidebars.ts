@@ -496,6 +496,27 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
+      label: 'Lineage',
+      type: 'category',
+      items: [
+        {
+          id: 'lineage/index',
+          label: 'Overview',
+          type: 'doc'
+        },
+        {
+          id: 'lineage/gravitino-server',
+          label: 'Gravitino server support',
+          type: 'doc'
+        },
+        {
+          id: 'lineage/spark',
+          label: 'Gravitino Spark Lineage support',
+          type: 'doc'
+        }
+      ]
+    },
+    {
       label: 'Server administration',
       type: 'category',
       items: [
