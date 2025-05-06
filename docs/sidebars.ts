@@ -37,43 +37,162 @@ const sidebars: SidebarsConfig = {
       type: 'doc'
     },
     {
-      id: 'getting-started',
-      label: 'Getting started',
-      type: 'doc'
+      "label": "Getting Started",
+      "type": "category",
+      "items": [
+        {
+          "id": "getting-started/index",
+          "label": "Overview",
+          "type": "doc"
+        },
+        {
+          "label": "Prepare Environment",
+          "type": "category",
+          "items": [
+            {
+              "label": "Amazon Web Services",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#aws"
+            },
+            {
+              "label": "Google Cloud Platform",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#gcp"
+            },
+            {
+              "label": "Local Workstation",
+              "type": "link",
+              "href": "/docs/0.8.0-incubating/getting-started/#local-workstation"
+            }
+          ]
+        },
+        {
+          "id": "getting-started/hive",
+          "label": "Install Apache Hive",
+          "type": "doc"
+        },
+        {
+          "id": "getting-started/aws-remote-access",
+          "label": "Remote Accesss on AWS",
+          "type": "doc"
+        }
+      ]
     },
     {
-      id: 'how-to-install',
-      label: 'How to install Gravitino',
-      type: 'doc'
-    },
-    {
-      id: 'iceberg-rest-service',
-      label: 'Iceberg REST catalog service',
-      type: 'doc'
-    },
-    {
-      id: 'webui',
-      label: 'Web UI',
-      type: 'doc'
-    },
-    {
-      label: 'Running Gravitino on',
+      label: 'Installation',
       type: 'category',
       items: [
         {
-          label: 'Local',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-locally`
+          id: 'install/install',
+          label: 'Install Gravitino',
+          type: 'doc'
         },
         {
-          label: 'Amazon Web Services',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-on-amazon-web-services`
+          id: 'install/backend-storage',
+          label: 'Configure the backend storage',
+          type: 'doc'
         },
         {
-          label: 'Google Cloud Platform',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#getting-started-on-google-cloud-platform`
+          id: 'install/helm-chart',
+          label: 'Install Gravitino using Helm chart',
+          type: 'doc'
+        },
+      ]
+    },
+    {
+      label: 'Using Gravitino',
+      type: 'category',
+      items: [
+        {
+          label: 'Command line interface (CLI)',
+          type: 'category',
+          items: [
+            {
+              id: 'client/cli',
+              label: "Overview",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/generic',
+              label: "Generic commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/auth',
+              label: "Authentication commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/metalake',
+              label: "Metalake commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/catalog',
+              label: "Catalog commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/schema',
+              label: "Schema commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/table',
+              label: "Table commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/fileset',
+              label: "Fileset commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/topic',
+              label: "Topic commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/column',
+              label: "Column commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/tag',
+              label: "Tag commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/user',
+              label: "User commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/group',
+              label: "Group commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/role',
+              label: "Role commands",
+              type: 'doc'
+            },
+            {
+              id: 'client/cli-reference/owner',
+              label: "Owner commands",
+              type: 'doc'
+            }
+          ]
+        },
+        {
+          id: 'client/webui',
+          label: 'Web UI',
+          type: 'doc'
+        },
+        {
+          id: 'client/python-client',
+          label: 'Use Gravitino Python Client',
+          type: 'doc'
         }
       ]
     },
@@ -86,56 +205,88 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'lakehouse-iceberg-catalog',
-              label: 'Iceberg catalog',
-              type: 'doc'
-            },
-            {
               label: 'Hive catalog',
               type: 'category',
               items: [
                 {
-                  id: 'apache-hive-catalog',
+                  id: 'catalogs/relational/hive/index',
                   label: 'Hive catalog',
                   type: 'doc'
                 },
                 {
-                  id: 'hive-catalog-with-cloud-storage',
+                  id: 'catalogs/relational/hive/cloud-storage',
                   label: 'Hive catalog with cloud storage',
                   type: 'doc'
                 }
               ]
             },
             {
-              id: 'jdbc-mysql-catalog',
-              label: 'MySQL catalog',
+              label: 'Lakehouse catalog',
+              type: 'category',
+              items: [
+                {
+                  id: 'catalogs/relational/lakehouse/hudi',
+                  label: 'Hudi catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/lakehouse/iceberg',
+                  label: 'Iceberg catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/lakehouse/paimon',
+                  label: 'Paimon catalog',
+                  type: 'doc'
+                }
+              ],
+            },
+            {
+              label: 'JDBC catalog',
+              type: 'category',
+              items: [
+                {
+                  id: 'catalogs/relational/jdbc/doris',
+                  label: 'Doris catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/mysql',
+                  label: 'MySQL catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/oceanbase',
+                  label: 'OceanBase catalog',
+                  type: 'doc'
+                },
+                {
+                  id: 'catalogs/relational/jdbc/postgresql',
+                  label: 'PostgreSQL catalog',
+                  type: 'doc'
+                }
+              ]
+            },
+            {
+              id: 'catalogs/relational/partitioned-table',
+              label: 'Manage partitioned tables',
               type: 'doc'
             },
             {
-              id: 'jdbc-postgresql-catalog',
-              label: 'PostgreSQL catalog',
+              id: 'catalogs/relational/indexed-table',
+              label: 'Manage indexed tables',
               type: 'doc'
             },
             {
-              id: 'jdbc-doris-catalog',
-              label: 'Doris catalog',
+              id: 'catalogs/relational/distributed-table',
+              label: 'Manage distributed tables',
               type: 'doc'
             },
             {
-              id: 'lakehouse-paimon-catalog',
-              label: 'Paimon catalog',
+              id: 'catalogs/relational/sorted-table',
+              label: 'Manage sorted tables',
               type: 'doc'
-            },
-            {
-              id: 'lakehouse-hudi-catalog',
-              label: 'Hudi catalog',
-              type: 'doc'
-            },
-            {
-              id: 'jdbc-oceanbase-catalog',
-              label: 'OceanBase catalog',
-              type: 'doc'
-            },
+            }
           ]
         },
         {
@@ -147,36 +298,41 @@ const sidebars: SidebarsConfig = {
               type: 'category',
               items: [
                 {
-                  id: 'hadoop-catalog-index',
+                  id: 'catalogs/fileset/hadoop/index',
                   label: 'Hadoop catalog index',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog',
+                  id: 'catalogs/fileset/hadoop/hadoop-catalog',
                   label: 'Hadoop catalog',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-s3',
-                  label: 'Hadoop catalog with s3',
+                  id: 'catalogs/fileset/hadoop/s3',
+                  label: 'Hadoop catalog with S3',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-gcs',
-                  label: 'Hadoop catalog with gcs',
+                  id: 'catalogs/fileset/hadoop/gcs',
+                  label: 'Hadoop catalog with GCS',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-oss',
-                  label: 'Hadoop catalog with oss',
+                  id: 'catalogs/fileset/hadoop/oss',
+                  label: 'Hadoop catalog with OSS',
                   type: 'doc'
                 },
                 {
-                  id: 'hadoop-catalog-with-adls',
-                  label: 'Hadoop catalog with adls',
+                  id: 'catalogs/fileset/hadoop/adls',
+                  label: 'Hadoop catalog with ADLS',
                   type: 'doc'
                 }
               ]
+            },
+            {
+              id: 'catalogs/fileset/gvfs/index',
+              label: 'Use Gravitino Virtual File System for Filesets',
+              type: 'doc'
             }
           ]
         },
@@ -185,7 +341,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'kafka-catalog',
+              id: 'catalogs/messaging/kafka/index',
               label: 'Kafka catalog',
               type: 'doc'
             }
@@ -196,7 +352,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           items: [
             {
-              id: 'model-catalog',
+              id: 'catalogs/model/index',
               label: 'Model catalog',
               type: 'doc'
             }
@@ -205,132 +361,159 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      label: 'Trino connector',
+      label: 'Connectors',
       type: 'category',
       items: [
         {
-          id: 'trino-connector/index',
-          label: 'Index',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/trino-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/requirements',
-          label: 'Requirements',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/installation',
-          label: 'Installation',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/configuration',
-          label: 'Configuration',
-          type: 'doc'
-        },
-        {
-          label: 'Supported catalogs',
+          label: 'Trino connector',
           type: 'category',
           items: [
             {
-              id: 'trino-connector/supported-catalog',
-              label: 'Introduction',
+              id: 'connectors/trino/index',
+              label: 'Index',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-hive',
-              label: 'Hive',
+              id: 'connectors/trino/trino-connector',
+              label: 'Overview',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-iceberg',
-              label: 'Iceberg',
+              id: 'connectors/trino/requirements',
+              label: 'Requirements',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-mysql',
-              label: 'MySQL',
+              id: 'connectors/trino/installation',
+              label: 'Installation',
               type: 'doc'
             },
             {
-              id: 'trino-connector/catalog-postgresql',
-              label: 'PostgreSQL',
+              id: 'connectors/trino/configuration',
+              label: 'Configuration',
+              type: 'doc'
+            },
+            {
+              label: 'Supported catalogs',
+              type: 'category',
+              items: [
+                {
+                  id: 'connectors/trino/supported-catalog',
+                  label: 'Introduction',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-hive',
+                  label: 'Hive',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-iceberg',
+                  label: 'Iceberg',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-mysql',
+                  label: 'MySQL',
+                  type: 'doc'
+                },
+                {
+                  id: 'connectors/trino/catalog-postgresql',
+                  label: 'PostgreSQL',
+                  type: 'doc'
+                }
+              ]
+            },
+            {
+              id: 'connectors/trino/sql-support',
+              label: 'Supported SQL',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/trino/development',
+              label: 'Development',
               type: 'doc'
             }
           ]
         },
         {
-          id: 'trino-connector/sql-support',
-          label: 'Supported SQL',
-          type: 'doc'
+          label: 'Spark connector',
+          type: 'category',
+          items: [
+            {
+              id: 'connectors/spark/index',
+              label: 'Overview',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-hive',
+              label: 'Hive',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-iceberg',
+              label: 'Iceberg',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-catalog-paimon',
+              label: 'Paimon',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/spark/spark-authentication-with-gravitino',
+              label: 'Spark authentication',
+              type: 'doc'
+            }
+          ]
         },
         {
-          id: 'trino-connector/development',
-          label: 'Development',
-          type: 'doc'
+          label: 'Flink connector',
+          type: 'category',
+          items: [
+            {
+              id: 'connectors/flink/index',
+              label: 'Overview',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-hive',
+              label: 'Hive',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-iceberg',
+              label: 'Iceberg',
+              type: 'doc'
+            },
+            {
+              id: 'connectors/flink/flink-catalog-paimon',
+              label: 'Paimon',
+              type: 'doc'
+            }
+          ]
         }
       ]
     },
     {
-      label: 'Spark connector',
+      label: 'Lineage',
       type: 'category',
       items: [
         {
-          id: 'spark-connector/spark-connector',
+          id: 'lineage/index',
           label: 'Overview',
           type: 'doc'
         },
         {
-          id: 'spark-connector/spark-catalog-hive',
-          label: 'Hive',
+          id: 'lineage/gravitino-server',
+          label: 'Gravitino server support',
           type: 'doc'
         },
         {
-          id: 'spark-connector/spark-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-authentication-with-gravitino',
-          label: 'Spark authentication',
+          id: 'lineage/spark',
+          label: 'Gravitino Spark Lineage support',
           type: 'doc'
         }
-      ]
-    },
-    {
-      label: 'Flink connector',
-      type: 'category',
-      items: [
-        {
-          id: 'flink-connector/flink-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-hive',
-          label: 'Hive',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
       ]
     },
     {
@@ -338,18 +521,28 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'gravitino-server-config',
-          label: 'Configurations',
+          id: 'admin/server-config',
+          label: 'Gravitino Server Configurations',
           type: 'doc'
         },
         {
-          id: 'metrics',
+          id: 'admin/iceberg-server',
+          label: 'Gravitino Iceberg REST service',
+          type: 'doc'
+        },
+        {
+          id: 'admin/metalake',
+          label: 'Manage metalake',
+          type: 'doc'
+        },
+        {
+          id: 'admin/upgrade',
+          label: 'Ugrade Gravitino',
+          type: 'doc'
+        },
+        {
+          id: 'admin/metrics',
           label: 'Metrics',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-use-relational-backend-storage',
-          label: 'How to use relational backend storage',
           type: 'doc'
         }
       ]
@@ -359,13 +552,18 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'security/security',
-          label: 'Overview',
+          id: 'security/index',
+          label: 'Security Overview',
           type: 'doc'
         },
         {
-          id: 'security/access-control',
-          label: 'Access Control',
+          id: 'security/authentication',
+          label: 'How to authenticate',
+          type: 'doc'
+        },
+        {
+          id: 'security/authorization',
+          label: 'Authorization',
           type: 'doc'
         },
         {
@@ -374,18 +572,13 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'security/how-to-authenticate',
-          label: 'How to authenticate',
+          id: 'security/cors',
+          label: 'Cross-Origin Resource Security (CORS)',
           type: 'doc'
         },
         {
-          id: 'security/how-to-use-cors',
-          label: 'How to use CORS',
-          type: 'doc'
-        },
-        {
-          id: 'security/how-to-use-https',
-          label: 'How to use HTTPS',
+          id: 'security/https',
+          label: 'Enabling HTTPS access',
           type: 'doc'
         },
         {
@@ -400,14 +593,14 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'how-to-use-the-playground',
-          label: 'Use Gravitino playground',
-          type: 'doc'
+          "id": "playground/install",
+          "label": "Installing the Playground",
+          "type": "doc"
         },
         {
-          label: 'Install on AWS or GCP',
-          type: 'link',
-          href: `/docs/${currentVersion}/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform`
+          "id": "playground/using-the-playground",
+          "label": "Using the playground",
+          "type": "doc"
         }
       ]
     },
@@ -416,58 +609,33 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'manage-metalake-using-gravitino',
-          label: 'Manage metalake',
-          type: 'doc'
-        },
-        {
-          id: 'manage-relational-metadata-using-gravitino',
+          id: 'metadata/relational',
           label: 'Manage relational metadata',
           type: 'doc'
         },
         {
-          id: 'manage-table-partition-using-gravitino',
-          label: 'Manage table partition',
-          type: 'doc'
-        },
-        {
-          id: 'table-partitioning-bucketing-sort-order-indexes',
-          label: 'Table partitioning, bucketing, sort ordering and indexes',
-          type: 'doc'
-        },
-        {
-          id: 'expression',
-          label: 'Expression system',
-          type: 'doc'
-        },
-        {
-          id: 'manage-fileset-metadata-using-gravitino',
+          id: 'metadata/fileset',
           label: 'Manage fileset metadata',
           type: 'doc'
         },
         {
-          id: 'how-to-use-gvfs',
-          label: 'Use Gravitino Virtual File System with Filesets',
-          type: 'doc'
-        },
-        {
-          id: 'manage-messaging-metadata-using-gravitino',
+          id: 'metadata/messaging',
           label: 'Manage messaging metadata',
           type: 'doc'
         },
         {
-          id: 'manage-model-metadata-using-gravitino',
+          id: 'metadata/model',
           label: 'Manage model metadata',
           type: 'doc'
         },
         {
-          id: 'manage-tags-in-gravitino',
+          id: 'metadata/tags',
           label: 'Manage tags in Gravitino',
           type: 'doc'
         },
         {
-          id: 'how-to-use-python-client',
-          label: 'Use Gravitino Python Client',
+          id: 'metadata/expression',
+          label: 'The Gravitino expression system',
           type: 'doc'
         },
         {
@@ -488,43 +656,53 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      label: 'Development guides',
+      label: 'Development guide',
       type: 'category',
       items: [
         {
-          id: 'how-to-build',
-          label: 'How to build',
+          id: 'develop/how-to-build',
+          label: 'Building packages',
           type: 'doc'
         },
         {
-          id: 'how-to-test',
-          label: 'How to test',
+          id: 'develop/testing',
+          label: 'Testing the server',
           type: 'doc'
         },
         {
-          id: 'how-to-sign-releases',
-          label: 'How to sign and verify',
+          id: 'develop/release-signing',
+          label: 'Signing release files',
           type: 'doc'
         },
         {
-          id: 'publish-docker-images',
-          label: 'Publish Docker images',
+          id: 'develop/publish-docker-images',
+          label: 'publishing Docker images',
           type: 'doc'
         },
         {
-          id: 'docker-image-details',
+          id: 'develop/docker-image-details',
           label: 'Docker image details',
-          type: 'doc'
-        },
-        {
-          id: 'how-to-upgrade',
-          label: 'How to upgrade',
           type: 'doc'
         }
       ]
     },
-    'glossary'
-  ],
+    {
+      "label": "References",
+      "type": "category",
+      "items": [
+        {
+          "id": "reference/events",
+          "label": "Gravitino events",
+          "type": "doc"
+        },
+        {
+          "id": "reference/glossary",
+          "label": "Glossary",
+          "type": "doc"
+        }
+      ]
+    }
+  ]
 };
 
 export default sidebars;
