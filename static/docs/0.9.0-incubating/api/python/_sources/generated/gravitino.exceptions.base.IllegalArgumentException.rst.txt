@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalArgumentException
+==================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalArgumentException

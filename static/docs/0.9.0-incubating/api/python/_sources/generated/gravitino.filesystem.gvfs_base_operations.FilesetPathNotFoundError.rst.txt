@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_base\_operations.FilesetPathNotFoundError
+====================================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_base_operations
+
+.. autoexception:: FilesetPathNotFoundError
