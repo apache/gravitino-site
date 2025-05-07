@@ -1,0 +1,57 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+   
+gravitino.exceptions.handlers
+=============================
+
+.. automodule:: gravitino.exceptions.handlers
+  
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst                 
+   :recursive:
+
+   gravitino.exceptions.handlers.catalog_error_handler
+   gravitino.exceptions.handlers.credential_error_handler
+   gravitino.exceptions.handlers.error_handler
+   gravitino.exceptions.handlers.fileset_error_handler
+   gravitino.exceptions.handlers.metalake_error_handler
+   gravitino.exceptions.handlers.model_error_handler
+   gravitino.exceptions.handlers.oauth_error_handler
+   gravitino.exceptions.handlers.rest_error_handler
+   gravitino.exceptions.handlers.schema_error_handler
+

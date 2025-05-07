@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalNameIdentifierException
+========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalNameIdentifierException

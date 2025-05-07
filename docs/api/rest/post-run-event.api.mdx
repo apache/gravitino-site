@@ -1,0 +1,2320 @@
+---
+id: post-run-event
+title: "Post runEvent"
+description: "Updates a run state for a job."
+sidebar_label: "Post runEvent"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V9tu2zgQ/RWCryvJsptLozc3ddu0aRw4DgpsNg9jaWQxkUgtSfkCx/++GFKK7ThFnzYIYIkcHs71zGjDMzSpFrUVSvKE39cZWDQMmG4kMxYsslxpBuxJzSIecFWjBhK+ynjCa2XspJGjBUrLA25hbnjywEshEebIHwOu8d8Gjf2ksjVPNjxV0pJssuFQ16VIHVbvydDtG27SAiugJyVxnPPkYcOtsCXyhL/esw12i5/BgkF7vPFdzdrFx+12uyVFTK2kQUPogzimn0Pbxz/4NuAng4vjralS7CfINZt4cwxJnq5Wx5JDZlAvUIdGZMhqrWYlVswWYFkl5oVlUlk2QwZZptEYmJXIcq1IBFlaCpSW0dGI3RvMnO89IDtdrRhqrbRhS2EL1VhWKY3M1JiKXKQsU2lTobTOpUzQfyYWImugZFo1Fg0F8DcRWMgsmmtYCCukihb9v45DYtc1eVbNnjClaB8a/v1ufOP1YzWsSwUZ02gbLTEjXYB1AXDas7zRtkDNMrQgSsOUdB5wANynjdCYUTZV5Kc5Un6RBmRC5nKr1pSNVviYutWdmkJanCNhVUKKqql40o/jOOAVrNrXPr0eWvFtOr3daeogA44rqGrKqn4cD7atGrubjNVCzo8cciUtagklIzGWYS6kcJFR+Z6p2+DVvj8iDlnRVCBDjZC5xOlObgNuLKTPexCgNax5wIXFyhxDu5LoamVEmvxUGZaE9Gpt51KyujOaqtCKCkerFL1ae/rvTL7zKTtqo9kq98CfYAFRCXIevcVJ2PuHXfU6J9lCdZTDA16DLXjCex3VBNyXiXGc0eiSJ3zjche3Sa+3KZSx22RTK223vc0MDN6CLbZHPv6KErVIGUl0lXc/uQ581kJZshq0NSxVMhfzRlMcqKwWoAU9m9eawXdopEDm97okuJ9cBQyFK4XC2pop/+tKNcMcmtLyhNMSxYaseB+WdjpScaxB6C01YNZacoBZqhRKB7gNOPnlfWDaYQ1x0bJA2V0h5NzdUPho7FA/xhcxAXYefodm3QOUrNaYixWzyvFhXaPMMKNX8rInrANoqAXl7SOFOm20sGsX6/GwscXgl7DF919TSjKyVaQ4bDKBMkX+SH3hExiRkiRPHh73Me5cPFzY3iDtGA9o/ShVvLhPDDoQ8LxUS89FjsgvNWYorYDSV6B6RnnvMtOFOOn1cOVzPnRXhD5KUaqqnhOmrE5V3SbVG7N8eKB9ZRIq9CH62tE4hc0wpyYD4+JF15BKKVilI+5ra883rza7jAteM5niKVIK7A/UM9TK/EFe4lxZARY53UDNZLKbBEY7ikFq0lPhzgziwUkYn4eDi2n/NDntJ4OPUXze/5s7qs+aFPWe7+bCFs3MOWtco7z2RHDwPCvVrLfoh3EY93xIOhXhfnK9h6VqlC2TREL1qG56cRiH/X24yLXEoFXZm303HU6mL5P7m5urm68vl+Oft9ej6ehl+Gk8mb58GV5dv4yn30YT6miNa6e68ZPThxw+nuZnJ+Hpef88PDk9G4SzD3kaDtKLsw/52RnkcEYZBSlaCr/zopoRBEXa1OBSoFqHZE/WlKjD3UbghNw+zW3V2oJ5fgsnZN1Yz5dvIDOaqlSjU3wPU0hjQaYYeU9GlnjvALzF/rK77THgqrH/330efP9Cp0SuXIq2fW5XGJPR3ZQNb694wEuRojTYOZbabA1pgWwQxTxoO0mXJ8vlMgK3HSk977VnTe/66nJ0czcKB1EcFbZyfZSakSeKOLqI4lDItJmBfa+xf6bhAM0+Z/ux7JXJc6GNZS1k1zyO7Yn+kZ7Nja1A7tl0S+1B7yb1g/v3xvI/fwC09W5xZXt1CcJd6Ly0aZvywfzvO9YD37iee6/L7ZaW/21QE30/7jqnI+aAFwgZ1fnDhj/jmif80usWTv3wt4CycQPO288HYnl/YpjSUPEb2fcHXUrQ1xHjdnxHbD5rv1kqNwVxDUsqY1jyhLsPIYJzzOzWNpzmmsYPQh6T/v4DgoKdkg==
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Post runEvent"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/lineage"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a run state for a job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <div>
+          <span
+            className={"badge badge--info"}
+            style={{"marginBottom":"1rem"}}
+          >
+            oneOf
+          </span><SchemaTabs>
+            <TabItem
+              label={"RunEvent"}
+              value={"0-item-properties"}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"eventTime"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"description":"the time the event occurred at","type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"producer"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"schemaURL"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this RunEvent","type":"string","format":"uri","example":"https://openlineage.io/spec/0-0-1/OpenLineage.json"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"eventType"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={"**Possible values:** [`START`, `RUNNING`, `COMPLETE`, `ABORT`, `FAIL`, `OTHER`]"}
+                schema={{"description":"the current transition of the run state. It is required to issue 1 START event and 1 of [ COMPLETE, ABORT, FAIL ] event per run. Additional events with OTHER eventType can be added to the same run. For example to send additional metadata after the run is complete","type":"string","enum":["START","RUNNING","COMPLETE","ABORT","FAIL","OTHER"],"example":"START|RUNNING|COMPLETE|ABORT|FAIL|OTHER"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        run
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"runId"}
+                      required={true}
+                      schemaName={"uuid"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The globally unique ID of the run associated with the job.","type":"string","format":"uuid"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The run facets.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           RunFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Run Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Run Facet","type":"object","title":"RunFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        job
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that job","type":"string","example":"my-scheduler-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that job within that namespace","type":"string","example":"myjob.mytask"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The job facets.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           JobFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Job Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Job Facet","type":"object","title":"JobFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        inputs
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      The set of **input** datasets.
+                      
+                      
+                    </div><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that dataset","type":"string","example":"my-datasource-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that dataset within that namespace","type":"string","example":"instance.schema.table"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           DatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Dataset Facet","type":"object","title":"DatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              inputFacets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The input facets for this dataset.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           InputDatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        An Input Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"An Input Dataset Facet","type":"object","title":"InputDatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        outputs
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      The set of **output** datasets.
+                      
+                      
+                    </div><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that dataset","type":"string","example":"my-datasource-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that dataset within that namespace","type":"string","example":"instance.schema.table"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           DatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Dataset Facet","type":"object","title":"DatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              outputFacets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The output facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           OutputDatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        An Output Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"An Output Dataset Facet","type":"object","title":"OutputDatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem>
+            </TabItem><TabItem
+              label={"DatasetEvent"}
+              value={"1-item-properties"}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"eventTime"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"description":"the time the event occurred at","type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"producer"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"schemaURL"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this RunEvent","type":"string","format":"uri","example":"https://openlineage.io/spec/0-0-1/OpenLineage.json"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        dataset
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      A Dataset sent within static metadata events
+                      
+                      
+                    </div><SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that dataset","type":"string","example":"my-datasource-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that dataset within that namespace","type":"string","example":"instance.schema.table"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           DatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Dataset Facet","type":"object","title":"DatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem>
+            </TabItem><TabItem
+              label={"JobEvent"}
+              value={"2-item-properties"}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"eventTime"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"description":"the time the event occurred at","type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"producer"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"schemaURL"}
+                required={true}
+                schemaName={"uri"}
+                qualifierMessage={undefined}
+                schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this RunEvent","type":"string","format":"uri","example":"https://openlineage.io/spec/0-0-1/OpenLineage.json"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        job
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that job","type":"string","example":"my-scheduler-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that job within that namespace","type":"string","example":"myjob.mytask"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The job facets.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           JobFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Job Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Job Facet","type":"object","title":"JobFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        inputs
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      The set of **input** datasets.
+                      
+                      
+                    </div><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that dataset","type":"string","example":"my-datasource-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that dataset within that namespace","type":"string","example":"instance.schema.table"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           DatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Dataset Facet","type":"object","title":"DatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              inputFacets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The input facets for this dataset.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           InputDatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        An Input Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"An Input Dataset Facet","type":"object","title":"InputDatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        outputs
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      The set of **output** datasets.
+                      
+                      
+                    </div><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"namespace"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The namespace containing that dataset","type":"string","example":"my-datasource-namespace"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"name"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"The unique name for that dataset within that namespace","type":"string","example":"instance.schema.table"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              facets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           DatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_deleted"}
+                                        required={false}
+                                        schemaName={"boolean"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"set to true to delete a facet","type":"boolean"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"A Dataset Facet","type":"object","title":"DatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"},"_deleted":{"description":"set to true to delete a facet","type":"boolean"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              outputFacets
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The output facets for this dataset
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          property name*
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           OutputDatasetFacet
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        An Output Dataset Facet
+                                        
+                                        
+                                      </div><SchemaItem
+                                        collapsible={false}
+                                        name={"_producer"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"_schemaURL"}
+                                        required={true}
+                                        schemaName={"uri"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"any"}
+                                        qualifierMessage={undefined}
+                                        schema={{"description":"An Output Dataset Facet","type":"object","title":"OutputDatasetFacet","required":["_producer","_schemaURL"],"additionalProperties":true,"properties":{"_producer":{"description":"URI identifying the producer of this metadata. For example this could be a git url with a given tag or sha","type":"string","format":"uri","example":"https://github.com/OpenLineage/OpenLineage/blob/v1-0-0/client"},"_schemaURL":{"description":"The JSON Pointer (https://tools.ietf.org/html/rfc6901) URL to the corresponding version of the schema definition for this facet","type":"string","format":"uri","example":"https://openlineage.io/spec/1-0-2/OpenLineage.json#/$defs/BaseFacet"}}}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem>
+            </TabItem>
+          </SchemaTabs>
+        </div>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem><TabItem
+        label={"429"}
+        value={"429"}
+      >
+        <div>
+          
+          
+          Too Many Requests
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
