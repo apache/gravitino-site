@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
                 <div className='bg-[rgba(217,217,217,0.4)] p-[1%] md:p-[5%] text-center'>
                   <img className='m-auto w-[60%]' src='/img/apache-gravitino.svg' />
                   <div className='relative my-[2%] md:my-[5%] text-xs w-full md:text-xl xl:w-[60%]  m-auto after:content-[ ] after:border-b-[1px] after:border-black after:absolute after:-bottom-4 after:left-[25%] after:w-[50%] after:h-2'>
-                    A unified metadata lake across all your sources, formats, cloud providers, and regions in a federated architecture. 
+                    Manage your data and AI assets seamlessly with our flexible, unified governance framework and lakehouse federation capabilities. 
                   </div>
                   <div className='inline-flex flex-wrap gap-1 px-0 py-[5%] md:gap-4 xl:px-[15%]'>
                     <Link to={'/community'}>
