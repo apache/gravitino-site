@@ -6,6 +6,7 @@ tags: [apache,gravitino,metadata,multicloud,model,security,government]
 ---
 
 Gravitino 0.9.0 focused more on AI, data government, and security. Many features are used in the production environment. The community received much feedback from users in many well-known companies. The AI and security features have raised more and more attention.
+
 In this version, the community optimizes the user experience regarding fileset catalogs and model catalogs. This allows users to manage their unstructured AI data and model data more conveniently.
 
 Talking about data lineage, the community added a data lineage interface. Users can implement their custom data lineage plugin to adapt to their system.
@@ -27,7 +28,7 @@ These enhancements significantly improve flexibility for multi-cloud environment
 
 ## GVFS (Gravitino Virtual File System)
 
-GVFS has been enhanced to support accessing multiple locations within filesets.Users can now select which location to use through configuration properties, environment variables, or fileset default settings.
+GVFS has been enhanced to support accessing multiple locations within filesets. Users can now select which location to use through configuration properties, environment variables, or fileset default settings.
 
 GVFS has also been refactored with a pluggable architecture allowing custom operations and hooks, enabling users to extend functionality through `operations_class` and `hook_class` configuration options for more flexible integration with their specific infrastructure [#6938](https://github.com/apache/gravitino/issues/6938).
 
@@ -47,7 +48,7 @@ The community mainly cared about the performance. It improves the performance by
 
 ## CLI
 
-Additionally, there is one more change worth mentioning: users no longer need to rely on the alias command to use the CLI. Instead,  the community provided a convenient script located at ./bin/gcli.sh that the user can directly use the CLI client [#5383](https://github.com/apache/gravitino/issues/5383).
+Additionally, there is one more change worth mentioning: users no longer need to rely on the alias command to use the CLI. Instead, the community provided a convenient script located at ./bin/gcli.sh that the user can directly use the CLI client [#5383](https://github.com/apache/gravitino/issues/5383).
 
 ## Connector
 
