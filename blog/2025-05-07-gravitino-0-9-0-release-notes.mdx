@@ -5,65 +5,66 @@ authors: [roryqi]
 tags: [apache,gravitino,metadata,multicloud,model,security,government]
 ---
 
-Gravitino 0.9.0 focused more on AI, data government, and security. Many features are used in the production environment. The community received much feedback from users in many well-known companies. The AI and security features have raised more and more attention.
+Gravitino 0.9.0 focuses on advancements in AI, data governance, and security. Many of its new features are already being used in production environments. The release has attracted strong interest from users from well-known companies, with AI and security capabilities drawing attention.
 
-In this version, the community optimizes the user experience regarding fileset catalogs and model catalogs. This allows users to manage their unstructured AI data and model data more conveniently.
+In this version, the community optimized the user experience for fileset catalogs and model catalogs, making it easier for users to manage their unstructured AI data and model data.
 
-Talking about data lineage, the community added a data lineage interface. Users can implement their custom data lineage plugin to adapt to their system.
-For security, the community corrects some privilege semantics and fixes many authorization plugin corner cases to make the system more robust.
+The community added a new data lineage interface. Users can now implement a custom data lineage plugin to adapt to their own system.
+
+For security, the community has corrected some privilege semantics and fixed authorization plugin corner cases to make the entire system more robust.
 
 ## Model Catalog
 
-Before 0.9.0, the model catalog was immutable, which was not convenient. It can alter models and model versions, and supports adding tags in the new version [#6626](https://github.com/apache/gravitino/issues/6226) [#6222](https://github.com/apache/gravitino/issues/6222).
+Before 0.9.0, the model catalog was immutable, which was not flexible. In the new version, users can alter models and model versions and add tags [#6626](https://github.com/apache/gravitino/issues/6226) [#6222](https://github.com/apache/gravitino/issues/6222).
 
 ## Fileset Catalog
 
 Gravitino now supports multiple named storage locations within a single fileset and placeholder-based path generation.
 
-With multiple locations support, users can reference data across different file systems (HDFS, S3, GCS, local, etc.) through a unified fileset interface, each with a unique location name.
+With multiple location support, users can reference data across different file systems (HDFS, S3, GCS, local, etc.) through a unified fileset interface, each with a unique location name.
 
-The placeholder feature allows dynamic storage path generation using the `{{placeholder}}` syntax, where placeholders are automatically replaced with corresponding fileset properties.
+The placeholder feature allows dynamic storage path generation using the `{{placeholder}}` syntax, automatically replacing placeholders with corresponding fileset properties.
 
-These enhancements significantly improve flexibility for multi-cloud environments and complex data organization patterns while maintaining a clean abstraction layer for data assets management [#6681](https://github.com/apache/gravitino/issues/6681).
+These enhancements significantly improves the flexibility for multi-cloud environments and complex data organization patterns while maintaining a clean abstraction layer for data assets management [#6681](https://github.com/apache/gravitino/issues/6681).
 
 ## GVFS (Gravitino Virtual File System)
 
 GVFS has been enhanced to support accessing multiple locations within filesets. Users can now select which location to use through configuration properties, environment variables, or fileset default settings.
 
-GVFS has also been refactored with a pluggable architecture allowing custom operations and hooks, enabling users to extend functionality through `operations_class` and `hook_class` configuration options for more flexible integration with their specific infrastructure [#6938](https://github.com/apache/gravitino/issues/6938).
+GVFS has also been refactored with a pluggable architecture allowing custom operations and hooks. This enables users to extend functionality through `operations_class` and `hook_class` configuration options for more flexible integration with their specific infrastructure [#6938](https://github.com/apache/gravitino/issues/6938).
 
 ## Security
 
-The new version added privileges for the model and corrected some privilege semantics.
-Meanwhile, it fixed some bugs with the Ranger path-based plugin [#6620](https://github.com/apache/gravitino/pull/6620) [#6575](https://github.com/apache/gravitino/pull/6575) [#6821](https://github.com/apache/gravitino/pull/6821) [#6864](https://github.com/apache/gravitino/pull/6864).
-All of the user-related,  group-related, and role-related events were supported for the event system [#2969](https://github.com/apache/gravitino/issues/2969) .
+The new version has added privileges for the data model and corrected some privilege semantics.
+It has also fixed some bugs with the Ranger path-based plugin [#6620](https://github.com/apache/gravitino/pull/6620) [#6575](https://github.com/apache/gravitino/pull/6575) [#6821](https://github.com/apache/gravitino/pull/6821) [#6864](https://github.com/apache/gravitino/pull/6864).
+All of the user-related,  group-related, and role-related events are now supported for the event system [#2969](https://github.com/apache/gravitino/issues/2969).
 
 ## Data Lineage
 
-The community added a data lineage interface that follows the OpenLineage API spec. Users can implement their custom data lineage plugin to adapt to their system [#6617](https://github.com/apache/gravitino/issues/6617).
+The community added a data lineage interface that follows the OpenLineage API specification. Users can implement their custom data lineage plugin to adapt to their system [#6617](https://github.com/apache/gravitino/issues/6617).
 
 ## Core
 
-The community mainly cared about the performance. It improves the performance by reducing the scope of the lock and batch reading data from storage [#6744](https://github.com/apache/gravitino/issues/6744) [#6560](https://github.com/apache/gravitino/issues/6560) [#2870](https://github.com/apache/gravitino/issues/2780) .
+The community cared about performance. Performance was improved by reducing the scope of the lock and batch reading data from storage [#6744](https://github.com/apache/gravitino/issues/6744) [#6560](https://github.com/apache/gravitino/issues/6560) [#2870](https://github.com/apache/gravitino/issues/2780).
 
 ## CLI
 
-Additionally, there is one more change worth mentioning: users no longer need to rely on the alias command to use the CLI. Instead, the community provided a convenient script located at ./bin/gcli.sh that the user can directly use the CLI client [#5383](https://github.com/apache/gravitino/issues/5383).
+Additionally, there is one more change worth mentioning. Users no longer need to rely on the alias command to use the CLI. Instead, the community provided a convenient script located at ./bin/gcli.sh so that a user can directly use the CLI client [#5383](https://github.com/apache/gravitino/issues/5383).
 
 ## Connector
 
-Both Flink connector and Spark connector add JDBC support [#6233](https://github.com/apache/gravitino/issues/6233) [#6164](https://github.com/apache/gravitino/issues/6164).
+Both the Flink connector and the Spark connector added JDBC support [#6233](https://github.com/apache/gravitino/issues/6233) [#6164](https://github.com/apache/gravitino/issues/6164).
 
 ## Chart
 
-Deploy Gravitino on Kubernetes with fully customizable configurations [#6594](https://github.com/apache/gravitino/issues/6594).
+Deploying Gravitino on Kubernetes with a fully customizable configuration [#6594](https://github.com/apache/gravitino/issues/6594).
 
 ## Overall
 
-Gravitino 0.9.0 focused more on AI, data government, and security. We thank the Gravitino community for their continued support and valuable contributions. Thanks to our users' feedback, we can continue to innovate and build,
-So thanks to all those reading this!
-To further explore the Gravitino 0.9.0 release, please check [the documentation](https://gravitino.apache.org/docs/0.9.0-incubating).
-Your feedback is invaluable to the community and the project.
+Gravitino 0.9.0 focuses on advancements in AI, data governance, and security. We thank the Gravitino community for their continued support and valuable contributions. We can continue to innovate and build thanks to all our users' feedback.
+Thank you for taking the time to read this!
+To dive deeper into the Gravitino 0.9.0 release, explore [the full documentation](https://gravitino.apache.org/docs/0.9.0-incubating).
+Your feedback is greatly valued and helps shape the future of the Gravitino project and community.
 
 ## Credits
 
