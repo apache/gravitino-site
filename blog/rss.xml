@@ -4,10 +4,104 @@
         <title>Apache Gravitino Blog</title>
         <link>https://gravitino.apache.org/blog</link>
         <description>Apache Gravitino Blog</description>
-        <lastBuildDate>Fri, 24 Jan 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Apache Gravitino 0.9.0 - Focus on AI, data governance, and security with multi-dimensional feature upgrade]]></title>
+            <link>https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes</link>
+            <guid>https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes</guid>
+            <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Gravitino 0.9.0 focused more on AI, data government, and security. Many features are used in the production environment. The community received much feedback from users in many well-known companies. The AI and security features have raised more and more attention.]]></description>
+            <content:encoded><![CDATA[<p>Gravitino 0.9.0 focused more on AI, data government, and security. Many features are used in the production environment. The community received much feedback from users in many well-known companies. The AI and security features have raised more and more attention.</p>
+<p>In this version, the community optimizes the user experience regarding fileset catalogs and model catalogs. This allows users to manage their unstructured AI data and model data more conveniently.</p>
+<p>Talking about data lineage, the community added a data lineage interface. Users can implement their custom data lineage plugin to adapt to their system.
+For security, the community corrects some privilege semantics and fixes many authorization plugin corner cases to make the system more robust.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="model-catalog">Model Catalog<a class="hash-link" aria-label="Direct link to Model Catalog" title="Direct link to Model Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#model-catalog">​</a></h2>
+<p>Before 0.9.0, the model catalog was immutable, which was not convenient. It can alter models and model versions, and supports adding tags in the new version <a href="https://github.com/apache/gravitino/issues/6226" target="_blank" rel="noopener noreferrer">#6626</a> <a href="https://github.com/apache/gravitino/issues/6222" target="_blank" rel="noopener noreferrer">#6222</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="fileset-catalog">Fileset Catalog<a class="hash-link" aria-label="Direct link to Fileset Catalog" title="Direct link to Fileset Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#fileset-catalog">​</a></h2>
+<p>Gravitino now supports multiple named storage locations within a single fileset and placeholder-based path generation.</p>
+<p>With multiple locations support, users can reference data across different file systems (HDFS, S3, GCS, local, etc.) through a unified fileset interface, each with a unique location name.</p>
+<p>The placeholder feature allows dynamic storage path generation using the <code>{{placeholder}}</code> syntax, where placeholders are automatically replaced with corresponding fileset properties.</p>
+<p>These enhancements significantly improve flexibility for multi-cloud environments and complex data organization patterns while maintaining a clean abstraction layer for data assets management <a href="https://github.com/apache/gravitino/issues/6681" target="_blank" rel="noopener noreferrer">#6681</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="gvfs-gravitino-virtual-file-system">GVFS (Gravitino Virtual File System)<a class="hash-link" aria-label="Direct link to GVFS (Gravitino Virtual File System)" title="Direct link to GVFS (Gravitino Virtual File System)" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#gvfs-gravitino-virtual-file-system">​</a></h2>
+<p>GVFS has been enhanced to support accessing multiple locations within filesets. Users can now select which location to use through configuration properties, environment variables, or fileset default settings.</p>
+<p>GVFS has also been refactored with a pluggable architecture allowing custom operations and hooks, enabling users to extend functionality through <code>operations_class</code> and <code>hook_class</code> configuration options for more flexible integration with their specific infrastructure <a href="https://github.com/apache/gravitino/issues/6938" target="_blank" rel="noopener noreferrer">#6938</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#security">​</a></h2>
+<p>The new version added privileges for the model and corrected some privilege semantics.
+Meanwhile, it fixed some bugs with the Ranger path-based plugin <a href="https://github.com/apache/gravitino/pull/6620" target="_blank" rel="noopener noreferrer">#6620</a> <a href="https://github.com/apache/gravitino/pull/6575" target="_blank" rel="noopener noreferrer">#6575</a> <a href="https://github.com/apache/gravitino/pull/6821" target="_blank" rel="noopener noreferrer">#6821</a> <a href="https://github.com/apache/gravitino/pull/6864" target="_blank" rel="noopener noreferrer">#6864</a>.
+All of the user-related,  group-related, and role-related events were supported for the event system <a href="https://github.com/apache/gravitino/issues/2969" target="_blank" rel="noopener noreferrer">#2969</a> .</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="data-lineage">Data Lineage<a class="hash-link" aria-label="Direct link to Data Lineage" title="Direct link to Data Lineage" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#data-lineage">​</a></h2>
+<p>The community added a data lineage interface that follows the OpenLineage API spec. Users can implement their custom data lineage plugin to adapt to their system <a href="https://github.com/apache/gravitino/issues/6617" target="_blank" rel="noopener noreferrer">#6617</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="core">Core<a class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#core">​</a></h2>
+<p>The community mainly cared about the performance. It improves the performance by reducing the scope of the lock and batch reading data from storage <a href="https://github.com/apache/gravitino/issues/6744" target="_blank" rel="noopener noreferrer">#6744</a> <a href="https://github.com/apache/gravitino/issues/6560" target="_blank" rel="noopener noreferrer">#6560</a> <a href="https://github.com/apache/gravitino/issues/2780" target="_blank" rel="noopener noreferrer">#2870</a> .</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="cli">CLI<a class="hash-link" aria-label="Direct link to CLI" title="Direct link to CLI" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#cli">​</a></h2>
+<p>Additionally, there is one more change worth mentioning: users no longer need to rely on the alias command to use the CLI. Instead, the community provided a convenient script located at ./bin/gcli.sh that the user can directly use the CLI client <a href="https://github.com/apache/gravitino/issues/5383" target="_blank" rel="noopener noreferrer">#5383</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="connector">Connector<a class="hash-link" aria-label="Direct link to Connector" title="Direct link to Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#connector">​</a></h2>
+<p>Both Flink connector and Spark connector add JDBC support <a href="https://github.com/apache/gravitino/issues/6233" target="_blank" rel="noopener noreferrer">#6233</a> <a href="https://github.com/apache/gravitino/issues/6164" target="_blank" rel="noopener noreferrer">#6164</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="chart">Chart<a class="hash-link" aria-label="Direct link to Chart" title="Direct link to Chart" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#chart">​</a></h2>
+<p>Deploy Gravitino on Kubernetes with fully customizable configurations <a href="https://github.com/apache/gravitino/issues/6594" target="_blank" rel="noopener noreferrer">#6594</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#overall">​</a></h2>
+<p>Gravitino 0.9.0 focused more on AI, data government, and security. We thank the Gravitino community for their continued support and valuable contributions. Thanks to our users' feedback, we can continue to innovate and build,
+So thanks to all those reading this!
+To further explore the Gravitino 0.9.0 release, please check <a href="https://gravitino.apache.org/docs/0.9.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
+Your feedback is invaluable to the community and the project.</p>
+<h2 class="anchor anchorWithStickyNavbar_X9Uu" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#credits">​</a></h2>
+<p><a href="https://github.com/JavedAbdullah" target="_blank" rel="noopener noreferrer">JavedAbdullah</a>
+<a href="https://github.com/AndreVale69" target="_blank" rel="noopener noreferrer">AndreVale69</a>
+<a href="https://github.com/Brijeshthummar02" target="_blank" rel="noopener noreferrer">Brijeshthummar02</a>
+<a href="https://github.com/cool9850311" target="_blank" rel="noopener noreferrer">cool9850311</a>
+<a href="https://github.com/liuchunhao" target="_blank" rel="noopener noreferrer">liuchunhao</a>
+<a href="https://github.com/danhuawang" target="_blank" rel="noopener noreferrer">danhuawang</a>
+<a href="https://github.com/unknowntpo" target="_blank" rel="noopener noreferrer">unknowntpo</a>
+<a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">FANNG1</a>
+<a href="https://github.com/tsungchih" target="_blank" rel="noopener noreferrer">tsungchih</a>
+<a href="https://github.com/jerryshao" target="_blank" rel="noopener noreferrer">jerryshao</a>
+<a href="https://github.com/justinmclean" target="_blank" rel="noopener noreferrer">justinmclean</a>
+<a href="https://github.com/zhoukangcn" target="_blank" rel="noopener noreferrer">zhoukangcn</a>
+<a href="https://github.com/Abyss-lord" target="_blank" rel="noopener noreferrer">Abyss-lord</a>
+<a href="https://github.com/amazingLychee" target="_blank" rel="noopener noreferrer">amazingLyche</a>
+<a href="https://github.com/yuqi1129" target="_blank" rel="noopener noreferrer">yuqi1129</a>
+<a href="https://github.com/Pranaykarvi" target="_blank" rel="noopener noreferrer">Pranaykarvi</a>
+<a href="https://github.com/puchengy" target="_blank" rel="noopener noreferrer">puchengy</a>
+<a href="https://github.com/LauraXia123" target="_blank" rel="noopener noreferrer">LauraXia123</a>
+<a href="https://github.com/tengqm" target="_blank" rel="noopener noreferrer">tengqm</a>
+<a href="https://github.com/rud9192" target="_blank" rel="noopener noreferrer">rud9192</a>
+<a href="https://github.com/antony0016" target="_blank" rel="noopener noreferrer">antony0016</a>
+<a href="https://github.com/frankvicky" target="_blank" rel="noopener noreferrer">frankvicky</a>
+<a href="https://github.com/TEOTEO520" target="_blank" rel="noopener noreferrer">TEOTEO520</a>
+<a href="https://github.com/TungYuChiang" target="_blank" rel="noopener noreferrer">TungYuChiang</a>
+<a href="https://github.com/sunxiaojian" target="_blank" rel="noopener noreferrer">sunxiaojian</a>
+<a href="https://github.com/xunliu" target="_blank" rel="noopener noreferrer">xunliu</a>
+<a href="https://github.com/LuciferYang" target="_blank" rel="noopener noreferrer">LuciferYang</a>
+<a href="https://github.com/diqiu50" target="_blank" rel="noopener noreferrer">diqiu50</a>
+<a href="https://github.com/zhengkezhou1" target="_blank" rel="noopener noreferrer">zhengkezhou1</a>
+<a href="https://github.com/caican00" target="_blank" rel="noopener noreferrer">caican00</a>
+<a href="https://github.com/granewang" target="_blank" rel="noopener noreferrer">granewang</a>
+<a href="https://github.com/yunchipang" target="_blank" rel="noopener noreferrer">yunchipang</a>
+<a href="https://github.com/jerqi" target="_blank" rel="noopener noreferrer">jerqi</a>
+<a href="https://github.com/mchades" target="_blank" rel="noopener noreferrer">mchades</a>
+<a href="https://github.com/rickyma" target="_blank" rel="noopener noreferrer">rickyma</a>
+<a href="https://github.com/Xander-run" target="_blank" rel="noopener noreferrer">Xander-run</a>
+<a href="https://github.com/flaming-archer" target="_blank" rel="noopener noreferrer">flaming-archer</a>
+<a href="https://github.com/waukin" target="_blank" rel="noopener noreferrer">waukin</a>
+<a href="https://github.com/lsyulong" target="_blank" rel="noopener noreferrer">lsyulong</a>
+<a href="https://github.com/luoshipeng" target="_blank" rel="noopener noreferrer">luoshipeng</a>
+<a href="https://github.com/FourFriends" target="_blank" rel="noopener noreferrer">FourFriends</a>
+<a href="https://github.com/this-user" target="_blank" rel="noopener noreferrer">this-user</a>
+<a href="https://github.com/vitamin43" target="_blank" rel="noopener noreferrer">vitamin43</a>
+<a href="https://github.com/hdygxsj" target="_blank" rel="noopener noreferrer">hdygxsj</a>
+<a href="https://github.com/liangyouze" target="_blank" rel="noopener noreferrer">liangyouze</a></p>
+<sub>Apache, Apache Fink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>]]></content:encoded>
+            <category>apache</category>
+            <category>gravitino</category>
+            <category>metadata</category>
+            <category>multicloud</category>
+            <category>model</category>
+            <category>security</category>
+            <category>government</category>
+        </item>
         <item>
             <title><![CDATA[Apache Gravitino 0.8.0 - strengthen the AI support for Apache Gravitino™ (incubating)]]></title>
             <link>https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes</link>
