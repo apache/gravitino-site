@@ -15,7 +15,7 @@
 
 
 <script src="js/matomo.js" async></script><link rel="stylesheet" href="/assets/css/styles.31c9fd29.css">
-<script src="/assets/js/runtime~main.1eb74cb7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d1f72152.js" defer="defer"></script>
 <script src="/assets/js/main.f6ee1183.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,6 +26,12 @@
 <div class="language-shell codeBlockContainer_Cbyv theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_O2_i"><pre tabindex="0" class="prism-code language-shell codeBlock_JIho thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_Pt_q"><span class="token-line" style="color:#bfc7d5"><span class="token plain">docker run --rm -d -p 8090:8090 -p 9001:9001 apache/gravitino:0.7.0-incubating</span><br></span></code></pre><div class="buttonGroup_HM9B"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_hTNT" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_N4P7"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_jlWW"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>Changelog</p>
 <ul>
+<li>
+<p>apache/gravitino:0.9.0-incubating</p>
+<ul>
+<li>Based on Gravitino 0.9.0-incubating, you can know more information from 0.9.0-incubating <a href="https://github.com/apache/gravitino/releases/tag/v0.9.0-incubating" target="_blank" rel="noopener noreferrer">release notes</a>.</li>
+</ul>
+</li>
 <li>
 <p>apache/gravitino:0.8.0-incubating</p>
 <ul>
@@ -96,9 +102,11 @@
 <p>Changelog</p>
 <ul>
 <li>
-<p>apache/gravitino-iceberg-rest:0.8.0-incubating</p>
+<p>apache/gravitino-iceberg-rest:0.9.0-incubating</p>
 <ul>
-<li>Supports OSS and ADLS storage.</li>
+<li>Upgrade Iceberg version from 1.5 to 1.6.</li>
+<li>Supports s3 path-style-access property.</li>
+<li>Bug fix for warehouse is hard code in Iceberg memory catalog backend.</li>
 </ul>
 </li>
 <li>
@@ -162,6 +170,12 @@
 <h3 class="anchor anchorWithStickyNavbar_X9Uu" id="trino-image">Trino image<a class="hash-link" aria-label="Direct link to Trino image" title="Direct link to Trino image" href="/docs/next/docker-image-details#trino-image">​</a></h3>
 <p>Changelog</p>
 <ul>
+<li>
+<p>apache/gravitino-playground<!-- -->:trino-435-gravitino-0<!-- -->.9.0-incubating</p>
+<ul>
+<li>Use Gravitino release 0.9.0-incubating Dockerfile to build the image.</li>
+</ul>
+</li>
 <li>
 <p>apache/gravitino-playground<!-- -->:trino-435-gravitino-0<!-- -->.8.0-incubating</p>
 <ul>
