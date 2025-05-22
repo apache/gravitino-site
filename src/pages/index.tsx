@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import Layout from '@theme/Layout';
+import Layout from '@theme/Layout'; 
 import HomepageFeatures from '../components/HomepageFeatures';
 import GravitinoInfo from '../components/GravitinoInfo';
 import Link from '@docusaurus/Link'
