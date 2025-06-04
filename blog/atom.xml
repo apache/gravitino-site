@@ -2,11 +2,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gravitino.apache.org/blog</id>
     <title>Apache Gravitino Blog</title>
-    <updated>2025-05-07T00:00:00.000Z</updated>
+    <updated>2025-06-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gravitino.apache.org/blog"/>
     <subtitle>Apache Gravitino Blog</subtitle>
     <icon>https://gravitino.apache.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Apache Gravitino Graduates as a Top-Level Project at The Apache Software Foundation]]></title>
+        <id>https://gravitino.apache.org/blog/gravitino-top-level-project</id>
+        <link href="https://gravitino.apache.org/blog/gravitino-top-level-project"/>
+        <updated>2025-06-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We’re excited to share that Apache Gravitino is now a Top-Level Project (TLP) at the Apache Software Foundation (ASF)\! This milestone marks a major step forward for the project and the community that’s grown around it since entering the Apache Incubator in June 2024\.]]></summary>
+        <content type="html"><![CDATA[<p>We’re excited to share that <strong>Apache Gravitino</strong> is now a <strong>Top-Level Project (TLP)</strong> at the Apache Software Foundation (ASF)! This milestone marks a major step forward for the project and the community that’s grown around it since entering the Apache Incubator in June 2024.</p>
+<p>Gravitino was created to solve a growing pain in today’s data ecosystem: managing metadata across an explosion of systems including data warehouses, datalakes, lakehouses, streaming platforms, and AI tools. With Gravitino, you get a high-performance, open-source metastore that brings all that metadata together into one unified platform. Think of it as the missing layer that makes your data and AI assets easier to manage, discover, and govern.</p>
+<p>“Graduation is a major milestone for any Apache project,” said <strong>Justin Mclean, Chair of the Apache Incubator</strong>. “Apache Gravitino has demonstrated the maturity expected of a top-level project, including a diverse and engaged community and a deep understanding of the ASF’s governance principles."</p>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="built-for-todays-data-stack"><strong>Built for Today’s Data Stack</strong><a class="hash-link" aria-label="Direct link to built-for-todays-data-stack" title="Direct link to built-for-todays-data-stack" href="https://gravitino.apache.org/blog/gravitino-top-level-project#built-for-todays-data-stack">​</a></h2>
+<p>Gravitino supports a wide range of systems out of the box, including <strong>Apache Iceberg</strong>, <strong>Apache Hive</strong>, <strong>Apache Kafka</strong>, <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and more. Whether you're building a modern lakehouse architecture or trying to wrangle metadata across hybrid cloud and on-prem environments, Gravitino helps break down data silos and streamline metadata governance at scale.</p>
+<p>“We’re thrilled to see Gravitino become an Apache Top-Level Project,” said <strong>Jerry Shao, Chair of Apache Gravitino</strong>. “Our community is deeply committed to building a scalable, extensible metadata system that helps enterprises unify their data ecosystem. Graduation is not the end but a new beginning and we’re just getting started.”</p>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="growing-community-real-world-adoption"><strong>Growing Community, Real-World Adoption</strong><a class="hash-link" aria-label="Direct link to growing-community-real-world-adoption" title="Direct link to growing-community-real-world-adoption" href="https://gravitino.apache.org/blog/gravitino-top-level-project#growing-community-real-world-adoption">​</a></h2>
+<p>In under a year, Gravitino has built a global community of contributors and gained real adoption from companies with serious data challenges.</p>
+<p>“As organizations grapple with increasingly complex and distributed data and AI environments, Gravitino provides the unified metadata layer that’s been missing,” said <strong>Junping Du</strong>, <strong>CEO of Datastrato</strong>. “We’re proud to support the project and congratulate the community on this big step forward.”</p>
+<p>"Gravitino is uniquely designed to bridge data and AI workloads. We're excited to deploy it across our multi-cloud AI clusters and contribute to many prioritized AI and agent-based use cases," said <strong>Jack Song</strong>, <strong>Director of Uber Data Platform</strong>. "Gravitino’s graduation marks its maturity entering the next level, backed by a thriving and engaged community."</p>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="get-involved"><strong>Get Involved</strong><a class="hash-link" aria-label="Direct link to get-involved" title="Direct link to get-involved" href="https://gravitino.apache.org/blog/gravitino-top-level-project#get-involved">​</a></h2>
+<p>Whether you’re looking to contribute, integrate Gravitino into your stack, or just learn more, now’s the perfect time to get involved:</p>
+<p>- <a href="https://gravitino.apache.org/" target="_blank" rel="noopener noreferrer">Website</a>
+- <a href="https://github.com/apache/gravitino" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+<p>Thanks to everyone in the community who made this possible. Let’s keep growing!</p>]]></content>
+        <author>
+            <name>Justin Mclean</name>
+            <uri>https://github.com/justinmclean/</uri>
+        </author>
+        <category label="apache" term="apache"/>
+        <category label="gravitino" term="gravitino"/>
+        <category label="ASF" term="ASF"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache Gravitino 0.9.0 - Focus on AI, data governance, and security with multi-dimensional feature upgrade]]></title>
         <id>https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes</id>
@@ -17,36 +46,36 @@
 <p>In this version, the community optimized the user experience for fileset catalogs and model catalogs, making it easier for users to manage their unstructured AI data and model data.</p>
 <p>The community added a new data lineage interface. Users can now implement a custom data lineage plugin to adapt to their own system.</p>
 <p>For security, the community has corrected some privilege semantics and fixed authorization plugin corner cases to make the entire system more robust.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="model-catalog">Model Catalog<a class="hash-link" aria-label="Direct link to Model Catalog" title="Direct link to Model Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#model-catalog">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="model-catalog">Model Catalog<a class="hash-link" aria-label="Direct link to Model Catalog" title="Direct link to Model Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#model-catalog">​</a></h2>
 <p>Before 0.9.0, the model catalog was immutable, which was not flexible. In the new version, users can alter models and model versions and add tags <a href="https://github.com/apache/gravitino/issues/6226" target="_blank" rel="noopener noreferrer">#6626</a> <a href="https://github.com/apache/gravitino/issues/6222" target="_blank" rel="noopener noreferrer">#6222</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="fileset-catalog">Fileset Catalog<a class="hash-link" aria-label="Direct link to Fileset Catalog" title="Direct link to Fileset Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#fileset-catalog">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="fileset-catalog">Fileset Catalog<a class="hash-link" aria-label="Direct link to Fileset Catalog" title="Direct link to Fileset Catalog" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#fileset-catalog">​</a></h2>
 <p>Gravitino now supports multiple named storage locations within a single fileset and placeholder-based path generation.</p>
 <p>With multiple location support, users can reference data across different file systems (HDFS, S3, GCS, local, etc.) through a unified fileset interface, each with a unique location name.</p>
 <p>The placeholder feature allows dynamic storage path generation using the <code>{{placeholder}}</code> syntax, automatically replacing placeholders with corresponding fileset properties.</p>
 <p>These enhancements significantly improves the flexibility for multi-cloud environments and complex data organization patterns while maintaining a clean abstraction layer for data assets management <a href="https://github.com/apache/gravitino/issues/6681" target="_blank" rel="noopener noreferrer">#6681</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="gvfs-gravitino-virtual-file-system">GVFS (Gravitino Virtual File System)<a class="hash-link" aria-label="Direct link to GVFS (Gravitino Virtual File System)" title="Direct link to GVFS (Gravitino Virtual File System)" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#gvfs-gravitino-virtual-file-system">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="gvfs-gravitino-virtual-file-system">GVFS (Gravitino Virtual File System)<a class="hash-link" aria-label="Direct link to GVFS (Gravitino Virtual File System)" title="Direct link to GVFS (Gravitino Virtual File System)" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#gvfs-gravitino-virtual-file-system">​</a></h2>
 <p>GVFS has been enhanced to support accessing multiple locations within filesets. Users can now select which location to use through configuration properties, environment variables, or fileset default settings.</p>
 <p>GVFS has also been refactored with a pluggable architecture allowing custom operations and hooks. This enables users to extend functionality through <code>operations_class</code> and <code>hook_class</code> configuration options for more flexible integration with their specific infrastructure <a href="https://github.com/apache/gravitino/issues/6938" target="_blank" rel="noopener noreferrer">#6938</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#security">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#security">​</a></h2>
 <p>The new version has added privileges for the data model and corrected some privilege semantics.
 It has also fixed some bugs with the Ranger path-based plugin <a href="https://github.com/apache/gravitino/pull/6620" target="_blank" rel="noopener noreferrer">#6620</a> <a href="https://github.com/apache/gravitino/pull/6575" target="_blank" rel="noopener noreferrer">#6575</a> <a href="https://github.com/apache/gravitino/pull/6821" target="_blank" rel="noopener noreferrer">#6821</a> <a href="https://github.com/apache/gravitino/pull/6864" target="_blank" rel="noopener noreferrer">#6864</a>.
 All of the user-related,  group-related, and role-related events are now supported for the event system <a href="https://github.com/apache/gravitino/issues/2969" target="_blank" rel="noopener noreferrer">#2969</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="data-lineage">Data Lineage<a class="hash-link" aria-label="Direct link to Data Lineage" title="Direct link to Data Lineage" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#data-lineage">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="data-lineage">Data Lineage<a class="hash-link" aria-label="Direct link to Data Lineage" title="Direct link to Data Lineage" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#data-lineage">​</a></h2>
 <p>The community added a data lineage interface that follows the OpenLineage API specification. Users can implement their custom data lineage plugin to adapt to their system <a href="https://github.com/apache/gravitino/issues/6617" target="_blank" rel="noopener noreferrer">#6617</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="core">Core<a class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#core">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="core">Core<a class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#core">​</a></h2>
 <p>The community cared about performance. Performance was improved by reducing the scope of the lock and batch reading data from storage <a href="https://github.com/apache/gravitino/issues/6744" target="_blank" rel="noopener noreferrer">#6744</a> <a href="https://github.com/apache/gravitino/issues/6560" target="_blank" rel="noopener noreferrer">#6560</a> <a href="https://github.com/apache/gravitino/issues/2780" target="_blank" rel="noopener noreferrer">#2870</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="cli">CLI<a class="hash-link" aria-label="Direct link to CLI" title="Direct link to CLI" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#cli">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="cli">CLI<a class="hash-link" aria-label="Direct link to CLI" title="Direct link to CLI" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#cli">​</a></h2>
 <p>Additionally, there is one more change worth mentioning. Users no longer need to rely on the alias command to use the CLI. Instead, the community provided a convenient script located at ./bin/gcli.sh so that a user can directly use the CLI client <a href="https://github.com/apache/gravitino/issues/5383" target="_blank" rel="noopener noreferrer">#5383</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="connector">Connector<a class="hash-link" aria-label="Direct link to Connector" title="Direct link to Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#connector">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="connector">Connector<a class="hash-link" aria-label="Direct link to Connector" title="Direct link to Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#connector">​</a></h2>
 <p>Both the Flink connector and the Spark connector added JDBC support <a href="https://github.com/apache/gravitino/issues/6233" target="_blank" rel="noopener noreferrer">#6233</a> <a href="https://github.com/apache/gravitino/issues/6164" target="_blank" rel="noopener noreferrer">#6164</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="chart">Chart<a class="hash-link" aria-label="Direct link to Chart" title="Direct link to Chart" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#chart">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="chart">Chart<a class="hash-link" aria-label="Direct link to Chart" title="Direct link to Chart" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#chart">​</a></h2>
 <p>Deploying Gravitino on Kubernetes with a fully customizable configuration <a href="https://github.com/apache/gravitino/issues/6594" target="_blank" rel="noopener noreferrer">#6594</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#overall">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#overall">​</a></h2>
 <p>Gravitino 0.9.0 focuses on advancements in AI, data governance, and security. We thank the Gravitino community for their continued support and valuable contributions. We can continue to innovate and build thanks to all our users' feedback.
 Thank you for taking the time to read this!
 To dive deeper into the Gravitino 0.9.0 release, explore <a href="https://gravitino.apache.org/docs/0.9.0-incubating" target="_blank" rel="noopener noreferrer">the full documentation</a>.
 Your feedback is greatly valued and helps shape the future of the Gravitino project and community.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#credits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-9-0-release-notes#credits">​</a></h2>
 <p><a href="https://github.com/JavedAbdullah" target="_blank" rel="noopener noreferrer">JavedAbdullah</a>
 <a href="https://github.com/AndreVale69" target="_blank" rel="noopener noreferrer">AndreVale69</a>
 <a href="https://github.com/Brijeshthummar02" target="_blank" rel="noopener noreferrer">Brijeshthummar02</a>
@@ -113,12 +142,12 @@ Your feedback is greatly valued and helps shape the future of the Gravitino proj
         <summary type="html"><![CDATA[Apache Gravitino 0.8.0 is the third major release after entering the ASF. In this release, the community provides several exciting features like model catalog, Fuse for Fileset, credential vending for Fileset, Flink Iceberg and Paimon connector, Spark Paimon connector, and security enforcement.]]></summary>
         <content type="html"><![CDATA[<p>Apache Gravitino 0.8.0 is the third major release after entering the ASF. In this release, the community provides several exciting features like model catalog, Fuse for Fileset, credential vending for Fileset, Flink Iceberg and Paimon connector, Spark Paimon connector, and security enforcement.</p>
 <p>This release blog will briefly introduce the new significant features and improvements. Please keep reading to learn more about what the community has worked on.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="model-catalog">Model Catalog<a class="hash-link" aria-label="Direct link to Model Catalog" title="Direct link to Model Catalog" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#model-catalog">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="model-catalog">Model Catalog<a class="hash-link" aria-label="Direct link to Model Catalog" title="Direct link to Model Catalog" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#model-catalog">​</a></h2>
 <p>Besides table and messaging metadata, Gravitino supports model metadata management in version 0.8. Gravitino allows a model to have multiple versions, and users can choose the best version. 0.8 provides basic functionality, and more features will be provided in the future, such as tagging models and better integration with machine learning workflows, to help users better manage models and extract more value from data and models.</p>
 <ul>
 <li>Support model versioning metadata <a href="https://github.com/apache/gravitino/issues/4783" target="_blank" rel="noopener noreferrer">#4783</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credential-vending">Credential vending<a class="hash-link" aria-label="Direct link to Credential vending" title="Direct link to Credential vending" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#credential-vending">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credential-vending">Credential vending<a class="hash-link" aria-label="Direct link to Credential vending" title="Direct link to Credential vending" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#credential-vending">​</a></h2>
 <p>Credential vending is a fundamental function in the cloud. In version 0.7, credential vending was supported for the Iceberg REST server. In version 0.8, we offer support for the Gravitino server and integrate it with Fileset. Based on Credential vending, Fileset can be used more securely and conveniently. The Gravitino server will centrally manage the security key and issue a temporary token, which is only valid for the Fileset that needs to be accessed by the request, making it more secure and eliminating the need for the user side to provide information such as AKSK.</p>
 <p>In addition to the support for GCS and S3, version 0.8 also has built-in support for OSS and ADLS credential vending, and can support other storage in a pluggable manner.</p>
 <ul>
@@ -127,19 +156,19 @@ Your feedback is greatly valued and helps shape the future of the Gravitino proj
 <li>Support Aliyun OSS credential provider <a href="https://github.com/apache/gravitino/issues/5625" target="_blank" rel="noopener noreferrer">#5625</a>.</li>
 <li>Support ADLS credential provider <a href="https://github.com/apache/gravitino/issues/5624" target="_blank" rel="noopener noreferrer">#5624</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="fuse-for-fileset">Fuse for Fileset<a class="hash-link" aria-label="Direct link to Fuse for Fileset" title="Direct link to Fuse for Fileset" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#fuse-for-fileset">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="fuse-for-fileset">Fuse for Fileset<a class="hash-link" aria-label="Direct link to Fuse for Fileset" title="Direct link to Fuse for Fileset" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#fuse-for-fileset">​</a></h2>
 <p>With the widespread use of Fileset in AI scenarios, how to improve usability and reduce user usage costs has become a major issue. In AI scenarios, users tend to access remote data in the way of local disks. Fuse for fileset is designed based on this, enabling users to access data managed by Fileset as if they were using local disks. Currently, basic alpha functionality is provided, which allows access to S3 data managed by Fileset. In subsequent versions, metadata caching functionality and support for more storage will be provided. Fuse for fileset is developed in Rust for performance considerations, and everyone is welcome to join the development.</p>
 <ul>
 <li>Implement GVFS fuse to access Gravitino fileset in the POSIX Protocol <a href="https://github.com/apache/gravitino/issues/5504" target="_blank" rel="noopener noreferrer">#5504</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="lakehouse-federation">Lakehouse Federation<a class="hash-link" aria-label="Direct link to Lakehouse Federation" title="Direct link to Lakehouse Federation" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#lakehouse-federation">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="lakehouse-federation">Lakehouse Federation<a class="hash-link" aria-label="Direct link to Lakehouse Federation" title="Direct link to Lakehouse Federation" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#lakehouse-federation">​</a></h2>
 <p>Gravitino provides a variety of catalogs, such as Apache Hive, Apache Iceberg, Apache Hudi, and Apache Paimon, etc. How can it be better connected to the surrounding ecosystem to facilitate user use? This iteration provides Flink Paimon connector, Flink Iceberg connector, and Spark Paimon connector to access data from Paimon and Iceberg. More connectors will be supported in the future. Let's look forward to it.</p>
 <ul>
 <li>Support Iceberg catalog in Flink connector <a href="https://github.com/apache/gravitino/issues/3515" target="_blank" rel="noopener noreferrer">#3515</a>.</li>
 <li>Support Paimon catalog in Flink connector <a href="https://github.com/apache/gravitino/issues/5194" target="_blank" rel="noopener noreferrer">#5194</a> <a href="https://github.com/apache/gravitino/issues/5193" target="_blank" rel="noopener noreferrer">#5193</a> <a href="https://github.com/apache/gravitino/issues/5192" target="_blank" rel="noopener noreferrer">#5192</a>.</li>
 <li>Support Paimon catalog in Spark connector <a href="https://github.com/apache/gravitino/pull/5722" target="_blank" rel="noopener noreferrer">#5722</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="security-enforcement">Security enforcement<a class="hash-link" aria-label="Direct link to Security enforcement" title="Direct link to Security enforcement" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#security-enforcement">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="security-enforcement">Security enforcement<a class="hash-link" aria-label="Direct link to Security enforcement" title="Direct link to Security enforcement" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#security-enforcement">​</a></h2>
 <p>As a metadata management system, security is of the utmost importance. In this iteration, we managing security policies in chain authorization, and support the push-down of SQL security policies and path-based security policies. Additionally, the privilege policies of Iceberg and Paimon tables can be pushed down to Ranger. Based on Gravitino's security policies, a solid foundation is provided for your business development.</p>
 <ul>
 <li>Chain authorization multiple underlying data source <a href="https://github.com/apache/gravitino/issues/5774" target="_blank" rel="noopener noreferrer">#5774</a>.</li>
@@ -148,26 +177,26 @@ Your feedback is greatly valued and helps shape the future of the Gravitino proj
 <li>Use chain authorization to support Hive and HDFS authorization <a href="https://github.com/apache/gravitino/issues/5956" target="_blank" rel="noopener noreferrer">#5956</a>.</li>
 <li>Ranger Authorization HDFS Plugin <a href="https://github.com/apache/gravitino/issues/5731" target="_blank" rel="noopener noreferrer">#5731</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="other-notable-enhancements">Other notable enhancements<a class="hash-link" aria-label="Direct link to Other notable enhancements" title="Direct link to Other notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#other-notable-enhancements">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="iceberg-rest-server">Iceberg REST server<a class="hash-link" aria-label="Direct link to Iceberg REST server" title="Direct link to Iceberg REST server" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#iceberg-rest-server">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="other-notable-enhancements">Other notable enhancements<a class="hash-link" aria-label="Direct link to Other notable enhancements" title="Direct link to Other notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#other-notable-enhancements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="iceberg-rest-server">Iceberg REST server<a class="hash-link" aria-label="Direct link to Iceberg REST server" title="Direct link to Iceberg REST server" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#iceberg-rest-server">​</a></h3>
 <ul>
 <li>Generate credential according to the data path and metadata path <a href="https://github.com/apache/gravitino/issues/5648" target="_blank" rel="noopener noreferrer">#5648</a>.</li>
 <li>Integrate audit log framework for Iceberg REST server <a href="https://github.com/apache/gravitino/issues/5556" target="_blank" rel="noopener noreferrer">#5556</a>.</li>
 <li>Add schema and view event for Iceberg REST server <a href="https://github.com/apache/gravitino/issues/5438" target="_blank" rel="noopener noreferrer">#5438</a> <a href="https://github.com/apache/gravitino/issues/5437" target="_blank" rel="noopener noreferrer">#5437</a>.
 Add HTTP header to Iceberg event <a href="https://github.com/apache/gravitino/issues/5518" target="_blank" rel="noopener noreferrer">#5518</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="core">Core<a class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#core">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="core">Core<a class="hash-link" aria-label="Direct link to Core" title="Direct link to Core" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#core">​</a></h3>
 <ul>
 <li>Optimization tree lock when drop and load Table/Schema  <a href="https://github.com/apache/gravitino/issues/6044" target="_blank" rel="noopener noreferrer">#6044</a>.</li>
 <li>Support ADLS storage for Gravitino Iceberg catalog and Spark connector <a href="https://github.com/apache/gravitino/issues/5954" target="_blank" rel="noopener noreferrer">#5954</a>.</li>
 <li>Support pre-event for Gravitino server <a href="https://github.com/apache/gravitino/issues/5317" target="_blank" rel="noopener noreferrer">#5317</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="gravitino-client">Gravitino Client<a class="hash-link" aria-label="Direct link to Gravitino Client" title="Direct link to Gravitino Client" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#gravitino-client">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="gravitino-client">Gravitino Client<a class="hash-link" aria-label="Direct link to Gravitino Client" title="Direct link to Gravitino Client" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#gravitino-client">​</a></h3>
 <ul>
 <li>Add CLI interface for Gravitino <a href="https://github.com/apache/gravitino/issues/4943" target="_blank" rel="noopener noreferrer">#4943</a>.</li>
 <li>Support Python client for table operations <a href="https://github.com/apache/gravitino/issues/5198" target="_blank" rel="noopener noreferrer">#5198</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="bug-fix">BUG FIX<a class="hash-link" aria-label="Direct link to BUG FIX" title="Direct link to BUG FIX" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#bug-fix">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="bug-fix">BUG FIX<a class="hash-link" aria-label="Direct link to BUG FIX" title="Direct link to BUG FIX" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#bug-fix">​</a></h2>
 <p>Version 0.8 has fixed a large number of bugs, especially in terms of security and fileset usage. Some are listed below.</p>
 <ul>
 <li>Can't load filesystem 'gs' when use spark to access Gravitino GCS bundles <a href="https://github.com/apache/gravitino/issues/5609" target="_blank" rel="noopener noreferrer">#5609</a>.</li>
@@ -179,12 +208,12 @@ Add HTTP header to Iceberg event <a href="https://github.com/apache/gravitino/is
 <li>The owner of the catalog is incorrect when using Basic Auth and Password is empty <a href="https://github.com/apache/gravitino/issues/5968" target="_blank" rel="noopener noreferrer">#5968</a>.</li>
 <li>Grant a metalake level privilege won't take effect <a href="https://github.com/apache/gravitino/issues/5892" target="_blank" rel="noopener noreferrer">#5892</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#overall">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#overall">​</a></h2>
 <p>Apache Gravitino 0.8.0 is the third ASF release. This version adds a bunch of new features. We thank the Gravitino community for their continued support and valuable contributions. Thanks to our users' feedback, we can continue to innovate and build,
 so thanks to all those reading this!</p>
 <p>To further explore the Gravitino 0.8.0 release, please check <a href="https://gravitino.apache.org/docs/0.8.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
 Your feedback is invaluable to the community and the project.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#credits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-8-0-release-notes#credits">​</a></h2>
 <p>This release acknowledges the hard work and dedication of all contributors who have helped make this release possible.</p>
 <p><a href="https://github.com/Abyss-lord" target="_blank" rel="noopener noreferrer">@Abyss-lord</a>
 <a href="https://github.com/Aireed" target="_blank" rel="noopener noreferrer">@Aireed</a>
@@ -269,7 +298,7 @@ Your feedback is invaluable to the community and the project.</p>
 mainly focused on strengthening cloud support to make Gravitino work better in cloud environments.</p>
 <p>This release blog will briefly introduce the new features related to cloud support and other
 significant features and improvements. Please keep reading to learn more about what the community has worked on.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="cloud-storage-support-for-gravitino">Cloud storage support for Gravitino<a class="hash-link" aria-label="Direct link to Cloud storage support for Gravitino" title="Direct link to Cloud storage support for Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#cloud-storage-support-for-gravitino">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="cloud-storage-support-for-gravitino">Cloud storage support for Gravitino<a class="hash-link" aria-label="Direct link to Cloud storage support for Gravitino" title="Direct link to Cloud storage support for Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#cloud-storage-support-for-gravitino">​</a></h2>
 <p>As more and more users run their data stacks in the cloud and use cloud object storage, cloud
 storage support has become an imperative requirement. In this release, the community has mainly focused on
 adding cloud storage support for Gravitino to make sure Gravitino itself and its connectors/sources
@@ -290,7 +319,7 @@ different cloud storage.</li>
 <p>Overall, with the 0.7.0 release, Gravitino generally supports working with different cloud storage services.
 To know more, you can check our issue <a href="https://github.com/apache/gravitino/issues/4396" target="_blank" rel="noopener noreferrer">#4396</a>. Also,
 we’re continuing to add more cloud storage support in future releases. Please stay tuned.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credential-vending-support-in-gravitino">Credential vending support in Gravitino<a class="hash-link" aria-label="Direct link to Credential vending support in Gravitino" title="Direct link to Credential vending support in Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credential-vending-support-in-gravitino">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credential-vending-support-in-gravitino">Credential vending support in Gravitino<a class="hash-link" aria-label="Direct link to Credential vending support in Gravitino" title="Direct link to Credential vending support in Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credential-vending-support-in-gravitino">​</a></h2>
 <p>Besides cloud storage support, credential vending support is also vital for Gravitino,
 especially to work with cloud storage. The traditional way of using AKSK is not convenient or safe.
 With credential vending technology, the Gravitino server will help users get temporary tokens for
@@ -302,14 +331,14 @@ users can smoothly access Iceberg tables on S3 and GCS with authentication.</p>
 like fileset support, connector support, etc, in the next release.</p>
 <p>For the details of credential vending, please check the issue <a href="https://github.com/apache/gravitino/issues/4398" target="_blank" rel="noopener noreferrer">#4398</a>
 and the <a href="https://docs.google.com/document/d/1fovK0ylSmI45ynrCPcnRZqzyPDn7DRNb_ExdbjVPq0k/edit?tab=t.0#heading=h.1cts6muko2j1" target="_blank" rel="noopener noreferrer">design document</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="unified-access-control-improvements">Unified access control improvements<a class="hash-link" aria-label="Direct link to Unified access control improvements" title="Direct link to Unified access control improvements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#unified-access-control-improvements">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="unified-access-control-improvements">Unified access control improvements<a class="hash-link" aria-label="Direct link to Unified access control improvements" title="Direct link to Unified access control improvements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#unified-access-control-improvements">​</a></h2>
 <p>Gravitino 0.6.0 introduced the alpha version of unified access control with Apache Ranger
 support (<a href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#introducing-the-unified-rbac-model-for-gravitino" target="_blank" rel="noopener noreferrer">here</a>),
 but this feature still needs improvement. In version 0.7.0, we added many improvements and bug fixes to make this end-to-end access control workable. Now, with the release of
 0.7.0, the Gravitino unified access control works well with Spark and Ranger to secure end-to-end table access. To see what we have fixed, please check out our issue <a href="https://github.com/apache/gravitino/issues/4615" target="_blank" rel="noopener noreferrer">#4615</a>.
 You can also try our <a href="https://github.com/apache/gravitino-playground" target="_blank" rel="noopener noreferrer">playground</a> to try out the
 unified access control feature.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="centralized-audit-log-support">Centralized audit log support<a class="hash-link" aria-label="Direct link to Centralized audit log support" title="Direct link to Centralized audit log support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#centralized-audit-log-support">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="centralized-audit-log-support">Centralized audit log support<a class="hash-link" aria-label="Direct link to Centralized audit log support" title="Direct link to Centralized audit log support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#centralized-audit-log-support">​</a></h2>
 <p>Thanks to the community, Gravitino now supports centralized audit logs. With this feature enabled,
 users can get the audit information in a centralized place, whether they’re accessing tables or filesets from various sources.</p>
 <p>Gravitino’s audit log framework also supports different plugin formatters and writers, and users
@@ -317,12 +346,12 @@ can implement their own log format and output destinations.</p>
 <p>Please see the issues <a href="https://github.com/apache/gravitino/issues/4887" target="_blank" rel="noopener noreferrer">#4887</a>
 and <a href="https://github.com/apache/gravitino/issues/4021" target="_blank" rel="noopener noreferrer">#4021</a> to know more about Gravitino’s
 centralized audit log.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="new-data-sources-support">New data sources support<a class="hash-link" aria-label="Direct link to New data sources support" title="Direct link to New data sources support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#new-data-sources-support">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="new-data-sources-support">New data sources support<a class="hash-link" aria-label="Direct link to New data sources support" title="Direct link to New data sources support" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#new-data-sources-support">​</a></h2>
 <p>As a unified data catalog, the community always aims to add more data sources. In
 this version, Gravitino adds two new data sources. One is <a href="https://hudi.apache.org/" target="_blank" rel="noopener noreferrer">Apache Hudi</a>,
 the other is <a href="https://github.com/oceanbase/oceanbase" target="_blank" rel="noopener noreferrer">OceanBase</a>. You can now use Gravitino to
 manipulate Hudi and Oceanbase metadata in a unified manner.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="various-core-features">Various core features<a class="hash-link" aria-label="Direct link to Various core features" title="Direct link to Various core features" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#various-core-features">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="various-core-features">Various core features<a class="hash-link" aria-label="Direct link to Various core features" title="Direct link to Various core features" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#various-core-features">​</a></h2>
 <p>Apart from the features listed above, this version also improves a lot at its core, here are several important features:</p>
 <ul>
 <li>Add PostgreSQL support for storage backend <a href="https://github.com/apache/gravitino/issues/4101" target="_blank" rel="noopener noreferrer">#4101</a>.
@@ -338,8 +367,8 @@ will support column-level operations.</li>
 <li>Add an event listener for Iceberg REST catalog server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>
 and support pre-event for event listener <a href="https://github.com/apache/gravitino/issues/5112" target="_blank" rel="noopener noreferrer">#5112</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="other-notable-enhancements">Other notable enhancements<a class="hash-link" aria-label="Direct link to Other notable enhancements" title="Direct link to Other notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#other-notable-enhancements">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="gravitino-core">Gravitino core<a class="hash-link" aria-label="Direct link to Gravitino core" title="Direct link to Gravitino core" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#gravitino-core">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="other-notable-enhancements">Other notable enhancements<a class="hash-link" aria-label="Direct link to Other notable enhancements" title="Direct link to Other notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#other-notable-enhancements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="gravitino-core">Gravitino core<a class="hash-link" aria-label="Direct link to Gravitino core" title="Direct link to Gravitino core" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#gravitino-core">​</a></h3>
 <ul>
 <li>Supporting storing column metadata in Gravitino <a href="https://github.com/apache/gravitino/issues/4493" target="_blank" rel="noopener noreferrer">#4493</a>.</li>
 <li>Support pre-event for Gravitino <a href="https://github.com/apache/gravitino/issues/5049" target="_blank" rel="noopener noreferrer">#5049</a>.</li>
@@ -348,13 +377,13 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <li>Support audit log in Gravitino <a href="https://github.com/apache/gravitino/issues/4887" target="_blank" rel="noopener noreferrer">#4887</a>.</li>
 <li>Shrink the package size of Gravitino <a href="https://github.com/apache/gravitino/issues/4513" target="_blank" rel="noopener noreferrer">#4513</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="iceberg-rest-catalog-server">Iceberg REST catalog server<a class="hash-link" aria-label="Direct link to Iceberg REST catalog server" title="Direct link to Iceberg REST catalog server" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#iceberg-rest-catalog-server">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="iceberg-rest-catalog-server">Iceberg REST catalog server<a class="hash-link" aria-label="Direct link to Iceberg REST catalog server" title="Direct link to Iceberg REST catalog server" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#iceberg-rest-catalog-server">​</a></h3>
 <ul>
 <li>Add credential vending for Iceberg REST server. <a href="https://github.com/apache/gravitino/issues/4993" target="_blank" rel="noopener noreferrer">#4993</a>.</li>
 <li>Add an event listener for Iceberg REST server <a href="https://github.com/apache/gravitino/issues/5204" target="_blank" rel="noopener noreferrer">#5204</a>.</li>
 <li>Support pre-event for event listener <a href="https://github.com/apache/gravitino/issues/5112" target="_blank" rel="noopener noreferrer">#5112</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="catalog-related">Catalog related<a class="hash-link" aria-label="Direct link to Catalog related" title="Direct link to Catalog related" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#catalog-related">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="catalog-related">Catalog related<a class="hash-link" aria-label="Direct link to Catalog related" title="Direct link to Catalog related" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#catalog-related">​</a></h3>
 <ul>
 <li>Add OSS support for fileset catalog <a href="https://github.com/apache/gravitino/issues/5173" target="_blank" rel="noopener noreferrer">#5173</a>.</li>
 <li>Add GCS support for fileset catalog <a href="https://github.com/apache/gravitino/issues/5074" target="_blank" rel="noopener noreferrer">#5074</a>.</li>
@@ -364,7 +393,7 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <li>Add catalog support for Hudi <a href="https://github.com/apache/gravitino/issues/4306" target="_blank" rel="noopener noreferrer">#4306</a>.</li>
 <li>Add catalog support for OceanBase<a href="https://github.com/apache/gravitino/issues/4848" target="_blank" rel="noopener noreferrer">#4848</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="api-and-client">API and client<a class="hash-link" aria-label="Direct link to API and client" title="Direct link to API and client" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#api-and-client">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="api-and-client">API and client<a class="hash-link" aria-label="Direct link to API and client" title="Direct link to API and client" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#api-and-client">​</a></h3>
 <ul>
 <li>Add S3 fileset support for Python GVFS client  <a href="https://github.com/apache/gravitino/issues/5188" target="_blank" rel="noopener noreferrer">#5188</a>.</li>
 <li>Add GCS fileset support for Python GVFS client <a href="https://github.com/apache/gravitino/issues/5139" target="_blank" rel="noopener noreferrer">#5139</a>.</li>
@@ -372,19 +401,19 @@ and support pre-event for event listener <a href="https://github.com/apache/grav
 <li>Supports unified auditing of Fileset metadata and data operations <a href="https://github.com/apache/gravitino/issues/4021" target="_blank" rel="noopener noreferrer">#4021</a>.</li>
 <li>Support OAuth2 in Python GVFS <a href="https://github.com/apache/gravitino/issues/3758" target="_blank" rel="noopener noreferrer">#3758</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="ui">UI<a class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#ui">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="ui">UI<a class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#ui">​</a></h3>
 <ul>
 <li>Add UI support for operating fileset <a href="https://github.com/apache/gravitino/issues/5167" target="_blank" rel="noopener noreferrer">#5167</a>.</li>
 <li>Add UI support for operating schema <a href="https://github.com/apache/gravitino/issues/5140" target="_blank" rel="noopener noreferrer">#5140</a>.</li>
 </ul>
 <p>All the resolved issues targeting the 0.7.0 release can be seen at <a href="https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+" target="_blank" rel="noopener noreferrer">https://github.com/apache/gravitino/issues?q=is%3Aissue+is%3Aclosed+label%3A0.7.0+</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#overall">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#overall">​</a></h2>
 <p>Apache Gravitino 0.7.0 is the second ASF release. This version adds a bunch of new features. We thank the Gravitino community for their continued support and valuable
 contributions. Thanks to our users' feedback, we can continue to innovate and build,
 so thanks to all those reading this!</p>
 <p>To further explore the Gravitino 0.7.0 release, please check <a href="https://gravitino.apache.org/docs/0.7.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
 Your feedback is invaluable to the community and the project.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-7-0-release-notes#credits">​</a></h2>
 <p>This release acknowledges the hard work and dedication of all contributors who have helped make this release possible.</p>
 <p><a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">@FANNG1</a>
 <a href="https://github.com/LauraXia123" target="_blank" rel="noopener noreferrer">@LauraXia123</a>
@@ -438,7 +467,7 @@ and/or other countries.</sub>]]></content>
 This release brings a suite of new features and enhancements, particularly focusing on the unified
 access control system. Additionally, it includes various bug fixes and optimizations across other
 components.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#security">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="security">Security<a class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#security">​</a></h2>
 <ul>
 <li>Supports list users <a href="https://github.com/apache/gravitino/issues/3348" target="_blank" rel="noopener noreferrer">#3348</a></li>
 <li>Supports list roles <a href="https://github.com/apache/gravitino/issues/3346" target="_blank" rel="noopener noreferrer">#3346</a></li>
@@ -450,35 +479,35 @@ components.</p>
 <li>Remove role local cache <a href="https://github.com/apache/gravitino/issues/4246" target="_blank" rel="noopener noreferrer">#4246</a></li>
 <li>Addressed a response error in Ranger when calling the Ranger CREATE_GROUP API <a href="https://github.com/apache/gravitino/issues/4975" target="_blank" rel="noopener noreferrer">#4975</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="gravitino-core">Gravitino Core<a class="hash-link" aria-label="Direct link to Gravitino Core" title="Direct link to Gravitino Core" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#gravitino-core">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="gravitino-core">Gravitino Core<a class="hash-link" aria-label="Direct link to Gravitino Core" title="Direct link to Gravitino Core" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#gravitino-core">​</a></h2>
 <ul>
 <li>Fixed an issue with updating comments in metalake or catalog operations <a href="https://github.com/apache/gravitino/issues/4845" target="_blank" rel="noopener noreferrer">#4845</a></li>
 <li>Introduced a basic framework to support multiple JDBC backends <a href="https://github.com/apache/gravitino/issues/4832" target="_blank" rel="noopener noreferrer">#4832</a> <a href="https://github.com/apache/gravitino/issues/4868" target="_blank" rel="noopener noreferrer">#4868</a></li>
 <li>Fixed a cleanup bug occurring after failed catalog creation attempts <a href="https://github.com/apache/gravitino/issues/5082" target="_blank" rel="noopener noreferrer">#5082</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="tag">Tag<a class="hash-link" aria-label="Direct link to Tag" title="Direct link to Tag" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#tag">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="tag">Tag<a class="hash-link" aria-label="Direct link to Tag" title="Direct link to Tag" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#tag">​</a></h2>
 <ul>
 <li>Transitioned Tag REST APIs to Object path for improved management <a href="https://github.com/apache/gravitino/issues/5000" target="_blank" rel="noopener noreferrer">#5000</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="catalogs">Catalogs<a class="hash-link" aria-label="Direct link to Catalogs" title="Direct link to Catalogs" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#catalogs">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="iceberg">Iceberg<a class="hash-link" aria-label="Direct link to Iceberg" title="Direct link to Iceberg" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#iceberg">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="catalogs">Catalogs<a class="hash-link" aria-label="Direct link to Catalogs" title="Direct link to Catalogs" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#catalogs">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="iceberg">Iceberg<a class="hash-link" aria-label="Direct link to Iceberg" title="Direct link to Iceberg" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#iceberg">​</a></h3>
 <ul>
 <li>Use unified logic to transform catalog backend name to handle the renaming of catalog <a href="https://github.com/apache/gravitino/issues/4718" target="_blank" rel="noopener noreferrer">#4718</a></li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="doris">Doris<a class="hash-link" aria-label="Direct link to Doris" title="Direct link to Doris" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#doris">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="doris">Doris<a class="hash-link" aria-label="Direct link to Doris" title="Direct link to Doris" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#doris">​</a></h3>
 <ul>
 <li>Fix the missing distribution information when loading Doris tables <a href="https://github.com/apache/gravitino/issues/4988" target="_blank" rel="noopener noreferrer">#4988</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="trino-connector">Trino Connector<a class="hash-link" aria-label="Direct link to Trino Connector" title="Direct link to Trino Connector" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#trino-connector">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="trino-connector">Trino Connector<a class="hash-link" aria-label="Direct link to Trino Connector" title="Direct link to Trino Connector" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#trino-connector">​</a></h2>
 <ul>
 <li>Corrected the default precision settings for Time and Timestamp column types in the Iceberg catalog <a href="https://github.com/apache/gravitino/issues/4743" target="_blank" rel="noopener noreferrer">#4743</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="ui">UI<a class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#ui">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="ui">UI<a class="hash-link" aria-label="Direct link to UI" title="Direct link to UI" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#ui">​</a></h2>
 <ul>
 <li>Supports creating Paimon catalog <a href="https://github.com/apache/gravitino/issues/4742" target="_blank" rel="noopener noreferrer">#4742</a></li>
 <li>Improved user experience by showing an expand arrow when reloading tree nodes <a href="https://github.com/apache/gravitino/issues/5042" target="_blank" rel="noopener noreferrer">#5042</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="build-and-others">Build and Others<a class="hash-link" aria-label="Direct link to Build and Others" title="Direct link to Build and Others" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#build-and-others">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="build-and-others">Build and Others<a class="hash-link" aria-label="Direct link to Build and Others" title="Direct link to Build and Others" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#build-and-others">​</a></h2>
 <ul>
 <li>Fix the env of openAPI lint plugin <a href="https://github.com/apache/gravitino/issues/4876" target="_blank" rel="noopener noreferrer">#4876</a></li>
 <li>Addressed an Out Of Memory (OOM) issue during Trino connector tests <a href="https://github.com/apache/gravitino/issues/4871" target="_blank" rel="noopener noreferrer">#4871</a></li>
@@ -487,11 +516,11 @@ components.</p>
 <li>Ensured that TestHiveTableOperations can be run independently <a href="https://github.com/apache/gravitino/issues/4851" target="_blank" rel="noopener noreferrer">#4851</a></li>
 <li>Added LICENSE and NOTICE files for the Iceberg REST binary to comply with licensing requirements <a href="https://github.com/apache/gravitino/issues/5010" target="_blank" rel="noopener noreferrer">#5010</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="limitations-and-known-issues">Limitations and Known Issues<a class="hash-link" aria-label="Direct link to Limitations and Known Issues" title="Direct link to Limitations and Known Issues" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#limitations-and-known-issues">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="limitations-and-known-issues">Limitations and Known Issues<a class="hash-link" aria-label="Direct link to Limitations and Known Issues" title="Direct link to Limitations and Known Issues" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#limitations-and-known-issues">​</a></h2>
 <ul>
 <li>Please be aware that the Ranger authorization plugin within the unified access control system may exhibit some limitations and known issues. For detailed information, refer to issue <a href="https://github.com/apache/gravitino/issues/5115" target="_blank" rel="noopener noreferrer">#5115</a>.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#credits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-6-1-release-notes#credits">​</a></h2>
 <p>We would like to thank the following contributors for their valuable contributions to this release:</p>
 <p><a href="https://github.com/diqiu50" target="_blank" rel="noopener noreferrer">@diqiu50</a>
 <a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">@FANNG1</a>
@@ -527,7 +556,7 @@ and/or other countries.</sub>]]></content>
         <summary type="html"><![CDATA[This blog post will briefly introduce the new features and significant improvements. Keep reading to]]></summary>
         <content type="html"><![CDATA[<p>This blog post will briefly introduce the new features and significant improvements. Keep reading to
 learn what the community has worked on and understand Gravitino’s use cases.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="introducing-the-unified-rbac-model-for-gravitino">Introducing the unified RBAC model for Gravitino<a class="hash-link" aria-label="Direct link to Introducing the unified RBAC model for Gravitino" title="Direct link to Introducing the unified RBAC model for Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#introducing-the-unified-rbac-model-for-gravitino">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="introducing-the-unified-rbac-model-for-gravitino">Introducing the unified RBAC model for Gravitino<a class="hash-link" aria-label="Direct link to Introducing the unified RBAC model for Gravitino" title="Direct link to Introducing the unified RBAC model for Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#introducing-the-unified-rbac-model-for-gravitino">​</a></h2>
 <p>Access control is a crucial feature for the enterprise use of a data catalog, providing users with
 unified and centralized authorization and authentication capabilities. This release introduces a
 role-based access control (RBAC) model in Gravitino to authorize different securable objects in a
@@ -557,7 +586,7 @@ others like IAM are under development.</p>
 To enable and use access control in Gravitino, please refer to the <a href="https://gravitino.apache.org/docs/0.6.0-incubating/security/access-control" target="_blank" rel="noopener noreferrer">user document</a>.</p>
 <p>Our implementation of unified access control capability is still in the alpha stage, and we’re
 striving to add more features and make it stable as soon as possible, so please stay tuned.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="separation-of-the-iceberg-rest-catalog-service">Separation of the Iceberg REST catalog service<a class="hash-link" aria-label="Direct link to Separation of the Iceberg REST catalog service" title="Direct link to Separation of the Iceberg REST catalog service" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#separation-of-the-iceberg-rest-catalog-service">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="separation-of-the-iceberg-rest-catalog-service">Separation of the Iceberg REST catalog service<a class="hash-link" aria-label="Direct link to Separation of the Iceberg REST catalog service" title="Direct link to Separation of the Iceberg REST catalog service" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#separation-of-the-iceberg-rest-catalog-service">​</a></h2>
 <p>Apache Iceberg is a first-class citizen, and Gravitino has provided an embedded Iceberg REST catalog
 service since version 0.3. We have seen the increased demands and adoption of Iceberg REST catalog
 service as a standalone server. So, in version 0.6.0, we refactored the whole architecture and
@@ -569,7 +598,7 @@ In future releases, we will add more features like cloud storage support and int
 RBAC model, credential vending, etc.</p>
 <p>To use the Gravitino Iceberg REST catalog service, please check our <a href="https://gravitino.apache.org/docs/0.6.0-incubating/iceberg-rest-service" target="_blank" rel="noopener noreferrer">user document</a>.
 The umbrella issue is <a href="https://github.com/apache/gravitino/issues/4058" target="_blank" rel="noopener noreferrer">#4058</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="tagging-support">Tagging support<a class="hash-link" aria-label="Direct link to Tagging support" title="Direct link to Tagging support" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#tagging-support">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="tagging-support">Tagging support<a class="hash-link" aria-label="Direct link to Tagging support" title="Direct link to Tagging support" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#tagging-support">​</a></h2>
 <p>Tagging on metadata objects is useful for data discovery, classification, and data governance.
 It can also be leveraged by query engines to provide tag-based access control. In Gravitino 0.6.0,
 we introduce tag support users can add tags on metadata objects like <code>CATALOG</code>, <code>SCHEMA</code>, <code>TABLE</code>,
@@ -577,20 +606,20 @@ we introduce tag support users can add tags on metadata objects like <code>CATAL
 <a href="https://docs.google.com/document/d/1zkQWla8OMIPY61HqKUivpf43cTteNvcd2w_oA32yAfg/edit#heading=h.26ac49mb3u1q" target="_blank" rel="noopener noreferrer">design document</a>
 and issue <a href="https://github.com/apache/gravitino/issues/3344" target="_blank" rel="noopener noreferrer">#3344</a>. To use
 tags in both REST API and Java SDK, please see <a href="https://gravitino.apache.org/docs/0.6.0-incubating/manage-tags-in-gravitino" target="_blank" rel="noopener noreferrer">how to manage tags</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="apache-flink-gravitino-connector">Apache Flink Gravitino connector<a class="hash-link" aria-label="Direct link to Apache Flink Gravitino connector" title="Direct link to Apache Flink Gravitino connector" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#apache-flink-gravitino-connector">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="apache-flink-gravitino-connector">Apache Flink Gravitino connector<a class="hash-link" aria-label="Direct link to Apache Flink Gravitino connector" title="Direct link to Apache Flink Gravitino connector" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#apache-flink-gravitino-connector">​</a></h2>
 <p>As an open data catalog, we want to be able to support all query engines. Therefore, alongside Trino
 and Apache Spark, we have added Apache Flink as our newest supported query engine.</p>
 <p>In 0.6.0, we added a new Flink Gravitino connector <a href="https://github.com/apache/gravitino/issues/1354" target="_blank" rel="noopener noreferrer">#1354</a>
 and supported querying Hive tables using Flink with Gravitino. Hive support is just our first step,
 we will continue to add more table support.</p>
 <p>To know how to use the Flink Gravitino connector, please refer to our <a href="https://gravitino.apache.org/docs/0.6.0-incubating/flink-connector/flink-connector" target="_blank" rel="noopener noreferrer">documentation</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="apache-paimon-table-management-in-gravitino">Apache Paimon table management in Gravitino<a class="hash-link" aria-label="Direct link to Apache Paimon table management in Gravitino" title="Direct link to Apache Paimon table management in Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#apache-paimon-table-management-in-gravitino">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="apache-paimon-table-management-in-gravitino">Apache Paimon table management in Gravitino<a class="hash-link" aria-label="Direct link to Apache Paimon table management in Gravitino" title="Direct link to Apache Paimon table management in Gravitino" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#apache-paimon-table-management-in-gravitino">​</a></h2>
 <p>Apache Paimon has become quite popular this year, and many companies use Paimon to build their
 streaming warehouse or lakehouse. To manage all the lakehouse tables in a unified manner, Gravitino
 has added Paimon table management in 0.6.0 <a href="https://github.com/apache/gravitino/issues/1129" target="_blank" rel="noopener noreferrer">#1129</a>.
 Users can use our unified API to manage Paimon tables as well as other tables.
 To know more about how to manage Paimon tables, please refer to <a href="https://gravitino.apache.org/docs/0.6.0-incubating/lakehouse-paimon-catalog" target="_blank" rel="noopener noreferrer">Lakehouse Paimon Catalog document</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="add-python-gvfs-support-for-fileset">Add Python GVFS support for fileset<a class="hash-link" aria-label="Direct link to Add Python GVFS support for fileset" title="Direct link to Add Python GVFS support for fileset" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#add-python-gvfs-support-for-fileset">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="add-python-gvfs-support-for-fileset">Add Python GVFS support for fileset<a class="hash-link" aria-label="Direct link to Add Python GVFS support for fileset" title="Direct link to Add Python GVFS support for fileset" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#add-python-gvfs-support-for-fileset">​</a></h2>
 <p>In Gravitino 0.5, we added a Java Hadoop Compatible Filesystem (HCFS) support (GVFS) for fileset
 read/write in Gravitino. The provided Java GVFS can be used by query engines like Apache Spark to
 read/write data from files or folders. Although this works well in big data, AI development is
@@ -598,13 +627,13 @@ largely dominated by Python, which can create an obstacle and hinder users from 
 <p>In 0.6.0, we followed the Python fsspec to provide a Python GVFS package that can be used by popular
 Python frameworks like Apache Arrow, Pandas, Ray, LlamaIndex, and more. You can check
 out <a href="https://gravitino.apache.org/docs/0.6.0-incubating/how-to-use-gvfs#2-managing-files-of-fileset-with-python-gvfs" target="_blank" rel="noopener noreferrer">Python GVFS document</a> for more information.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="notable-enhancements">Notable enhancements<a class="hash-link" aria-label="Direct link to Notable enhancements" title="Direct link to Notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#notable-enhancements">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="gravitino-core">Gravitino core<a class="hash-link" aria-label="Direct link to Gravitino core" title="Direct link to Gravitino core" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#gravitino-core">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="notable-enhancements">Notable enhancements<a class="hash-link" aria-label="Direct link to Notable enhancements" title="Direct link to Notable enhancements" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#notable-enhancements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="gravitino-core">Gravitino core<a class="hash-link" aria-label="Direct link to Gravitino core" title="Direct link to Gravitino core" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#gravitino-core">​</a></h3>
 <ul>
 <li>Support catalog reload after a property is altered <a href="https://github.com/apache/gravitino/issues/2267" target="_blank" rel="noopener noreferrer">#2267</a>.</li>
 <li>Deprecate KV store and add H2 support as embedded storage backend <a href="https://github.com/apache/gravitino/issues/3968" target="_blank" rel="noopener noreferrer">#3968</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="catalog-relate">Catalog relate<a class="hash-link" aria-label="Direct link to Catalog relate" title="Direct link to Catalog relate" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#catalog-relate">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="catalog-relate">Catalog relate<a class="hash-link" aria-label="Direct link to Catalog relate" title="Direct link to Catalog relate" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#catalog-relate">​</a></h3>
 <ul>
 <li>Add API test catalog connection <a href="https://github.com/apache/gravitino/issues/4107" target="_blank" rel="noopener noreferrer">#4107</a>.</li>
 <li>Improve the type system to support unknown types <a href="https://github.com/apache/gravitino/issues/3427" target="_blank" rel="noopener noreferrer">#3427</a>.</li>
@@ -614,19 +643,19 @@ out <a href="https://gravitino.apache.org/docs/0.6.0-incubating/how-to-use-gvfs#
 <li>Support multiple Kerberos authentication for Hive catalog <a href="https://github.com/apache/gravitino/issues/3906" target="_blank" rel="noopener noreferrer">#3906</a>.</li>
 <li>Unify the behavior of purge for all the catalogs <a href="https://github.com/apache/gravitino/issues/3685" target="_blank" rel="noopener noreferrer">#3685</a>.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="api-and-client">API and client<a class="hash-link" aria-label="Direct link to API and client" title="Direct link to API and client" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#api-and-client">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="api-and-client">API and client<a class="hash-link" aria-label="Direct link to API and client" title="Direct link to API and client" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#api-and-client">​</a></h3>
 <ul>
 <li>Refactor Java and Python API for better user experience <a href="https://github.com/apache/gravitino/issues/3626" target="_blank" rel="noopener noreferrer">#3626</a>.</li>
 <li>Add missing error handlers in Python client <a href="https://github.com/apache/gravitino/issues/4225" target="_blank" rel="noopener noreferrer">#4225</a>.</li>
 </ul>
 <p>All the resolved issues targeting the 0.6.0 release can be seen at <a href="https://github.com/apache/gravitino/issues?page=12&amp;q=is%3Aissue+is%3Aclosed+label%3A0.6.0" target="_blank" rel="noopener noreferrer">https://github.com/apache/gravitino/issues?page=12&amp;q=is%3Aissue+is%3Aclosed+label%3A0.6.0</a>.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#overall">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="overall">Overall<a class="hash-link" aria-label="Direct link to Overall" title="Direct link to Overall" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#overall">​</a></h2>
 <p>Apache Gravitino 0.6.0 is the first ASF release, we would like to show appreciation to the Gravitino
 community for their continued support and valuable contributions. Thanks to the feedback of our users,
 we are able to continue to innovate and build, so thanks to all those reading this!</p>
 <p>To explore Gravitino 0.6.0 release, please check <a href="https://gravitino.apache.org/docs/0.6.0-incubating" target="_blank" rel="noopener noreferrer">the documentation</a>.
 Your feedback is invaluable to the community and the project.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#credits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-0-6-0-release-notes#credits">​</a></h2>
 <p>This release acknowledges the hard work and dedication of all contributors who have helped make this
 release possible.</p>
 <p><a href="https://github.com/1996fanrui" target="_blank" rel="noopener noreferrer">@1996fanrui</a>
@@ -713,26 +742,26 @@ and/or other countries.</sub>]]></content>
         <updated>2024-07-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[In the ever-evolving landscape of data and artificial intelligence, innovation is the key driver of progress. Gravitino is an open source, next-generation data and AI platform. Gravitino aims to unify all aspects of your data, analytics, and AI in one seamless accessible platform.]]></summary>
         <content type="html"><![CDATA[<p>In the ever-evolving landscape of data and artificial intelligence, innovation is the key driver of progress. Gravitino is an open source, next-generation data and AI platform. Gravitino aims to unify all aspects of your data, analytics, and AI in one seamless accessible platform.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="the-power-of-open-source">The power of open source<a class="hash-link" aria-label="Direct link to The power of open source" title="Direct link to The power of open source" href="https://gravitino.apache.org/blog/gravitino-open-source#the-power-of-open-source">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="the-power-of-open-source">The power of open source<a class="hash-link" aria-label="Direct link to The power of open source" title="Direct link to The power of open source" href="https://gravitino.apache.org/blog/gravitino-open-source#the-power-of-open-source">​</a></h2>
 <p>Open source embodies collaboration, transparency, and community-driven development. Making Gravitino open source and as an incubating project of the Apache Software Foundation extends an invitation to developers worldwide to participate in shaping the future of multi-cloud data management and analytics.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="unified-data-analytics-and-ai-fabric">Unified data, analytics, and AI fabric<a class="hash-link" aria-label="Direct link to Unified data, analytics, and AI fabric" title="Direct link to Unified data, analytics, and AI fabric" href="https://gravitino.apache.org/blog/gravitino-open-source#unified-data-analytics-and-ai-fabric">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="unified-data-analytics-and-ai-fabric">Unified data, analytics, and AI fabric<a class="hash-link" aria-label="Direct link to Unified data, analytics, and AI fabric" title="Direct link to Unified data, analytics, and AI fabric" href="https://gravitino.apache.org/blog/gravitino-open-source#unified-data-analytics-and-ai-fabric">​</a></h2>
 <p>Gravitino isn't just a tool; it's a fabric that weaves together all your data, analytics, and AI into a single, unified platform. Regardless of where your data resides, be it in various public or private cloud environments, different vendors or different regions, Gravitino provides a solution and delivers optimal performance and cost efficiency.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="operational-simplicity">Operational Simplicity<a class="hash-link" aria-label="Direct link to Operational Simplicity" title="Direct link to Operational Simplicity" href="https://gravitino.apache.org/blog/gravitino-open-source#operational-simplicity">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="operational-simplicity">Operational Simplicity<a class="hash-link" aria-label="Direct link to Operational Simplicity" title="Direct link to Operational Simplicity" href="https://gravitino.apache.org/blog/gravitino-open-source#operational-simplicity">​</a></h2>
 <p>Gravitino offers a unified perspective of all your data and AI models, ensuring seamless access to all your data. Gravitino empowers users with operational simplicity, allowing them to focus on deriving insights rather than managing complex data infrastructure.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="developer-experience">Developer experience<a class="hash-link" aria-label="Direct link to Developer experience" title="Direct link to Developer experience" href="https://gravitino.apache.org/blog/gravitino-open-source#developer-experience">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="developer-experience">Developer experience<a class="hash-link" aria-label="Direct link to Developer experience" title="Direct link to Developer experience" href="https://gravitino.apache.org/blog/gravitino-open-source#developer-experience">​</a></h2>
 <p>For developers, Gravitino enables a unified ANSI standard-compatible SQL interface, making data handling ETL-free and codeless. Its REST interface, coupled with a built-in SQL optimizer and intelligent query execution, ensures an efficient developer experience. Gravitino empowers developers to focus on innovation rather than grappling with the intricacies of data handling.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="performance-and-cost-efficiency">Performance and cost efficiency<a class="hash-link" aria-label="Direct link to Performance and cost efficiency" title="Direct link to Performance and cost efficiency" href="https://gravitino.apache.org/blog/gravitino-open-source#performance-and-cost-efficiency">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="performance-and-cost-efficiency">Performance and cost efficiency<a class="hash-link" aria-label="Direct link to Performance and cost efficiency" title="Direct link to Performance and cost efficiency" href="https://gravitino.apache.org/blog/gravitino-open-source#performance-and-cost-efficiency">​</a></h2>
 <p>Gravitino aims to take data management to the next level by eliminating unnecessary data transmission, providing the best performance for data queries on multi-cloud environments. With global data acceleration, Gravitino enables faster and more cost-effective data analysis. This performance boost ensures that organizations can derive insights quicker and more efficiently.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="data-source-connection-data-virtualization-federated-computing">Data source connection, data virtualization, federated computing<a class="hash-link" aria-label="Direct link to Data source connection, data virtualization, federated computing" title="Direct link to Data source connection, data virtualization, federated computing" href="https://gravitino.apache.org/blog/gravitino-open-source#data-source-connection-data-virtualization-federated-computing">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="data-source-connection-data-virtualization-federated-computing">Data source connection, data virtualization, federated computing<a class="hash-link" aria-label="Direct link to Data source connection, data virtualization, federated computing" title="Direct link to Data source connection, data virtualization, federated computing" href="https://gravitino.apache.org/blog/gravitino-open-source#data-source-connection-data-virtualization-federated-computing">​</a></h2>
 <p>Gravitino comes equipped with enterprise-ready connectors for seamless access to cloud data lakes with a focus on high performance. It offers a unified experience for data in remote regions through data virtualization, progress on intelligent acceleration, and allows effortless data analysis and training across different data sources, breaking down traditional silos.</p>
-<h2 class="anchor anchorWithStickyNavbar_ZrRW" id="why-gravitino">Why Gravitino?<a class="hash-link" aria-label="Direct link to Why Gravitino?" title="Direct link to Why Gravitino?" href="https://gravitino.apache.org/blog/gravitino-open-source#why-gravitino">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="breaking-down-data-silos">Breaking down data silos<a class="hash-link" aria-label="Direct link to Breaking down data silos" title="Direct link to Breaking down data silos" href="https://gravitino.apache.org/blog/gravitino-open-source#breaking-down-data-silos">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_J_tx" id="why-gravitino">Why Gravitino?<a class="hash-link" aria-label="Direct link to Why Gravitino?" title="Direct link to Why Gravitino?" href="https://gravitino.apache.org/blog/gravitino-open-source#why-gravitino">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="breaking-down-data-silos">Breaking down data silos<a class="hash-link" aria-label="Direct link to Breaking down data silos" title="Direct link to Breaking down data silos" href="https://gravitino.apache.org/blog/gravitino-open-source#breaking-down-data-silos">​</a></h3>
 <p>Gravitino tackles the age-old challenge of data silos by providing a unified metadata management and federated analytics engine. This allows for direct data analysis from various cloud and SaaS services without the need for time-consuming ETL processes.</p>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="query-federation-and-in-situ-analysis">Query federation and in-situ analysis<a class="hash-link" aria-label="Direct link to Query federation and in-situ analysis" title="Direct link to Query federation and in-situ analysis" href="https://gravitino.apache.org/blog/gravitino-open-source#query-federation-and-in-situ-analysis">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="query-federation-and-in-situ-analysis">Query federation and in-situ analysis<a class="hash-link" aria-label="Direct link to Query federation and in-situ analysis" title="Direct link to Query federation and in-situ analysis" href="https://gravitino.apache.org/blog/gravitino-open-source#query-federation-and-in-situ-analysis">​</a></h3>
 <p>Gravitino is creating a world where users can access data from diverse systems within a single query, eliminating the need for complex data replication and transformation processes.</p>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="open-source-commitment">Open source commitment<a class="hash-link" aria-label="Direct link to Open source commitment" title="Direct link to Open source commitment" href="https://gravitino.apache.org/blog/gravitino-open-source#open-source-commitment">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="open-source-commitment">Open source commitment<a class="hash-link" aria-label="Direct link to Open source commitment" title="Direct link to Open source commitment" href="https://gravitino.apache.org/blog/gravitino-open-source#open-source-commitment">​</a></h3>
 <p>Gravitino's journey isn't just about software; it's about community-driven development. Actively engaged in open source development under the Apache License, a business-friendly permissive license, join the developer community to be part of this exciting journey.</p>
-<h3 class="anchor anchorWithStickyNavbar_ZrRW" id="the-future-of-multi-cloud-data-management">The future of multi-cloud data management<a class="hash-link" aria-label="Direct link to The future of multi-cloud data management" title="Direct link to The future of multi-cloud data management" href="https://gravitino.apache.org/blog/gravitino-open-source#the-future-of-multi-cloud-data-management">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_J_tx" id="the-future-of-multi-cloud-data-management">The future of multi-cloud data management<a class="hash-link" aria-label="Direct link to The future of multi-cloud data management" title="Direct link to The future of multi-cloud data management" href="https://gravitino.apache.org/blog/gravitino-open-source#the-future-of-multi-cloud-data-management">​</a></h3>
 <p>In the era of data-driven decision-making, Gravitino emerges as a beacon of innovation and collaboration. Embracing open source, the belief in the power of community-driven development to shape the future of data and AI is evident. Gravitino isn't just a platform; it represents a movement toward a more connected, efficient, and accessible data landscape. Join the journey to redefine the possibilities of data management and analytics with Gravitino, the next-generation data and AI fabric.</p>
 <p>Discover the power of Gravitino, an open source platform reshaping multi-cloud data and AI. Join the community and redefine the possibilities of data management. Get started on GitHub!, on GitHub you also find documentation and a Docker playground to help get you started, you can also join the community slack channel to discuss ideas and seek help.</p>]]></content>
         <author>
