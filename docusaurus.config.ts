@@ -206,7 +206,7 @@ const config: Config = {
   themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
   scripts: [
     {
-      src: 'js/matomo.js',
+      src: '/js/matomo.js',
       async: true,
     },
   ]
