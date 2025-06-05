@@ -19,24 +19,24 @@ jmclean:
   name: Justin Mclean
   title: PMC Member
   url: https://github.com/justinmclean/
-  image_url: https://github.com/justinmclean.png
+  image_url: /img/authors/justinmclean.jepg
 jerryshao:
   name: Jerry Shao
   title: PMC Member
   url: https://github.com/jerryshao/
-  image_url: https://github.com/jerryshao.png
+  image_url: /img/authors/jerryshao.jpeg
 Minghuang Li:
   name: Minghuang Li
   title: committer
   url: https://github.com/mchades/
-  image_url: https://github.com/mchades.png
+  image_url: /img/authors/mchades.jpeg
 FANNG:
   name: Xiaojing Fang
   title: committer
   url: https://github.com/fanng1/
-  image_url: https://github.com/fanng1.png
+  image_url: /img/authors/fanng1.png
 roryqi:
   name: Rory Qi
   title: committer
   url: https://github.com/jerqi/
-  image_url: https://github.com/jerqi.png
+  image_url: /img/authors/jerqi.jepg
