@@ -19,7 +19,7 @@ jmclean:
   name: Justin Mclean
   title: PMC Member
   url: https://github.com/justinmclean/
-  image_url: /img/authors/justinmclean.jepg
+  image_url: /img/authors/justinmclean.jpeg
 jerryshao:
   name: Jerry Shao
   title: PMC Member
@@ -39,4 +39,4 @@ roryqi:
   name: Rory Qi
   title: committer
   url: https://github.com/jerqi/
-  image_url: /img/authors/jerqi.jepg
+  image_url: /img/authors/jerqi.jpeg
