@@ -254,6 +254,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
+          id: 'trino-connector/trino-cascading-query',
+          label: 'Trino cascading query',
+          type: 'doc'
+        },
+        {
           id: 'trino-connector/development',
           label: 'Development',
           type: 'doc'
