@@ -4,10 +4,100 @@
         <title>Apache Gravitino Blog</title>
         <link>https://gravitino.apache.org/blog</link>
         <description>Apache Gravitino Blog</description>
-        <lastBuildDate>Tue, 03 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 21 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Apache Gravitino 0.9.1]]></title>
+            <link>https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes</link>
+            <guid>https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes</guid>
+            <pubDate>Mon, 21 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Model Management]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_dDHj" id="model-management">Model Management<a class="hash-link" aria-label="Direct link to Model Management" title="Direct link to Model Management" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#model-management">​</a></h2>
+<p>Support updating aliases for model versions <a href="https://github.com/apache/gravitino/issues/6814" target="_blank" rel="noopener noreferrer">#6814</a>,<a href="https://github.com/apache/gravitino/issues/7158" target="_blank" rel="noopener noreferrer">#7158</a></p>
+<p>Add file viewer support for Filesets <a href="https://github.com/apache/gravitino/issues/6860" target="_blank" rel="noopener noreferrer">#6860</a></p>
+<p>Implement ListFilesEvent in FilesetEventDispatcher <a href="https://github.com/apache/gravitino/issues/7314" target="_blank" rel="noopener noreferrer">#7314</a></p>
+<p>Support setOwner/getOwner event operations <a href="https://github.com/apache/gravitino/issues/7646" target="_blank" rel="noopener noreferrer">#7646</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="trino-connector">Trino Connector<a class="hash-link" aria-label="Direct link to Trino Connector" title="Direct link to Trino Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#trino-connector">​</a></h2>
+<p>Auto-load multiple metalakes in Trino connector <a href="https://github.com/apache/gravitino/issues/7288" target="_blank" rel="noopener noreferrer">#7288</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="jdbc-validation">JDBC Validation<a class="hash-link" aria-label="Direct link to JDBC Validation" title="Direct link to JDBC Validation" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#jdbc-validation">​</a></h2>
+<p>Validate JDBC URLs during store initialization <a href="https://github.com/apache/gravitino/issues/7547" target="_blank" rel="noopener noreferrer">#7547</a></p>
+<h1>Bug Fixes</h1>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="core--catalogs">Core &amp; Catalogs<a class="hash-link" aria-label="Direct link to Core &amp; Catalogs" title="Direct link to Core &amp; Catalogs" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#core--catalogs">​</a></h2>
+<p>Fix H2 backend file lock issues during deletion <a href="https://github.com/apache/gravitino/issues/7406" target="_blank" rel="noopener noreferrer">#7406</a></p>
+<p>Prevent SQL session commit errors <a href="https://github.com/apache/gravitino/issues/7403" target="_blank" rel="noopener noreferrer">#7403</a></p>
+<p>Correct OAuth token refresh in web UI <a href="https://github.com/apache/gravitino/issues/7426" target="_blank" rel="noopener noreferrer">#7426</a></p>
+<p>Validate namespace string conversions <a href="https://github.com/apache/gravitino/issues/7516" target="_blank" rel="noopener noreferrer">#7516</a></p>
+<p>Improve server force-kill shutdown logic <a href="https://github.com/apache/gravitino/issues/7513" target="_blank" rel="noopener noreferrer">#7513</a></p>
+<p>Fix bypass key handling in Hive catalog <a href="https://github.com/apache/gravitino/issues/7416" target="_blank" rel="noopener noreferrer">#7416</a></p>
+<p>Filter empty Hadoop storage locations <a href="https://github.com/apache/gravitino/issues/7190" target="_blank" rel="noopener noreferrer">#7190</a></p>
+<p>Fix model catalog error messages <a href="https://github.com/apache/gravitino/issues/7346" target="_blank" rel="noopener noreferrer">#7346</a></p>
+<h1>Connectors</h1>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="spark-connector">Spark Connector<a class="hash-link" aria-label="Direct link to Spark Connector" title="Direct link to Spark Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#spark-connector">​</a></h2>
+<p>Remove conflicting slf4j dependency <a href="https://github.com/apache/gravitino/issues/7287" target="_blank" rel="noopener noreferrer">#7287</a></p>
+<p>Fix S3 credential test errors <a href="https://github.com/apache/gravitino/issues/7432" target="_blank" rel="noopener noreferrer">#7432</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="trino-connector-1">Trino Connector<a class="hash-link" aria-label="Direct link to Trino Connector" title="Direct link to Trino Connector" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#trino-connector-1">​</a></h2>
+<p>Handle unsupported catalog providers <a href="https://github.com/apache/gravitino/issues/7322" target="_blank" rel="noopener noreferrer">#7322</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="python-client">Python Client<a class="hash-link" aria-label="Direct link to Python Client" title="Direct link to Python Client" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#python-client">​</a></h2>
+<p>Fix storage handler mappings for S3/OSS/ABS <a href="https://github.com/apache/gravitino/issues/7225" target="_blank" rel="noopener noreferrer">#7225</a></p>
+<p>Improve Java client error messages <a href="https://github.com/apache/gravitino/issues/7344" target="_blank" rel="noopener noreferrer">#7344</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="filesets">Filesets<a class="hash-link" aria-label="Direct link to Filesets" title="Direct link to Filesets" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#filesets">​</a></h2>
+<p>Fix multi-location file paths <a href="https://github.com/apache/gravitino/issues/7371" target="_blank" rel="noopener noreferrer">#7371</a></p>
+<h1>Improvements</h1>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="core--catalogs-1">Core &amp; Catalogs<a class="hash-link" aria-label="Direct link to Core &amp; Catalogs" title="Direct link to Core &amp; Catalogs" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#core--catalogs-1">​</a></h2>
+<p>Optimize column deletion logic (#7415)(<a href="https://github.com/apache/gravitino/issues/7415" target="_blank" rel="noopener noreferrer">https://github.com/apache/gravitino/issues/7415</a>)</p>
+<p>Auto-register mappers via SPI <a href="https://github.com/apache/gravitino/issues/7529" target="_blank" rel="noopener noreferrer">#7529</a></p>
+<p>Validate JDBC entity store URLs <a href="https://github.com/apache/gravitino/issues/7614" target="_blank" rel="noopener noreferrer">#7614</a></p>
+<p>Fix catalog index existence checks <a href="https://github.com/apache/gravitino/issues/7660" target="_blank" rel="noopener noreferrer">#7660</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="cli--clients">CLI &amp; Clients<a class="hash-link" aria-label="Direct link to CLI &amp; Clients" title="Direct link to CLI &amp; Clients" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#cli--clients">​</a></h2>
+<p>Remove duplicate owner field in CLI <a href="https://github.com/apache/gravitino/issues/7639" target="_blank" rel="noopener noreferrer">#7639</a></p>
+<p>URL-encode paths in Java client <a href="https://github.com/apache/gravitino/issues/7686" target="_blank" rel="noopener noreferrer">#7686</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="testing">Testing<a class="hash-link" aria-label="Direct link to Testing" title="Direct link to Testing" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#testing">​</a></h2>
+<p>Refactor Hadoop catalog test stubbing <a href="https://github.com/apache/gravitino/issues/7280" target="_blank" rel="noopener noreferrer">#7280</a></p>
+<p>Fix precondition message mismatches <a href="https://github.com/apache/gravitino/issues/7521" target="_blank" rel="noopener noreferrer">#7521</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="documentation">Documentation<a class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#documentation">​</a></h2>
+<p>Add Trino REST catalog example <a href="https://github.com/apache/gravitino/issues/7121" target="_blank" rel="noopener noreferrer">#7121</a></p>
+<p>Iceberg IRC guides for StarRocks/Doris <a href="https://github.com/apache/gravitino/issues/7368" target="_blank" rel="noopener noreferrer">#7368</a></p>
+<p>OpenAPI specs for Fileset/File <a href="https://github.com/apache/gravitino/issues/6860" target="_blank" rel="noopener noreferrer">#6860</a></p>
+<p>Fix access control docs <a href="https://github.com/apache/gravitino/issues/7195" target="_blank" rel="noopener noreferrer">#7195</a></p>
+<p>Update model privilege docs <a href="https://github.com/apache/gravitino/issues/7555" target="_blank" rel="noopener noreferrer">#7555</a></p>
+<p>Typo fixes <a href="https://github.com/apache/gravitino/issues/7448" target="_blank" rel="noopener noreferrer">#7448</a>, <a href="https://github.com/apache/gravitino/issues/7647" target="_blank" rel="noopener noreferrer">#7647</a></p>
+<p>Remove incubating status markers <a href="https://github.com/apache/gravitino/issues/7492" target="_blank" rel="noopener noreferrer">#7492</a></p>
+<p>Add 0.9.1 release notes <a href="https://github.com/apache/gravitino/issues/7485" target="_blank" rel="noopener noreferrer">#7485</a></p>
+<h2 class="anchor anchorWithStickyNavbar_dDHj" id="build--infra">Build &amp; Infra<a class="hash-link" aria-label="Direct link to Build &amp; Infra" title="Direct link to Build &amp; Infra" href="https://gravitino.apache.org/blog/gravitino-0-9-1-release-notes#build--infra">​</a></h2>
+<p>Fix Helm chart versioning <a href="https://github.com/apache/gravitino/issues/7129" target="_blank" rel="noopener noreferrer">#7129</a>, <a href="https://github.com/apache/gravitino/issues/7134" target="_blank" rel="noopener noreferrer">#7134</a></p>
+<p>Upgrade Kyuubi dependency <a href="https://github.com/apache/gravitino/issues/7480" target="_blank" rel="noopener noreferrer">#7480</a></p>
+<h1>Credits</h1>
+<p><a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">FANNG1</a>
+<a href="https://github.com/Abyss-lord" target="_blank" rel="noopener noreferrer">Abyss-lord</a>
+<a href="https://github.com/jerqi" target="_blank" rel="noopener noreferrer">jerqi</a>
+<a href="https://github.com/jerryshao" target="_blank" rel="noopener noreferrer">jerryshao</a>
+<a href="https://github.com/slimtom95" target="_blank" rel="noopener noreferrer">slimtom95</a>
+<a href="https://github.com/flaming-archer" target="_blank" rel="noopener noreferrer">flaming-archer</a>
+<a href="https://github.com/yunchipang" target="_blank" rel="noopener noreferrer">yunchipang</a>
+<a href="https://github.com/KyleLin0927" target="_blank" rel="noopener noreferrer">KyleLin0927</a>
+<a href="https://github.com/xiaozcy" target="_blank" rel="noopener noreferrer">xiaozcy</a>
+<a href="https://github.com/diqiu50" target="_blank" rel="noopener noreferrer">diqiu50</a>
+<a href="https://github.com/yuqi1129" target="_blank" rel="noopener noreferrer">yuqi1129</a>
+<a href="https://github.com/ziqiangliang" target="_blank" rel="noopener noreferrer">ziqiangliang</a>
+<a href="https://github.com/carl239" target="_blank" rel="noopener noreferrer">carl239</a>
+<a href="https://github.com/LauraXia123" target="_blank" rel="noopener noreferrer">LauraXia123</a>
+<a href="https://github.com/guov100" target="_blank" rel="noopener noreferrer">guov100</a>
+<a href="https://github.com/senlizishi" target="_blank" rel="noopener noreferrer">senlizishi</a>
+<a href="https://github.com/fivedragon5" target="_blank" rel="noopener noreferrer">fivedragon5</a>
+<a href="https://github.com/justinmclean" target="_blank" rel="noopener noreferrer">justinmclean</a>
+<a href="https://github.com/Jackeyzhe" target="_blank" rel="noopener noreferrer">Jackeyzhe</a>
+<a href="https://github.com/Spiritedswordsman" target="_blank" rel="noopener noreferrer">Spiritedswordsman</a>
+[su8y]<a href="https://github.com/su8y" target="_blank" rel="noopener noreferrer">https://github.com/su8y</a></p>]]></content:encoded>
+            <category>apache</category>
+            <category>gravitino</category>
+            <category>metadata</category>
+            <category>multicloud</category>
+            <category>model</category>
+            <category>security</category>
+            <category>government</category>
+        </item>
         <item>
             <title><![CDATA[Apache Gravitino Graduates as a Top-Level Project at The Apache Software Foundation]]></title>
             <link>https://gravitino.apache.org/blog/gravitino-top-level-project</link>
