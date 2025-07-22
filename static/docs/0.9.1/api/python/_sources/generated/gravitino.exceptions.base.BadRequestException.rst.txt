@@ -1,0 +1,6 @@
+gravitino.exceptions.base.BadRequestException
+=============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: BadRequestException

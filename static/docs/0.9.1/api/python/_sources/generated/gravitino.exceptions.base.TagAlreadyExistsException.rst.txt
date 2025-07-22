@@ -1,0 +1,6 @@
+gravitino.exceptions.base.TagAlreadyExistsException
+===================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: TagAlreadyExistsException
