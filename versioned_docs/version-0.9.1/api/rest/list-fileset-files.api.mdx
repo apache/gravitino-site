@@ -1,0 +1,551 @@
+---
+id: list-fileset-files
+title: "List files"
+description: "List metadata of files and directories in a fileset"
+sidebar_label: "List files"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/metalakes/{metalake}/catalogs/{catalog}/schemas/{schema}/filesets/{fileset}/files"}
+>
+  
+</MethodEndpoint>
+
+
+
+List metadata of files and directories in a fileset
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"catalog","in":"path","description":"The name of the catalog","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"schema","in":"path","description":"The name of the schema","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"fileset","in":"path","description":"The name of the fileset","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"sub_path","in":"query","required":false,"schema":{"type":"string","default":"/"},"description":"The sub path within the fileset to list files and directories from"}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"location_name","in":"query","required":false,"schema":{"type":"string","default":null},"description":"The name of the storage location"}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          The response containing a list of file/directory metadata
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                files
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The name of the file/directory"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"isDir"}
+                              required={true}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","description":"Whether this is a directory"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"size"}
+                              required={true}
+                              schemaName={"int64"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","format":"int64","description":"The file size in bytes (0 if directory)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastModified"}
+                              required={true}
+                              schemaName={"int64"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","format":"int64","description":"The last modification time of the file/directory"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"path"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The gvfs path of the file/directory"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"files\": [\n    {\n      \"name\": \"string\",\n      \"isDir\": true,\n      \"size\": 0,\n      \"lastModified\": 0,\n      \"path\": \"string\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"FileInfoListResponse"}
+                  value={"FileInfoListResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"files\": [\n    {\n      \"name\": \"file.txt\",\n      \"isDir\": false,\n      \"size\": 5,\n      \"lastModified\": 1748875070123,\n      \"path\": \"/fileset/catalog1/schema1/fileset1/file.txt\"\n    },\n    {\n      \"name\": \"sub_dir\",\n      \"isDir\": true,\n      \"size\": 0,\n      \"lastModified\": 1748875070124,\n      \"path\": \"/fileset/catalog1/schema1/fileset1/sub_dir\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found – the target fileset or subPath or locationName does not exist
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetalakeException"}
+                  value={"NoSuchMetalakeException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetalakeException\",\n  \"message\": \"Failed to operate metalake(s) [test] operation [LOAD], reason [NoSuchMetalakeException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetalakeException: Metalake test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchCatalogException"}
+                  value={"NoSuchCatalogException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchCatalogException\",\n  \"message\": \"Failed to operate catalog(s) [test] operation [LOAD] under metalake [my_test_metalake], reason [NoSuchCatalogException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchCatalogException: Catalog my_test_metalake.test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchSchemaException"}
+                  value={"NoSuchSchemaException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchSchemaException\",\n  \"message\": \"Failed to operate schema(s) [my_hive_schema1] operation [LOAD] under catalog [my_hive_catalog], reason [NoSuchSchemaException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchSchemaException: Hive schema (database) does not exist: my_hive_schema1 in Hive Metastore\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchFilesetException"}
+                  value={"NoSuchFilesetException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchFilesetException\",\n  \"message\": \"Fileset does not exist\",\n  \"stack\": [\n    \"java.lang.NoSuchFilesetException: Fileset does not exist\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

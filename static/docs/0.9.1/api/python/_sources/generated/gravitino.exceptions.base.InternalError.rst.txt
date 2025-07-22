@@ -1,0 +1,6 @@
+gravitino.exceptions.base.InternalError
+=======================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: InternalError
