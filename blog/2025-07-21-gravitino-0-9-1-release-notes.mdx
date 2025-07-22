@@ -1,0 +1,141 @@
+---
+title: Apache Gravitino 0.9.1
+slug: gravitino-0-9-1-release-notes
+authors: [roryqi]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+# New Features
+
+## Model Management
+
+Support updating aliases for model versions [#6814](https://github.com/apache/gravitino/issues/6814),[#7158](https://github.com/apache/gravitino/issues/7158)
+
+Add file viewer support for Filesets [#6860](https://github.com/apache/gravitino/issues/6860)
+
+Implement ListFilesEvent in FilesetEventDispatcher [#7314](https://github.com/apache/gravitino/issues/7314)
+
+Support setOwner/getOwner event operations [#7646](https://github.com/apache/gravitino/issues/7646)
+
+## Trino Connector
+
+Auto-load multiple metalakes in Trino connector [#7288](https://github.com/apache/gravitino/issues/7288)
+
+## JDBC Validation
+
+Validate JDBC URLs during store initialization [#7547](https://github.com/apache/gravitino/issues/7547)
+
+# Bug Fixes
+
+## Core & Catalogs
+
+Fix H2 backend file lock issues during deletion [#7406](https://github.com/apache/gravitino/issues/7406)
+
+Prevent SQL session commit errors [#7403](https://github.com/apache/gravitino/issues/7403)
+
+Correct OAuth token refresh in web UI [#7426](https://github.com/apache/gravitino/issues/7426)
+
+Validate namespace string conversions [#7516](https://github.com/apache/gravitino/issues/7516)
+
+Improve server force-kill shutdown logic [#7513](https://github.com/apache/gravitino/issues/7513)
+
+Fix bypass key handling in Hive catalog [#7416](https://github.com/apache/gravitino/issues/7416)
+
+Filter empty Hadoop storage locations [#7190](https://github.com/apache/gravitino/issues/7190)
+
+Fix model catalog error messages [#7346](https://github.com/apache/gravitino/issues/7346)
+
+## Connectors
+
+### Spark Connector
+
+Remove conflicting slf4j dependency [#7287](https://github.com/apache/gravitino/issues/7287)
+
+Fix S3 credential test errors [#7432](https://github.com/apache/gravitino/issues/7432)
+
+### Trino Connector
+
+Handle unsupported catalog providers [#7322](https://github.com/apache/gravitino/issues/7322)
+
+## Python Client
+
+Fix storage handler mappings for S3/OSS/ABS [#7225](https://github.com/apache/gravitino/issues/7225)
+
+Improve Java client error messages [#7344](https://github.com/apache/gravitino/issues/7344)
+
+## Filesets
+
+Fix multi-location file paths [#7371](https://github.com/apache/gravitino/issues/7371)
+
+# Improvements
+
+## Core & Catalogs
+
+Optimize column deletion logic (#7415)(https://github.com/apache/gravitino/issues/7415)
+
+Auto-register mappers via SPI [#7529](https://github.com/apache/gravitino/issues/7529)
+
+
+Validate JDBC entity store URLs [#7614](https://github.com/apache/gravitino/issues/7614)
+
+Fix catalog index existence checks [#7660](https://github.com/apache/gravitino/issues/7660)
+
+## CLI & Clients
+
+Remove duplicate owner field in CLI [#7639](https://github.com/apache/gravitino/issues/7639)
+
+URL-encode paths in Java client [#7686](https://github.com/apache/gravitino/issues/7686)
+
+## Testing
+
+Refactor Hadoop catalog test stubbing [#7280](https://github.com/apache/gravitino/issues/7280)
+
+Fix precondition message mismatches [#7521](https://github.com/apache/gravitino/issues/7521)
+
+## Documentation
+
+Add Trino REST catalog example [#7121](https://github.com/apache/gravitino/issues/7121)
+
+Iceberg IRC guides for StarRocks/Doris [#7368](https://github.com/apache/gravitino/issues/7368)
+
+OpenAPI specs for Fileset/File [#6860](https://github.com/apache/gravitino/issues/6860)
+
+Fix access control docs [#7195](https://github.com/apache/gravitino/issues/7195)
+
+Update model privilege docs [#7555](https://github.com/apache/gravitino/issues/7555)
+
+Typo fixes [#7448](https://github.com/apache/gravitino/issues/7448), [#7647](https://github.com/apache/gravitino/issues/7647)
+
+Remove incubating status markers [#7492](https://github.com/apache/gravitino/issues/7492)
+
+Add 0.9.1 release notes [#7485](https://github.com/apache/gravitino/issues/7485)
+
+## Build & Infra
+
+Fix Helm chart versioning [#7129](https://github.com/apache/gravitino/issues/7129), [#7134](https://github.com/apache/gravitino/issues/7134)
+
+Upgrade Kyuubi dependency [#7480](https://github.com/apache/gravitino/issues/7480)
+
+# Credits
+
+[FANNG1](https://github.com/FANNG1)
+[Abyss-lord](https://github.com/Abyss-lord) 
+[jerqi](https://github.com/jerqi) 
+[jerryshao](https://github.com/jerryshao) 
+[slimtom95](https://github.com/slimtom95) 
+[flaming-archer](https://github.com/flaming-archer)
+[yunchipang](https://github.com/yunchipang) 
+[KyleLin0927](https://github.com/KyleLin0927)
+[xiaozcy](https://github.com/xiaozcy)
+[diqiu50](https://github.com/diqiu50) 
+[yuqi1129](https://github.com/yuqi1129) 
+[ziqiangliang](https://github.com/ziqiangliang) 
+[carl239](https://github.com/carl239)
+[LauraXia123](https://github.com/LauraXia123)
+[guov100](https://github.com/guov100)
+[senlizishi](https://github.com/senlizishi)
+[fivedragon5](https://github.com/fivedragon5) 
+[justinmclean](https://github.com/justinmclean)
+[Jackeyzhe](https://github.com/Jackeyzhe)
+[Spiritedswordsman](https://github.com/Spiritedswordsman)
+[su8y](https://github.com/su8y)
