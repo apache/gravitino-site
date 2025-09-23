@@ -1,0 +1,6 @@
+gravitino.api.catalog.UnsupportedOperationException
+===================================================
+
+.. currentmodule:: gravitino.api.catalog
+
+.. autoexception:: UnsupportedOperationException
