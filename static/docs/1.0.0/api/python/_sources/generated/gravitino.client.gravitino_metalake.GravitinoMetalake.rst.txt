@@ -1,0 +1,79 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.client.gravitino\_metalake.GravitinoMetalake
+======================================================
+
+.. currentmodule:: gravitino.client.gravitino_metalake
+
+.. autoclass:: GravitinoMetalake
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoMetalake.__init__
+      ~GravitinoMetalake.alter_catalog
+      ~GravitinoMetalake.audit_info
+      ~GravitinoMetalake.cancel_job
+      ~GravitinoMetalake.comment
+      ~GravitinoMetalake.create_catalog
+      ~GravitinoMetalake.delete_job_template
+      ~GravitinoMetalake.disable_catalog
+      ~GravitinoMetalake.drop_catalog
+      ~GravitinoMetalake.enable_catalog
+      ~GravitinoMetalake.equals
+      ~GravitinoMetalake.from_dict
+      ~GravitinoMetalake.from_json
+      ~GravitinoMetalake.get_job
+      ~GravitinoMetalake.get_job_template
+      ~GravitinoMetalake.list_catalogs
+      ~GravitinoMetalake.list_catalogs_info
+      ~GravitinoMetalake.list_job_templates
+      ~GravitinoMetalake.list_jobs
+      ~GravitinoMetalake.load_catalog
+      ~GravitinoMetalake.name
+      ~GravitinoMetalake.properties
+      ~GravitinoMetalake.property_equal
+      ~GravitinoMetalake.register_job_template
+      ~GravitinoMetalake.run_job
+      ~GravitinoMetalake.schema
+      ~GravitinoMetalake.to_dict
+      ~GravitinoMetalake.to_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GravitinoMetalake.API_METALAKES_CATALOGS_PATH
+      ~GravitinoMetalake.API_METALAKES_JOB_RUNS_PATH
+      ~GravitinoMetalake.API_METALAKES_JOB_TEMPLATES_PATH
+      ~GravitinoMetalake.dataclass_json_config
+      ~GravitinoMetalake.rest_client
+   
+   

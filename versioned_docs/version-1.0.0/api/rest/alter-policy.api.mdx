@@ -1,0 +1,1001 @@
+---
+id: alter-policy
+title: "Update policy"
+description: "Alters the specified policy information in the specified metalake"
+sidebar_label: "Update policy"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update policy"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/metalakes/{metalake}/policies/{policy}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Alters the specified policy information in the specified metalake
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"policy","in":"path","description":"The name of the policy","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  updates
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><div>
+                <span
+                  className={"badge badge--info"}
+                  style={{"marginBottom":"1rem"}}
+                >
+                  oneOf
+                </span><SchemaTabs>
+                  <TabItem
+                    label={"RenamePolicyRequest"}
+                    value={"0-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`rename`]"}
+                      schema={{"type":"string","enum":["rename"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"newName"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The new name of the policy"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"UpdatePolicyCommentRequest"}
+                    value={"1-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`updateComment`]"}
+                      schema={{"type":"string","enum":["updateComment"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"newComment"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The new comment of the policy"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"UpdatePolicyContentRequest"}
+                    value={"2-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`updateContent`]"}
+                      schema={{"type":"string","enum":["updateContent"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"policyType"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The type of the policy"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              newContent
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <div
+                            style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                          >
+                            
+                            
+                            The new content of the policy, its structure depends on the 'policyType'.
+                            
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                              style={{"marginBottom":"1rem"}}
+                            >
+                              oneOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"CustomPolicyContent"}
+                                value={"0-item-properties"}
+                              >
+                                <div
+                                  style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  className={"openapi-schema__summary"}
+                                >
+                                  
+                                  
+                                  Content for a custom policy type.
+                                  
+                                  
+                                </div><SchemaItem
+                                  collapsible={false}
+                                  name={"supportedObjectTypes"}
+                                  required={true}
+                                  schemaName={"string[]"}
+                                  qualifierMessage={"**Possible values:** [`CATALOG`, `SCHEMA`, `TABLE`, `FILESET`, `TOPIC`, `MODEL`], `>= 1`"}
+                                  schema={{"type":"array","description":"The types of metadata objects this policy content can be applied to.","minItems":1,"items":{"type":"string","enum":["CATALOG","SCHEMA","TABLE","FILESET","TOPIC","MODEL"]}}}
+                                >
+                                  
+                                </SchemaItem><SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          properties
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           object
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <div
+                                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                      >
+                                        
+                                        
+                                        A map of string-to-string properties for the policy content.
+                                        
+                                        
+                                      </div><SchemaItem
+                                        name={"property name*"}
+                                        required={false}
+                                        schemaName={"string"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"string"}}
+                                        collapsible={false}
+                                        discriminator={false}
+                                      >
+                                        
+                                      </SchemaItem>
+                                    </div>
+                                  </details>
+                                </SchemaItem><SchemaItem
+                                  collapsible={false}
+                                  name={"customRules"}
+                                  required={false}
+                                  schemaName={"object"}
+                                  qualifierMessage={undefined}
+                                  schema={{"type":"object","description":"A map of custom rules where the key is the rule name and the value can be of any type.","example":{"rule1":"rule1","rule2":123}}}
+                                >
+                                  
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </div>
+                      </details>
+                    </SchemaItem>
+                  </TabItem>
+                </SchemaTabs>
+              </div><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns the updated policy object
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                policy
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              A basic policy without content
+                              
+                              
+                            </div><div>
+                              <span
+                                className={"badge badge--info"}
+                                style={{"marginBottom":"1rem"}}
+                              >
+                                oneOf
+                              </span><SchemaTabs>
+                                <TabItem
+                                  label={"CustomPolicy"}
+                                  value={"0-item-properties"}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                    className={"openapi-schema__summary"}
+                                  >
+                                    
+                                    
+                                    A policy with custom content
+                                    
+                                    
+                                  </div><SchemaItem
+                                    collapsible={false}
+                                    name={"name"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The name of the policy"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comment"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"A comment about the policy","nullable":true}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"policyType"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The type of the policy"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"enabled"}
+                                    required={true}
+                                    schemaName={"boolean"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"boolean","description":"Whether the policy is enabled"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            audit
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object
+                                          </span><span
+                                            className={"openapi-schema__divider"}
+                                          >
+                                            
+                                          </span><span
+                                            className={"openapi-schema__required"}
+                                          >
+                                            required
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <div
+                                          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                        >
+                                          
+                                          
+                                          Audit information for a Gravitino resource.
+                                          
+                                          
+                                        </div><SchemaItem
+                                          collapsible={false}
+                                          name={"creator"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","description":"The user who created the resource"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"createTime"}
+                                          required={false}
+                                          schemaName={"date-time"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","format":"date-time","description":"The time the resource was created"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"lastModifier"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","description":"The user who last modified the resource"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"lastModifiedTime"}
+                                          required={false}
+                                          schemaName={"date-time"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","format":"date-time","description":"The time the resource was last modified"}}
+                                        >
+                                          
+                                        </SchemaItem>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"inherited"}
+                                    required={false}
+                                    schemaName={"boolean"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"boolean","description":"Whether the policy is inherited from the parent metadata object","nullable":true}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            content
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object
+                                          </span><span
+                                            className={"openapi-schema__divider"}
+                                          >
+                                            
+                                          </span><span
+                                            className={"openapi-schema__required"}
+                                          >
+                                            required
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <div
+                                          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                        >
+                                          
+                                          
+                                          Content for a custom policy type.
+                                          
+                                          
+                                        </div><SchemaItem
+                                          collapsible={false}
+                                          name={"supportedObjectTypes"}
+                                          required={true}
+                                          schemaName={"string[]"}
+                                          qualifierMessage={"**Possible values:** [`CATALOG`, `SCHEMA`, `TABLE`, `FILESET`, `TOPIC`, `MODEL`], `>= 1`"}
+                                          schema={{"type":"array","description":"The types of metadata objects this policy content can be applied to.","minItems":1,"items":{"type":"string","enum":["CATALOG","SCHEMA","TABLE","FILESET","TOPIC","MODEL"]}}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={true}
+                                          className={"schemaItem"}
+                                        >
+                                          <details
+                                            style={{}}
+                                            className={"openapi-markdown__details"}
+                                          >
+                                            <summary
+                                              style={{}}
+                                            >
+                                              <span
+                                                className={"openapi-schema__container"}
+                                              >
+                                                <strong
+                                                  className={"openapi-schema__property"}
+                                                >
+                                                  properties
+                                                </strong><span
+                                                  className={"openapi-schema__name"}
+                                                >
+                                                   object
+                                                </span>
+                                              </span>
+                                            </summary><div
+                                              style={{"marginLeft":"1rem"}}
+                                            >
+                                              <div
+                                                style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                              >
+                                                
+                                                
+                                                A map of string-to-string properties for the policy content.
+                                                
+                                                
+                                              </div><SchemaItem
+                                                name={"property name*"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string"}}
+                                                collapsible={false}
+                                                discriminator={false}
+                                              >
+                                                
+                                              </SchemaItem>
+                                            </div>
+                                          </details>
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"customRules"}
+                                          required={false}
+                                          schemaName={"object"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"object","description":"A map of custom rules where the key is the rule name and the value can be of any type.","example":{"rule1":"rule1","rule2":123}}}
+                                        >
+                                          
+                                        </SchemaItem>
+                                      </div>
+                                    </details>
+                                  </SchemaItem>
+                                </TabItem>
+                              </SchemaTabs>
+                            </div>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"PolicyResponse"}
+                  value={"PolicyResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"policy\": {\n    \"name\": \"my_policy1\",\n    \"comment\": \"This is a test policy\",\n    \"policyType\": \"custom\",\n    \"enabled\": false,\n    \"content\": {\n      \"customRules\": {\n        \"rule1\": 123\n      },\n      \"supportedObjectTypes\": [\n        \"SCHEMA\",\n        \"TABLE\",\n        \"MODEL\",\n        \"TOPIC\",\n        \"FILESET\",\n        \"CATALOG\"\n      ],\n      \"properties\": {\n        \"key1\": \"value1\"\n      }\n    },\n    \"inherited\": null,\n    \"audit\": {\n      \"creator\": \"anonymous\",\n      \"createTime\": \"2025-08-04T10:29:23.463Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found - The specified policy does not exist in the specified metalake
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetalakeException"}
+                  value={"NoSuchMetalakeException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetalakeException\",\n  \"message\": \"Failed to operate metalake(s) [test] operation [LOAD], reason [NoSuchMetalakeException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetalakeException: Metalake test does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchPolicyException"}
+                  value={"NoSuchPolicyException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchPolicyException\",\n  \"message\": \"Failed to operate policy(s) [my_policy] operation [LOAD] under metalake [my_test_metalake], reason [NoSuchPolicyException]\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchPolicyException: Policy my_policy does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,448 @@
+---
+id: list-statistics
+title: "List statistics"
+description: "List statistics"
+sidebar_label: "List statistics"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List statistics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/metalakes/{metalake}/objects/{metadataObjectType}/{metadataObjectFullName}/statistics"}
+>
+  
+</MethodEndpoint>
+
+
+
+List statistics
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metadataObjectType","in":"path","description":"The type of the metadata object","required":true,"schema":{"type":"string","enum":["METALAKE","CATALOG","SCHEMA","TABLE","COLUMN","FILESET","TOPIC","MODEL","ROLE"]}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metadataObjectFullName","in":"path","description":"The full name of the metadata object","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns the statistics for the specified metadata object
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                statistics
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              A map of statistic names to their values for the metadata object
+                              
+                              
+                            </div><SchemaItem
+                              name={"property name*"}
+                              required={false}
+                              schemaName={"any"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"object","additionalProperties":{},"description":"A map of statistic names to their values for the metadata object"}}
+                              collapsible={false}
+                              discriminator={false}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"statistics\": {}\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"StatisticListResponse"}
+                  value={"StatisticListResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"statistics\": {\n    \"row_count\": \"1000\",\n    \"file_size\": \"500MB\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Not Found - The specified metadata object doesn't exist
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"NoSuchMetadataObjectException"}
+                  value={"NoSuchMetadataObjectException"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchMetadataObjectException\",\n  \"message\": \"Metadata object does not exist\",\n  \"stack\": [\n    \"org.apache.gravitino.exceptions.NoSuchMetadataObjectException: Metadata object does not exist\",\n    \"...\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
