@@ -98,12 +98,14 @@ The Apache Hive service will use HDFS to store its data. You have created a `hdf
 ```properties
 authorization-provider=chain
 authorization.chain.plugins=hive,hdfs
+authorization.chain.hive.provider=ranger
 authorization.chain.hive.ranger.admin.url=http://ranger-service:6080
 authorization.chain.hive.ranger.service.type=HadoopSQL
 authorization.chain.hive.ranger.service.name=hiveRepo
 authorization.chain.hive.ranger.auth.type=simple
 authorization.chain.hive.ranger.username=Jack
 authorization.chain.hive.ranger.password=PWD123
+authorization.chain.hdfs.provider=ranger
 authorization.chain.hdfs.ranger.admin.url=http://ranger-service:6080
 authorization.chain.hdfs.ranger.service.type=HDFS
 authorization.chain.hdfs.ranger.service.name=hdfsRepo
