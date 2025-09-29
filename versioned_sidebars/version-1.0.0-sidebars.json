@@ -62,7 +62,7 @@
       "label": "Iceberg REST catalog service",
       "type": "doc"
     },
-        {
+    {
       "id": "gravitino-mcp-server",
       "label": "Gravitino MCP server",
       "type": "doc"
@@ -437,7 +437,7 @@
         {
           "label": "Install on AWS or GCP",
           "type": "link",
-          "href": "/docs/0.9.1/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform"
+          "href": "/docs/1.0.0/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform"
         }
       ]
     },
@@ -632,6 +632,72 @@
             },
             {
               "type": "category",
+              "label": "policy",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-policies-for-metadata-object",
+                  "label": "List policies (names) for metadata object",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/associate-policies-for-object",
+                  "label": "Associate policies with metadata object",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-policies",
+                  "label": "List policies (names)",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/create-policy",
+                  "label": "Create policy",
+                  "className": "api-method post"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-policy",
+                  "label": "Get policy",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/alter-policy",
+                  "label": "Update policy",
+                  "className": "api-method put"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/set-policy",
+                  "label": "Enable or disable a policy",
+                  "className": "api-method patch"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/delete-policy",
+                  "label": "Delete policy",
+                  "className": "api-method delete"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/list-metadata-objects-for-policy",
+                  "label": "list metadata objects for policy",
+                  "className": "api-method get"
+                },
+                {
+                  "type": "doc",
+                  "id": "api/rest/get-policy-for-object",
+                  "label": "Get policy for metadata object",
+                  "className": "api-method get"
+                }
+              ]
+            },
+            {
+              "type": "category",
               "label": "statistics",
               "items": [
                 {
@@ -675,54 +741,6 @@
                   "id": "api/rest/update-partition-statistics",
                   "label": "Update partition statistics",
                   "className": "api-method put"
-                }
-              ]
-            },
-            {
-              "type": "category",
-              "label": "policy",
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "api/rest/list-policies",
-                  "label": "List policies (names)",
-                  "className": "api-method get"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/create-policy",
-                  "label": "Create policy",
-                  "className": "api-method post"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/get-policy",
-                  "label": "Get policy",
-                  "className": "api-method get"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/alter-policy",
-                  "label": "Update policy",
-                  "className": "api-method put"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/set-policy",
-                  "label": "Enable or disable a policy",
-                  "className": "api-method patch"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/delete-policy",
-                  "label": "Delete policy",
-                  "className": "api-method delete"
-                },
-                {
-                  "type": "doc",
-                  "id": "api/rest/list-metadata-objects-for-policy",
-                  "label": "list metadata objects for policy",
-                  "className": "api-method get"
                 }
               ]
             },
@@ -1265,12 +1283,12 @@
         {
           "label": "Gravitino Java doc",
           "type": "link",
-          "href": "pathname:///docs/0.9.1/api/java/index.html"
+          "href": "pathname:///docs/1.0.0/api/java/index.html"
         },
         {
           "label": "Gravitino Python doc",
           "type": "link",
-          "href": "pathname:///docs/0.9.1/api/python/index.html"
+          "href": "pathname:///docs/1.0.0/api/python/index.html"
         }
       ]
     },
