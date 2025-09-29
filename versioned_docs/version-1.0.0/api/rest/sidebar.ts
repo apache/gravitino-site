@@ -110,6 +110,72 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "policy",
+      items: [
+        {
+          type: "doc",
+          id: "api/rest/list-policies-for-metadata-object",
+          label: "List policies (names) for metadata object",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest/associate-policies-for-object",
+          label: "Associate policies with metadata object",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest/list-policies",
+          label: "List policies (names)",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest/create-policy",
+          label: "Create policy",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/rest/get-policy",
+          label: "Get policy",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest/alter-policy",
+          label: "Update policy",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "api/rest/set-policy",
+          label: "Enable or disable a policy",
+          className: "api-method patch",
+        },
+        {
+          type: "doc",
+          id: "api/rest/delete-policy",
+          label: "Delete policy",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "api/rest/list-metadata-objects-for-policy",
+          label: "list metadata objects for policy",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "api/rest/get-policy-for-object",
+          label: "Get policy for metadata object",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "statistics",
       items: [
         {
@@ -153,54 +219,6 @@ const sidebar: SidebarsConfig = {
           id: "api/rest/update-partition-statistics",
           label: "Update partition statistics",
           className: "api-method put",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "policy",
-      items: [
-        {
-          type: "doc",
-          id: "api/rest/list-policies",
-          label: "List policies (names)",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest/create-policy",
-          label: "Create policy",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/rest/get-policy",
-          label: "Get policy",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/rest/alter-policy",
-          label: "Update policy",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "api/rest/set-policy",
-          label: "Enable or disable a policy",
-          className: "api-method patch",
-        },
-        {
-          type: "doc",
-          id: "api/rest/delete-policy",
-          label: "Delete policy",
-          className: "api-method delete",
-        },
-        {
-          type: "doc",
-          id: "api/rest/list-metadata-objects-for-policy",
-          label: "list metadata objects for policy",
-          className: "api-method get",
         },
       ],
     },
