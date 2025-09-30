@@ -1,0 +1,129 @@
+---
+title: Apache Gravitino 1.0.0 - From Metadata Management to Contextual Engineering
+slug: gravitino-1-0-0-release-notes
+authors: [jerryshao]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+Apache Gravitino was designed from day one to provide a unified framework for metadata management across heterogeneous sources, regions, and clouds—what we define as the metadata lake (or metalake). Throughout its evolution, Gravitino has extended support to multiple data modalities, including tabular metadata from Apache Hive, Apache Iceberg, MySQL, and PostgreSQL; unstructured assets from HDFS and S3; streaming and messaging metadata from Apache Kafka; and metadata for machine learning models. To further strengthen governance in Gravitino, we have also integrated advanced capabilities, including tagging, audit logging, and end-to-end lineage capture.
+
+After all enterprise metadata has been centralized through Gravitino, it forms a data brain: a structured, queryable, and semantically enriched representation of data assets. This enables not only consistent metadata access but also knowledge grounding, contextual reasoning, tool using and others. As we approach the 1.0 milestone, our focus shifts from pure metadata storage to metadata-driven contextual engineering—a foundation we call the Metadata-driven Action System, to provide the building blocks for the contextual engineering.
+
+The release of Apache Gravitino 1.0.0 marks a significant engineering step forward, with robust APIs, extensible connectors, enhanced governance primitives, improved scalability and reliability in distributed environments. In the following sections, I will dive into the new features and architectural improvements introduced in Gravitino 1.0.0.
+
+## Metadata-driven action system
+
+In version 1.0.0, we introduced three new components that enable us to build jobs to accomplish metadata-driven actions, such as table compaction, TTL data management, and PII identification. These three new components are: the statistics system, the policy system, and the job system.
+
+Taking table compaction as an example:
+
+* Firstly, users can define the table compaction policy in Gravitino and associate this policy with the tables that need to be compacted.
+* Then, users can save the statistics of the table to Gravitino.
+* Also, users can define a job template for the compaction.
+* Lastly, users can use the statistics with the defined policy to generate the compaction parameters and use these parameters to trigger a compaction job based on the defined job templates.
+
+### Statistics system
+
+The statistics system is a new component for the statistics store and retrieval. You can define and store the table/partition level statistics in Gravitino, and also fetch them through Gravitino for different purposes.
+
+For the details of how we design this component, please see [#7268](https://github.com/apache/gravitino/issues/7268). For instructions on using the statistics system, refer to the documentation [here](https://gravitino.apache.org/docs/1.0.0/manage-statistics-in-gravitino/).
+
+### Policy system
+
+The policy system enables you to define action rules in Gravitino, like compaction rules or TTL rules. The defined policy can be associated with the metadata, which means these rules will be enforced on the dedicated metadata. Users can leverage these enforced polices to decide how to trigger an action on the dedicated metadata.
+
+Please refer to the policy system [documentation](https://gravitino.apache.org/docs/1.0.0/manage-policies-in-gravitino) to know how to use it. For more information on the policy system's implementation details, please refer to [#7139](https://github.com/apache/gravitino/issues/7139).
+
+### Job system
+
+The job system is another feature that allows you to submit and run jobs through Gravitino. Users can register a job template, then trigger a job based on the specific job template. Gravitino will help submit the job to the dedicated job executor, such as Apache Airflow. Gravitino can manage the job lifecycle and save the job status in it. With the job system, users can run a self-defined job to accomplish a metadata-driven action system.
+
+In version 1.0.0, we have an initial version to support running the jobs as a local process. If you want to know more about the design details, you can follow issue [#7154](https://github.com/apache/gravitino/issues/7154). Also, a user-facing documentation can be found [here](https://gravitino.apache.org/docs/1.0.0/manage-jobs-in-gravitino).
+
+The whole metadata-driven action system is still in an alpha phase for version 1.0.0. The community will continue to evolve the code and take the Iceberg table maintenance as a reference implementation in the next version. Please stay tuned.
+
+## Agent-ready through the MCP server
+
+MCP is a powerful protocol to bridge the gap between human languages and machine interfaces. With MCP, users can communicate with the LLM using natural language, and the LLM can understand the context and invoke the appropriate tools.
+
+In version 1.0.0, the community officially delivered the MCP server for Gravitino. Users can launch it as a remote or local MCP server and connect to various MCP applications, such as Cursor and Claude Desktop. Additionally, we exposed all metadata-related interfaces as tools that MCP clients can call.
+
+With the Gravitino MCP server, users can manage and govern metadata, as well as perform metadata-driven actions using natural language. Please follow issue [#7483](https://github.com/apache/gravitino/issues/7483) for more details. Additionally, you can refer to the [documentation](https://gravitino.apache.org/docs/1.0.0/gravitino-mcp-server) for instructions on how to start the MCP server locally or in Docker.
+
+## Unified access control framework
+
+Gravitino introduced the RBAC system in the previous version, but it only offers users the ability to grant privileges to roles and users, without enforcing access control when manipulating the secure objects. In 1.0.0, we complete this missing piece in Gravitino.
+
+Currently, users can set access control policies through our RBAC system and enforce these controls when accessing secure objects. For details, you can refer to the umbrella issue [#6762](https://github.com/apache/gravitino/issues/6762).
+
+## Add support for multiple locations model management
+
+The model management is introduced in Gravitino 0.9.0. Users have since requested support for multiple storage locations within a single model version, allowing them to select a model version with a preferred location.
+
+In 1.0.0, the community added multiple locations for model management. This feature is similar to the fileset’s support for multiple locations. Users can check the document [here](https://gravitino.apache.org/docs/1.0.0/manage-model-metadata-using-gravitino) for more information. For more information on implementation details, please refer to this issue [#7363](https://github.com/apache/gravitino/issues/7363).
+
+## Support the latest Apache Iceberg and Paimon versions
+
+In Gravitino 1.0.0, we have upgraded the supported Iceberg version to 1.9.0. With the new version, we will add more feature support in the next release. Additionally, we have upgraded the supported Paimon version to 1.2.0, introducing new features for Paimon support.
+
+You can see the issue [#6719](https://github.com/apache/gravitino/issues/6719) for Iceberg upgrading and issue [#8163](https://github.com/apache/gravitino/issues/8163) for Paimon upgrading.
+
+## Various core features
+
+Core:
+
+* Add the cache system in the Gravitino entity store [#7175](https://github.com/apache/gravitino/issues/7175).
+* Add Marquez integration as a lineage sink in Gravitino [#7396](https://github.com/apache/gravitino/issues/7396).
+
+Server:
+
+* Add Azure AD login support for OAuth authentication [#7538](https://github.com/apache/gravitino/issues/7538).
+
+Catalogs:
+
+* Support StarRocks catalog management in Gravitino [#3302](https://github.com/apache/gravitino/issues/3302).
+
+Clients:
+
+* Adds the custom configurations for clients [#7816](https://github.com/apache/gravitino/issues/7816), [#7817](https://github.com/apache/gravitino/issues/7817), [#7670](https://github.com/apache/gravitino/issues/7670), [#7456](https://github.com/apache/gravitino/issues/7456).
+
+Spark connector:
+
+* Upgrade the supported Kyubbi version [#7480](https://github.com/apache/gravitino/issues/7480).
+
+UI:
+
+* Add web UI for listing files / directories under a fileset [#7477](https://github.com/apache/gravitino/issues/7477).
+
+Deployment:
+
+* Add hem char deployment for Iceberg REST catalog [#7159](https://github.com/apache/gravitino/issues/7159).
+
+## Behavior changes
+
+### Compatible changes:
+
+* Rename the **Hadoop** catalog to **fileset** catalog [#7184](https://github.com/apache/gravitino/issues/7184).
+* Allowing event listener changes Iceberg create table request [#6486](https://github.com/apache/gravitino/issues/6486).
+* Support returning aliases when listing model version [#7307](https://github.com/apache/gravitino/issues/7307).
+
+### Breaking changes:
+
+* Change the supported Java version to JDK 17 for the Gravitino server.
+* Remove the Python 3.8 support for the Gravitino Python client [#7491](https://github.com/apache/gravitino/issues/7491).
+* Fix the unnecessary double encoding and decoding issue for fileset get location and list files interfaces [#8335](https://github.com/apache/gravitino/issues/8335). This change is incompatible with the old version of Java and Python clients. Using old version clients with a new version server will meet a decoding issue in some unexpected scenarios.
+
+## Overall
+
+There are still lots of features, improvements, and bug fixes that are not mentioned here. We thank the community for their continued support and valuable contributions.
+
+Apache Gravitino 1.0.0 opens a new chapter from the data catalog to the smart catalog. We will continue to innovate and build, to add more Data and AI features. Please stay tuned\!
+
+## Credits
+
+This release acknowledges the hard work and dedication of all contributors who have helped make this release possible.
+
+1161623489@qq.com, Aamir, Aaryan Kumar Sinha, Ajax, Akshat Tiwari, Akshat kumar gupta, Aman Chandra Kumar, AndreVale69, Ashwil-Colaco, BIN, Ben Coke, Bharath Krishna, Brijesh Thummar, Bryan Maloyer, Cyber Star, Danhua Wang, Daniel, Daniele Carpentiero, Dentalkart399, Drinkaiii, Edie, Eric Chang, FANNG, Gagan B Mishra, George T. C. Lai, Guilherme Santos, Hatim Kagalwala, Jackeyzhe, Jarvis, JeonDaehong, Jerry Shao, Jimmy Lee, Joonha, Joonseo Lee, Joseph C., Justin Mclean, KWON TAE HEON, Kang, KeeProMise, Khawaja Abdullah Ansar, Kwon Taeheon, Kyle Lin, KyleLin0927, Lord of Abyss, MaAng, Mathieu Baurin, Maxspace1024, Mikshakecere, Mini Yu, Minji Kim, Minji Ryu, Nithish Kumar S, Pacman, Peidian li, Praveen, Qian Xia, Qiang-Liu, Qiming Teng, Raj Gupta, Ratnesh Rastogi, Raveendra Pujari, Reuben George, RickyMa, Rory, Sambhavi Pandey, Sébastien Brochet, Shaofeng Shi, Spiritedswordsman, Sua Bae, Surya B, Tarun, Tian Lu, Tianhang, Timur, Viral Kachhadiya, Will Guo, XiaoZ, Xiaojian Sun, Xun, Yftach Zur, Yuhui, Yujiang Zhong, Yunchi Pang, Zhengke Zhou, \_.mung, ankamde, arjun, danielyyang, dependabot\[bot\], fad, fanng, gavin.wang, guow34, jackeyzhe, kaghatim, keepConcentration, kerenpas, kitoha, lipeidian, liuxian, liuxian131, lsyulong, mchades, mingdaoy, predator4ann, qbhan, raveendra11, roryqi, senlizishi, slimtom95, taylor.fan, taylor12805, teo, tian bao, vishnu, yangyang zhong, youngseojeon, yuhui, yunchi, yuqi, zacsun, zhanghan, zhanghan18, 梁自强, 박용현, 배수아, 신동재, 이승주, 이준하
+
+<sub>Apache, Apache Fink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
+
