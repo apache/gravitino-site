@@ -18,7 +18,7 @@ This Helm chart deploys Apache Gravitino Iceberg REST Catalog Server on Kubernet
 ## Update Chart Dependency
 
 The Gravitino Iceberg REST Catalog Server Helm chart has not yet been officially released.   
-To proceed, please clone the repository, navigate to the chart directory [charts](../dev/charts), and execute the Helm dependency update command.
+To proceed, please clone the repository, navigate to the chart directory [charts](https://github.com/apache/gravitino/tree/main/dev/charts), and execute the Helm dependency update command.
 
 ```console
 helm dependency update [CHART]
@@ -26,7 +26,7 @@ helm dependency update [CHART]
 
 ## View Chart values
 
-You can customize values.yaml parameters to override chart default settings. Additionally, Gravitino Iceberg REST Catalog Server configurations in [gravitino-iceberg-rest-server.conf](../dev/charts/gravitino-iceberg-rest-server/resources/gravitino-iceberg-rest-server.conf) can be modified through Helm values.yaml.
+You can customize values.yaml parameters to override chart default settings. Additionally, Gravitino Iceberg REST Catalog Server configurations in [gravitino-iceberg-rest-server.conf](https://github.com/apache/gravitino/blob/main/dev/charts/gravitino-iceberg-rest-server/resources/gravitino-iceberg-rest-server.conf) can be modified through Helm values.yaml.
 
 To display the default values of the Gravitino chart, run:
 
