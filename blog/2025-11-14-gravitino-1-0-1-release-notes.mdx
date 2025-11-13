@@ -1,0 +1,56 @@
+---
+title: Apache Gravitino 1.0.1 - Release Notes
+slug: gravitino-1-0-1-release-notes
+authors: [Minghuang Li]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+We are pleased to announce the release of Gravitino 1.0.1. This version introduces comprehensive support for job template alterations, along with significant improvements and bug fixes across the core engine, various catalogs, and clients.
+
+## Major Features & Improvements
+
+### Job and Job Template
+
+* Supports altering job templates. [#8638](https://github.com/apache/gravitino/issues/8638), [#8639](https://github.com/apache/gravitino/issues/8639), [#8781](https://github.com/apache/gravitino/issues/8781), [#8783](https://github.com/apache/gravitino/issues/8783), [#8640](https://github.com/apache/gravitino/issues/8640), [#8641](https://github.com/apache/gravitino/issues/8641), [#8642](https://github.com/apache/gravitino/issues/8642)
+* Supports placeholders for all job template fields. [#8865](https://github.com/apache/gravitino/issues/8865)
+* Supports running Spark jobs in the local environment. [#7962](https://github.com/apache/gravitino/issues/7962)
+
+### Gravitino Core
+
+* Refactored tag operations by leveraging the entity store's relation operations. [#7916](https://github.com/apache/gravitino/issues/7916)
+* Made several optimizations to the Caffeine cache, including adjusting weight values, resolving a performance issue with `reverseIndex`, and prioritizing the eviction of tags and policies when the cache is full, and so on. [#8697](https://github.com/apache/gravitino/issues/8697), [#8743](https://github.com/apache/gravitino/issues/8743), [#8815](https://github.com/apache/gravitino/issues/8815), [#8871](https://github.com/apache/gravitino/issues/8871), [#8937](https://github.com/apache/gravitino/issues/8937)
+
+### Catalogs
+* **Kafka**: Fixed an issue where topic creation was asynchronous, ensuring the operation is now synchronous. [#4168](https://github.com/apache/gravitino/issues/4168)
+* **Iceberg**: Fixed a failure in starting the Iceberg REST server within a Docker environment. [#8733](https://github.com/apache/gravitino/issues/8733)
+* **Doris, StarRocks, PostgreSQL**: Fixed incorrect parsing of column default values and types for these data sources. [#8277](https://github.com/apache/gravitino/issues/8277)
+
+### Python Client
+* Added metadata objects to the Python client. [#8627](https://github.com/apache/gravitino/issues/8627)
+* Fixed an incorrect credential URL and a fileset test issue on GCS. [#8935](https://github.com/apache/gravitino/issues/8935), [#8969](https://github.com/apache/gravitino/issues/8969)
+
+### Authorization
+* Authorization is supported for the testCatalogConnection operation. [#7893](https://github.com/apache/gravitino/issues/7893)
+
+### Web UI
+* Fixed an issue with reconfiguring submission parameters when creating a catalog. [#8694](https://github.com/apache/gravitino/issues/8694)
+* Added pagination support for the fileset file list. [#8987](https://github.com/apache/gravitino/issues/8987)
+
+## Bug Fixes
+* Fixed a Null Pointer Exception (NPE) in `TableFormat.java` when a user has no roles. [#8202](https://github.com/apache/gravitino/issues/8202)
+* Corrected exception handling in the `setPolicy` operation. [#8661](https://github.com/apache/gravitino/issues/8661)
+* Fixed missing policy operations in the OpenAPI entry point. [#8706](https://github.com/apache/gravitino/issues/8706)
+* Fixed a build failure in the `gvfs-fuse` module. [#8830](https://github.com/apache/gravitino/issues/8830)
+* Fixed an issue where the hard deletion of statistics would fail. [#9038](https://github.com/apache/gravitino/issues/9038)
+* Corrected index names for statistics and job names in the database upgrade script. [#8979](https://github.com/apache/gravitino/issues/8979)
+* Fixed deletePolicyAndVersionMetasByLegacyTimeline error. [#9031](https://github.com/apache/gravitino/issues/9031)
+* Fixed role didn't update when the table is deleted. [#8824](https://github.com/apache/gravitino/issues/8824)
+
+## Credits
+
+We would like to thank the following contributors for their valuable contributions to this release:
+
+[@dyrnq](https://github.com/dyrnq) [@yuqi1129](https://github.com/yuqi1129) [@LauraXia123](https://github.com/LauraXia123) [@jerryshao](https://github.com/jerryshao) [@danhuawang](https://github.com/danhuawang) [@playasim](https://github.com/playasim) [@keepConcentration](https://github.com/keepConcentration) [@KayMas2808](https://github.com/KayMas2808) [@jerqi](https://github.com/jerqi) [@mchades](https://github.com/mchades) [@HugoSalaDev](https://github.com/HugoSalaDev) [@FANNG1](https://github.com/FANNG1) [@diqiu50](https://github.com/diqiu50) [@hdygxsj](https://github.com/hdygxsj) [@tsungchih](https://github.com/tsungchih)
+
+<sub>Apache, Apache Fink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
+
