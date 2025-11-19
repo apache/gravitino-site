@@ -1,0 +1,6 @@
+gravitino.exceptions.base.MetalakeNotInUseException
+===================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: MetalakeNotInUseException
