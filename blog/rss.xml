@@ -4,10 +4,72 @@
         <title>Apache Gravitino Blog</title>
         <link>https://gravitino.apache.org/blog</link>
         <description>Apache Gravitino Blog</description>
-        <lastBuildDate>Wed, 24 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 14 Nov 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Apache Gravitino 1.0.1 - Release Notes]]></title>
+            <link>https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes</link>
+            <guid>https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes</guid>
+            <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are pleased to announce the release of Gravitino 1.0.1. This version introduces comprehensive support for job template alterations, along with significant improvements and bug fixes across the core engine, various catalogs, and clients.]]></description>
+            <content:encoded><![CDATA[<p>We are pleased to announce the release of Gravitino 1.0.1. This version introduces comprehensive support for job template alterations, along with significant improvements and bug fixes across the core engine, various catalogs, and clients.</p>
+<h2 class="anchor anchorWithStickyNavbar_nt2D" id="major-features--improvements">Major Features &amp; Improvements<a class="hash-link" aria-label="Direct link to Major Features &amp; Improvements" title="Direct link to Major Features &amp; Improvements" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#major-features--improvements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="job-and-job-template">Job and Job Template<a class="hash-link" aria-label="Direct link to Job and Job Template" title="Direct link to Job and Job Template" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#job-and-job-template">​</a></h3>
+<ul>
+<li>Supports altering job templates. <a href="https://github.com/apache/gravitino/issues/8638" target="_blank" rel="noopener noreferrer">#8638</a>, <a href="https://github.com/apache/gravitino/issues/8639" target="_blank" rel="noopener noreferrer">#8639</a>, <a href="https://github.com/apache/gravitino/issues/8781" target="_blank" rel="noopener noreferrer">#8781</a>, <a href="https://github.com/apache/gravitino/issues/8783" target="_blank" rel="noopener noreferrer">#8783</a>, <a href="https://github.com/apache/gravitino/issues/8640" target="_blank" rel="noopener noreferrer">#8640</a>, <a href="https://github.com/apache/gravitino/issues/8641" target="_blank" rel="noopener noreferrer">#8641</a>, <a href="https://github.com/apache/gravitino/issues/8642" target="_blank" rel="noopener noreferrer">#8642</a></li>
+<li>Supports placeholders for all job template fields. <a href="https://github.com/apache/gravitino/issues/8865" target="_blank" rel="noopener noreferrer">#8865</a></li>
+<li>Supports running Spark jobs in the local environment. <a href="https://github.com/apache/gravitino/issues/7962" target="_blank" rel="noopener noreferrer">#7962</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="gravitino-core">Gravitino Core<a class="hash-link" aria-label="Direct link to Gravitino Core" title="Direct link to Gravitino Core" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#gravitino-core">​</a></h3>
+<ul>
+<li>Refactored tag operations by leveraging the entity store's relation operations. <a href="https://github.com/apache/gravitino/issues/7916" target="_blank" rel="noopener noreferrer">#7916</a></li>
+<li>Made several optimizations to the Caffeine cache, including adjusting weight values, resolving a performance issue with <code>reverseIndex</code>, and prioritizing the eviction of tags and policies when the cache is full, and so on. <a href="https://github.com/apache/gravitino/issues/8697" target="_blank" rel="noopener noreferrer">#8697</a>, <a href="https://github.com/apache/gravitino/issues/8743" target="_blank" rel="noopener noreferrer">#8743</a>, <a href="https://github.com/apache/gravitino/issues/8815" target="_blank" rel="noopener noreferrer">#8815</a>, <a href="https://github.com/apache/gravitino/issues/8871" target="_blank" rel="noopener noreferrer">#8871</a>, <a href="https://github.com/apache/gravitino/issues/8937" target="_blank" rel="noopener noreferrer">#8937</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="catalogs">Catalogs<a class="hash-link" aria-label="Direct link to Catalogs" title="Direct link to Catalogs" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#catalogs">​</a></h3>
+<ul>
+<li><strong>Kafka</strong>: Fixed an issue where topic creation was asynchronous, ensuring the operation is now synchronous. <a href="https://github.com/apache/gravitino/issues/4168" target="_blank" rel="noopener noreferrer">#4168</a></li>
+<li><strong>Iceberg</strong>: Fixed a failure in starting the Iceberg REST server within a Docker environment. <a href="https://github.com/apache/gravitino/issues/8733" target="_blank" rel="noopener noreferrer">#8733</a></li>
+<li><strong>Doris, StarRocks, PostgreSQL</strong>: Fixed incorrect parsing of column default values and types for these data sources. <a href="https://github.com/apache/gravitino/issues/8277" target="_blank" rel="noopener noreferrer">#8277</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="python-client">Python Client<a class="hash-link" aria-label="Direct link to Python Client" title="Direct link to Python Client" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#python-client">​</a></h3>
+<ul>
+<li>Added metadata objects to the Python client. <a href="https://github.com/apache/gravitino/issues/8627" target="_blank" rel="noopener noreferrer">#8627</a></li>
+<li>Fixed an incorrect credential URL and a fileset test issue on GCS. <a href="https://github.com/apache/gravitino/issues/8935" target="_blank" rel="noopener noreferrer">#8935</a>, <a href="https://github.com/apache/gravitino/issues/8969" target="_blank" rel="noopener noreferrer">#8969</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="authorization">Authorization<a class="hash-link" aria-label="Direct link to Authorization" title="Direct link to Authorization" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#authorization">​</a></h3>
+<ul>
+<li>Authorization is supported for the testCatalogConnection operation. <a href="https://github.com/apache/gravitino/issues/7893" target="_blank" rel="noopener noreferrer">#7893</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_nt2D" id="web-ui">Web UI<a class="hash-link" aria-label="Direct link to Web UI" title="Direct link to Web UI" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#web-ui">​</a></h3>
+<ul>
+<li>Fixed an issue with reconfiguring submission parameters when creating a catalog. <a href="https://github.com/apache/gravitino/issues/8694" target="_blank" rel="noopener noreferrer">#8694</a></li>
+<li>Added pagination support for the fileset file list. <a href="https://github.com/apache/gravitino/issues/8987" target="_blank" rel="noopener noreferrer">#8987</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_nt2D" id="bug-fixes">Bug Fixes<a class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#bug-fixes">​</a></h2>
+<ul>
+<li>Fixed a Null Pointer Exception (NPE) in <code>TableFormat.java</code> when a user has no roles. <a href="https://github.com/apache/gravitino/issues/8202" target="_blank" rel="noopener noreferrer">#8202</a></li>
+<li>Corrected exception handling in the <code>setPolicy</code> operation. <a href="https://github.com/apache/gravitino/issues/8661" target="_blank" rel="noopener noreferrer">#8661</a></li>
+<li>Fixed missing policy operations in the OpenAPI entry point. <a href="https://github.com/apache/gravitino/issues/8706" target="_blank" rel="noopener noreferrer">#8706</a></li>
+<li>Fixed a build failure in the <code>gvfs-fuse</code> module. <a href="https://github.com/apache/gravitino/issues/8830" target="_blank" rel="noopener noreferrer">#8830</a></li>
+<li>Fixed an issue where the hard deletion of statistics would fail. <a href="https://github.com/apache/gravitino/issues/9038" target="_blank" rel="noopener noreferrer">#9038</a></li>
+<li>Corrected index names for statistics and job names in the database upgrade script. <a href="https://github.com/apache/gravitino/issues/8979" target="_blank" rel="noopener noreferrer">#8979</a></li>
+<li>Fixed deletePolicyAndVersionMetasByLegacyTimeline error. <a href="https://github.com/apache/gravitino/issues/9031" target="_blank" rel="noopener noreferrer">#9031</a></li>
+<li>Fixed role didn't update when the table is deleted. <a href="https://github.com/apache/gravitino/issues/8824" target="_blank" rel="noopener noreferrer">#8824</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_nt2D" id="credits">Credits<a class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits" href="https://gravitino.apache.org/blog/gravitino-1-0-1-release-notes#credits">​</a></h2>
+<p>We would like to thank the following contributors for their valuable contributions to this release:</p>
+<p><a href="https://github.com/dyrnq" target="_blank" rel="noopener noreferrer">@dyrnq</a> <a href="https://github.com/yuqi1129" target="_blank" rel="noopener noreferrer">@yuqi1129</a> <a href="https://github.com/LauraXia123" target="_blank" rel="noopener noreferrer">@LauraXia123</a> <a href="https://github.com/jerryshao" target="_blank" rel="noopener noreferrer">@jerryshao</a> <a href="https://github.com/danhuawang" target="_blank" rel="noopener noreferrer">@danhuawang</a> <a href="https://github.com/playasim" target="_blank" rel="noopener noreferrer">@playasim</a> <a href="https://github.com/keepConcentration" target="_blank" rel="noopener noreferrer">@keepConcentration</a> <a href="https://github.com/KayMas2808" target="_blank" rel="noopener noreferrer">@KayMas2808</a> <a href="https://github.com/jerqi" target="_blank" rel="noopener noreferrer">@jerqi</a> <a href="https://github.com/mchades" target="_blank" rel="noopener noreferrer">@mchades</a> <a href="https://github.com/HugoSalaDev" target="_blank" rel="noopener noreferrer">@HugoSalaDev</a> <a href="https://github.com/FANNG1" target="_blank" rel="noopener noreferrer">@FANNG1</a> <a href="https://github.com/diqiu50" target="_blank" rel="noopener noreferrer">@diqiu50</a> <a href="https://github.com/hdygxsj" target="_blank" rel="noopener noreferrer">@hdygxsj</a> <a href="https://github.com/tsungchih" target="_blank" rel="noopener noreferrer">@tsungchih</a></p>
+<sub>Apache, Apache Fink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>]]></content:encoded>
+            <category>apache</category>
+            <category>gravitino</category>
+            <category>metadata</category>
+            <category>multicloud</category>
+            <category>model</category>
+            <category>security</category>
+            <category>government</category>
+        </item>
         <item>
             <title><![CDATA[Apache Gravitino 1.0.0 - From Metadata Management to Contextual Engineering]]></title>
             <link>https://gravitino.apache.org/blog/gravitino-1-0-0-release-notes</link>
