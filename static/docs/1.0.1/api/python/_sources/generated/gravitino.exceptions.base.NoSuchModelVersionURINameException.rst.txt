@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchModelVersionURINameException
+============================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchModelVersionURINameException

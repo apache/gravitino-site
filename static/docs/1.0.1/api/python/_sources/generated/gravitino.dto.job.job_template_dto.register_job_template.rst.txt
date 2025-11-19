@@ -1,0 +1,6 @@
+gravitino.dto.job.job\_template\_dto.register\_job\_template
+============================================================
+
+.. currentmodule:: gravitino.dto.job.job_template_dto
+
+.. autofunction:: register_job_template
