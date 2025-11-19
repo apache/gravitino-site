@@ -1,0 +1,6 @@
+gravitino.exceptions.base.ForbiddenException
+============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: ForbiddenException
