@@ -1,7 +1,7 @@
 ---
 title: Apache Gravitino 1.1.0 - An AI-native data metadata platform
 slug: gravitino-1-1-0-release-notes
-authors: [Qi Yu]
+authors: [yuqi1129]
 tags: [apache,gravitino,metadata,multicloud,model,security,government]
 ---
 
@@ -56,36 +56,36 @@ We are glad to announce the release of Gravitino 1.1.0! This release builds upon
 *   **Authorization**: Refined permission checks (https://github.com/apache/gravitino/issues/7942).
 *   **Resource management**: Improved resource release and closure mechanisms to prevent leaks (https://github.com/apache/gravitino/issues/8981, https://github.com/apache/gravitino/issues/9002, https://github.com/apache/gravitino/issues/8999).
 *   **JDBC metric store**: Support storing Iceberg metrics in JDBC (https://github.com/apache/gravitino/issues/8899).
-*  **Job system enhancement**: support job alternation. (https://github.com/apache/gravitino/issues/8638, https://github.com/apache/gravitino/issues/8814)
+*  **Job system enhancement**: Support job alteration. (https://github.com/apache/gravitino/issues/8638, https://github.com/apache/gravitino/issues/8814)
 
 ### Catalogs & Connectors
 *   **Iceberg catalog**:
-    *   Support metadata cache (https://github.com/apache/gravitino/issues/8314).
-    *   Upgrade Iceberg to 1.10.0 to support scan planning (https://github.com/apache/gravitino/issues/9046).
-    *   Improve dynamic config provider for better usability (https://github.com/apache/gravitino/issues/8970).
-*   **Fileset catalog**: Avoid filesystem instances hang for a long time. (https://github.com/apache/gravitino/issues/9280).
+*   Support metadata cache (https://github.com/apache/gravitino/issues/8314).
+*   Upgrade Iceberg to 1.10.0 to support scan planning (https://github.com/apache/gravitino/issues/9046).
+*   Improve dynamic config provider for better usability (https://github.com/apache/gravitino/issues/8970).
+*   **Fileset catalog**: Prevented filesystem instances from hanging for a long time. (https://github.com/apache/gravitino/issues/9280).
 *   **Trino connector**:
-    *   Support SQL UPDATE/DELETE/MERGE (https://github.com/apache/gravitino/issues/8241).
-    *   Fix getTableStatistics in GravitinoMetadata (https://github.com/apache/gravitino/issues/9100).
+*   Support SQL UPDATE/DELETE/MERGE (https://github.com/apache/gravitino/issues/8241).
+*   Fix getTableStatistics in GravitinoMetadata (https://github.com/apache/gravitino/issues/9100).
 
 ### Clients
 *   **GVFS client**: Improved stability and error handling (https://github.com/apache/gravitino/issues/8752, https://github.com/apache/gravitino/issues/8882, https://github.com/apache/gravitino/issues/8948, https://github.com/apache/gravitino/issues/8953).
 *   **Fileset bundle JARs**: Refactored for a more detailed delivery strategy (https://github.com/apache/gravitino/issues/9106).
-*   **Python client**: Add support for relational catalog. (https://github.com/apache/gravitino/issues/5198)
+*   **Python client**: Added support for relational catalog(https://github.com/apache/gravitino/issues/5198).
 
 ### Developer Experience & Operations
 *   **Helm chart**: Enhanced configuration options and stability (https://github.com/apache/gravitino/issues/8747, https://github.com/apache/gravitino/issues/8174).
 *   **GitHub templates**: Added templates to support AI coding (https://github.com/apache/gravitino/issues/9227).
 *   **Tests**: Refactoring and enhancement of test suites (https://github.com/apache/gravitino/issues/9223, https://github.com/apache/gravitino/issues/9107).
-*   **Docker**: Change Gravitino Docker base image (https://github.com/apache/gravitino/issues/8817).
-*   **Code Style**: Upgrade Google Java Format to support JDK 17.(https://github.com/apache/gravitino/issues/8792)
+*   **Docker**: Changed Gravitino Docker base image (https://github.com/apache/gravitino/issues/8817)
+*   **Code Style**: Upgrade Google Java Format to support JDK 17.(https://github.com/apache/gravitino/issues/8792).
 
 ## Frontend Updates
 
-*   Pagination for files list (https://github.com/apache/gravitino/issues/8987).
-*   Display the index type in UI (https://github.com/apache/gravitino/issues/6997).
-*   Upgrade dependabot affected versions (https://github.com/apache/gravitino/issues/9357).
-*   Fix routing issue where path '/' may not route to 'metalakes' (https://github.com/apache/gravitino/issues/9354).
+*   Added pagination for files list (https://github.com/apache/gravitino/issues/8987).
+*   Displayed the index type in UI (https://github.com/apache/gravitino/issues/6997).
+*   Upgraded dependabot affected versions (https://github.com/apache/gravitino/issues/9357).
+*   Fixed routing issue where path '/' may not route to 'metalakes' (https://github.com/apache/gravitino/issues/9354).
 
 
 ## Bug Fixes
