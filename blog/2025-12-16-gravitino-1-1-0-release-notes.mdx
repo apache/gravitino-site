@@ -1,0 +1,136 @@
+---
+title: Apache Gravitino 1.1.0 - Release Notes
+slug: gravitino-1-1-0-release-notes
+authors: [Qi Yu]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+
+We are glad to announce the release of Gravitino 1.1.0! This release builds upon the solid foundation laid by Gravitino 1.0.0, introducing a range of new features, improvements, and bug fixes that enhance the platform's capabilities, performance, and security.
+
+
+## Highlights
+- Broader catalog support (initial Lance REST service, a reusable lakehouse-generic catalog, and Hive3) to simplify integration with diverse lakehouse deployments.
+- Multi-cluster fileset support and Python client improvements for real-world multi-region and migration workflows.
+- Stronger metadata-level authorization and security hardening for the Iceberg REST surface.
+- Stability, performance and observability work across the entity-store, caches, scan planning, connectors and CI — reducing operational friction and test flakiness.
+
+
+## New Features
+
+
+1. **Built for the Future of AI Data: Lance REST service** (https://github.com/apache/gravitino/issues/8889).
+
+   As AI and ML workflows become central to data platforms, efficient access to vector data is crucial. The new Lance REST service exposes Lance datasets through a managed HTTP interface. This allows remote clients—such as inference services or notebooks—to access vector data with the high performance of the Lance format, all while adhering to Gravitino's centralized security and governance policies.
+
+2. **Generic lakehouse catalog** (https://github.com/apache/gravitino/issues/8828).
+
+   The lakehouse ecosystem is diverse and rapidly evolving, with new table formats and engines emerging frequently. To keep pace, we introduced a generic lakehouse catalog framework. This abstraction reduces the boilerplate code required to integrate new engines, standardizing how capabilities are negotiated and how namespaces are handled. This means faster support for new formats and a more consistent experience for developers and users alike.
+
+3. **Access control for Iceberg REST service** (https://github.com/apache/gravitino/issues/4290).
+
+   The Iceberg REST catalog is becoming the standard for open table access, but production use demands robust security. We have hardened the Iceberg REST service with comprehensive authentication and authorization checks. This ensures that data accessed via standard Iceberg clients is fully protected, making Gravitino a secure choice for multi-tenant and public-facing data lake deployments.
+
+4. **Hive 3 catalog support** (https://github.com/apache/gravitino/issues/5912).
+
+   Many enterprises still rely on Hive 3 for their core data infrastructure, making migration a risky and complex endeavor. This feature allows users to register existing Hive 3 metastores directly as Gravitino catalogs. By doing so, organizations can instantly bring their legacy data under Gravitino's unified governance and management umbrella without moving data or disrupting existing workloads, paving the way for a smoother transition to modern lakehouse architectures.
+
+5. **Multiple HDFS clusters support** (https://github.com/apache/gravitino/issues/9117, https://github.com/apache/gravitino/issues/9288).
+
+   In large-scale production environments, data is often distributed across multiple HDFS clusters to ensure isolation and disaster recovery. Previously, Gravitino was limited in how it handled these complex topologies. With this release, users can manage filesets across multiple HDFS clusters within a single Gravitino instance. This capability simplifies cross-cluster data management, improves resource isolation, and provides greater flexibility for multi-tenant architectures.
+
+6. **Metadata authorization for IRC, statistics, tags, jobs, and policies** (https://github.com/apache/gravitino/issues/4361, https://github.com/apache/gravitino/issues/8752, https://github.com/apache/gravitino/issues/8944, https://github.com/apache/gravitino/issues/8943).
+
+   True governance requires securing every aspect of the metadata platform. We have expanded fine-grained authorization to cover auxiliary resources like tags, statistics, and background jobs. This enhancement closes previous security gaps, ensuring that all user interactions with the system—whether viewing statistics or managing tags—are strictly governed by least-privilege policies.
+
+
+7. **New Iceberg REST endpoints** (https://github.com/apache/gravitino/issues/6336).
+
+   To support the full range of capabilities expected by modern analytics tools, we have implemented additional endpoints from the Iceberg REST specification. This improves compatibility with the latest query engines and clients, ensuring that users can leverage advanced planning and catalog operations without running into compatibility issues.
+
+## Improvements
+
+### Core & Server
+*   **Entity store and Cache**: Fixed several performance and logic issues to improve stability and speed. (https://github.com/apache/gravitino/issues/8697, https://github.com/apache/gravitino/issues/8743, https://github.com/apache/gravitino/issues/8815, https://github.com/apache/gravitino/issues/8817, https://github.com/apache/gravitino/issues/8710, https://github.com/apache/gravitino/issues/9148, https://github.com/apache/gravitino/issues/7916, https://github.com/apache/gravitino/issues/8546)
+*   **Metrics**: Expose more metrics for server and catalogs to enhance observability (https://github.com/apache/gravitino/issues/8594).
+*   **Authorization**: Refined permission checks (https://github.com/apache/gravitino/issues/7942).
+*   **Resource management**: Improved resource release and closure mechanisms to prevent leaks (https://github.com/apache/gravitino/issues/8981, https://github.com/apache/gravitino/issues/9002, https://github.com/apache/gravitino/issues/8999).
+*   **JDBC metric store**: Support storing Iceberg metrics in JDBC (https://github.com/apache/gravitino/issues/8899).
+*  **Job system enhancement**: support job alternation. (https://github.com/apache/gravitino/issues/8638, https://github.com/apache/gravitino/issues/8814)
+
+### Catalogs & Connectors
+*   **Iceberg catalog**:
+    *   Support metadata cache (https://github.com/apache/gravitino/issues/8314).
+    *   Upgrade Iceberg to 1.10.0 to support scan planning (https://github.com/apache/gravitino/issues/9046).
+    *   Improve dynamic config provider for better usability (https://github.com/apache/gravitino/issues/8970).
+*   **Fileset catalog**: Avoid filesystem instances hang for a long time. (https://github.com/apache/gravitino/issues/9280).
+*   **Trino connector**:
+    *   Support SQL UPDATE/DELETE/MERGE (https://github.com/apache/gravitino/issues/8241).
+    *   Fix getTableStatistics in GravitinoMetadata (https://github.com/apache/gravitino/issues/9100).
+
+### Clients
+*   **GVFS client**: Improved stability and error handling (https://github.com/apache/gravitino/issues/8752, https://github.com/apache/gravitino/issues/8882, https://github.com/apache/gravitino/issues/8948, https://github.com/apache/gravitino/issues/8953).
+*   **Fileset bundle JARs**: Refactored for a more detailed delivery strategy (https://github.com/apache/gravitino/issues/9106).
+*   **Python client**: Add support for relational catalog. (https://github.com/apache/gravitino/issues/5198)
+
+### Developer Experience & Operations
+*   **Helm chart**: Enhanced configuration options and stability (https://github.com/apache/gravitino/issues/8747, https://github.com/apache/gravitino/issues/8174).
+*   **GitHub templates**: Added templates to support AI coding (https://github.com/apache/gravitino/issues/9227).
+*   **Tests**: Refactoring and enhancement of test suites (https://github.com/apache/gravitino/issues/9223, https://github.com/apache/gravitino/issues/9107).
+*   **Docker**: Change Gravitino Docker base image (https://github.com/apache/gravitino/issues/8817).
+*   **Code Style**: Upgrade Google Java Format to support JDK 17.(https://github.com/apache/gravitino/issues/8792)
+
+## Frontend Updates
+
+*   Pagination for files list (https://github.com/apache/gravitino/issues/8987).
+*   Display the index type in UI (https://github.com/apache/gravitino/issues/6997).
+*   Upgrade dependabot affected versions (https://github.com/apache/gravitino/issues/9357).
+*   Fix routing issue where path '/' may not route to 'metalakes' (https://github.com/apache/gravitino/issues/9354).
+
+
+## Bug Fixes
+
+1. Create topic encounters NoSuchTopicException when Kafka is deployed with 3 brokers on EKS (https://github.com/apache/gravitino/issues/4168).
+2. Gravitino IRC server returns `java.lang.NoSuchMethodError: void org.apache.hadoop.security.HadoopKerberosName.setRuleMechanism` (https://github.com/apache/gravitino/issues/8754).
+3. Several bugs in SQL provider (https://github.com/apache/gravitino/issues/8659, https://github.com/apache/gravitino/issues/9166).
+4. Unknown error when using fsspec through JNI (https://github.com/apache/gravitino/issues/8858).
+
+Still, there are many bugs that have not listed due to limited space. Please refer to the [full list](https://github.com/apache/gravitino/issues?q=sort%3Aupdated-desc%20is%3Aissue%20state%3Aclosed%20label%3A1.1.0%20label%3Abug) of issues and pull requests merged since the 1.0.0 release for more details.
+
+## Acknowledgements
+Thanks to everyone who contributed to the 1.1.0 work — code, reviews, tests, issue triage, design, and feedback. Below is a consolidated list of contributor GitHub IDs extracted from issue and PR activity.
+
+- https://github.com/danhuawang
+- https://github.com/LauraXia123
+- https://github.com/forLp811
+- https://github.com/justinmclean
+- https://github.com/FANNG1
+- https://github.com/LeeMo2K10
+- https://github.com/jerryshao
+- https://github.com/diqiu50
+- https://github.com/mchades
+- https://github.com/jerqi
+- https://github.com/sunxiaojian
+- https://github.com/yuqi1129
+- https://github.com/hdygxsj
+- https://github.com/agnes-xinyi-lu
+- https://github.com/bharos
+- https://github.com/JoelVR2k
+- https://github.com/joeyutong
+- https://github.com/PCloud63514
+- https://github.com/Pikady
+- https://github.com/technotablet
+- https://github.com/shaofengshi
+- https://github.com/AryanBagade
+- https://github.com/KayMas2808
+- https://github.com/bittu9975
+- https://github.com/chenwyi2
+- https://github.com/blackfaced
+- https://github.com/an-shi-chi-fan
+- https://github.com/Abyss-lord
+- https://github.com/tsungchih
+- https://github.com/pratyushkumar211
+- https://github.com/keepConcentration
+- https://github.com/macpie
+- https://github.com/vmanik2k
+- https://github.com/ruanweijun
