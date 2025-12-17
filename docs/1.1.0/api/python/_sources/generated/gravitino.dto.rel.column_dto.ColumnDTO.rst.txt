@@ -1,0 +1,65 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.rel.column\_dto.ColumnDTO
+=======================================
+
+.. currentmodule:: gravitino.dto.rel.column_dto
+
+.. autoclass:: ColumnDTO
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ColumnDTO.__init__
+      ~ColumnDTO.auto_increment
+      ~ColumnDTO.builder
+      ~ColumnDTO.comment
+      ~ColumnDTO.data_type
+      ~ColumnDTO.default_value
+      ~ColumnDTO.from_dict
+      ~ColumnDTO.from_json
+      ~ColumnDTO.name
+      ~ColumnDTO.nullable
+      ~ColumnDTO.of
+      ~ColumnDTO.schema
+      ~ColumnDTO.supports_tags
+      ~ColumnDTO.to_dict
+      ~ColumnDTO.to_json
+      ~ColumnDTO.validate
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ColumnDTO.DEFAULT_VALUE_NOT_SET
+      ~ColumnDTO.DEFAULT_VALUE_OF_CURRENT_TIMESTAMP
+      ~ColumnDTO.dataclass_json_config
+   
+   
