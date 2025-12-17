@@ -463,7 +463,7 @@ const sidebars: SidebarsConfig = {
         {
           label: 'Install on AWS or GCP',
           type: 'link',
-          href: `/docs/${currentVersion}/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform`
+          href: `/docs/${currentVersion}/getting-started/aws-remote-access`
         }
       ]
     },
