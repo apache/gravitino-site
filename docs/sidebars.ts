@@ -388,6 +388,11 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
+      id: 'daft-connector/daft-connector',
+      label: 'Daft connector',
+      type: 'doc'
+    },
+    {
       label: 'Server administration',
       type: 'category',
       items: [
