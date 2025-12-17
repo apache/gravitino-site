@@ -1,0 +1,104 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.rel.json\_serdes.distribution\_serdes.DistributionSerDes
+======================================================================
+
+.. currentmodule:: gravitino.dto.rel.json_serdes.distribution_serdes
+
+.. autoclass:: DistributionSerDes
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DistributionSerDes.__init__
+      ~DistributionSerDes.deserialize
+      ~DistributionSerDes.serialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DistributionSerDes.ASSIGNMENTS_NAME
+      ~DistributionSerDes.CATALOG_STRING
+      ~DistributionSerDes.DATA_TYPE
+      ~DistributionSerDes.DECIMAL_PATTERN
+      ~DistributionSerDes.DIRECTION
+      ~DistributionSerDes.EXPRESSION_TYPE
+      ~DistributionSerDes.EXTERNAL
+      ~DistributionSerDes.FIELDS
+      ~DistributionSerDes.FIELD_NAME
+      ~DistributionSerDes.FIELD_NAMES
+      ~DistributionSerDes.FIXEDCHAR_PATTERN
+      ~DistributionSerDes.FIXED_PATTERN
+      ~DistributionSerDes.FUNCTION_ARGS
+      ~DistributionSerDes.FUNCTION_NAME
+      ~DistributionSerDes.IDENTITY_PARTITION_VALUES
+      ~DistributionSerDes.INDEX_FIELD_NAMES
+      ~DistributionSerDes.INDEX_NAME
+      ~DistributionSerDes.INDEX_TYPE
+      ~DistributionSerDes.LIST
+      ~DistributionSerDes.LIST_ELEMENT_NULLABLE
+      ~DistributionSerDes.LIST_ELEMENT_TYPE
+      ~DistributionSerDes.LIST_PARTITION_LISTS
+      ~DistributionSerDes.LITERAL_VALUE
+      ~DistributionSerDes.MAP
+      ~DistributionSerDes.MAP_KEY_TYPE
+      ~DistributionSerDes.MAP_VALUE_NULLABLE
+      ~DistributionSerDes.MAP_VALUE_TYPE
+      ~DistributionSerDes.NON_PRIMITIVE_TYPES
+      ~DistributionSerDes.NULL_ORDERING
+      ~DistributionSerDes.NUMBER
+      ~DistributionSerDes.NUM_BUCKETS
+      ~DistributionSerDes.PARTITION_NAME
+      ~DistributionSerDes.PARTITION_PROPERTIES
+      ~DistributionSerDes.PARTITION_TYPE
+      ~DistributionSerDes.PRIMITIVE_AND_NULL_TYPES
+      ~DistributionSerDes.RANGE_PARTITION_LOWER
+      ~DistributionSerDes.RANGE_PARTITION_UPPER
+      ~DistributionSerDes.SORT_TERM
+      ~DistributionSerDes.STRATEGY
+      ~DistributionSerDes.STRUCT
+      ~DistributionSerDes.STRUCT_FIELD_COMMENT
+      ~DistributionSerDes.STRUCT_FIELD_NAME
+      ~DistributionSerDes.STRUCT_FIELD_NULLABLE
+      ~DistributionSerDes.TIMESTAMP_PATTERN
+      ~DistributionSerDes.TIMESTAMP_TZ_PATTERN
+      ~DistributionSerDes.TIME_PATTERN
+      ~DistributionSerDes.TYPE
+      ~DistributionSerDes.TYPES
+      ~DistributionSerDes.UNION
+      ~DistributionSerDes.UNION_TYPES
+      ~DistributionSerDes.UNPARSED
+      ~DistributionSerDes.UNPARSED_EXPRESSION
+      ~DistributionSerDes.UNPARSED_TYPE
+      ~DistributionSerDes.VARCHAR_PATTERN
+      ~DistributionSerDes.WIDTH
+   
+   

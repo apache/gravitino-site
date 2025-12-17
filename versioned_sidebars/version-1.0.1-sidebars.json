@@ -437,7 +437,7 @@
         {
           "label": "Install on AWS or GCP",
           "type": "link",
-          "href": "/docs/1.0.1/getting-started#installing-apache-gravitino-playground-on-aws-or-google-cloud-platform"
+          "href": "/docs/1.0.1/getting-started/aws-remote-access"
         }
       ]
     },
