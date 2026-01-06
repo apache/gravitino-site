@@ -82,7 +82,7 @@
 <li><strong>Emergence of Data Agents</strong>: AI Agents are becoming the primary consumers of data. These agents require "Context Engineering"—a way to use metadata as an external brain to discover, understand, and act upon data autonomously.</li>
 <li><strong>Escalating AI Security Risks</strong>: The high-speed nature of AI interactions makes traditional static security (RBAC) obsolete. The industry is moving toward <strong>Identity-Centric Zero Trust</strong> and <strong>Fine-Grained ABAC</strong> to prevent data leakage and ensure model safety.</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_XtAn" id="future-work"><strong>Future Work:</strong><a class="hash-link" aria-label="Direct link to future-work" title="Direct link to future-work" href="https://gravitino.apache.org/blog/2025-summary#future-work">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="future-work"><strong>Future Work</strong><a class="hash-link" aria-label="Direct link to future-work" title="Direct link to future-work" href="https://gravitino.apache.org/blog/2025-summary#future-work">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_XtAn" id="1-universal-lakehouse--format-interoperability"><strong>1. Universal Lakehouse &amp; Format Interoperability</strong><a class="hash-link" aria-label="Direct link to 1-universal-lakehouse--format-interoperability" title="Direct link to 1-universal-lakehouse--format-interoperability" href="https://gravitino.apache.org/blog/2025-summary#1-universal-lakehouse--format-interoperability">​</a></h4>
 <p>To solve the data silo problem, Gravitino is expanding its reach to provide a unified management layer for the modern Lakehouse.</p>
 <ul>
