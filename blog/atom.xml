@@ -2,11 +2,114 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gravitino.apache.org/blog</id>
     <title>Apache Gravitino Blog</title>
-    <updated>2025-12-16T00:00:00.000Z</updated>
+    <updated>2026-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gravitino.apache.org/blog"/>
     <subtitle>Apache Gravitino Blog</subtitle>
     <icon>https://gravitino.apache.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Apache Gravitino - 2025 Summary]]></title>
+        <id>https://gravitino.apache.org/blog/gravitino-top-level-project</id>
+        <link href="https://gravitino.apache.org/blog/gravitino-top-level-project"/>
+        <updated>2026-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introduction]]></summary>
+        <content type="html"><![CDATA[<h3></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="introduction"><strong>Introduction</strong><a class="hash-link" aria-label="Direct link to introduction" title="Direct link to introduction" href="https://gravitino.apache.org/blog/gravitino-top-level-project#introduction">​</a></h3>
+<p>2025 was a landmark year for Apache Gravitino. The project not only graduated as a Top-Level Project (TLP) but also reached its first major stable release, version 1.0.0. Throughout the year, the community focused heavily on "Contextual Engineering" and "AI-native" metadata management, introducing groundbreaking features like the Model Context Protocol (MCP) server, the Lance REST service, and a metadata-driven action system. This article summarizes the milestones and achievements of Apache Gravitino in 2025.</p>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="-1"><a class="hash-link" aria-label="Direct link to -1" title="Direct link to -1" href="https://gravitino.apache.org/blog/gravitino-top-level-project#-1">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="timeline"><strong>Timeline</strong><a class="hash-link" aria-label="Direct link to timeline" title="Direct link to timeline" href="https://gravitino.apache.org/blog/gravitino-top-level-project#timeline">​</a></h3>
+<p>Apache Gravitino officially <strong>graduated as an Apache Top-Level Project on June 3, 2025</strong>, marking a significant maturity milestone.</p>
+<p>In 2025, the community released several key versions, including the major 1.0.0 release and significant feature updates in 0.8.0-incubating, 0.9.0-incubating, and 1.1.0.</p>
+<ul>
+<li><strong>2025.01.24: Version 0.8.0-incubating released</strong>
+<ul>
+<li>Focused on strengthening AI support with the introduction of the <strong>Model Catalog</strong>.</li>
+<li>Introduced credential vending for Filesets and new connectors for Flink (Iceberg/Paimon).</li>
+</ul>
+</li>
+<li><strong>2025.05.07: Version 0.9.0-incubating released</strong>
+<ul>
+<li>Enhanced data governance with a new <strong>Data Lineage interface</strong> (OpenLineage compliant).</li>
+<li>Added gcli script for better CLI experience and improved security with privilege refinements.</li>
+</ul>
+</li>
+<li><strong>2025.09.24: Version 1.0.0 released</strong>
+<ul>
+<li>The first stable major release, themed "From Metadata Management to Contextual Engineering."</li>
+<li>Introduced the <strong>Metadata-driven Action System</strong> (including Statistics, Policies, and Jobs).</li>
+<li>Launched the <strong>MCP (Model Context Protocol) Server</strong>, enabling AI Agents/LLMs to interact directly with metadata.</li>
+<li>Implemented unified Role-Based Access Control (RBAC) across catalogs.</li>
+</ul>
+</li>
+<li><strong>2025.11.20: Version 1.0.1 released</strong>
+<ul>
+<li>A stability release featuring smarter job templates and improved Python client support.</li>
+</ul>
+</li>
+<li><strong>2025.12.19: Version 1.1.0 released</strong>
+<ul>
+<li>Added the <strong>Lance REST service</strong> to support vector data for AI workloads.</li>
+<li>Introduced a Generic Lakehouse Catalog and support for Hive 3 and multi-cluster HDFS filesets.</li>
+<li>Hardened security for the Iceberg REST service.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="key-features--improvements"><strong>Key Features &amp; Improvements</strong><a class="hash-link" aria-label="Direct link to key-features--improvements" title="Direct link to key-features--improvements" href="https://gravitino.apache.org/blog/gravitino-top-level-project#key-features--improvements">​</a></h3>
+<p>In 2025, Gravitino evolved from a unified catalog to an active metadata control plane. Key technical achievements include:</p>
+<ol>
+<li><strong>AI &amp; LLM Integration</strong>: The project positioned itself as an AI-native catalog by introducing the <strong>Model Catalog</strong> for managing ML models and the <strong>MCP Server</strong> to connect AI agents with data context. The addition of the <strong>Lance REST service</strong> in v1.1.0 further solidified support for vector datasets.</li>
+<li><strong>Metadata-Driven Actions</strong>: A new framework allowing users to define policies (e.g., TTL, compaction) and execute jobs based on metadata, moving beyond passive metadata storage.</li>
+<li><strong>Unified Governance &amp; Security</strong>: Full implementation of <strong>RBAC</strong>, credential vending for secure data access (S3/GCS/ADLS), and a unified authentication flow for Iceberg REST services.</li>
+<li><strong>Ecosystem Expansion</strong>: Broadened support with new connectors (Generic Lakehouse, Hive 3, Flink, Paimon) and enhancements to the <strong>GVFS (Gravitino Virtual File System)</strong> for unified file management.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="community"><strong>Community</strong><a class="hash-link" aria-label="Direct link to community" title="Direct link to community" href="https://gravitino.apache.org/blog/gravitino-top-level-project#community">​</a></h3>
+<p>The Apache Gravitino community saw explosive growth in 2025, evolving from an incubator project into a Top-Level Project (TLP) backed by a rapidly expanding global ecosystem.</p>
+<ul>
+<li><strong>Top-Level Graduation</strong>: On <strong>June 3, 2025</strong>, the project officially graduated to an Apache Top-Level Project, a major milestone marking its maturity in community health, vendor-neutral governance, and production readiness.</li>
+<li><strong>Community Growth (Year-over-Year)</strong>:<!-- -->
+<ul>
+<li><strong>Engagement</strong>: GitHub stars increased by over <strong>130%</strong>, ending the year above <strong>2,600</strong>. Forks grew by approximately <strong>150%</strong>, reflecting a surge in community-led integrations and local developments.</li>
+<li><strong>Contributor Base</strong>: The active developer community expanded by nearly <strong>100%</strong>. Recent major releases, such as version 1.1.0, featured contributions from <strong>40+ unique developers</strong> representing a wide variety of global organizations.</li>
+<li><strong>Development Velocity</strong>: Development pace accelerated significantly, with code commits reaching a lifetime total of over <strong>3,300 commits</strong>.</li>
+<li><strong>Post-Graduation Committer Growth</strong>: July 7, 2025: Chenxi Pan was added as Committers. December 15, 2025: Junda Yang and Yangyang Zhong were added as Committers.</li>
+</ul>
+</li>
+<li><strong>Global Presence</strong>: The project established itself as the standard for federated metadata through featured presentations at <strong>Community Over Code (NA &amp; Asia)</strong> and <strong>QCon Shanghai</strong>, gathering critical production feedback from global data engineering teams to shape the future roadmap.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="industry-trends-in-metadata-management-2026"><strong>Industry Trends in Metadata Management (2026)</strong><a class="hash-link" aria-label="Direct link to industry-trends-in-metadata-management-2026" title="Direct link to industry-trends-in-metadata-management-2026" href="https://gravitino.apache.org/blog/gravitino-top-level-project#industry-trends-in-metadata-management-2026">​</a></h3>
+<ol>
+<li><strong>Breaking Lakehouse Silos</strong>: As organizations adopt multiple "open" table formats, the risk of "format lock-in" has replaced "vendor lock-in." The trend is toward <strong>Universal Lakehouse</strong> architectures that provide a single entry point for fragmented data silos.</li>
+<li><strong>The Multimodal AI Explosion</strong>: AI workloads are moving beyond tabular data to include massive volumes of unstructured assets (images, video, audio). Traditional data stacks are being replaced by <strong>AI-Native Multimodal Stacks</strong> that can process complex data types with the same governance as SQL tables.</li>
+<li><strong>Emergence of Data Agents</strong>: AI Agents are becoming the primary consumers of data. These agents require "Context Engineering"—a way to use metadata as an external brain to discover, understand, and act upon data autonomously.</li>
+<li><strong>Escalating AI Security Risks</strong>: The high-speed nature of AI interactions makes traditional static security (RBAC) obsolete. The industry is moving toward <strong>Identity-Centric Zero Trust</strong> and <strong>Fine-Grained ABAC</strong> to prevent data leakage and ensure model safety.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="future-work"><strong>Future Work:</strong><a class="hash-link" aria-label="Direct link to future-work" title="Direct link to future-work" href="https://gravitino.apache.org/blog/gravitino-top-level-project#future-work">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="1-universal-lakehouse--format-interoperability"><strong>1. Universal Lakehouse &amp; Format Interoperability</strong><a class="hash-link" aria-label="Direct link to 1-universal-lakehouse--format-interoperability" title="Direct link to 1-universal-lakehouse--format-interoperability" href="https://gravitino.apache.org/blog/gravitino-top-level-project#1-universal-lakehouse--format-interoperability">​</a></h3>
+<p>To solve the data silo problem, Gravitino is expanding its reach to provide a unified management layer for the modern Lakehouse.</p>
+<ul>
+<li><strong>Multi-Format Support</strong>: We will provide first-class support for <strong>Apache Iceberg</strong>, <strong>Delta Lake</strong>, <strong>Hudi</strong>, and <strong>Paimon</strong>. By acting as a "Catalog of Catalogs," Gravitino allows users to manage multiple formats through a single interface, significantly reducing vendor lock-in and simplifying cross-format governance.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="2-multimodal-data-stack-for-the-ai-era"><strong>2. Multimodal Data Stack for the AI Era</strong><a class="hash-link" aria-label="Direct link to 2-multimodal-data-stack-for-the-ai-era" title="Direct link to 2-multimodal-data-stack-for-the-ai-era" href="https://gravitino.apache.org/blog/gravitino-top-level-project#2-multimodal-data-stack-for-the-ai-era">​</a></h4>
+<p>Gravitino is evolving to empower a new generation of AI-native data stacks.</p>
+<ul>
+<li><strong>Ecosystem Integration</strong>: We will focus on deep integration with AI-centric engines like <strong>Daft</strong>, <strong>Ray</strong>, and <strong>Lance</strong>.</li>
+<li><strong>Empowering New Scenarios</strong>: By providing a unified metadata layer for these engines, Gravitino allows users to "reuse" existing data governance capabilities—like auditing and access control—for modern multimodal scenarios, giving the new AI data stack enterprise-grade maturity from day one.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="3-data-agent-orchestration-metadata-as-the-brain"><strong>3. Data Agent Orchestration (Metadata as the "Brain")</strong><a class="hash-link" aria-label="Direct link to 3-data-agent-orchestration-metadata-as-the-brain" title="Direct link to 3-data-agent-orchestration-metadata-as-the-brain" href="https://gravitino.apache.org/blog/gravitino-top-level-project#3-data-agent-orchestration-metadata-as-the-brain">​</a></h4>
+<p>Gravitino will serve as the cognitive foundation for autonomous <strong>Data Agents</strong>.</p>
+<ul>
+<li><strong>MCP Server &amp; Action System</strong>: Leveraging the <strong>Model Context Protocol (MCP)</strong> and our <strong>Metadata Action System</strong>, we are exploring scenario-based capabilities for Data Agents. This allows an AI agent to not only "see" the data but also "act" on it—such as performing a schema update or triggering a compaction job—using metadata as its reasoning context.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="4-advanced-security-kms--abac"><strong>4. Advanced Security: KMS &amp; ABAC</strong><a class="hash-link" aria-label="Direct link to 4-advanced-security-kms--abac" title="Direct link to 4-advanced-security-kms--abac" href="https://gravitino.apache.org/blog/gravitino-top-level-project#4-advanced-security-kms--abac">​</a></h4>
+<p>As security threats become more sophisticated in the AI era, Gravitino is implementing more granular and automated security controls.</p>
+<ul>
+<li><strong>ABAC (Attribute-Based Access Control)</strong>: We will implement an ABAC engine to enable fine-grained permissions. This allows access decisions to be made based on dynamic tags (e.g., Sensitivity=High) and environmental context rather than just static roles.</li>
+<li><strong>KMS &amp; Credential Management</strong>: To protect data-at-rest and in-transit, we are integrating with <strong>Key Management Services (KMS)</strong> .</li>
+</ul>]]></content>
+        <category label="apache" term="apache"/>
+        <category label="gravitino" term="gravitino"/>
+        <category label="ASF" term="ASF"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache Gravitino 1.1.0 - An AI-native metadata management platform]]></title>
         <id>https://gravitino.apache.org/blog/gravitino-1-1-0-release-notes</id>
@@ -429,22 +532,99 @@
         <link href="https://gravitino.apache.org/blog/gravitino-top-level-project"/>
         <updated>2025-06-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We’re excited to share that Apache Gravitino is now a Top-Level Project (TLP) at the Apache Software Foundation (ASF)\! This milestone marks a major step forward for the project and the community that’s grown around it since entering the Apache Incubator in June 2024\.]]></summary>
-        <content type="html"><![CDATA[<p>We’re excited to share that <strong>Apache Gravitino</strong> is now a <strong>Top-Level Project (TLP)</strong> at the Apache Software Foundation (ASF)! This milestone marks a major step forward for the project and the community that’s grown around it since entering the Apache Incubator in June 2024.</p>
-<p>Gravitino was created to solve a growing pain in today’s data ecosystem: managing metadata across an explosion of systems including data warehouses, datalakes, lakehouses, streaming platforms, and AI tools. With Gravitino, you get a high-performance, open-source metastore that brings all that metadata together into one unified platform. Think of it as the missing layer that makes your data and AI assets easier to manage, discover, and govern.</p>
-<p>“Graduation is a major milestone for any Apache project,” said <strong>Justin Mclean, Chair of the Apache Incubator</strong>. “Apache Gravitino has demonstrated the maturity expected of a top-level project, including a diverse and engaged community and a deep understanding of the ASF’s governance principles."</p>
-<h2 class="anchor anchorWithStickyNavbar_XtAn" id="built-for-todays-data-stack"><strong>Built for Today’s Data Stack</strong><a class="hash-link" aria-label="Direct link to built-for-todays-data-stack" title="Direct link to built-for-todays-data-stack" href="https://gravitino.apache.org/blog/gravitino-top-level-project#built-for-todays-data-stack">​</a></h2>
-<p>Gravitino supports a wide range of systems out of the box, including <strong>Apache Iceberg</strong>, <strong>Apache Hive</strong>, <strong>Apache Kafka</strong>, <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and more. Whether you're building a modern lakehouse architecture or trying to wrangle metadata across hybrid cloud and on-prem environments, Gravitino helps break down data silos and streamline metadata governance at scale.</p>
-<p>“We’re thrilled to see Gravitino become an Apache Top-Level Project,” said <strong>Jerry Shao, Chair of Apache Gravitino</strong>. “Our community is deeply committed to building a scalable, extensible metadata system that helps enterprises unify their data ecosystem. Graduation is not the end but a new beginning and we’re just getting started.”</p>
-<h2 class="anchor anchorWithStickyNavbar_XtAn" id="growing-community-real-world-adoption"><strong>Growing Community, Real-World Adoption</strong><a class="hash-link" aria-label="Direct link to growing-community-real-world-adoption" title="Direct link to growing-community-real-world-adoption" href="https://gravitino.apache.org/blog/gravitino-top-level-project#growing-community-real-world-adoption">​</a></h2>
-<p>In under a year, Gravitino has built a global community of contributors and gained real adoption from companies with serious data challenges.</p>
-<p>“As organizations grapple with increasingly complex and distributed data and AI environments, Gravitino provides the unified metadata layer that’s been missing,” said <strong>Junping Du</strong>, <strong>CEO of Datastrato</strong>. “We’re proud to support the project and congratulate the community on this big step forward.”</p>
-<p>"Gravitino is uniquely designed to bridge data and AI workloads. We're excited to deploy it across our multi-cloud AI clusters and contribute to many prioritized AI and agent-based use cases," said <strong>Jack Song</strong>, <strong>Director of Uber Data Platform</strong>. "Gravitino’s graduation marks its maturity entering the next level, backed by a thriving and engaged community."</p>
-<p>“As the first open-source Iceberg REST Catalog, Apache Gravitino has been running in our production environment for quite some time,” said <strong>Ang Zhang</strong>, <strong>Director of Big Data Platform at Pinterest</strong>. “Gravitino’s graduation to an ASF Top-Level Project marks an important milestone—it reflects the project's maturity, the strength of its community, and its growing reliability for broader production use.”</p>
-<h2 class="anchor anchorWithStickyNavbar_XtAn" id="get-involved"><strong>Get Involved</strong><a class="hash-link" aria-label="Direct link to get-involved" title="Direct link to get-involved" href="https://gravitino.apache.org/blog/gravitino-top-level-project#get-involved">​</a></h2>
-<p>Whether you’re looking to contribute, integrate Gravitino into your stack, or just learn more, now’s the perfect time to get involved:</p>
-<p>- <a href="https://gravitino.apache.org/" target="_blank" rel="noopener noreferrer">Website</a>
-- <a href="https://github.com/apache/gravitino" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-<p>Thanks to everyone in the community who made this possible. Let’s keep growing!</p>]]></content>
+        <content type="html"><![CDATA[<h3></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="introduction"><strong>Introduction</strong><a class="hash-link" aria-label="Direct link to introduction" title="Direct link to introduction" href="https://gravitino.apache.org/blog/gravitino-top-level-project#introduction">​</a></h3>
+<p>2025 was a landmark year for Apache Gravitino. The project not only graduated as a Top-Level Project (TLP) but also reached its first major stable release, version 1.0.0. Throughout the year, the community focused heavily on "Contextual Engineering" and "AI-native" metadata management, introducing groundbreaking features like the Model Context Protocol (MCP) server, the Lance REST service, and a metadata-driven action system. This article summarizes the milestones and achievements of Apache Gravitino in 2025.</p>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="-1"><a class="hash-link" aria-label="Direct link to -1" title="Direct link to -1" href="https://gravitino.apache.org/blog/gravitino-top-level-project#-1">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="timeline"><strong>Timeline</strong><a class="hash-link" aria-label="Direct link to timeline" title="Direct link to timeline" href="https://gravitino.apache.org/blog/gravitino-top-level-project#timeline">​</a></h3>
+<p>Apache Gravitino officially <strong>graduated as an Apache Top-Level Project on June 3, 2025</strong>, marking a significant maturity milestone.</p>
+<p>In 2025, the community released several key versions, including the major 1.0.0 release and significant feature updates in 0.8.0-incubating, 0.9.0-incubating, and 1.1.0.</p>
+<ul>
+<li><strong>2025.01.24: Version 0.8.0-incubating released</strong>
+<ul>
+<li>Focused on strengthening AI support with the introduction of the <strong>Model Catalog</strong>.</li>
+<li>Introduced credential vending for Filesets and new connectors for Flink (Iceberg/Paimon).</li>
+</ul>
+</li>
+<li><strong>2025.05.07: Version 0.9.0-incubating released</strong>
+<ul>
+<li>Enhanced data governance with a new <strong>Data Lineage interface</strong> (OpenLineage compliant).</li>
+<li>Added gcli script for better CLI experience and improved security with privilege refinements.</li>
+</ul>
+</li>
+<li><strong>2025.09.24: Version 1.0.0 released</strong>
+<ul>
+<li>The first stable major release, themed "From Metadata Management to Contextual Engineering."</li>
+<li>Introduced the <strong>Metadata-driven Action System</strong> (including Statistics, Policies, and Jobs).</li>
+<li>Launched the <strong>MCP (Model Context Protocol) Server</strong>, enabling AI Agents/LLMs to interact directly with metadata.</li>
+<li>Implemented unified Role-Based Access Control (RBAC) across catalogs.</li>
+</ul>
+</li>
+<li><strong>2025.11.20: Version 1.0.1 released</strong>
+<ul>
+<li>A stability release featuring smarter job templates and improved Python client support.</li>
+</ul>
+</li>
+<li><strong>2025.12.19: Version 1.1.0 released</strong>
+<ul>
+<li>Added the <strong>Lance REST service</strong> to support vector data for AI workloads.</li>
+<li>Introduced a Generic Lakehouse Catalog and support for Hive 3 and multi-cluster HDFS filesets.</li>
+<li>Hardened security for the Iceberg REST service.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="key-features--improvements"><strong>Key Features &amp; Improvements</strong><a class="hash-link" aria-label="Direct link to key-features--improvements" title="Direct link to key-features--improvements" href="https://gravitino.apache.org/blog/gravitino-top-level-project#key-features--improvements">​</a></h3>
+<p>In 2025, Gravitino evolved from a unified catalog to an active metadata control plane. Key technical achievements include:</p>
+<ol>
+<li><strong>AI &amp; LLM Integration</strong>: The project positioned itself as an AI-native catalog by introducing the <strong>Model Catalog</strong> for managing ML models and the <strong>MCP Server</strong> to connect AI agents with data context. The addition of the <strong>Lance REST service</strong> in v1.1.0 further solidified support for vector datasets.</li>
+<li><strong>Metadata-Driven Actions</strong>: A new framework allowing users to define policies (e.g., TTL, compaction) and execute jobs based on metadata, moving beyond passive metadata storage.</li>
+<li><strong>Unified Governance &amp; Security</strong>: Full implementation of <strong>RBAC</strong>, credential vending for secure data access (S3/GCS/ADLS), and a unified authentication flow for Iceberg REST services.</li>
+<li><strong>Ecosystem Expansion</strong>: Broadened support with new connectors (Generic Lakehouse, Hive 3, Flink, Paimon) and enhancements to the <strong>GVFS (Gravitino Virtual File System)</strong> for unified file management.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="community"><strong>Community</strong><a class="hash-link" aria-label="Direct link to community" title="Direct link to community" href="https://gravitino.apache.org/blog/gravitino-top-level-project#community">​</a></h3>
+<p>The Apache Gravitino community saw explosive growth in 2025, evolving from an incubator project into a Top-Level Project (TLP) backed by a rapidly expanding global ecosystem.</p>
+<ul>
+<li><strong>Top-Level Graduation</strong>: On <strong>June 3, 2025</strong>, the project officially graduated to an Apache Top-Level Project, a major milestone marking its maturity in community health, vendor-neutral governance, and production readiness.</li>
+<li><strong>Community Growth (Year-over-Year)</strong>:<!-- -->
+<ul>
+<li><strong>Engagement</strong>: GitHub stars increased by over <strong>130%</strong>, ending the year above <strong>2,600</strong>. Forks grew by approximately <strong>150%</strong>, reflecting a surge in community-led integrations and local developments.</li>
+<li><strong>Contributor Base</strong>: The active developer community expanded by nearly <strong>100%</strong>. Recent major releases, such as version 1.1.0, featured contributions from <strong>40+ unique developers</strong> representing a wide variety of global organizations.</li>
+<li><strong>Development Velocity</strong>: Development pace accelerated significantly, with code commits reaching a lifetime total of over <strong>3,300 commits</strong>.</li>
+<li><strong>Post-Graduation Committer Growth</strong>: July 7, 2025: Chenxi Pan was added as Committers. December 15, 2025: Junda Yang and Yangyang Zhong were added as Committers.</li>
+</ul>
+</li>
+<li><strong>Global Presence</strong>: The project established itself as the standard for federated metadata through featured presentations at <strong>Community Over Code (NA &amp; Asia)</strong> and <strong>QCon Shanghai</strong>, gathering critical production feedback from global data engineering teams to shape the future roadmap.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="industry-trends-in-metadata-management-2026"><strong>Industry Trends in Metadata Management (2026)</strong><a class="hash-link" aria-label="Direct link to industry-trends-in-metadata-management-2026" title="Direct link to industry-trends-in-metadata-management-2026" href="https://gravitino.apache.org/blog/gravitino-top-level-project#industry-trends-in-metadata-management-2026">​</a></h3>
+<ol>
+<li><strong>Breaking Lakehouse Silos</strong>: As organizations adopt multiple "open" table formats, the risk of "format lock-in" has replaced "vendor lock-in." The trend is toward <strong>Universal Lakehouse</strong> architectures that provide a single entry point for fragmented data silos.</li>
+<li><strong>The Multimodal AI Explosion</strong>: AI workloads are moving beyond tabular data to include massive volumes of unstructured assets (images, video, audio). Traditional data stacks are being replaced by <strong>AI-Native Multimodal Stacks</strong> that can process complex data types with the same governance as SQL tables.</li>
+<li><strong>Emergence of Data Agents</strong>: AI Agents are becoming the primary consumers of data. These agents require "Context Engineering"—a way to use metadata as an external brain to discover, understand, and act upon data autonomously.</li>
+<li><strong>Escalating AI Security Risks</strong>: The high-speed nature of AI interactions makes traditional static security (RBAC) obsolete. The industry is moving toward <strong>Identity-Centric Zero Trust</strong> and <strong>Fine-Grained ABAC</strong> to prevent data leakage and ensure model safety.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="future-work"><strong>Future Work:</strong><a class="hash-link" aria-label="Direct link to future-work" title="Direct link to future-work" href="https://gravitino.apache.org/blog/gravitino-top-level-project#future-work">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_XtAn" id="1-universal-lakehouse--format-interoperability"><strong>1. Universal Lakehouse &amp; Format Interoperability</strong><a class="hash-link" aria-label="Direct link to 1-universal-lakehouse--format-interoperability" title="Direct link to 1-universal-lakehouse--format-interoperability" href="https://gravitino.apache.org/blog/gravitino-top-level-project#1-universal-lakehouse--format-interoperability">​</a></h3>
+<p>To solve the data silo problem, Gravitino is expanding its reach to provide a unified management layer for the modern Lakehouse.</p>
+<ul>
+<li><strong>Multi-Format Support</strong>: We will provide first-class support for <strong>Apache Iceberg</strong>, <strong>Delta Lake</strong>, <strong>Hudi</strong>, and <strong>Paimon</strong>. By acting as a "Catalog of Catalogs," Gravitino allows users to manage multiple formats through a single interface, significantly reducing vendor lock-in and simplifying cross-format governance.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="2-multimodal-data-stack-for-the-ai-era"><strong>2. Multimodal Data Stack for the AI Era</strong><a class="hash-link" aria-label="Direct link to 2-multimodal-data-stack-for-the-ai-era" title="Direct link to 2-multimodal-data-stack-for-the-ai-era" href="https://gravitino.apache.org/blog/gravitino-top-level-project#2-multimodal-data-stack-for-the-ai-era">​</a></h4>
+<p>Gravitino is evolving to empower a new generation of AI-native data stacks.</p>
+<ul>
+<li><strong>Ecosystem Integration</strong>: We will focus on deep integration with AI-centric engines like <strong>Daft</strong>, <strong>Ray</strong>, and <strong>Lance</strong>.</li>
+<li><strong>Empowering New Scenarios</strong>: By providing a unified metadata layer for these engines, Gravitino allows users to "reuse" existing data governance capabilities—like auditing and access control—for modern multimodal scenarios, giving the new AI data stack enterprise-grade maturity from day one.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="3-data-agent-orchestration-metadata-as-the-brain"><strong>3. Data Agent Orchestration (Metadata as the "Brain")</strong><a class="hash-link" aria-label="Direct link to 3-data-agent-orchestration-metadata-as-the-brain" title="Direct link to 3-data-agent-orchestration-metadata-as-the-brain" href="https://gravitino.apache.org/blog/gravitino-top-level-project#3-data-agent-orchestration-metadata-as-the-brain">​</a></h4>
+<p>Gravitino will serve as the cognitive foundation for autonomous <strong>Data Agents</strong>.</p>
+<ul>
+<li><strong>MCP Server &amp; Action System</strong>: Leveraging the <strong>Model Context Protocol (MCP)</strong> and our <strong>Metadata Action System</strong>, we are exploring scenario-based capabilities for Data Agents. This allows an AI agent to not only "see" the data but also "act" on it—such as performing a schema update or triggering a compaction job—using metadata as its reasoning context.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_XtAn" id="4-advanced-security-kms--abac"><strong>4. Advanced Security: KMS &amp; ABAC</strong><a class="hash-link" aria-label="Direct link to 4-advanced-security-kms--abac" title="Direct link to 4-advanced-security-kms--abac" href="https://gravitino.apache.org/blog/gravitino-top-level-project#4-advanced-security-kms--abac">​</a></h4>
+<p>As security threats become more sophisticated in the AI era, Gravitino is implementing more granular and automated security controls.</p>
+<ul>
+<li><strong>ABAC (Attribute-Based Access Control)</strong>: We will implement an ABAC engine to enable fine-grained permissions. This allows access decisions to be made based on dynamic tags (e.g., Sensitivity=High) and environmental context rather than just static roles.</li>
+<li><strong>KMS &amp; Credential Management</strong>: To protect data-at-rest and in-transit, we are integrating with <strong>Key Management Services (KMS)</strong> .</li>
+</ul>]]></content>
         <author>
             <name>Justin Mclean</name>
             <uri>https://github.com/justinmclean/</uri>
