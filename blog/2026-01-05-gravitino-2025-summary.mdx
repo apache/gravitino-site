@@ -1,0 +1,93 @@
+---
+title: Apache Gravitino - 2025 Summary
+slug: gravitino-top-level-project
+tags: [apache,gravitino,ASF]
+---
+###
+
+### **Introduction**
+
+2025 was a landmark year for Apache Gravitino. The project not only graduated as a Top-Level Project (TLP) but also reached its first major stable release, version 1.0.0. Throughout the year, the community focused heavily on "Contextual Engineering" and "AI-native" metadata management, introducing groundbreaking features like the Model Context Protocol (MCP) server, the Lance REST service, and a metadata-driven action system. This article summarizes the milestones and achievements of Apache Gravitino in 2025.
+
+###
+
+### **Timeline**
+
+Apache Gravitino officially **graduated as an Apache Top-Level Project on June 3, 2025**, marking a significant maturity milestone.
+
+In 2025, the community released several key versions, including the major 1.0.0 release and significant feature updates in 0.8.0-incubating, 0.9.0-incubating, and 1.1.0.
+
+* **2025.01.24: Version 0.8.0-incubating released**
+  * Focused on strengthening AI support with the introduction of the **Model Catalog**.
+  * Introduced credential vending for Filesets and new connectors for Flink (Iceberg/Paimon).
+* **2025.05.07: Version 0.9.0-incubating released**
+  * Enhanced data governance with a new **Data Lineage interface** (OpenLineage compliant).
+  * Added gcli script for better CLI experience and improved security with privilege refinements.
+* **2025.09.24: Version 1.0.0 released**
+  * The first stable major release, themed "From Metadata Management to Contextual Engineering."
+  * Introduced the **Metadata-driven Action System** (including Statistics, Policies, and Jobs).
+  * Launched the **MCP (Model Context Protocol) Server**, enabling AI Agents/LLMs to interact directly with metadata.
+  * Implemented unified Role-Based Access Control (RBAC) across catalogs.
+* **2025.11.20: Version 1.0.1 released**
+  * A stability release featuring smarter job templates and improved Python client support.
+* **2025.12.19: Version 1.1.0 released**
+  * Added the **Lance REST service** to support vector data for AI workloads.
+  * Introduced a Generic Lakehouse Catalog and support for Hive 3 and multi-cluster HDFS filesets.
+  * Hardened security for the Iceberg REST service.
+
+### **Key Features & Improvements**
+
+In 2025, Gravitino evolved from a unified catalog to an active metadata control plane. Key technical achievements include:
+
+1. **AI & LLM Integration**: The project positioned itself as an AI-native catalog by introducing the **Model Catalog** for managing ML models and the **MCP Server** to connect AI agents with data context. The addition of the **Lance REST service** in v1.1.0 further solidified support for vector datasets.
+2. **Metadata-Driven Actions**: A new framework allowing users to define policies (e.g., TTL, compaction) and execute jobs based on metadata, moving beyond passive metadata storage.
+3. **Unified Governance & Security**: Full implementation of **RBAC**, credential vending for secure data access (S3/GCS/ADLS), and a unified authentication flow for Iceberg REST services.
+4. **Ecosystem Expansion**: Broadened support with new connectors (Generic Lakehouse, Hive 3, Flink, Paimon) and enhancements to the **GVFS (Gravitino Virtual File System)** for unified file management.
+
+### **Community**
+
+The Apache Gravitino community saw explosive growth in 2025, evolving from an incubator project into a Top-Level Project (TLP) backed by a rapidly expanding global ecosystem.
+
+* **Top-Level Graduation**: On **June 3, 2025**, the project officially graduated to an Apache Top-Level Project, a major milestone marking its maturity in community health, vendor-neutral governance, and production readiness.
+* **Community Growth (Year-over-Year)**:
+  * **Engagement**: GitHub stars increased by over **130%**, ending the year above **2,600**. Forks grew by approximately **150%**, reflecting a surge in community-led integrations and local developments.
+  * **Contributor Base**: The active developer community expanded by nearly **100%**. Recent major releases, such as version 1.1.0, featured contributions from **40+ unique developers** representing a wide variety of global organizations.
+  * **Development Velocity**: Development pace accelerated significantly, with code commits reaching a lifetime total of over **3,300 commits**.
+  * **Post-Graduation Committer Growth**: July 7, 2025: Chenxi Pan was added as Committers. December 15, 2025: Junda Yang and Yangyang Zhong were added as Committers.
+* **Global Presence**: The project established itself as the standard for federated metadata through featured presentations at **Community Over Code (NA & Asia)** and **QCon Shanghai**, gathering critical production feedback from global data engineering teams to shape the future roadmap.
+
+### **Industry Trends in Metadata Management (2026)**
+
+1. **Breaking Lakehouse Silos**: As organizations adopt multiple "open" table formats, the risk of "format lock-in" has replaced "vendor lock-in." The trend is toward **Universal Lakehouse** architectures that provide a single entry point for fragmented data silos.
+2. **The Multimodal AI Explosion**: AI workloads are moving beyond tabular data to include massive volumes of unstructured assets (images, video, audio). Traditional data stacks are being replaced by **AI-Native Multimodal Stacks** that can process complex data types with the same governance as SQL tables.
+3. **Emergence of Data Agents**: AI Agents are becoming the primary consumers of data. These agents require "Context Engineering"—a way to use metadata as an external brain to discover, understand, and act upon data autonomously.
+4. **Escalating AI Security Risks**: The high-speed nature of AI interactions makes traditional static security (RBAC) obsolete. The industry is moving toward **Identity-Centric Zero Trust** and **Fine-Grained ABAC** to prevent data leakage and ensure model safety.
+
+### **Future Work:**
+
+### **1. Universal Lakehouse & Format Interoperability**
+
+To solve the data silo problem, Gravitino is expanding its reach to provide a unified management layer for the modern Lakehouse.
+
+* **Multi-Format Support**: We will provide first-class support for **Apache Iceberg**, **Delta Lake**, **Hudi**, and **Paimon**. By acting as a "Catalog of Catalogs," Gravitino allows users to manage multiple formats through a single interface, significantly reducing vendor lock-in and simplifying cross-format governance.
+
+#### **2. Multimodal Data Stack for the AI Era**
+
+Gravitino is evolving to empower a new generation of AI-native data stacks.
+
+* **Ecosystem Integration**: We will focus on deep integration with AI-centric engines like **Daft**, **Ray**, and **Lance**.
+* **Empowering New Scenarios**: By providing a unified metadata layer for these engines, Gravitino allows users to "reuse" existing data governance capabilities—like auditing and access control—for modern multimodal scenarios, giving the new AI data stack enterprise-grade maturity from day one.
+
+#### **3. Data Agent Orchestration (Metadata as the "Brain")**
+
+Gravitino will serve as the cognitive foundation for autonomous **Data Agents**.
+
+* **MCP Server & Action System**: Leveraging the **Model Context Protocol (MCP)** and our **Metadata Action System**, we are exploring scenario-based capabilities for Data Agents. This allows an AI agent to not only "see" the data but also "act" on it—such as performing a schema update or triggering a compaction job—using metadata as its reasoning context.
+
+#### **4. Advanced Security: KMS & ABAC**
+
+As security threats become more sophisticated in the AI era, Gravitino is implementing more granular and automated security controls.
+
+* **ABAC (Attribute-Based Access Control)**: We will implement an ABAC engine to enable fine-grained permissions. This allows access decisions to be made based on dynamic tags (e.g., Sensitivity=High) and environmental context rather than just static roles.
+* **KMS & Credential Management**: To protect data-at-rest and in-transit, we are integrating with **Key Management Services (KMS)** .
+
