@@ -74,7 +74,7 @@ const sidebars: SidebarsConfig = {
         {
           id: 'chart',
           label: 'Install Gravitino on Kubernetes',
-          type: 'doc',
+          type: 'doc'
         },
         {
           id: 'iceberg-rest-catalog-chart',
@@ -89,9 +89,24 @@ const sidebars: SidebarsConfig = {
       type: 'doc'
     },
     {
-      id: 'lance-rest-service',
       label: 'Lance REST service',
-      type: 'doc'
+      type: 'category',
+      link: {
+        type: 'doc',
+        id: 'lance-rest-service'
+      },
+      items: [
+        {
+          id: 'lance-rest-integration',
+          type: 'doc',
+          label: 'Lance integration'
+        },
+        {
+          id: 'lance-rest-server-chart',
+          type: 'doc',
+          label: 'Install Lance REST Server on Kubernetes'
+        }
+      ]
     },
     {
       id: 'gravitino-mcp-server',
@@ -104,6 +119,11 @@ const sidebars: SidebarsConfig = {
       type: 'doc'
     },
     {
+      id: 'webui-v2',
+      label: 'Web UI v2',
+      type: 'doc'
+    },
+    {
       label: 'Catalogs',
       type: 'category',
       items: [
@@ -111,6 +131,11 @@ const sidebars: SidebarsConfig = {
           label: 'Relational',
           type: 'category',
           items: [
+            {
+              id: 'jdbc-clickhouse-catalog',
+              label: 'ClickHouse catalog',
+              type: 'doc'
+            },
             {
               id: 'jdbc-doris-catalog',
               label: 'Doris catalog',
@@ -147,6 +172,11 @@ const sidebars: SidebarsConfig = {
                 {
                   id: 'lakehouse-generic-lance-table',
                   label: 'Lance table support',
+                  type: 'doc'
+                },
+                {
+                  id: 'lakehouse-generic-delta-table',
+                  label: 'Delta table support',
                   type: 'doc'
                 }
               ]
@@ -240,6 +270,47 @@ const sidebars: SidebarsConfig = {
               type: 'doc'
             }
           ]
+        }
+      ]
+    },
+    {
+      label: 'Table Maintenance Service',
+      type: 'category',
+      items: [
+        {
+          id: 'table-maintenance-service/optimizer',
+          label: 'Optimizer',
+          type: 'doc'
+        },
+        {
+          id: 'table-maintenance-service/optimizer-cli-reference',
+          label: 'Optimizer CLI reference',
+          type: 'doc'
+        },
+        {
+          id: 'table-maintenance-service/optimizer-configuration',
+          label: 'Optimizer configuration',
+          type: 'doc'
+        },
+        {
+          id: 'table-maintenance-service/optimizer-extension-guide',
+          label: 'Optimizer extension guide',
+          type: 'doc'
+        },
+        {
+          id: 'table-maintenance-service/optimizer-quick-start',
+          label: 'Optimizer quick start',
+          type: 'doc'
+        },
+        {
+          id: 'table-maintenance-service/optimizer-troubleshooting',
+          label: 'Optimizer troubleshooting',
+          type: 'doc'
+        },
+        {
+          id: 'iceberg-compaction-policy',
+          label: 'Iceberg compaction policy',
+          type: 'doc'
         }
       ]
     },
@@ -360,6 +431,11 @@ const sidebars: SidebarsConfig = {
       label: 'Flink connector',
       type: 'category',
       items: [
+        {
+          id: 'flink-connector/flink-authentication-with-gravitino',
+          label: 'Flink authentication with Gravitino server',
+          type: 'doc'
+        },
         {
           id: 'flink-connector/flink-connector',
           label: 'Overview',
@@ -501,6 +577,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
+          id: 'table-partitioning-distribution-sort-order-indexes',
+          label: 'Table partitioning, distribution, sort ordering and indexes',
+          type: 'doc'
+        },
+        {
           id: 'manage-relational-metadata-using-gravitino',
           label: 'Manage relational metadata',
           type: 'doc'
@@ -508,11 +589,6 @@ const sidebars: SidebarsConfig = {
         {
           id: 'manage-table-partition-using-gravitino',
           label: 'Manage table partition',
-          type: 'doc'
-        },
-        {
-          id: 'table-partitioning-distribution-sort-order-indexes',
-          label: 'Table partitioning, distribution, sort ordering and indexes',
           type: 'doc'
         },
         {
@@ -538,6 +614,11 @@ const sidebars: SidebarsConfig = {
         {
           id: 'manage-model-metadata-using-gravitino',
           label: 'Manage model metadata',
+          type: 'doc'
+        },
+        {
+          id: 'manage-user-defined-function-using-gravitino',
+          label: 'Manage user defined function',
           type: 'doc'
         },
         {
