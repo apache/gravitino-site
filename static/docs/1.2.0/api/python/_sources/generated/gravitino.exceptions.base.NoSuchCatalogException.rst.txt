@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchCatalogException
+================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchCatalogException

@@ -19,23 +19,24 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.4.0",
+    "@docusaurus/plugin-client-redirects": "3.4.0",
     "@docusaurus/plugin-content-docs": "3.4.0",
     "@docusaurus/plugin-ideal-image": "3.4.0",
-    "@docusaurus/plugin-client-redirects": "3.4.0",
     "@docusaurus/preset-classic": "3.4.0",
     "@docusaurus/theme-common": "3.4.0",
     "@docusaurus/theme-mermaid": "3.4.0",
-    "docusaurus-plugin-openapi-docs": "v3.0.2",
-    "docusaurus-theme-openapi-docs": "v3.0.2",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "docusaurus-plugin-openapi-docs": "v3.0.2",
+    "docusaurus-theme-openapi-docs": "v3.0.2",
     "postcss-import": "^16.1.0",
     "prism-react-renderer": "^2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-player": "^2.16.0"
+    "react-player": "^2.16.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.4.0",

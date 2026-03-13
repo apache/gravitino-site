@@ -1,0 +1,6 @@
+gravitino.exceptions.base.TableAlreadyExistsException
+=====================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: TableAlreadyExistsException

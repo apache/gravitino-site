@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_utils.to\_gvfs\_path\_prefix
+=======================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_utils
+
+.. autofunction:: to_gvfs_path_prefix
