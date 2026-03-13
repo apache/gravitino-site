@@ -1,0 +1,6 @@
+gravitino.api.supports\_schemas.NoSuchSchemaException
+=====================================================
+
+.. currentmodule:: gravitino.api.supports_schemas
+
+.. autoexception:: NoSuchSchemaException

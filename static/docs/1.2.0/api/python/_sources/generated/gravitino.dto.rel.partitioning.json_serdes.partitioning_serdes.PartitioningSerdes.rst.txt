@@ -1,0 +1,104 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.rel.partitioning.json\_serdes.partitioning\_serdes.PartitioningSerdes
+===================================================================================
+
+.. currentmodule:: gravitino.dto.rel.partitioning.json_serdes.partitioning_serdes
+
+.. autoclass:: PartitioningSerdes
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PartitioningSerdes.__init__
+      ~PartitioningSerdes.deserialize
+      ~PartitioningSerdes.serialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PartitioningSerdes.ASSIGNMENTS_NAME
+      ~PartitioningSerdes.CATALOG_STRING
+      ~PartitioningSerdes.DATA_TYPE
+      ~PartitioningSerdes.DECIMAL_PATTERN
+      ~PartitioningSerdes.DIRECTION
+      ~PartitioningSerdes.EXPRESSION_TYPE
+      ~PartitioningSerdes.EXTERNAL
+      ~PartitioningSerdes.FIELDS
+      ~PartitioningSerdes.FIELD_NAME
+      ~PartitioningSerdes.FIELD_NAMES
+      ~PartitioningSerdes.FIXEDCHAR_PATTERN
+      ~PartitioningSerdes.FIXED_PATTERN
+      ~PartitioningSerdes.FUNCTION_ARGS
+      ~PartitioningSerdes.FUNCTION_NAME
+      ~PartitioningSerdes.IDENTITY_PARTITION_VALUES
+      ~PartitioningSerdes.INDEX_FIELD_NAMES
+      ~PartitioningSerdes.INDEX_NAME
+      ~PartitioningSerdes.INDEX_TYPE
+      ~PartitioningSerdes.LIST
+      ~PartitioningSerdes.LIST_ELEMENT_NULLABLE
+      ~PartitioningSerdes.LIST_ELEMENT_TYPE
+      ~PartitioningSerdes.LIST_PARTITION_LISTS
+      ~PartitioningSerdes.LITERAL_VALUE
+      ~PartitioningSerdes.MAP
+      ~PartitioningSerdes.MAP_KEY_TYPE
+      ~PartitioningSerdes.MAP_VALUE_NULLABLE
+      ~PartitioningSerdes.MAP_VALUE_TYPE
+      ~PartitioningSerdes.NON_PRIMITIVE_TYPES
+      ~PartitioningSerdes.NULL_ORDERING
+      ~PartitioningSerdes.NUMBER
+      ~PartitioningSerdes.NUM_BUCKETS
+      ~PartitioningSerdes.PARTITION_NAME
+      ~PartitioningSerdes.PARTITION_PROPERTIES
+      ~PartitioningSerdes.PARTITION_TYPE
+      ~PartitioningSerdes.PRIMITIVE_AND_NULL_TYPES
+      ~PartitioningSerdes.RANGE_PARTITION_LOWER
+      ~PartitioningSerdes.RANGE_PARTITION_UPPER
+      ~PartitioningSerdes.SORT_TERM
+      ~PartitioningSerdes.STRATEGY
+      ~PartitioningSerdes.STRUCT
+      ~PartitioningSerdes.STRUCT_FIELD_COMMENT
+      ~PartitioningSerdes.STRUCT_FIELD_NAME
+      ~PartitioningSerdes.STRUCT_FIELD_NULLABLE
+      ~PartitioningSerdes.TIMESTAMP_PATTERN
+      ~PartitioningSerdes.TIMESTAMP_TZ_PATTERN
+      ~PartitioningSerdes.TIME_PATTERN
+      ~PartitioningSerdes.TYPE
+      ~PartitioningSerdes.TYPES
+      ~PartitioningSerdes.UNION
+      ~PartitioningSerdes.UNION_TYPES
+      ~PartitioningSerdes.UNPARSED
+      ~PartitioningSerdes.UNPARSED_EXPRESSION
+      ~PartitioningSerdes.UNPARSED_TYPE
+      ~PartitioningSerdes.VARCHAR_PATTERN
+      ~PartitioningSerdes.WIDTH
+   
+   

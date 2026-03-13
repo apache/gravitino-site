@@ -1,0 +1,85 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.client.relational\_catalog.RelationalCatalog
+======================================================
+
+.. currentmodule:: gravitino.client.relational_catalog
+
+.. autoclass:: RelationalCatalog
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RelationalCatalog.__init__
+      ~RelationalCatalog.alter_function
+      ~RelationalCatalog.alter_schema
+      ~RelationalCatalog.alter_table
+      ~RelationalCatalog.as_fileset_catalog
+      ~RelationalCatalog.as_function_catalog
+      ~RelationalCatalog.as_model_catalog
+      ~RelationalCatalog.as_schemas
+      ~RelationalCatalog.as_table_catalog
+      ~RelationalCatalog.as_topic_catalog
+      ~RelationalCatalog.audit_info
+      ~RelationalCatalog.builder
+      ~RelationalCatalog.comment
+      ~RelationalCatalog.create_schema
+      ~RelationalCatalog.create_table
+      ~RelationalCatalog.drop_function
+      ~RelationalCatalog.drop_schema
+      ~RelationalCatalog.drop_table
+      ~RelationalCatalog.format_schema_request_path
+      ~RelationalCatalog.function_exists
+      ~RelationalCatalog.get_function
+      ~RelationalCatalog.list_function_infos
+      ~RelationalCatalog.list_functions
+      ~RelationalCatalog.list_schemas
+      ~RelationalCatalog.list_tables
+      ~RelationalCatalog.load_schema
+      ~RelationalCatalog.load_table
+      ~RelationalCatalog.name
+      ~RelationalCatalog.properties
+      ~RelationalCatalog.provider
+      ~RelationalCatalog.purge_table
+      ~RelationalCatalog.register_function
+      ~RelationalCatalog.schema_exists
+      ~RelationalCatalog.table_exists
+      ~RelationalCatalog.to_schema_update_request
+      ~RelationalCatalog.type
+      ~RelationalCatalog.validate
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RelationalCatalog.PROPERTY_PACKAGE
+      ~RelationalCatalog.rest_client
+   
+   

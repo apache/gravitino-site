@@ -1,0 +1,6 @@
+gravitino.exceptions.base.ModelAlreadyExistsException
+=====================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: ModelAlreadyExistsException

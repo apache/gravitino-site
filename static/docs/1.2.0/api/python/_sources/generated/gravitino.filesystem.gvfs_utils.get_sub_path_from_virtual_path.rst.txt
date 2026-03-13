@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_utils.get\_sub\_path\_from\_virtual\_path
+====================================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_utils
+
+.. autofunction:: get_sub_path_from_virtual_path

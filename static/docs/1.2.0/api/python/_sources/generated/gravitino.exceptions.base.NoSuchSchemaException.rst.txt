@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchSchemaException
+===============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchSchemaException

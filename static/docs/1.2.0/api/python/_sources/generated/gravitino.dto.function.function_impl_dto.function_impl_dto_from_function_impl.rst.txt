@@ -1,0 +1,6 @@
+gravitino.dto.function.function\_impl\_dto.function\_impl\_dto\_from\_function\_impl
+====================================================================================
+
+.. currentmodule:: gravitino.dto.function.function_impl_dto
+
+.. autofunction:: function_impl_dto_from_function_impl

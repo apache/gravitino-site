@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_storage\_handler.get\_storage\_handler\_by\_path
+===========================================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_storage_handler
+
+.. autofunction:: get_storage_handler_by_path

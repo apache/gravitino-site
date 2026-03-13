@@ -1,0 +1,6 @@
+gravitino.exceptions.base.ModelVersionAliasesAlreadyExistException
+==================================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: ModelVersionAliasesAlreadyExistException

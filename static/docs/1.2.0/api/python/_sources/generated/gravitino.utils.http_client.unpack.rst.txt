@@ -1,0 +1,6 @@
+gravitino.utils.http\_client.unpack
+===================================
+
+.. currentmodule:: gravitino.utils.http_client
+
+.. autofunction:: unpack

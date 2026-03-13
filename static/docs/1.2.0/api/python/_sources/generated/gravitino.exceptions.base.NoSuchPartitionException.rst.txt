@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchPartitionException
+==================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchPartitionException

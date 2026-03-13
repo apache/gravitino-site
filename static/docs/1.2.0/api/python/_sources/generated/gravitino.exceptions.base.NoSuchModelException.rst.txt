@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchModelException
+==============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchModelException

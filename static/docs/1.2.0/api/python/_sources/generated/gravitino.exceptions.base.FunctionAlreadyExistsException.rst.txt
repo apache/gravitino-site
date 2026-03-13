@@ -1,0 +1,6 @@
+gravitino.exceptions.base.FunctionAlreadyExistsException
+========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: FunctionAlreadyExistsException

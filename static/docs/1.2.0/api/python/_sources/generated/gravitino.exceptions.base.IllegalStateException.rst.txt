@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalStateException
+===============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalStateException

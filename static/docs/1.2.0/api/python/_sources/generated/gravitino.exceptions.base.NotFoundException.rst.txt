@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NotFoundException
+===========================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NotFoundException
