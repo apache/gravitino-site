@@ -1,0 +1,201 @@
+---
+title: Apache Gravitino 1.2.0 
+slug: gravitino-1-2-0-release-notes
+authors: [Hui Yu]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+Apache Gravitino 1.2.0 has been released\! This release introduces major new capabilities including a new Table Maintenance Service (TMS), a new ClickHouse catalog, end-to-end UDF management, authorization for Iceberg view operation, a redesigned Web UI, and broad improvements across connectors, authorization, and clients.
+
+**Release Date:** 2026-03-13 **Previous Version:** 1.1.0 (2025-12-16)
+
+## Highlights
+
+- **Table Maintenance Service (TMS) foundational framework** — Data platforms can now shift from reactive firefighting to proactive table health. Gravitino analyzes your tables and automatically schedules the right maintenance operations, at the right times.  
+- **ClickHouse catalog** — Teams running real-time analytics on ClickHouse can now govern it alongside their lakehouse, with one metadata layer for both streaming and batch workloads.  
+- **Scan planning offload** — Query engines like DuckDB and Spark can now offload scan planning to Gravitino's IRC server, reducing query latency and client-side complexity — making Gravitino a more capable catalog server for the growing Iceberg ecosystem.  
+- **Ecosystem reach** — Multi-version Trino connector (435–478), Flink user authentication, and multi-cluster fileset support and Web UI v2 broaden Gravitino's integration surface across the modern data stack.
+
+---
+
+## New Features
+
+1. **Table Maintenance Service (TMS)** [\#9546](https://github.com/apache/gravitino/issues/9546), [\#9652](https://github.com/apache/gravitino/issues/9652), [\#9653](https://github.com/apache/gravitino/issues/9653), [\#9654](https://github.com/apache/gravitino/issues/9654), [\#9983](https://github.com/apache/gravitino/issues/9983), [\#9984](https://github.com/apache/gravitino/issues/9984), [\#9985](https://github.com/apache/gravitino/issues/9985), [\#9986](https://github.com/apache/gravitino/issues/9986), [\#10096](https://github.com/apache/gravitino/issues/10096), [\#10097](https://github.com/apache/gravitino/issues/10097), [\#10098](https://github.com/apache/gravitino/issues/10098), [\#10140](https://github.com/apache/gravitino/issues/10140), [\#9541](https://github.com/apache/gravitino/issues/9541), [\#9543](https://github.com/apache/gravitino/issues/9543)  
+     
+   Maintaining a healthy lakehouse table requires ongoing maintenance work — compaction, rewriting data files, and expiring snapshot cleanup. Gravitino 1.2.0 introduces the Table Maintenance Service (TMS), which analyzes table statistics and automatically schedules the right maintenance operations at the right time. This allows data platforms to move from reactive firefighting to proactive table health management.  
+     
+2. **ClickHouse Catalog** [\#9738](https://github.com/apache/gravitino/issues/9738), [\#9754](https://github.com/apache/gravitino/issues/9754), [\#9755](https://github.com/apache/gravitino/issues/9755), [\#9756](https://github.com/apache/gravitino/issues/9756), [\#9820](https://github.com/apache/gravitino/issues/9820), [\#9865](https://github.com/apache/gravitino/issues/9865)  
+     
+   ClickHouse is widely adopted for large-scale real-time analytics. Gravitino 1.2.0 introduces a full-featured ClickHouse catalog with full DDL support including distributed and partitioned cluster modes.  
+     
+3. **User-Defined Function (UDF) Management** [\#9525](https://github.com/apache/gravitino/issues/9525), [\#9527](https://github.com/apache/gravitino/issues/9527), [\#9528](https://github.com/apache/gravitino/issues/9528), [\#9529](https://github.com/apache/gravitino/issues/9529), [\#9530](https://github.com/apache/gravitino/issues/9530), [\#9531](https://github.com/apache/gravitino/issues/9531), [\#9532](https://github.com/apache/gravitino/issues/9532), [\#9561](https://github.com/apache/gravitino/issues/9561)  
+     
+   Teams can now centrally register, update, and govern UDFs, and Spark can automatically discover and invoke these functions through Gravitino's catalog interface. Gravitino 1.2.0 introduces end-to-end UDF management: Java API, server-side REST interface, relational storage backend, Java client support, Spark FunctionCatalog integration, Python client, Web UI management for visual browsing/creation, and complete documentation with OpenAPI specifications.  
+     
+4. **Iceberg REST Catalog: Support scan planning cache** [\#9048](https://github.com/apache/gravitino/issues/9048)  
+
+   Adding a cache for scan planning improves performance by caching the results of the scan planning phase, which determines which data files need to be read for a query. Since scan planning involves reading and parsing Iceberg metadata and manifest files, caching avoids repeating this expensive work for similar queries. As a result, it reduces metadata I/O, lowers query latency, and decreases load on object storage and the planning service.  
+     
+5. **Authorization support for Iceberg REST catalog view operations** [\#9744](https://github.com/apache/gravitino/issues/9744), [\#9745](https://github.com/apache/gravitino/issues/9745), [\#9746](https://github.com/apache/gravitino/issues/9746), [\#9747](https://github.com/apache/gravitino/issues/9747), [\#9915](https://github.com/apache/gravitino/issues/9915)  
+     
+   Views are an important abstraction for data access control but have long been a governance blind spot. Gravitino 1.2.0 manages Iceberg views as first-class entities, introducing view management, generic storage, view-level permissions, and full authorization support for IRC view operations. This enables teams to govern views alongside tables and apply fine-grained access control policies to view access while maintaining consistent enforcement of underlying table permissions.  
+     
+6. **Generic Lakehouse Catalog: Delta Lake External Table Support** [\#9647](https://github.com/apache/gravitino/issues/9647)  
+     
+   Delta Lake is one of the most widely deployed open table formats. Gravitino now supports registering and managing external Delta tables through the generic lakehouse catalog, enabling unified governance for Delta alongside Iceberg, Hudi, and other formats without data migration. This allows organizations to manage Delta Lake workloads through an open catalog architecture, reducing dependence on proprietary catalog services such as Unity Catalog.  
+     
+7. **Trino Connector Multi-version Support** [\#9718](https://github.com/apache/gravitino/issues/9718), [\#9719](https://github.com/apache/gravitino/issues/9719), [\#9894](https://github.com/apache/gravitino/issues/9894), [\#9952](https://github.com/apache/gravitino/issues/9952), [\#9961](https://github.com/apache/gravitino/issues/9961), [\#9964](https://github.com/apache/gravitino/issues/9964), [\#10091](https://github.com/apache/gravitino/issues/10091)  
+     
+   Gravitino now supports Trino versions 435 through 478, with a connector architecture designed to maintain compatibility with future Trino releases.  
+     
+8. **Multi-cluster Fileset Support** [\#9568](https://github.com/apache/gravitino/issues/9568), [\#9312](https://github.com/apache/gravitino/issues/9312)  
+     Production data platforms often span multiple storage clusters. Through GVFS multi-cluster filesets, Gravitino now allows a single fileset to reference storage locations across different clusters.  
+     
+9. **Flink Connector: User Authentication** [\#9564](https://github.com/apache/gravitino/issues/9564)  
+     The Gravitino Flink connector now supports user authentication, enabling secure access to Gravitino-managed metadata from Flink jobs.  
+
+10. **Web UI v2 Reconstruction** [\#9758](https://github.com/apache/gravitino/issues/9758)
+    The Gravitino Web UI now supports managing ClickHouse catalogs and UDFs, along with improved views for tags, policies, and task templates. The updated interface provides a more streamlined experience for navigating governance resources. Web v1 remains available during the transition period.
+
+---
+
+## Improvements
+
+### Core & Server
+
+- Block non-cascading schema deletions when topics still exist ([\#9078](https://github.com/apache/gravitino/issues/9078))  
+- Cache non-existent relational data to avoid repeated lookups ([\#9799](https://github.com/apache/gravitino/issues/9799))  
+- Optimize in-use status checks for catalogs and metalakes ([\#9586](https://github.com/apache/gravitino/issues/9586))  
+- Improve authorization performance by skipping overhead when plugin is empty ([\#9170](https://github.com/apache/gravitino/issues/9170))  
+- Support renaming tables to a different schema in ManagedTableOperations ([\#9477](https://github.com/apache/gravitino/issues/9477))  
+- Include generic lakehouse catalogs in managed entities for proper drop behavior ([\#9490](https://github.com/apache/gravitino/issues/9490))  
+- Add JDBC storage backend for partition statistics ([\#9838](https://github.com/apache/gravitino/issues/9838))  
+- Make `gravitino-api` and related dependencies `compileOnly` in catalog modules ([\#10195](https://github.com/apache/gravitino/issues/10195))  
+- Optimize JDBC driver deregistration logic to avoid possible OOM ([\#10253](https://github.com/apache/gravitino/issues/10253))
+
+### Authorization
+
+- Convert JCasbin internal map to a cache for improved performance ([\#9770](https://github.com/apache/gravitino/issues/9770))  
+- Support preloading table metadata in batch for authorization checks ([\#9802](https://github.com/apache/gravitino/issues/9802))  
+- Rename model privilege names to follow operation name conventions ([\#9381](https://github.com/apache/gravitino/issues/9381))  
+- Support overriding privileges for roles ([\#9269](https://github.com/apache/gravitino/issues/9269))  
+- Fileset supports credential vending with correct access privileges ([\#9506](https://github.com/apache/gravitino/issues/9506))
+
+### Iceberg REST Catalog (IRC)
+
+- Upgrade Apache Iceberg to 1.10.1 ([\#9989](https://github.com/apache/gravitino/issues/9989))  
+- Optimize IRC catalog wrapper and entity cache expiry strategy ([\#9782](https://github.com/apache/gravitino/issues/9782))  
+- Improve IRC table load performance under high concurrency with authorization enabled ([\#9765](https://github.com/apache/gravitino/issues/9765))  
+- IRC uses internal catalog fetcher instead of HTTP interface for better performance ([\#9825](https://github.com/apache/gravitino/issues/9825))  
+- IRC timely expires catalog wrapper cache ([\#9966](https://github.com/apache/gravitino/issues/9966))  
+- Improve table load performance by tuning the cooperation between Iceberg service and Gravitino server ([\#9277](https://github.com/apache/gravitino/issues/9277))  
+- Cross-Namespace Table Rename: Gravitino Iceberg catalog now supports renaming tables across different namespaces ([\#9517](https://github.com/apache/gravitino/issues/9517))
+
+### Catalogs & Connectors
+
+- Support Paimon REST backend ([\#9791](https://github.com/apache/gravitino/issues/9791))  
+- Support hash distribution in Paimon catalog ([\#9731](https://github.com/apache/gravitino/issues/9731))  
+- Refactor Hive and Hudi catalogs to use the shared HiveClient ([\#9459](https://github.com/apache/gravitino/issues/9459))  
+- Add support to skip catalog in Trino connector ([\#9492](https://github.com/apache/gravitino/issues/9492))  
+- Flink connector supports generic Hive tables ([\#9504](https://github.com/apache/gravitino/issues/9504))  
+- Spark connector supports `TableWritePrivilege` for Spark 3.5+ authorization ([\#10181](https://github.com/apache/gravitino/issues/10181))  
+- Upgrade Kyuubi Hive connector from 1.10 to 1.11 ([\#10040](https://github.com/apache/gravitino/issues/10040))
+
+### OAuth & Authentication
+
+- Support JWT tokens with multiple audiences in the `aud` claim ([\#9733](https://github.com/apache/gravitino/issues/9733))  
+- Support regex for user principal mapping in OAuth ([\#9767](https://github.com/apache/gravitino/issues/9767))  
+- Allow JWKS validators to work without `serverUri` or `tokenPath` ([\#9713](https://github.com/apache/gravitino/issues/9713))  
+- Enhance version parsing to support release candidate version strings ([\#9482](https://github.com/apache/gravitino/issues/9482))
+
+### Clients
+
+- Add configurable HTTP connection pool settings for Gravitino client ([\#9468](https://github.com/apache/gravitino/issues/9468))  
+- Allow disabling client-server version check via environment variable ([\#9760](https://github.com/apache/gravitino/issues/9760))
+
+### Lance REST Service
+
+- Add Helm chart for deploying Lance REST server as a standalone service on Kubernetes ([\#9403](https://github.com/apache/gravitino/issues/9403))  
+- Add dataset version tracking in Lance REST `loadTable` and `createTable` ([\#9792](https://github.com/apache/gravitino/issues/9792))  
+- Add documentation for Lance REST server setup and Spark/Ray integration ([\#9169](https://github.com/apache/gravitino/issues/9169), [\#9622](https://github.com/apache/gravitino/issues/9622))  
+- Refine `createEmptyTable` semantics in Lance REST ([\#9520](https://github.com/apache/gravitino/issues/9520))
+
+### Web UI
+
+- Add global banner to guide users to Web UI v2 ([\#9996](https://github.com/apache/gravitino/issues/9996))  
+- Support ClickHouse catalog management in Web UI v2 ([\#9865](https://github.com/apache/gravitino/issues/9865))  
+- Support associated roles view for tags, policies, and job templates ([\#9807](https://github.com/apache/gravitino/issues/9807))
+
+---
+
+## Bug Fixes
+
+- Fix credential vending for filesets with multiple storage locations ([\#9500](https://github.com/apache/gravitino/issues/9500))  
+- Fix IRC connection failure after idle timeout ([\#9383](https://github.com/apache/gravitino/issues/9383))  
+- Fix tag association cache inconsistency ([\#9635](https://github.com/apache/gravitino/issues/9635))  
+- Fix Iceberg migrate procedure failing with "table already exists" for JDBC catalogs ([\#9666](https://github.com/apache/gravitino/issues/9666))  
+- Fix clearing column comments in MySQL table ALTER operations ([\#9694](https://github.com/apache/gravitino/issues/9694))  
+- Fix UnsupportedOperationException when updating model version aliases ([\#9727](https://github.com/apache/gravitino/issues/9727))  
+- Fix table loading failure due to incorrect SQL in fetch column info ([\#10034](https://github.com/apache/gravitino/issues/10034))  
+- Fix NoSuchEntityException in authorization when schema entity is not imported ([\#10055](https://github.com/apache/gravitino/issues/10055))  
+- Fix owner assignment failure due to unimported schema entity ([\#9809](https://github.com/apache/gravitino/issues/9809))  
+- Fix Hive SerDe incompatibility between Gravitino Flink connector and native Flink client ([\#9508](https://github.com/apache/gravitino/issues/9508))  
+- Fix JDBC catalog column default value alteration ([\#9816](https://github.com/apache/gravitino/issues/9816))  
+- Fix Trino connector distribution to include JARs for all supported versions ([\#10139](https://github.com/apache/gravitino/issues/10139))  
+- Fix TMS built-in rewrite adapter resolution by template name ([\#10311](https://github.com/apache/gravitino/issues/10311))  
+- Fix JDBC catalog pool size properties not being loaded on catalog creation ([\#10284](https://github.com/apache/gravitino/issues/10284))  
+- Fix SLF4J provider not found error in Spark connector 3.3 ([\#6906](https://github.com/apache/gravitino/issues/6906))  
+- Fix PassThroughAuthorizer user verification logic blocking new user creation ([\#9616](https://github.com/apache/gravitino/issues/9616))  
+- Fix IRC URL decoding for table names containing special characters ([\#9936](https://github.com/apache/gravitino/issues/9936))  
+- Fix lazy authorization configuration check for IRC to allow server startup ([\#9247](https://github.com/apache/gravitino/issues/9247))  
+- Fix `maxStatisticsPerUpdate` configuration for Lance partition storage ([\#9650](https://github.com/apache/gravitino/issues/9650))
+
+---
+
+## Breaking Changes
+
+- **Dropped Python 3.9 Support** — Python 3.9 has reached end of life. The Gravitino Python client no longer supports this version. Users need to upgrade to Python 3.10 or higher. ([\#10011](https://github.com/apache/gravitino/issues/10011))
+
+---
+
+## Acknowledgements
+
+Thanks to everyone who contributed to the 1.2.0 work — code, reviews, tests, issue triage, design, and feedback. Below is a consolidated list of contributor GitHub IDs extracted from issue and PR activity.
+
+- [Abyss-lord](https://github.com/Abyss-lord)
+- [agnes-xinyi-lu](https://github.com/agnes-xinyi-lu)
+- [AndreVale69](https://github.com/AndreVale69)
+- [bharos](https://github.com/bharos)
+- [cc5566](https://github.com/cc5566)
+- [chl-wxp](https://github.com/chl-wxp)
+- [danhuawang](https://github.com/danhuawang)
+- [diqiu50](https://github.com/diqiu50)
+- [echonesis](https://github.com/echonesis)
+- [FANNG1](https://github.com/FANNG1)
+- [fwonce](https://github.com/fwonce)
+- [hdygxsj](https://github.com/hdygxsj)
+- [hqbhoho](https://github.com/hqbhoho)
+- [jerryshao](https://github.com/jerryshao)
+- [joeyutong](https://github.com/joeyutong)
+- [josephperez3](https://github.com/josephperez3)
+- [LauraXia123](https://github.com/LauraXia123)
+- [liunaijie](https://github.com/liunaijie)
+- [mchades](https://github.com/mchades)
+- [paultanay](https://github.com/paultanay)
+- [Pranaykarvi](https://github.com/Pranaykarvi)
+- [qingwei727](https://github.com/qingwei727)
+- [qqqttt123](https://github.com/qqqttt123)
+- [raveendra11](https://github.com/raveendra11)
+- [roryqi](https://github.com/roryqi)
+- [sabashaikh4](https://github.com/sabashaikh4)
+- [SalmaneKhalili](https://github.com/SalmaneKhalili)
+- [shaofengshi](https://github.com/shaofengshi)
+- [simhani1](https://github.com/simhani1)
+- [sunxiaojian](https://github.com/sunxiaojian)
+- [tedyu](https://github.com/tedyu)
+- [tsungchih](https://github.com/tsungchih)
+- [youngyjd](https://github.com/youngyjd)
+- [yuqi1129](https://github.com/yuqi1129)
+
+<sub>Apache, Apache Flink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
+
