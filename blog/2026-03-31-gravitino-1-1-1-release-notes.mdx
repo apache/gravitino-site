@@ -1,0 +1,101 @@
+---
+title: Apache Gravitino 1.1.1
+slug: gravitino-1-1-1-release-notes
+authors: [Qi Yu]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+We are glad to announce the release of Apache Gravitino 1.1.1! This is a patch release that focuses on stability, correctness, and performance improvements. It includes bug fixes across the core server, authorization, Iceberg REST, Spark connector, OAuth, and various catalog implementations.
+
+## Improvements
+
+### Core & Server
+  - **Cache**: Cache non-existent relational data to avoid repeated backend lookups on missing entities. [#9799](https://github.com/apache/gravitino/issues/9799)
+  - **Performance**: Reduce the number of `catalogInUse` calls on the server hot path. [#9474](https://github.com/apache/gravitino/issues/9474)
+  - **Metadata API**: Support `batchGet` for metadata objects to reduce round-trips. [#9893](https://github.com/apache/gravitino/issues/9893)
+  - **Managed entities**: Include lakehouse-generic catalogs in managed entities for proper drop behavior. [#9490](https://github.com/apache/gravitino/issues/9490)
+  - **Error handling**: Preserve the post-hook exception when rollback fails, so the original error is not swallowed. [#10217](https://github.com/apache/gravitino/issues/10217)
+  - **Partition API**: Include partition path parameter in `getPartition` error messages for easier debugging. [#10175](https://github.com/apache/gravitino/issues/10175)
+
+### Authorization
+  - **Performance**: Avoid authorization-plugin overhead when the plugin is not configured. [#9170](https://github.com/apache/gravitino/issues/9170)
+  - **Performance**: Convert Jcasbin internal map to a cache to speed up permission lookups. [#9770](https://github.com/apache/gravitino/issues/9770)
+  - **Batch authorization**: Support preloading table metadata in batch metadata authorization. [#9802](https://github.com/apache/gravitino/issues/9802)
+
+### Iceberg REST Server
+  - **Performance**: Improve the performance of loading tables by reducing redundant HMS calls. [#9765](https://github.com/apache/gravitino/issues/9765)
+  - **Cache**: Optimize the catalog wrapper and entity cache expiry strategy. [#9782](https://github.com/apache/gravitino/issues/9782)
+  - **Rename**: Support renaming a table across different namespaces in the Gravitino Iceberg catalog. [#9571](https://github.com/apache/gravitino/issues/9571)
+
+### Lance REST Server
+  - **Column operations**: Support drop and rename column for Lance tables. [#9113](https://github.com/apache/gravitino/issues/9113)
+  - **Empty table**: Refine the concept of `createEmptyTable` in Lance REST for clearer semantics. [#9520](https://github.com/apache/gravitino/issues/9520)
+  - **Statistics**: Add `maxStatisticsPerUpdate` configuration for Lance partition storage. [#9650](https://github.com/apache/gravitino/issues/9650)
+  - **Helm**: Add a complete Lance REST server Helm chart. [#9403](https://github.com/apache/gravitino/issues/9403)
+
+### Common
+  - **Version parsing**: Enhance version parsing to support release candidate tags with validation. [#9482](https://github.com/apache/gravitino/issues/9482)
+  - **Code quality**: Refactor to reduce duplicated code across modules. [#9294](https://github.com/apache/gravitino/issues/9294)
+  - **Logging**: Update log4j2 configuration for Iceberg/Lance REST servers. [#9547](https://github.com/apache/gravitino/issues/9547)
+  - **Build**: Add MCP-server changes handling in build workflow. [#9921](https://github.com/apache/gravitino/issues/9921)
+  - **Build**: Remove release task and centralize JDK 8 compatibility handling. [#10262](https://github.com/apache/gravitino/issues/10262)
+
+## Bug Fixes
+
+### Core & Server
+  - Fix loading table failure caused by incorrect SQL in the fetch-column-info query. [#10034](https://github.com/apache/gravitino/issues/10034)
+  - Fix tag association problem that caused tags to be incorrectly linked. [#9635](https://github.com/apache/gravitino/issues/9635)
+  - Fix credential issue for filesets with multiple locations. [#9500](https://github.com/apache/gravitino/issues/9500)
+  - Fix `equals` and `hashCode` missing from `Policy.java`, causing incorrect policy comparison. [#10009](https://github.com/apache/gravitino/issues/10009)
+  - Default `ifExists` to `true` when deleting a table index to prevent spurious errors. [#10380](https://github.com/apache/gravitino/issues/10380)
+
+### Authorization
+  - Fix `NoSuchEntityException` caused by schema entity not being imported before authorization checks. [#10055](https://github.com/apache/gravitino/issues/10055)
+  - Fix schema import to avoid `setOwner` failures when the schema had not been ingested. [#9809](https://github.com/apache/gravitino/issues/9809)
+  - Fix `PassThroughAuthorizer` user verification logic that incorrectly rejected valid users. [#9616](https://github.com/apache/gravitino/issues/9616)
+
+### Iceberg
+  - Fix wrong namespaces returned when listing tables or views in multi-level namespace configurations. [#10397](https://github.com/apache/gravitino/issues/10397)
+  - Fix URL decoding of table names in Iceberg REST server request paths. [#9936](https://github.com/apache/gravitino/issues/9936)
+  - Fix authorization decode issue for table names containing special characters. [#9936](https://github.com/apache/gravitino/issues/9936)
+  - Fix `migrate` procedure by preserving the `stageCreate` flag. [#9666](https://github.com/apache/gravitino/issues/9666)
+
+### OAuth
+  - Allow JWKS validators to operate without `serverUri` or `tokenPath` being mandatory. [#9713](https://github.com/apache/gravitino/issues/9713)
+
+### Catalogs
+  - Fix altering the JDBC catalog column default value problem. [#9816](https://github.com/apache/gravitino/issues/9816)
+  - Fix `UnsupportedOperationException` when updating aliases for a model version created without aliases. [#9727](https://github.com/apache/gravitino/issues/9727)
+
+### Hive
+  - Perform proper resource cleanup in `HiveClientPool.close()` to prevent connection leaks. [#9581](https://github.com/apache/gravitino/issues/9581)
+
+### Lance REST
+  - Handle null `mode` in `registerTableRequest` to prevent NPE. [#9512](https://github.com/apache/gravitino/issues/9512)
+
+### Spark Connector
+  - Fix `No SLF4J providers` warning/error in Spark connector 3.3. [#6906](https://github.com/apache/gravitino/issues/6906)
+
+### CI & Infrastructure
+  - Pin all `docker/*` GitHub Actions to SHA-based references (v4.0.0) to comply with ASF policy. [#10502](https://github.com/apache/gravitino/issues/10502)
+  - Fix Python CI pipeline failures due to runner image upgrade. [#9919](https://github.com/apache/gravitino/issues/9919)
+  - Fix Docker container startup failures due to GitHub CI runner image upgrade. [#9990](https://github.com/apache/gravitino/issues/9990)
+  - Fix MCP-server `fastmcp` version to avoid breaking CI changes from 3.0.x. [#10035](https://github.com/apache/gravitino/issues/10035)
+  - Fix UV CI pipeline. [HOTFIX](https://github.com/apache/gravitino/pull/9906)
+  - Fix JDK8 compatibility issues across modules. [#10373](https://github.com/apache/gravitino/issues/10373)
+
+## Documentation
+  - Add documents about the Flink catalog name limitation. [#9973](https://github.com/apache/gravitino/issues/9973)
+  - Update OAuth documentation to clarify correct version endpoints for Azure authentication. [#9868](https://github.com/apache/gravitino/issues/9868)
+  - Fix the incorrect `curl` command in the migration guide for `set the owner`. [#10041](https://github.com/apache/gravitino/issues/10041)
+  - Add documentation for docker run command in the Hive section. [#9876](https://github.com/apache/gravitino/issues/9876)
+  - Improve lakehouse-paimon-catalog documentation. [#9957](https://github.com/apache/gravitino/issues/9957)
+  - Add a guide for Lance REST integration with Spark and Ray. [#9622](https://github.com/apache/gravitino/is1.1.1sues/9622)
+  - Add REST catalog backend documentation for Iceberg REST Catalog (IRC). [MINOR](https://github.com/apache/gravitino/pull/9916)
+  - Add warehouse documentation for the REST catalog backend in Iceberg. [MINOR](https://github.com/apache/gravitino/pull/9823)
+  - Add missing `DescribeTable` endpoint to `lance-rest-service.md`. [#9662](https://github.com/apache/gravitino/issues/9662)
+
+## Acknowledgements
+Thanks to everyone who contributed to the 1.1.1 work — code, reviews, tests, issue triage, design, and feedback.
+
+@FANNG1, @agnes-xinyi-lu, @bharos, @chl-wxp, @danhuawang, @echonesis, @jerryshao, @joeyutong, @mchades, @pandeysambhi, @pythaac, @qqqttt123, @roryqi, @tedyu, @yuqi1129
