@@ -2,11 +2,134 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gravitino.apache.org/blog</id>
     <title>Apache Gravitino Blog</title>
-    <updated>2026-03-13T00:00:00.000Z</updated>
+    <updated>2026-03-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gravitino.apache.org/blog"/>
     <subtitle>Apache Gravitino Blog</subtitle>
     <icon>https://gravitino.apache.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Apache Gravitino 1.1.1]]></title>
+        <id>https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes</id>
+        <link href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes"/>
+        <updated>2026-03-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are glad to announce the release of Apache Gravitino 1.1.1! This is a patch release that focuses on stability, correctness, and performance improvements. It includes bug fixes across the core server, authorization, Iceberg REST, Spark connector, OAuth, and various catalog implementations.]]></summary>
+        <content type="html"><![CDATA[<p>We are glad to announce the release of Apache Gravitino 1.1.1! This is a patch release that focuses on stability, correctness, and performance improvements. It includes bug fixes across the core server, authorization, Iceberg REST, Spark connector, OAuth, and various catalog implementations.</p>
+<h2 class="anchor anchorWithStickyNavbar_IesJ" id="improvements">Improvements<a class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#improvements">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="core--server">Core &amp; Server<a class="hash-link" aria-label="Direct link to Core &amp; Server" title="Direct link to Core &amp; Server" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#core--server">​</a></h3>
+<ul>
+<li><strong>Cache</strong>: Cache non-existent relational data to avoid repeated backend lookups on missing entities. <a href="https://github.com/apache/gravitino/issues/9799" target="_blank" rel="noopener noreferrer">#9799</a></li>
+<li><strong>Performance</strong>: Reduce the number of <code>catalogInUse</code> calls on the server hot path. <a href="https://github.com/apache/gravitino/issues/9474" target="_blank" rel="noopener noreferrer">#9474</a></li>
+<li><strong>Metadata API</strong>: Support <code>batchGet</code> for metadata objects to reduce round-trips. <a href="https://github.com/apache/gravitino/issues/9893" target="_blank" rel="noopener noreferrer">#9893</a></li>
+<li><strong>Managed entities</strong>: Include lakehouse-generic catalogs in managed entities for proper drop behavior. <a href="https://github.com/apache/gravitino/issues/9490" target="_blank" rel="noopener noreferrer">#9490</a></li>
+<li><strong>Error handling</strong>: Preserve the post-hook exception when rollback fails, so the original error is not swallowed. <a href="https://github.com/apache/gravitino/issues/10217" target="_blank" rel="noopener noreferrer">#10217</a></li>
+<li><strong>Partition API</strong>: Include partition path parameter in <code>getPartition</code> error messages for easier debugging. <a href="https://github.com/apache/gravitino/issues/10175" target="_blank" rel="noopener noreferrer">#10175</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="authorization">Authorization<a class="hash-link" aria-label="Direct link to Authorization" title="Direct link to Authorization" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#authorization">​</a></h3>
+<ul>
+<li><strong>Performance</strong>: Avoid authorization-plugin overhead when the plugin is not configured. <a href="https://github.com/apache/gravitino/issues/9170" target="_blank" rel="noopener noreferrer">#9170</a></li>
+<li><strong>Performance</strong>: Convert Jcasbin internal map to a cache to speed up permission lookups. <a href="https://github.com/apache/gravitino/issues/9770" target="_blank" rel="noopener noreferrer">#9770</a></li>
+<li><strong>Batch authorization</strong>: Support preloading table metadata in batch metadata authorization. <a href="https://github.com/apache/gravitino/issues/9802" target="_blank" rel="noopener noreferrer">#9802</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="iceberg-rest-server">Iceberg REST Server<a class="hash-link" aria-label="Direct link to Iceberg REST Server" title="Direct link to Iceberg REST Server" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#iceberg-rest-server">​</a></h3>
+<ul>
+<li><strong>Performance</strong>: Improve the performance of loading tables by reducing redundant HMS calls. <a href="https://github.com/apache/gravitino/issues/9765" target="_blank" rel="noopener noreferrer">#9765</a></li>
+<li><strong>Cache</strong>: Optimize the catalog wrapper and entity cache expiry strategy. <a href="https://github.com/apache/gravitino/issues/9782" target="_blank" rel="noopener noreferrer">#9782</a></li>
+<li><strong>Rename</strong>: Support renaming a table across different namespaces in the Gravitino Iceberg catalog. <a href="https://github.com/apache/gravitino/issues/9571" target="_blank" rel="noopener noreferrer">#9571</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="lance-rest-server">Lance REST Server<a class="hash-link" aria-label="Direct link to Lance REST Server" title="Direct link to Lance REST Server" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#lance-rest-server">​</a></h3>
+<ul>
+<li><strong>Column operations</strong>: Support drop and rename column for Lance tables. <a href="https://github.com/apache/gravitino/issues/9113" target="_blank" rel="noopener noreferrer">#9113</a></li>
+<li><strong>Empty table</strong>: Refine the concept of <code>createEmptyTable</code> in Lance REST for clearer semantics. <a href="https://github.com/apache/gravitino/issues/9520" target="_blank" rel="noopener noreferrer">#9520</a></li>
+<li><strong>Statistics</strong>: Add <code>maxStatisticsPerUpdate</code> configuration for Lance partition storage. <a href="https://github.com/apache/gravitino/issues/9650" target="_blank" rel="noopener noreferrer">#9650</a></li>
+<li><strong>Helm</strong>: Add a complete Lance REST server Helm chart. <a href="https://github.com/apache/gravitino/issues/9403" target="_blank" rel="noopener noreferrer">#9403</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="common">Common<a class="hash-link" aria-label="Direct link to Common" title="Direct link to Common" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#common">​</a></h3>
+<ul>
+<li><strong>Version parsing</strong>: Enhance version parsing to support release candidate tags with validation. <a href="https://github.com/apache/gravitino/issues/9482" target="_blank" rel="noopener noreferrer">#9482</a></li>
+<li><strong>Code quality</strong>: Refactor to reduce duplicated code across modules. <a href="https://github.com/apache/gravitino/issues/9294" target="_blank" rel="noopener noreferrer">#9294</a></li>
+<li><strong>Logging</strong>: Update log4j2 configuration for Iceberg/Lance REST servers. <a href="https://github.com/apache/gravitino/issues/9547" target="_blank" rel="noopener noreferrer">#9547</a></li>
+<li><strong>Build</strong>: Add MCP-server changes handling in build workflow. <a href="https://github.com/apache/gravitino/issues/9921" target="_blank" rel="noopener noreferrer">#9921</a></li>
+<li><strong>Build</strong>: Remove release task and centralize JDK 8 compatibility handling. <a href="https://github.com/apache/gravitino/issues/10262" target="_blank" rel="noopener noreferrer">#10262</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_IesJ" id="bug-fixes">Bug Fixes<a class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#bug-fixes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="core--server-1">Core &amp; Server<a class="hash-link" aria-label="Direct link to Core &amp; Server" title="Direct link to Core &amp; Server" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#core--server-1">​</a></h3>
+<ul>
+<li>Fix loading table failure caused by incorrect SQL in the fetch-column-info query. <a href="https://github.com/apache/gravitino/issues/10034" target="_blank" rel="noopener noreferrer">#10034</a></li>
+<li>Fix tag association problem that caused tags to be incorrectly linked. <a href="https://github.com/apache/gravitino/issues/9635" target="_blank" rel="noopener noreferrer">#9635</a></li>
+<li>Fix credential issue for filesets with multiple locations. <a href="https://github.com/apache/gravitino/issues/9500" target="_blank" rel="noopener noreferrer">#9500</a></li>
+<li>Fix <code>equals</code> and <code>hashCode</code> missing from <code>Policy.java</code>, causing incorrect policy comparison. <a href="https://github.com/apache/gravitino/issues/10009" target="_blank" rel="noopener noreferrer">#10009</a></li>
+<li>Default <code>ifExists</code> to <code>true</code> when deleting a table index to prevent spurious errors. <a href="https://github.com/apache/gravitino/issues/10380" target="_blank" rel="noopener noreferrer">#10380</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="authorization-1">Authorization<a class="hash-link" aria-label="Direct link to Authorization" title="Direct link to Authorization" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#authorization-1">​</a></h3>
+<ul>
+<li>Fix <code>NoSuchEntityException</code> caused by schema entity not being imported before authorization checks. <a href="https://github.com/apache/gravitino/issues/10055" target="_blank" rel="noopener noreferrer">#10055</a></li>
+<li>Fix schema import to avoid <code>setOwner</code> failures when the schema had not been ingested. <a href="https://github.com/apache/gravitino/issues/9809" target="_blank" rel="noopener noreferrer">#9809</a></li>
+<li>Fix <code>PassThroughAuthorizer</code> user verification logic that incorrectly rejected valid users. <a href="https://github.com/apache/gravitino/issues/9616" target="_blank" rel="noopener noreferrer">#9616</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="iceberg">Iceberg<a class="hash-link" aria-label="Direct link to Iceberg" title="Direct link to Iceberg" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#iceberg">​</a></h3>
+<ul>
+<li>Fix wrong namespaces returned when listing tables or views in multi-level namespace configurations. <a href="https://github.com/apache/gravitino/issues/10397" target="_blank" rel="noopener noreferrer">#10397</a></li>
+<li>Fix URL decoding of table names in Iceberg REST server request paths. <a href="https://github.com/apache/gravitino/issues/9936" target="_blank" rel="noopener noreferrer">#9936</a></li>
+<li>Fix authorization decode issue for table names containing special characters. <a href="https://github.com/apache/gravitino/issues/9936" target="_blank" rel="noopener noreferrer">#9936</a></li>
+<li>Fix <code>migrate</code> procedure by preserving the <code>stageCreate</code> flag. <a href="https://github.com/apache/gravitino/issues/9666" target="_blank" rel="noopener noreferrer">#9666</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="oauth">OAuth<a class="hash-link" aria-label="Direct link to OAuth" title="Direct link to OAuth" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#oauth">​</a></h3>
+<ul>
+<li>Allow JWKS validators to operate without <code>serverUri</code> or <code>tokenPath</code> being mandatory. <a href="https://github.com/apache/gravitino/issues/9713" target="_blank" rel="noopener noreferrer">#9713</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="catalogs">Catalogs<a class="hash-link" aria-label="Direct link to Catalogs" title="Direct link to Catalogs" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#catalogs">​</a></h3>
+<ul>
+<li>Fix altering the JDBC catalog column default value problem. <a href="https://github.com/apache/gravitino/issues/9816" target="_blank" rel="noopener noreferrer">#9816</a></li>
+<li>Fix <code>UnsupportedOperationException</code> when updating aliases for a model version created without aliases. <a href="https://github.com/apache/gravitino/issues/9727" target="_blank" rel="noopener noreferrer">#9727</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="hive">Hive<a class="hash-link" aria-label="Direct link to Hive" title="Direct link to Hive" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#hive">​</a></h3>
+<ul>
+<li>Perform proper resource cleanup in <code>HiveClientPool.close()</code> to prevent connection leaks. <a href="https://github.com/apache/gravitino/issues/9581" target="_blank" rel="noopener noreferrer">#9581</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="lance-rest">Lance REST<a class="hash-link" aria-label="Direct link to Lance REST" title="Direct link to Lance REST" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#lance-rest">​</a></h3>
+<ul>
+<li>Handle null <code>mode</code> in <code>registerTableRequest</code> to prevent NPE. <a href="https://github.com/apache/gravitino/issues/9512" target="_blank" rel="noopener noreferrer">#9512</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="spark-connector">Spark Connector<a class="hash-link" aria-label="Direct link to Spark Connector" title="Direct link to Spark Connector" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#spark-connector">​</a></h3>
+<ul>
+<li>Fix <code>No SLF4J providers</code> warning/error in Spark connector 3.3. <a href="https://github.com/apache/gravitino/issues/6906" target="_blank" rel="noopener noreferrer">#6906</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_IesJ" id="ci--infrastructure">CI &amp; Infrastructure<a class="hash-link" aria-label="Direct link to CI &amp; Infrastructure" title="Direct link to CI &amp; Infrastructure" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#ci--infrastructure">​</a></h3>
+<ul>
+<li>Pin all <code>docker/*</code> GitHub Actions to SHA-based references (v4.0.0) to comply with ASF policy. <a href="https://github.com/apache/gravitino/issues/10502" target="_blank" rel="noopener noreferrer">#10502</a></li>
+<li>Fix Python CI pipeline failures due to runner image upgrade. <a href="https://github.com/apache/gravitino/issues/9919" target="_blank" rel="noopener noreferrer">#9919</a></li>
+<li>Fix Docker container startup failures due to GitHub CI runner image upgrade. <a href="https://github.com/apache/gravitino/issues/9990" target="_blank" rel="noopener noreferrer">#9990</a></li>
+<li>Fix MCP-server <code>fastmcp</code> version to avoid breaking CI changes from 3.0.x. <a href="https://github.com/apache/gravitino/issues/10035" target="_blank" rel="noopener noreferrer">#10035</a></li>
+<li>Fix UV CI pipeline. <a href="https://github.com/apache/gravitino/pull/9906" target="_blank" rel="noopener noreferrer">HOTFIX</a></li>
+<li>Fix JDK8 compatibility issues across modules. <a href="https://github.com/apache/gravitino/issues/10373" target="_blank" rel="noopener noreferrer">#10373</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_IesJ" id="documentation">Documentation<a class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#documentation">​</a></h2>
+<ul>
+<li>Add documents about the Flink catalog name limitation. <a href="https://github.com/apache/gravitino/issues/9973" target="_blank" rel="noopener noreferrer">#9973</a></li>
+<li>Update OAuth documentation to clarify correct version endpoints for Azure authentication. <a href="https://github.com/apache/gravitino/issues/9868" target="_blank" rel="noopener noreferrer">#9868</a></li>
+<li>Fix the incorrect <code>curl</code> command in the migration guide for <code>set the owner</code>. <a href="https://github.com/apache/gravitino/issues/10041" target="_blank" rel="noopener noreferrer">#10041</a></li>
+<li>Add documentation for docker run command in the Hive section. <a href="https://github.com/apache/gravitino/issues/9876" target="_blank" rel="noopener noreferrer">#9876</a></li>
+<li>Improve lakehouse-paimon-catalog documentation. <a href="https://github.com/apache/gravitino/issues/9957" target="_blank" rel="noopener noreferrer">#9957</a></li>
+<li>Add a guide for Lance REST integration with Spark and Ray. <a href="https://github.com/apache/gravitino/issues/9622" target="_blank" rel="noopener noreferrer">#9622</a></li>
+<li>Add REST catalog backend documentation for Iceberg REST Catalog (IRC). <a href="https://github.com/apache/gravitino/pull/9916" target="_blank" rel="noopener noreferrer">MINOR</a></li>
+<li>Add warehouse documentation for the REST catalog backend in Iceberg. <a href="https://github.com/apache/gravitino/pull/9823" target="_blank" rel="noopener noreferrer">MINOR</a></li>
+<li>Add missing <code>DescribeTable</code> endpoint to <code>lance-rest-service.md</code>. <a href="https://github.com/apache/gravitino/issues/9662" target="_blank" rel="noopener noreferrer">#9662</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_IesJ" id="acknowledgements">Acknowledgements<a class="hash-link" aria-label="Direct link to Acknowledgements" title="Direct link to Acknowledgements" href="https://gravitino.apache.org/blog/gravitino-1-1-1-release-notes#acknowledgements">​</a></h2>
+<p>Thanks to everyone who contributed to the 1.1.1 work — code, reviews, tests, issue triage, design, and feedback.</p>
+<p>@FANNG1, @agnes-xinyi-lu, @bharos, @chl-wxp, @danhuawang, @echonesis, @jerryshao, @joeyutong, @mchades, @pandeysambhi, @pythaac, @qqqttt123, @roryqi, @tedyu, @yuqi1129</p>]]></content>
+        <author>
+            <name>Qi Yu</name>
+            <uri>https://github.com/yuqi1129/</uri>
+        </author>
+        <category label="apache" term="apache"/>
+        <category label="gravitino" term="gravitino"/>
+        <category label="metadata" term="metadata"/>
+        <category label="multicloud" term="multicloud"/>
+        <category label="model" term="model"/>
+        <category label="security" term="security"/>
+        <category label="government" term="government"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache Gravitino 1.2.0]]></title>
         <id>https://gravitino.apache.org/blog/gravitino-1-2-0-release-notes</id>
