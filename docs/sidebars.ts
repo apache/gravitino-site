@@ -315,163 +315,191 @@ const sidebars: SidebarsConfig = {
       ]
     },
     {
-      label: 'Trino connector',
+      label: 'Engine Connectivity',
       type: 'category',
       items: [
         {
-          id: 'trino-connector/index',
-          label: 'Index',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/trino-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/requirements',
-          label: 'Requirements',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/installation',
-          label: 'Installation',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/configuration',
-          label: 'Configuration',
-          type: 'doc'
-        },
-        {
-          label: 'Supported catalogs',
+          label: 'Gravitino Engine Connectors',
           type: 'category',
           items: [
             {
-              id: 'trino-connector/supported-catalog',
-              label: 'Introduction',
-              type: 'doc'
+              label: 'Trino',
+              type: 'category',
+              items: [
+                {
+                  id: 'trino-connector/trino-connector',
+                  label: 'Overview',
+                  type: 'doc'
+                },
+                {
+                  id: 'trino-connector/requirements',
+                  label: 'Requirements',
+                  type: 'doc'
+                },
+                {
+                  id: 'trino-connector/installation',
+                  label: 'Installation',
+                  type: 'doc'
+                },
+                {
+                  id: 'trino-connector/configuration',
+                  label: 'Configuration',
+                  type: 'doc'
+                },
+                {
+                  label: 'Supported catalogs',
+                  type: 'category',
+                  items: [
+                    {
+                      id: 'trino-connector/supported-catalog',
+                      label: 'Introduction',
+                      type: 'doc'
+                    },
+                    {
+                      id: 'trino-connector/catalog-hive',
+                      label: 'Hive',
+                      type: 'doc'
+                    },
+                    {
+                      id: 'trino-connector/catalog-iceberg',
+                      label: 'Iceberg',
+                      type: 'doc'
+                    },
+                    {
+                      id: 'trino-connector/catalog-mysql',
+                      label: 'MySQL',
+                      type: 'doc'
+                    },
+                    {
+                      id: 'trino-connector/catalog-postgresql',
+                      label: 'PostgreSQL',
+                      type: 'doc'
+                    }
+                  ]
+                },
+                {
+                  id: 'trino-connector/sql-support',
+                  label: 'Supported SQL',
+                  type: 'doc'
+                },
+                {
+                  id: 'trino-connector/trino-cascading-query',
+                  label: 'Trino cascading query',
+                  type: 'doc'
+                },
+                {
+                  id: 'trino-connector/development',
+                  label: 'Development',
+                  type: 'doc'
+                }
+              ]
             },
             {
-              id: 'trino-connector/catalog-hive',
-              label: 'Hive',
-              type: 'doc'
+              label: 'Spark',
+              type: 'category',
+              items: [
+                {
+                  id: 'spark-connector/spark-connector',
+                  label: 'Overview',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-catalog-hive',
+                  label: 'Hive',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-catalog-iceberg',
+                  label: 'Iceberg',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-catalog-paimon',
+                  label: 'Paimon',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-catalog-jdbc',
+                  label: 'JDBC',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-connector-udf',
+                  label: 'User-defined functions',
+                  type: 'doc'
+                },
+                {
+                  id: 'spark-connector/spark-authentication-with-gravitino',
+                  label: 'Authentication',
+                  type: 'doc'
+                }
+              ]
             },
             {
-              id: 'trino-connector/catalog-iceberg',
-              label: 'Iceberg',
-              type: 'doc'
+              label: 'Flink',
+              type: 'category',
+              items: [
+                {
+                  id: 'flink-connector/flink-connector',
+                  label: 'Overview',
+                  type: 'doc'
+                },
+                {
+                  id: 'flink-connector/flink-catalog-hive',
+                  label: 'Hive',
+                  type: 'doc'
+                },
+                {
+                  id: 'flink-connector/flink-catalog-iceberg',
+                  label: 'Iceberg',
+                  type: 'doc'
+                },
+                {
+                  id: 'flink-connector/flink-catalog-paimon',
+                  label: 'Paimon',
+                  type: 'doc'
+                },
+                {
+                  id: 'flink-connector/flink-catalog-jdbc',
+                  label: 'JDBC',
+                  type: 'doc'
+                },
+                {
+                  id: 'flink-connector/flink-authentication-with-gravitino',
+                  label: 'Authentication',
+                  type: 'doc'
+                }
+              ]
             },
             {
-              id: 'trino-connector/catalog-mysql',
-              label: 'MySQL',
-              type: 'doc'
-            },
-            {
-              id: 'trino-connector/catalog-postgresql',
-              label: 'PostgreSQL',
+              id: 'daft-connector/daft-connector',
+              label: 'Daft',
               type: 'doc'
             }
           ]
         },
         {
-          id: 'trino-connector/sql-support',
-          label: 'Supported SQL',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/trino-cascading-query',
-          label: 'Trino cascading query',
-          type: 'doc'
-        },
-        {
-          id: 'trino-connector/development',
-          label: 'Development',
-          type: 'doc'
+          label: 'Iceberg REST',
+          type: 'category',
+          items: [
+            {
+              id: 'iceberg-rest-engine/trino',
+              label: 'Trino',
+              type: 'doc'
+            },
+            {
+              id: 'iceberg-rest-engine/spark',
+              label: 'Spark',
+              type: 'doc'
+            },
+            {
+              id: 'iceberg-rest-engine/flink',
+              label: 'Flink',
+              type: 'doc'
+            }
+          ]
         }
       ]
-    },
-    {
-      label: 'Spark connector',
-      type: 'category',
-      items: [
-        {
-          id: 'spark-connector/spark-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-hive',
-          label: 'Hive',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-catalog-jdbc',
-          label: 'JDBC',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-connector-udf',
-          label: 'User-defined functions',
-          type: 'doc'
-        },
-        {
-          id: 'spark-connector/spark-authentication-with-gravitino',
-          label: 'Spark authentication',
-          type: 'doc'
-        }
-      ]
-    },
-    {
-      label: 'Flink connector',
-      type: 'category',
-      items: [
-        {
-          id: 'flink-connector/flink-authentication-with-gravitino',
-          label: 'Flink authentication with Gravitino server',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-connector',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-hive',
-          label: 'Hive',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-iceberg',
-          label: 'Iceberg',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-paimon',
-          label: 'Paimon',
-          type: 'doc'
-        },
-        {
-          id: 'flink-connector/flink-catalog-jdbc',
-          label: 'JDBC',
-          type: 'doc'
-        },
-      ]
-    },
-    {
-      id: 'daft-connector/daft-connector',
-      label: 'Daft connector',
-      type: 'doc'
     },
     {
       label: 'Server administration',
