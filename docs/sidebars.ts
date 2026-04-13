@@ -496,6 +496,21 @@ const sidebars: SidebarsConfig = {
               id: 'iceberg-rest-engine/flink',
               label: 'Flink',
               type: 'doc'
+            },
+            {
+              id: 'iceberg-rest-engine/doris',
+              label: 'Doris',
+              type: 'doc'
+            },
+            {
+              id: 'iceberg-rest-engine/starrocks',
+              label: 'StarRocks',
+              type: 'doc'
+            },
+            {
+              id: 'iceberg-rest-engine/pyiceberg',
+              label: 'PyIceberg',
+              type: 'doc'
             }
           ]
         }

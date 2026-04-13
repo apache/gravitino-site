@@ -1,9 +1,9 @@
 ---
-title: Connect Spark to Gravitino via Iceberg REST
+title: Connect Spark via Iceberg REST
 sidebar_label: Spark
 ---
 
-# Connecting Apache Spark to Gravitino via Iceberg REST
+# Connecting Apache Spark via Iceberg REST
 
 Apache Gravitino exposes an [Iceberg REST catalog](../iceberg-rest-service.md) endpoint that any
 Iceberg-compatible engine can connect to directly — without installing a Gravitino-specific
@@ -130,6 +130,25 @@ spark.hadoop.fs.s3a.connection.ssl.enabled              false
 
 See [gravitino-irc-quickstart](https://github.com/markhoerth/gravitino-irc-quickstart) for a
 complete local development environment using MinIO.
+:::
+
+### With credential vending
+
+If Gravitino is configured with credential vending, add the following to enable it on the client side:
+
+```properties
+spark.sql.catalog.gravitino_irc.header.X-Iceberg-Access-Delegation    vended-credentials
+```
+
+See [Credential vending](../iceberg-rest-service.md#credential-vending) for server-side configuration.
+
+:::note
+For storage not managed by Gravitino, properties are not automatically transferred from the server
+to the client. Pass custom properties to initialize FileIO explicitly:
+
+```properties
+spark.sql.catalog.gravitino_irc.<configuration-key>    <property-value>
+```
 :::
 
 ## Starting Spark
