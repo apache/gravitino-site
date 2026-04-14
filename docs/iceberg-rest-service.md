@@ -537,6 +537,149 @@ curl  http://127.0.0.1:9001/iceberg/v1/config
 
 Normally you will see the output like `{"defaults":{},"overrides":{}, "endpoints":["GET /v1/{prefix}/namespaces", ...]}%`.
 
+## Exploring the Apache Gravitino Iceberg REST catalog service with Apache Spark
+
+### Deploying Apache Spark with Apache Iceberg support
+
+Follow the [Spark Iceberg start guide](https://iceberg.apache.org/docs/1.10.0/spark-getting-started/) to set up Apache Spark's and Apache Iceberg's environment.
+
+### Starting the Apache Spark client with the Apache Iceberg REST catalog
+
+| Configuration item                       | Description                                                               |
+|------------------------------------------|---------------------------------------------------------------------------|
+| `spark.sql.catalog.${catalog-name}.type` | The Spark catalog type; should set to `rest`.                             |
+| `spark.sql.catalog.${catalog-name}.uri`  | Spark Iceberg REST catalog URI, such as `http://127.0.0.1:9001/iceberg/`. |
+
+For example, we can configure Spark catalog options to use Gravitino Iceberg REST catalog with the catalog name `rest`.
+
+```shell
+./bin/spark-sql -v \
+--packages org.apache.iceberg:iceberg-spark-runtime-3.4_2.12:1.3.1 \
+--conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions \
+--conf spark.sql.catalog.rest=org.apache.iceberg.spark.SparkCatalog  \
+--conf spark.sql.catalog.rest.type=rest  \
+--conf spark.sql.catalog.rest.uri=http://127.0.0.1:9001/iceberg/
+```
+
+You may need to adjust the Iceberg Spark runtime jar file name according to the real version number in your environment. If you want to access the data stored in cloud, you need to download corresponding jars (please refer to the cloud storage part) and place it in the classpath of Spark. If you want to enable credential vending, please set `credential-providers` to a proper value in the server side, set `spark.sql.catalog.rest.header.X-Iceberg-Access-Delegation` = `vended-credentials` in the client side.
+
+For other storages not managed by Gravitino, the properties wouldn't transfer from the server to client automatically, if you want to pass custom properties to initialize `FileIO`, you could add it by `spark.sql.catalog.${iceberg_catalog_name}.${configuration_key}` = `{property_value}`.
+
+### Exploring Apache Iceberg with Apache Spark SQL
+
+```sql
+// First change to use the `rest` catalog
+USE rest;
+CREATE DATABASE IF NOT EXISTS dml;
+CREATE TABLE dml.test (id bigint COMMENT 'unique id') using iceberg;
+DESCRIBE TABLE EXTENDED dml.test;
+INSERT INTO dml.test VALUES (1), (2);
+SELECT * FROM dml.test;
+```
+
+## Exploring the Apache Gravitino Iceberg REST catalog service with Trino
+
+### Deploying Trino with Apache Iceberg support
+
+To configure the Iceberg connector, create a catalog properties file like `etc/catalog/rest.properties` that references the Iceberg connector.
+
+```
+connector.name=iceberg
+iceberg.catalog.type=rest
+iceberg.rest-catalog.uri=http://localhost:9001/iceberg/
+fs.hadoop.enabled=true
+```
+
+Please refer to [Trino Iceberg document](https://trino.io/docs/current/connector/iceberg.html) for more details.
+
+### Exploring Apache Iceberg with Trino SQL
+
+```sql
+USE rest.dml;
+DELETE FROM rest.dml.test WHERE id = 2;
+SELECT * FROM test;
+```
+
+## Exploring the Apache Gravitino Iceberg REST catalog service with Apache Doris
+
+### Creating Iceberg catalog in Apache Doris
+
+```
+CREATE CATALOG iceberg PROPERTIES (
+    "uri" = "http://localhost:9001/iceberg/",
+    "type" = "iceberg",
+    "iceberg.catalog.type" = "rest",
+    "s3.endpoint" = "http://s3.ap-southeast-2.amazonaws.com",
+    "s3.region" = "ap-southeast-2",
+    "s3.access_key" = "xxx",
+    "s3.secret_key" = "xxx"
+);
+```
+
+### Exploring Apache Iceberg with Apache Doris SQL
+
+```sql
+SWITCH iceberg;
+CREATE DATABASE db;
+USE db;
+CREATE TABLE t(a int);
+INSERT INTO t values(1);
+SELECT * FROM t;
+```
+
+## Exploring the Apache Gravitino Iceberg REST catalog service with StarRocks
+
+### Creating Iceberg catalog in StarRocks
+
+```
+CREATE EXTERNAL CATALOG 'iceberg'
+COMMENT "Gravitino Iceberg REST catalog on MinIO"
+PROPERTIES
+(
+  "type"="iceberg",
+  "iceberg.catalog.type"="rest",
+  "iceberg.catalog.uri"="http://iceberg-rest:9001/iceberg",
+  "aws.s3.access_key"="admin",
+  "aws.s3.secret_key"="password",
+  "aws.s3.endpoint"="http://minio:9000",
+  "aws.s3.enable_path_style_access"="true",
+  "client.factory"="com.starrocks.connector.iceberg.IcebergAwsClientFactory"
+);
+```
+
+Please note that, you should set `client.factory` explicitly.
+
+### Exploring Apache Iceberg with StarRocks SQL
+
+```sql
+SET CATALOG iceberg;
+CREATE DATABASE db;
+USE db;
+CREATE TABLE t(a int);
+INSERT INTO t values(1);
+SELECT * FROM t;
+```
+
+### Exploring Apache Iceberg with PyIceberg
+
+```python
+from pyiceberg.catalog import load_catalog
+
+catalog = load_catalog(
+    "my_rest_catalog", 
+    **{
+        "type": "rest",
+        "uri": "http://localhost:9001/iceberg",
+        "header.X-Iceberg-Access-Delegation":"vended-credentials",
+        "auth": {"type": "noop"},
+    }
+)
+
+table_identifier = "db.table"
+table = catalog.load_table(table_identifier)
+print(table.scan().to_arrow())
+```
+
 ## Docker instructions
 
 You could run Gravitino Iceberg REST server through docker container:
