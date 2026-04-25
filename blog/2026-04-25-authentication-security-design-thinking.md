@@ -1,5 +1,5 @@
 ---
-title: Authentication as Federated Trust: Lessons from a Catalog of Catalogs
+title: "Authentication as Federated Trust: Lessons from a Catalog of Catalogs"
 slug: authentication-security-design-thinking
 authors: [roryqi]
 tags: [security,authentication,architecture,zero-trust,gravitino]
