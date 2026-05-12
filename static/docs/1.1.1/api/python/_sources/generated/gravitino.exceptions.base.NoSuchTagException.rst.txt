@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchTagException
+============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchTagException
