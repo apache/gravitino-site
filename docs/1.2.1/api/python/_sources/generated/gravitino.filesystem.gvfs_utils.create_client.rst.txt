@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_utils.create\_client
+===============================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_utils
+
+.. autofunction:: create_client
