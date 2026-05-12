@@ -1,0 +1,6 @@
+gravitino.exceptions.base.MetalakeAlreadyExistsException
+========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: MetalakeAlreadyExistsException

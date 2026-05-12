@@ -1,0 +1,104 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.rel.indexes.json\_serdes.index\_serdes.IndexSerdes
+================================================================
+
+.. currentmodule:: gravitino.dto.rel.indexes.json_serdes.index_serdes
+
+.. autoclass:: IndexSerdes
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IndexSerdes.__init__
+      ~IndexSerdes.deserialize
+      ~IndexSerdes.serialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IndexSerdes.ASSIGNMENTS_NAME
+      ~IndexSerdes.CATALOG_STRING
+      ~IndexSerdes.DATA_TYPE
+      ~IndexSerdes.DECIMAL_PATTERN
+      ~IndexSerdes.DIRECTION
+      ~IndexSerdes.EXPRESSION_TYPE
+      ~IndexSerdes.EXTERNAL
+      ~IndexSerdes.FIELDS
+      ~IndexSerdes.FIELD_NAME
+      ~IndexSerdes.FIELD_NAMES
+      ~IndexSerdes.FIXEDCHAR_PATTERN
+      ~IndexSerdes.FIXED_PATTERN
+      ~IndexSerdes.FUNCTION_ARGS
+      ~IndexSerdes.FUNCTION_NAME
+      ~IndexSerdes.IDENTITY_PARTITION_VALUES
+      ~IndexSerdes.INDEX_FIELD_NAMES
+      ~IndexSerdes.INDEX_NAME
+      ~IndexSerdes.INDEX_TYPE
+      ~IndexSerdes.LIST
+      ~IndexSerdes.LIST_ELEMENT_NULLABLE
+      ~IndexSerdes.LIST_ELEMENT_TYPE
+      ~IndexSerdes.LIST_PARTITION_LISTS
+      ~IndexSerdes.LITERAL_VALUE
+      ~IndexSerdes.MAP
+      ~IndexSerdes.MAP_KEY_TYPE
+      ~IndexSerdes.MAP_VALUE_NULLABLE
+      ~IndexSerdes.MAP_VALUE_TYPE
+      ~IndexSerdes.NON_PRIMITIVE_TYPES
+      ~IndexSerdes.NULL_ORDERING
+      ~IndexSerdes.NUMBER
+      ~IndexSerdes.NUM_BUCKETS
+      ~IndexSerdes.PARTITION_NAME
+      ~IndexSerdes.PARTITION_PROPERTIES
+      ~IndexSerdes.PARTITION_TYPE
+      ~IndexSerdes.PRIMITIVE_AND_NULL_TYPES
+      ~IndexSerdes.RANGE_PARTITION_LOWER
+      ~IndexSerdes.RANGE_PARTITION_UPPER
+      ~IndexSerdes.SORT_TERM
+      ~IndexSerdes.STRATEGY
+      ~IndexSerdes.STRUCT
+      ~IndexSerdes.STRUCT_FIELD_COMMENT
+      ~IndexSerdes.STRUCT_FIELD_NAME
+      ~IndexSerdes.STRUCT_FIELD_NULLABLE
+      ~IndexSerdes.TIMESTAMP_PATTERN
+      ~IndexSerdes.TIMESTAMP_TZ_PATTERN
+      ~IndexSerdes.TIME_PATTERN
+      ~IndexSerdes.TYPE
+      ~IndexSerdes.TYPES
+      ~IndexSerdes.UNION
+      ~IndexSerdes.UNION_TYPES
+      ~IndexSerdes.UNPARSED
+      ~IndexSerdes.UNPARSED_EXPRESSION
+      ~IndexSerdes.UNPARSED_TYPE
+      ~IndexSerdes.VARCHAR_PATTERN
+      ~IndexSerdes.WIDTH
+   
+   

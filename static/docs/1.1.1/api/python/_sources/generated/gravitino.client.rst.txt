@@ -1,0 +1,66 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+   
+gravitino.client
+================
+
+.. automodule:: gravitino.client
+  
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst                 
+   :recursive:
+
+   gravitino.client.base_schema_catalog
+   gravitino.client.dto_converters
+   gravitino.client.fileset_catalog
+   gravitino.client.generic_column
+   gravitino.client.generic_fileset
+   gravitino.client.generic_job_handle
+   gravitino.client.generic_model
+   gravitino.client.generic_model_catalog
+   gravitino.client.generic_model_version
+   gravitino.client.gravitino_admin_client
+   gravitino.client.gravitino_client
+   gravitino.client.gravitino_client_base
+   gravitino.client.gravitino_client_config
+   gravitino.client.gravitino_metalake
+   gravitino.client.gravitino_version
+   gravitino.client.metadata_object_credential_operations
+   gravitino.client.metadata_object_impl
+   gravitino.client.relational_table
+
