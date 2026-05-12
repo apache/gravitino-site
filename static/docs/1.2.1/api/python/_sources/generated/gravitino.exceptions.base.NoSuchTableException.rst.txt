@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchTableException
+==============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchTableException

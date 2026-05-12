@@ -1,0 +1,6 @@
+gravitino.exceptions.base.PartitionAlreadyExistsException
+=========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: PartitionAlreadyExistsException

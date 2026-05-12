@@ -1,0 +1,89 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.filesystem.gvfs\_hook.GravitinoVirtualFileSystemHook
+==============================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_hook
+
+.. autoclass:: GravitinoVirtualFileSystemHook
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoVirtualFileSystemHook.__init__
+      ~GravitinoVirtualFileSystemHook.initialize
+      ~GravitinoVirtualFileSystemHook.on_cat_file_failure
+      ~GravitinoVirtualFileSystemHook.on_cp_file_failure
+      ~GravitinoVirtualFileSystemHook.on_created_failure
+      ~GravitinoVirtualFileSystemHook.on_exists_failure
+      ~GravitinoVirtualFileSystemHook.on_get_file_failure
+      ~GravitinoVirtualFileSystemHook.on_info_failure
+      ~GravitinoVirtualFileSystemHook.on_ls_failure
+      ~GravitinoVirtualFileSystemHook.on_makedirs_failure
+      ~GravitinoVirtualFileSystemHook.on_mkdir_failure
+      ~GravitinoVirtualFileSystemHook.on_modified_failure
+      ~GravitinoVirtualFileSystemHook.on_mv_failure
+      ~GravitinoVirtualFileSystemHook.on_open_failure
+      ~GravitinoVirtualFileSystemHook.on_rm_failure
+      ~GravitinoVirtualFileSystemHook.on_rm_file_failure
+      ~GravitinoVirtualFileSystemHook.on_rmdir_failure
+      ~GravitinoVirtualFileSystemHook.post_cat_file
+      ~GravitinoVirtualFileSystemHook.post_cp_file
+      ~GravitinoVirtualFileSystemHook.post_created
+      ~GravitinoVirtualFileSystemHook.post_exists
+      ~GravitinoVirtualFileSystemHook.post_get_file
+      ~GravitinoVirtualFileSystemHook.post_info
+      ~GravitinoVirtualFileSystemHook.post_ls
+      ~GravitinoVirtualFileSystemHook.post_makedirs
+      ~GravitinoVirtualFileSystemHook.post_mkdir
+      ~GravitinoVirtualFileSystemHook.post_modified
+      ~GravitinoVirtualFileSystemHook.post_mv
+      ~GravitinoVirtualFileSystemHook.post_open
+      ~GravitinoVirtualFileSystemHook.post_rm
+      ~GravitinoVirtualFileSystemHook.post_rm_file
+      ~GravitinoVirtualFileSystemHook.post_rmdir
+      ~GravitinoVirtualFileSystemHook.pre_cat_file
+      ~GravitinoVirtualFileSystemHook.pre_cp_file
+      ~GravitinoVirtualFileSystemHook.pre_created
+      ~GravitinoVirtualFileSystemHook.pre_exists
+      ~GravitinoVirtualFileSystemHook.pre_get_file
+      ~GravitinoVirtualFileSystemHook.pre_info
+      ~GravitinoVirtualFileSystemHook.pre_ls
+      ~GravitinoVirtualFileSystemHook.pre_makedirs
+      ~GravitinoVirtualFileSystemHook.pre_mkdir
+      ~GravitinoVirtualFileSystemHook.pre_modified
+      ~GravitinoVirtualFileSystemHook.pre_mv
+      ~GravitinoVirtualFileSystemHook.pre_open
+      ~GravitinoVirtualFileSystemHook.pre_rm
+      ~GravitinoVirtualFileSystemHook.pre_rm_file
+      ~GravitinoVirtualFileSystemHook.pre_rmdir
+      ~GravitinoVirtualFileSystemHook.set_operations_context
+   
+   
+
+   
+   
+   
