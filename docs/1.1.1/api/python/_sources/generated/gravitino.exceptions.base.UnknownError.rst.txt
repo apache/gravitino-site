@@ -1,0 +1,6 @@
+gravitino.exceptions.base.UnknownError
+======================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: UnknownError

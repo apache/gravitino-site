@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchMetalakeException
+=================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchMetalakeException
