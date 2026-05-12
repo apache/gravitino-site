@@ -1,0 +1,6 @@
+gravitino.rest.rest\_utils.encode\_string
+=========================================
+
+.. currentmodule:: gravitino.rest.rest_utils
+
+.. autofunction:: encode_string

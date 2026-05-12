@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NotEmptyException
+===========================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NotEmptyException

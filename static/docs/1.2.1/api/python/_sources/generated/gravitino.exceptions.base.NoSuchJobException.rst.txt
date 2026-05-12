@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchJobException
+============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchJobException
