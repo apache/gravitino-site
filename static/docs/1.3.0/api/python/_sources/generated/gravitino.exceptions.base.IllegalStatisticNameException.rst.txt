@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalStatisticNameException
+=======================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalStatisticNameException

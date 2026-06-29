@@ -1,0 +1,6 @@
+gravitino.exceptions.base.GroupAlreadyExistsException
+=====================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: GroupAlreadyExistsException

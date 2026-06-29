@@ -1,0 +1,728 @@
+---
+id: aggregate-health
+title: "Aggregate health"
+description: "Returns aggregate health status combining liveness and readiness checks. Returns 200 when all checks pass; 503 when any check fails. This endpoint is exempt from authentication so probes can reach it without credentials. Root-level aliases at /health and /health.html (outside the /api base path) are also available for GTMs that require probes at well-known root paths."
+sidebar_label: "Aggregate health"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Aggregate health"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/health"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns aggregate health status combining liveness and readiness checks. Returns 200 when all checks pass; 503 when any check fails. This endpoint is exempt from authentication so probes can reach it without credentials. Root-level aliases at /health and /health.html (outside the /api base path) are also available for GTMs that require probes at well-known root paths.
+
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Health check result
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","description":"Response code, 0 for success","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** [`UP`, `DOWN`]"}
+                        schema={{"type":"string","enum":["UP","DOWN"],"description":"Aggregate health status"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                checks
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span><span
+                                className={"openapi-schema__divider"}
+                              >
+                                
+                              </span><span
+                                className={"openapi-schema__required"}
+                              >
+                                required
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              Per-component check results
+                              
+                              
+                            </div><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"Name of the component being checked","example":"entityStore"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** [`UP`, `DOWN`]"}
+                              schema={{"type":"string","enum":["UP","DOWN"],"description":"Status of the component"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      details
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Optional diagnostic details about the check result
+                                    
+                                    
+                                  </div><SchemaItem
+                                    name={"property name*"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                    collapsible={false}
+                                    discriminator={false}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"UP\",\n  \"checks\": [\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"UP\",\n      \"details\": {}\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"HealthUp"}
+                  value={"HealthUp"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"UP\",\n  \"checks\": [\n    {\n      \"name\": \"httpServer\",\n      \"status\": \"UP\",\n      \"details\": {}\n    },\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"UP\",\n      \"details\": {}\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"HealthDown"}
+                  value={"HealthDown"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"DOWN\",\n  \"checks\": [\n    {\n      \"name\": \"httpServer\",\n      \"status\": \"UP\",\n      \"details\": {}\n    },\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"DOWN\",\n      \"details\": {\n        \"reason\": \"timeout\"\n      }\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"503"}
+        value={"503"}
+      >
+        <div>
+          
+          
+          Health check result
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","description":"Response code, 0 for success","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** [`UP`, `DOWN`]"}
+                        schema={{"type":"string","enum":["UP","DOWN"],"description":"Aggregate health status"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                checks
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span><span
+                                className={"openapi-schema__divider"}
+                              >
+                                
+                              </span><span
+                                className={"openapi-schema__required"}
+                              >
+                                required
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              Per-component check results
+                              
+                              
+                            </div><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"Name of the component being checked","example":"entityStore"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** [`UP`, `DOWN`]"}
+                              schema={{"type":"string","enum":["UP","DOWN"],"description":"Status of the component"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      details
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Optional diagnostic details about the check result
+                                    
+                                    
+                                  </div><SchemaItem
+                                    name={"property name*"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                    collapsible={false}
+                                    discriminator={false}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"UP\",\n  \"checks\": [\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"UP\",\n      \"details\": {}\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"HealthUp"}
+                  value={"HealthUp"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"UP\",\n  \"checks\": [\n    {\n      \"name\": \"httpServer\",\n      \"status\": \"UP\",\n      \"details\": {}\n    },\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"UP\",\n      \"details\": {}\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"HealthDown"}
+                  value={"HealthDown"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"status\": \"DOWN\",\n  \"checks\": [\n    {\n      \"name\": \"httpServer\",\n      \"status\": \"UP\",\n      \"details\": {}\n    },\n    {\n      \"name\": \"entityStore\",\n      \"status\": \"DOWN\",\n      \"details\": {\n        \"reason\": \"timeout\"\n      }\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"4XX"}
+        value={"4XX"}
+      >
+        <div>
+          
+          
+          Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure, such as invalid json. Usually serves application/json content, although in some cases simple text/plain content might be returned by the server's middleware.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"BadRequestException\",\n  \"message\": \"Malformed request\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5XX"}
+        value={"5XX"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

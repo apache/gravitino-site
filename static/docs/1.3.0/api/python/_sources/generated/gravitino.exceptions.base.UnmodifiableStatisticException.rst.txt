@@ -1,0 +1,6 @@
+gravitino.exceptions.base.UnmodifiableStatisticException
+========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: UnmodifiableStatisticException
