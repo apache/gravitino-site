@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchRoleException
+=============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchRoleException

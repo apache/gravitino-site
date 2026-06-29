@@ -1,0 +1,102 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.utils.serdes.SerdesUtilsBase
+======================================
+
+.. currentmodule:: gravitino.utils.serdes
+
+.. autoclass:: SerdesUtilsBase
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SerdesUtilsBase.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SerdesUtilsBase.ASSIGNMENTS_NAME
+      ~SerdesUtilsBase.CATALOG_STRING
+      ~SerdesUtilsBase.DATA_TYPE
+      ~SerdesUtilsBase.DECIMAL_PATTERN
+      ~SerdesUtilsBase.DIRECTION
+      ~SerdesUtilsBase.EXPRESSION_TYPE
+      ~SerdesUtilsBase.EXTERNAL
+      ~SerdesUtilsBase.FIELDS
+      ~SerdesUtilsBase.FIELD_NAME
+      ~SerdesUtilsBase.FIELD_NAMES
+      ~SerdesUtilsBase.FIXEDCHAR_PATTERN
+      ~SerdesUtilsBase.FIXED_PATTERN
+      ~SerdesUtilsBase.FUNCTION_ARGS
+      ~SerdesUtilsBase.FUNCTION_NAME
+      ~SerdesUtilsBase.IDENTITY_PARTITION_VALUES
+      ~SerdesUtilsBase.INDEX_FIELD_NAMES
+      ~SerdesUtilsBase.INDEX_NAME
+      ~SerdesUtilsBase.INDEX_TYPE
+      ~SerdesUtilsBase.LIST
+      ~SerdesUtilsBase.LIST_ELEMENT_NULLABLE
+      ~SerdesUtilsBase.LIST_ELEMENT_TYPE
+      ~SerdesUtilsBase.LIST_PARTITION_LISTS
+      ~SerdesUtilsBase.LITERAL_VALUE
+      ~SerdesUtilsBase.MAP
+      ~SerdesUtilsBase.MAP_KEY_TYPE
+      ~SerdesUtilsBase.MAP_VALUE_NULLABLE
+      ~SerdesUtilsBase.MAP_VALUE_TYPE
+      ~SerdesUtilsBase.NON_PRIMITIVE_TYPES
+      ~SerdesUtilsBase.NULL_ORDERING
+      ~SerdesUtilsBase.NUMBER
+      ~SerdesUtilsBase.NUM_BUCKETS
+      ~SerdesUtilsBase.PARTITION_NAME
+      ~SerdesUtilsBase.PARTITION_PROPERTIES
+      ~SerdesUtilsBase.PARTITION_TYPE
+      ~SerdesUtilsBase.PRIMITIVE_AND_NULL_TYPES
+      ~SerdesUtilsBase.RANGE_PARTITION_LOWER
+      ~SerdesUtilsBase.RANGE_PARTITION_UPPER
+      ~SerdesUtilsBase.SORT_TERM
+      ~SerdesUtilsBase.STRATEGY
+      ~SerdesUtilsBase.STRUCT
+      ~SerdesUtilsBase.STRUCT_FIELD_COMMENT
+      ~SerdesUtilsBase.STRUCT_FIELD_NAME
+      ~SerdesUtilsBase.STRUCT_FIELD_NULLABLE
+      ~SerdesUtilsBase.TIMESTAMP_PATTERN
+      ~SerdesUtilsBase.TIMESTAMP_TZ_PATTERN
+      ~SerdesUtilsBase.TIME_PATTERN
+      ~SerdesUtilsBase.TYPE
+      ~SerdesUtilsBase.TYPES
+      ~SerdesUtilsBase.UNION
+      ~SerdesUtilsBase.UNION_TYPES
+      ~SerdesUtilsBase.UNPARSED
+      ~SerdesUtilsBase.UNPARSED_EXPRESSION
+      ~SerdesUtilsBase.UNPARSED_TYPE
+      ~SerdesUtilsBase.VARCHAR_PATTERN
+      ~SerdesUtilsBase.WIDTH
+   
+   

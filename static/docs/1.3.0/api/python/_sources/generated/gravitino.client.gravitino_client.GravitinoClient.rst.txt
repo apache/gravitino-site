@@ -1,0 +1,103 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.client.gravitino\_client.GravitinoClient
+==================================================
+
+.. currentmodule:: gravitino.client.gravitino_client
+
+.. autoclass:: GravitinoClient
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoClient.__init__
+      ~GravitinoClient.add_group
+      ~GravitinoClient.add_user
+      ~GravitinoClient.alter_catalog
+      ~GravitinoClient.alter_job_template
+      ~GravitinoClient.alter_tag
+      ~GravitinoClient.cancel_job
+      ~GravitinoClient.check_metalake_name
+      ~GravitinoClient.check_version
+      ~GravitinoClient.close
+      ~GravitinoClient.create_catalog
+      ~GravitinoClient.create_role
+      ~GravitinoClient.create_tag
+      ~GravitinoClient.delete_job_template
+      ~GravitinoClient.delete_role
+      ~GravitinoClient.delete_tag
+      ~GravitinoClient.disable_catalog
+      ~GravitinoClient.drop_catalog
+      ~GravitinoClient.enable_catalog
+      ~GravitinoClient.get_client_version
+      ~GravitinoClient.get_group
+      ~GravitinoClient.get_job
+      ~GravitinoClient.get_job_template
+      ~GravitinoClient.get_metalake
+      ~GravitinoClient.get_owner
+      ~GravitinoClient.get_role
+      ~GravitinoClient.get_server_version
+      ~GravitinoClient.get_tag
+      ~GravitinoClient.get_user
+      ~GravitinoClient.grant_privileges_to_role
+      ~GravitinoClient.grant_roles_to_group
+      ~GravitinoClient.grant_roles_to_user
+      ~GravitinoClient.list_catalogs
+      ~GravitinoClient.list_catalogs_info
+      ~GravitinoClient.list_group_names
+      ~GravitinoClient.list_groups
+      ~GravitinoClient.list_job_templates
+      ~GravitinoClient.list_jobs
+      ~GravitinoClient.list_role_names
+      ~GravitinoClient.list_tags
+      ~GravitinoClient.list_tags_info
+      ~GravitinoClient.list_user_names
+      ~GravitinoClient.list_users
+      ~GravitinoClient.load_catalog
+      ~GravitinoClient.load_metalake
+      ~GravitinoClient.register_job_template
+      ~GravitinoClient.remove_group
+      ~GravitinoClient.remove_user
+      ~GravitinoClient.revoke_privileges_from_role
+      ~GravitinoClient.revoke_roles_from_group
+      ~GravitinoClient.revoke_roles_from_user
+      ~GravitinoClient.run_job
+      ~GravitinoClient.set_owner
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GravitinoClient.API_METALAKES_IDENTIFIER_PATH
+      ~GravitinoClient.API_METALAKES_LIST_PATH
+      ~GravitinoClient.CLIENT_VERSION_HEADER
+      ~GravitinoClient.VERSION_CHECK_DISABLED_ENV
+   
+   

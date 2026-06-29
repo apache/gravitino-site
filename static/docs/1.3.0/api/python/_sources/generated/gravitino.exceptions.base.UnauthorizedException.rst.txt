@@ -1,0 +1,6 @@
+gravitino.exceptions.base.UnauthorizedException
+===============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: UnauthorizedException

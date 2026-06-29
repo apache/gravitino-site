@@ -1,0 +1,54 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.requests.user\_add\_request.UserAddRequest
+========================================================
+
+.. currentmodule:: gravitino.dto.requests.user_add_request
+
+.. autoclass:: UserAddRequest
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UserAddRequest.__init__
+      ~UserAddRequest.from_dict
+      ~UserAddRequest.from_json
+      ~UserAddRequest.schema
+      ~UserAddRequest.to_dict
+      ~UserAddRequest.to_json
+      ~UserAddRequest.validate
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UserAddRequest.dataclass_json_config
+   
+   

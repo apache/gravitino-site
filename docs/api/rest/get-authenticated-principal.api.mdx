@@ -1,0 +1,358 @@
+---
+id: get-authenticated-principal
+title: "Get the authenticated principal"
+description: "Returns the server-resolved principal name for the current authenticated user. The principal is derived from the JWT token using the configured `principalFields` and `principalMapper`, ensuring consistency between server-side identity and UI display."
+sidebar_label: "Get the authenticated principal"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9ty2zYQ/ZUdvJamZKeZafXmpqrrNBePLY0fXM1kDaxEJCDAAKAu1fDfOwuSulhJnIe+NR7PiBfgYBfn4OxyKyIughg9CKxjQTZqiVE7K2aZcBX5dHOtxEgsKF7uh5C68dpKXaERmVAUpNdVmjgStxRrbwPEgiCQX5I/8xScWZKCqp8FFkuCufNpmKy9JxsBD1eAOpDPYVLQwTQdQJHXjDX3rkyzX99PILpPZKEO2i5aRGfnelF7UvBhN/sPTUaFD4D28OlbrCryHzIgG2rPANLZoEMkKzfwSHFFZPtMglYEWnGQcZOAptegdKgMbvK/rciEp1A5GyiI0VZcDIf88/UNOs74IE87d75suciEdDaSjQyFVWU6kgZLq/KFx6WO2rp8ef7Tx8ALbEWQBZXIV3FTkRgJ9/iRZBSZqDzTGnUbnnSKDkZpG2lBXmSiXbx99OLihOK7iLEOwNPBzVMifdoiE2TrUowehrOG1+tlsl8mRN7lE9DJ83rp1jqViWiaTEQdDeOzTt/SbR9QkwlaY1mZNucnb0dbsURT0347hkdRC1SltqJJf5n4eXh+SujUckTO639IwRlcHh0lkJ6SXtAEQE9Q6pBk6jxou0Sj1X/K8HFor+/evwPy3nmocGMcKvBJfqRAW8Adb7DSsYB57WNBHhRF1CaAs2nDE0DS9udae1JsGCWFgAvmO0WQtbs3+26JldrqkoVyPhwOM1Hiurs959vjLP6cTG72kSbIHakJ4KLpwnhWZdc2krdogIeBorm2OtHUaatNtcl2+T2LeAlFXaI984QKHw1BP7PJRIgoPx1AoPe4EZnQkcpwCt0cynjMkbx1ioxotfdyvT7V3uWRM1XePRpiW8QIpV4UEayL8EiASnmOiwPcOac0mm2Xp+YwDWyqzneA8HK9bncjJG24OkLpPEGoSOq5lqCcrEuysZW55n+ll1rVaMC7OlLIfyj7h7K/reyDbPst5az7pMVtbaMuabyWVHXVcBf/PuW7VrLjjs0uuAfxEZeYG7SL/CnOCL48edYZfUmxcF3jw3UTYyFGYsBGbwcls9QeE26etqL2XCq2SbvUjAaDbeFCbEbbyvnYDLaPGOgGY9Gc7PEVWfJaAo/oT9709k3WqhaNgQp9DLuGhnngY7VEr/k67M4MnZpDKqnpXS+C6e11BqTTUShirLgK8W86qormWBsu+/yIueEsvgzLb3pT2fVxnTWQ6jI5wjROokmA3Bc4/xVgfsM1XcGqINsv0fd1af4h6i/DX4cM2O/wKej7dIEGKk9zvYbokh9WFVlFim95l1vDOoLGSrNuZ0y1rL2Om8T1e67vF/c6Fq/vJywyzlVLuqyVJitJzJpsK37DoCWPFKOH2SHGXeIj0fYEae94rLLTrqsd3gqDJ2Ribtyq9aJk5K/2nUZC4554mpSZKB4NBrRuNX+WljhrWcqlKwdpMKtauqoT1ZO0Wnqwu20bskTRVW/jTFuAFCbgSX/rfN4VsoO92eWcFJftlMx8asnE/kX+kbwLz4y3tHBRY6TUCnL7nAZ3jrMP8XZ8N4HLm2uRCaMldS0gJ8OGV6EsCC7yoci6M93v3Gq1yjG9zp1fDLq5YfDm+tX43d347CIf5kUsk6OxLbSUnecvEtYxkb+zN1M4PDJdr9gfpLn2IUKH05/d0yT4iyMdphBLtAeJXFH81ufF04i2+yr9f/986+QVaR0HlUGdNjhJYdsVgfZbuS1E3BW0Hvkgtsnlp940DT/+XJNnw5jtvTpZQSYKQkU+eckn2rDsJBelZOrpS+Q7GiV2lF2JuhpPRNP8C4WPjx4=
+sidebar_class_name: "get api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the authenticated principal"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/authn/me"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the server-resolved principal name for the current authenticated user. The principal is derived from the JWT token using the configured `principalFields` and `principalMapper`, ensuring consistency between server-side identity and UI display.
+
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Returns the authenticated principal information
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** [`0`]"}
+                        schema={{"type":"integer","format":"int32","description":"Status code of the response","enum":[0]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"principal"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"The server-resolved principal name of the authenticated user"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"principal\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"AuthMeResponse"}
+                  value={"AuthMeResponse"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"principal\": \"admin\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"401"}
+        value={"401"}
+      >
+        <div>
+          
+          
+          Unauthorized - Authentication credentials are missing or invalid
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
