@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalJobTemplateOperationException
+==============================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalJobTemplateOperationException

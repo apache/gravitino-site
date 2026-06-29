@@ -1,0 +1,123 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.client.gravitino\_metalake.GravitinoMetalake
+======================================================
+
+.. currentmodule:: gravitino.client.gravitino_metalake
+
+.. autoclass:: GravitinoMetalake
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GravitinoMetalake.__init__
+      ~GravitinoMetalake.add_group
+      ~GravitinoMetalake.add_user
+      ~GravitinoMetalake.alter_catalog
+      ~GravitinoMetalake.alter_job_template
+      ~GravitinoMetalake.alter_tag
+      ~GravitinoMetalake.audit_info
+      ~GravitinoMetalake.cancel_job
+      ~GravitinoMetalake.comment
+      ~GravitinoMetalake.create_catalog
+      ~GravitinoMetalake.create_role
+      ~GravitinoMetalake.create_tag
+      ~GravitinoMetalake.delete_job_template
+      ~GravitinoMetalake.delete_role
+      ~GravitinoMetalake.delete_tag
+      ~GravitinoMetalake.disable_catalog
+      ~GravitinoMetalake.drop_catalog
+      ~GravitinoMetalake.enable_catalog
+      ~GravitinoMetalake.equals
+      ~GravitinoMetalake.from_dict
+      ~GravitinoMetalake.from_json
+      ~GravitinoMetalake.get_group
+      ~GravitinoMetalake.get_job
+      ~GravitinoMetalake.get_job_template
+      ~GravitinoMetalake.get_owner
+      ~GravitinoMetalake.get_role
+      ~GravitinoMetalake.get_tag
+      ~GravitinoMetalake.get_user
+      ~GravitinoMetalake.grant_privileges_to_role
+      ~GravitinoMetalake.grant_roles_to_group
+      ~GravitinoMetalake.grant_roles_to_user
+      ~GravitinoMetalake.list_catalogs
+      ~GravitinoMetalake.list_catalogs_info
+      ~GravitinoMetalake.list_group_names
+      ~GravitinoMetalake.list_groups
+      ~GravitinoMetalake.list_job_templates
+      ~GravitinoMetalake.list_jobs
+      ~GravitinoMetalake.list_role_names
+      ~GravitinoMetalake.list_tags
+      ~GravitinoMetalake.list_tags_info
+      ~GravitinoMetalake.list_user_names
+      ~GravitinoMetalake.list_users
+      ~GravitinoMetalake.load_catalog
+      ~GravitinoMetalake.name
+      ~GravitinoMetalake.properties
+      ~GravitinoMetalake.property_equal
+      ~GravitinoMetalake.register_job_template
+      ~GravitinoMetalake.remove_group
+      ~GravitinoMetalake.remove_user
+      ~GravitinoMetalake.revoke_privileges_from_role
+      ~GravitinoMetalake.revoke_roles_from_group
+      ~GravitinoMetalake.revoke_roles_from_user
+      ~GravitinoMetalake.run_job
+      ~GravitinoMetalake.schema
+      ~GravitinoMetalake.set_owner
+      ~GravitinoMetalake.to_dict
+      ~GravitinoMetalake.to_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GravitinoMetalake.API_METALAKES_CATALOGS_PATH
+      ~GravitinoMetalake.API_METALAKES_GROUPS_PATH
+      ~GravitinoMetalake.API_METALAKES_GROUP_PATH
+      ~GravitinoMetalake.API_METALAKES_JOB_RUNS_PATH
+      ~GravitinoMetalake.API_METALAKES_JOB_TEMPLATES_PATH
+      ~GravitinoMetalake.API_METALAKES_OWNERS_PATH
+      ~GravitinoMetalake.API_METALAKES_ROLES_PATH
+      ~GravitinoMetalake.API_METALAKES_ROLE_PATH
+      ~GravitinoMetalake.API_METALAKES_TAGS_PATH
+      ~GravitinoMetalake.API_METALAKES_TAG_PATH
+      ~GravitinoMetalake.API_METALAKES_USERS_PATH
+      ~GravitinoMetalake.API_METALAKES_USER_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_GROUP_GRANT_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_GROUP_REVOKE_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_ROLE_GRANT_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_ROLE_REVOKE_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_USER_GRANT_PATH
+      ~GravitinoMetalake.API_PERMISSIONS_USER_REVOKE_PATH
+      ~GravitinoMetalake.dataclass_json_config
+      ~GravitinoMetalake.rest_client
+   
+   
