@@ -1,0 +1,83 @@
+---
+title: Apache Gravitino 1.3.0 Release Notes
+slug: gravitino-1-3-0-release-notes
+authors: [Minghuang Li]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+We are glad to announce the release of Apache Gravitino 1.3.0! This release focuses on logical view management, hierarchical namespaces, AWS Glue catalog and engine connector support, built-in identity provider support, and Iceberg REST Catalog improvements.
+
+It also includes important behavior changes for credential vending, Docker image layout, and Iceberg REST Catalog upgrades, plus broad improvements across authorization, connectors, clients, Web UI, observability, and deployment.
+
+For the complete list of commits and pull requests included in this release, see the [full changelog](https://github.com/apache/gravitino/compare/v1.2.0...v1.3.0).
+
+## Highlights
+
+### AWS Glue Catalog and Engine Connector Support
+Added AWS Glue Catalog support and Trino/Spark connector adapters, allowing Hive and Iceberg metadata in Glue to be governed and queried through Gravitino.
+
+### Unified View Management
+Added a unified view definition model and view support across Hive, Iceberg, and Apache Paimon, covering APIs, persistence, Java client support, and Web UI management.
+
+### Core Cache and Authorization Consistency
+Improved multi-node cache correctness with version-validated authorization caches, entity-change-log tracking, and global cache invalidation.
+
+### Enterprise-Grade Iceberg REST Catalog
+Added federated Iceberg REST Catalog support, nested multi-level namespaces, vended-credential refresh, freshness-aware table loading, and asynchronous cleanup.
+
+## Upgrade Notes / Behavior Changes
+
+Please review these changes before upgrading; they may require deployment configuration updates or may affect existing behavior.
+
+- **Installation path moved to `/opt/gravitino`**: The Gravitino Docker image home/install path changed from `/root/gravitino` to `/opt/gravitino`, and the published Docker images now match the current Dockerfile and Helm defaults. When upgrading a Helm deployment, update `env.GRAVITINO_HOME` and path references such as `extraVolumeMounts`, for example log mounts, from `/root/gravitino` to `/opt/gravitino`. ([#11272](https://github.com/apache/gravitino/pull/11272), [#11312](https://github.com/apache/gravitino/pull/11312), [#11569](https://github.com/apache/gravitino/pull/11569), [#11671](https://github.com/apache/gravitino/pull/11671))
+- **Iceberg REST Catalog upgrades require a separate database backup**: If the IRC service is backed by its own PostgreSQL database, back it up separately before upgrading. The Helm chart does not perform automatic schema migration; back up the database and apply the upgrade SQL scripts manually. ([#11093](https://github.com/apache/gravitino/pull/11093), [#11120](https://github.com/apache/gravitino/pull/11120))
+- **Sensitive catalog properties are hidden from catalog load responses by default**: Starting in 1.3.0, credentials such as `jdbc-user`, `jdbc-password`, cloud access keys, and similar sensitive catalog properties are excluded from `GET /api/metalakes/{metalake}/catalogs/{catalog}` responses. Clients and connectors should retrieve them through the credential vending API. For short-term compatibility during migration, `gravitino.catalog.credential.backfillToProperties=true` can restore the old behavior, but it exposes credentials in catalog properties and should be disabled after clients are upgraded. ([#11264](https://github.com/apache/gravitino/pull/11264), [#11554](https://github.com/apache/gravitino/pull/11554), [#11669](https://github.com/apache/gravitino/pull/11669), [#11692](https://github.com/apache/gravitino/pull/11692), [#11741](https://github.com/apache/gravitino/pull/11741), [#11745](https://github.com/apache/gravitino/pull/11745))
+- **The web-v2 UI is now the default UI**. ([#11335](https://github.com/apache/gravitino/pull/11335))
+- **Iceberg REST JDBC catalog now defaults to strict mode**, so operations against non-existent namespaces return a 404 rather than silently succeeding. ([#11285](https://github.com/apache/gravitino/pull/11285))
+- **Iceberg table metadata cache is enabled by default**, with an increased default capacity. ([#11133](https://github.com/apache/gravitino/pull/11133))
+- **The default Iceberg JDBC schema version is now v1**. ([#10851](https://github.com/apache/gravitino/pull/10851))
+- **Iceberg REST config endpoint no longer includes the prefix**, per the Iceberg REST spec. ([#10640](https://github.com/apache/gravitino/pull/10640))
+- **Hadoop upgraded from 2.10.2 to 3.3.6**, and the legacy `hadoop2` dependency line was removed. ([#10788](https://github.com/apache/gravitino/pull/10788))
+
+## New Features
+
+- **Logical View Management**: Gravitino now manages logical views as first-class, versioned entities across supported catalogs, with REST APIs, relational persistence, Java client support, Web UI management, and connector support for Hive, Iceberg, Paimon, Spark, and Flink.
+- **Hierarchical Namespaces**: Added multi-level nested namespaces in both the core REST server and the Iceberg REST Catalog, enabling deeper catalog structures and more flexible organization for complex business domains.
+- **AWS Glue catalog and engine connectors**: Added a new AWS Glue catalog with schema/table CRUD, native Iceberg table support through the Glue SDK and Iceberg SDK, integration tests, and Trino/Spark connector adapters.
+- **Built-in identity provider and local authentication**: Added a built-in IdP model, password hashing, user/group/relation storage, REST APIs, and Basic authentication for deployments that do not require an external IdP.
+- **Authorization expansion**: Added function authorization, group-aware ownership, group-inherited roles, scoped delegated privilege management with `MANAGE_GRANTS`, and stronger cache invalidation for authorization state.
+- **Iceberg REST Catalog enhancements**: Added asynchronous hard-deletion cleanup, vended-credential refresh for S3/GCS/OSS/ADLS, registerTable credential refresh, ETag-based freshness-aware table loading, federation handling improvements, and REST backend support.
+- **Python Client Enhancements**: Added authorization management, metadata-object statistics operations, and relational catalog support to the Python client.
+- **Trino Connector Enhancements**: Added `CREATE TABLE AS SELECT`, UDF adaptation, session-credential forwarding, Iceberg snapshot maintenance procedures, and multi-version integration test coverage.
+- **Flink Connector Enhancements**: Added view support for Iceberg and Paimon catalogs and support for Flink 1.19 and 1.20.
+- **Operational Health and Audit Logs**: Added health-check endpoints for Gravitino and IRC, plus a JSON formatter for audit logs.
+- **New Hologres JDBC catalog**: Added schema and table operations, a frontend, and integration tests for governing Alibaba Cloud Hologres.
+
+## Selected Improvements
+
+- **Core server**: Cache consistency was strengthened with entity-change-log polling, `CatalogManager` cache invalidation, retention cleanup, fuller v2 audit operation mapping, and safer schema/table update validation.
+- **Authorization**: Performance and correctness improved through JCasbin cache work, per-request group-owner caching, batch owner lookup, and credential-vending support across Iceberg, Paimon, JDBC, and MySQL connectors.
+- **Iceberg & Iceberg REST Catalog**: Server-side Iceberg 1.11.0, backend HTTP timeout configs, federation refactoring, and client `io-impl` inference from table location.
+- **Catalog & connectors**: Glue complex types, Spark Glue support, Hive view support, Paimon view CRUD, Lance dependency upgrades, and reduced Hive Metastore catalog package size.
+- **Web UI**: The `web-v2` UI became the default and added support for Glue, hierarchical schemas, and relational catalog views.
+- **Table Maintenance Service**: Refined the existing optimizer/table-maintenance workflow with documentation, build, dependency, module-structure, and test/CI cleanup.
+- **Dependency & build**: Hadoop 3.3.6, Log4j 2.25.4, PostgreSQL JDBC 42.7.11, H2 2.2.224, Hive runtime classpath cleanup, branch-1.3 cherry-pick automation, CI acceleration, JaCoCo PR reporting, Helm chart unit tests, and Helm OCI publishing.
+
+## Notable Bug Fixes
+
+- **Catalogs and connectors**: Fixed Glue catalog edge cases, Trino catalog rollback/drop behavior, Trino OAuth2 and remote IRC table handling, Spark PostgreSQL timestamp handling, Flink/Paimon schema and partition handling, Hive metastore hostname/ClassLoader/Kerberos failures, ClickHouse issues, JDBC datetime filtering, Delta table restart metadata, timestamp time-zone consistency, and mixed-case table-name behavior.
+- **Iceberg REST Catalog**: Fixed hierarchical namespace drop handling, unsupported hierarchical-schema returns, authorization skip-check errors, connection pool shutdowns, remote IRC create view/table failures, staged create failures with authorization or credential vending, and AWS credential loading for Trino remote IRC.
+- **Authorization and authentication**: Fixed multi-admin IdP initialization, stale role bindings after privilege revocation, slow `listCatalogs` under authorization, table creation with authorization enabled, view authorization/cache behavior, owner-based `SELECT` checks, first-attempt new-user authorization failures, long-running query reauthorization, OAuth2 token refresh errors, occasional owner-setting failures, and Tag Manager metadata-object lookup errors.
+- **Audit, observability, and health**: Fixed audit timestamp precision, internal cross-server audit attribution, audit file/list/client-IP/formatter gaps, Hadoop metrics scheduler cleanup, and `/health.html` alias handling.
+- **Web UI**: Fixed unsupported-view error popups, relational view listing against unsupported catalogs, table/view navigation 404s, copy SQL behavior, view SQL display, bucketed Iceberg table editing, service-admin metalake creation button loading, and invalid metalake enable/disable switches.
+- **Core and Storage**: Fixed JDBC strict namespace handling, orphaned schema cleanup, table cache config, fileset credential NPEs, S3 fileset macOS bundle/runtime handling, GVFS long-running write failures, and `WebUIFilter` NPEs.
+- **Deployment and Runtime**: Fixed Docker image build inputs, published Docker image install path, Iceberg REST Docker environment mappings, Helm startup command, and JDK 8 client behavior.
+- **Lance**: Fixed declared/materialized table reporting, Web UI column display, runtime dependency size, and `purgeTable` handling.
+
+## Acknowledgements
+
+Thanks to everyone who contributed to the 1.3.0 work — code, reviews, tests, issue triage, design, and feedback.
+
+[A0R0P0I7T](https://github.com/A0R0P0I7T), [a19920714liou](https://github.com/a19920714liou), [a638011](https://github.com/a638011), [Abhijeetsng97](https://github.com/Abhijeetsng97), [Abyss-lord](https://github.com/Abyss-lord), [Aditi102005](https://github.com/Aditi102005), [ajw711](https://github.com/ajw711), [AlexGritA](https://github.com/AlexGritA), [AmitaWhite](https://github.com/AmitaWhite), [anfebladi](https://github.com/anfebladi), [arjnklc](https://github.com/arjnklc), [babumahesh](https://github.com/babumahesh), [bbiiaaoo](https://github.com/bbiiaaoo), [bharos](https://github.com/bharos), [ChisomUma](https://github.com/ChisomUma), [chl-wxp](https://github.com/chl-wxp), [danhuawang](https://github.com/danhuawang), [dennismdejong](https://github.com/dennismdejong), [diqiu50](https://github.com/diqiu50), [FANNG1](https://github.com/FANNG1), [flaming-archer](https://github.com/flaming-archer), [freesinger](https://github.com/freesinger), [gada121982](https://github.com/gada121982), [gauravrudragit](https://github.com/gauravrudragit), [geniusjun](https://github.com/geniusjun), [geyanggang](https://github.com/geyanggang), [griffonbyte](https://github.com/griffonbyte), [hdygxsj](https://github.com/hdygxsj), [hobostay](https://github.com/hobostay), [Jalina2007](https://github.com/Jalina2007), [JandyTenedora](https://github.com/JandyTenedora), [jarredhj0214](https://github.com/jarredhj0214), [jerryshao](https://github.com/jerryshao), [JoegenUSTC](https://github.com/JoegenUSTC), [kdyann](https://github.com/kdyann), [lasdf1234](https://github.com/lasdf1234), [laserninja](https://github.com/laserninja), [LauraXia123](https://github.com/LauraXia123), [lhjchn](https://github.com/lhjchn), [Lucas61000](https://github.com/Lucas61000), [LuciferYang](https://github.com/LuciferYang), [LukasDEDD](https://github.com/LukasDEDD), [markhoerth](https://github.com/markhoerth), [mchades](https://github.com/mchades), [mehakmeet](https://github.com/mehakmeet), [nikitanagar08](https://github.com/nikitanagar08), [ningsh7](https://github.com/ningsh7), [Octavi00](https://github.com/Octavi00), [pandeysambhi](https://github.com/pandeysambhi), [paultanay](https://github.com/paultanay), [pithecuse527](https://github.com/pithecuse527), [puchengy](https://github.com/puchengy), [pythaac](https://github.com/pythaac), [qqqttt123](https://github.com/qqqttt123), [raboof](https://github.com/raboof), [rameshreddy-adutla](https://github.com/rameshreddy-adutla), [raushanprabhakar1](https://github.com/raushanprabhakar1), [robertsilen](https://github.com/robertsilen), [romanhorilyi](https://github.com/romanhorilyi), [roryqi](https://github.com/roryqi), [Roshan1299](https://github.com/Roshan1299), [sachinnn99](https://github.com/sachinnn99), [sekikn](https://github.com/sekikn), [sgedward](https://github.com/sgedward), [shunki-fujita](https://github.com/shunki-fujita), [sunyuhan1998](https://github.com/sunyuhan1998), [tanya0793](https://github.com/tanya0793), [Tarantula471](https://github.com/Tarantula471), [Thakkar-Khushang](https://github.com/Thakkar-Khushang), [TimothyDing](https://github.com/TimothyDing), [tsungchih](https://github.com/tsungchih), [Victory-ET](https://github.com/Victory-ET), [wangxiaojing](https://github.com/wangxiaojing), [whua3](https://github.com/whua3), [xxubai](https://github.com/xxubai), [YuF-9468](https://github.com/YuF-9468), [yunhwane](https://github.com/yunhwane), [yuqi1129](https://github.com/yuqi1129), [yuw1](https://github.com/yuw1), [zhoukangcn](https://github.com/zhoukangcn)
+
+<sub>Apache, Apache Flink, Apache Hive, Apache Hudi, Apache Iceberg, Apache Ranger, Apache Spark, Apache Paimon and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
