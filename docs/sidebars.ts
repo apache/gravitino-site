@@ -608,6 +608,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
+          id: 'security/how-to-use-built-in-idp',
+          label: 'How to use built-in IDP',
+          type: 'doc'
+        },
+        {
           id: 'security/how-to-authenticate',
           label: 'How to authenticate',
           type: 'doc'
