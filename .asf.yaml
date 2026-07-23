@@ -19,14 +19,27 @@ github:
   features:
     issues: true
 
+  rulesets:
+    - name: "Default Branch Protection"
+      type: branch
+      branches:
+        includes:
+          - "~DEFAULT_BRANCH"
+          - "release/*"
+          - "rel/*"
+        excludes: []
+      bypass_teams:
+        - root
+      restrict_deletion: true
+      restrict_force_push: true
 notifications:
   commits: commits@gravitino.apache.org
   issues: commits@gravitino.apache.org
   pullrequests: commits@gravitino.apache.org
 
 staging:
-  profile: ~
-  whoami:  asf-staging
- 
+  profile:
+  whoami: asf-staging
+
 publish:
-  whoami:  asf-site
+  whoami: asf-site
