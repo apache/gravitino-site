@@ -207,7 +207,7 @@ To access S3-stored tables using Spark, you need to configure the SparkSession a
     sparkSession.sql("...");
 ```
 
-:::Note
+:::note
 Please download [hadoop aws jar](https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-aws), [aws java sdk jar](https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-bundle) and place them in the classpath of the Spark. If the JARs are missing, Spark will not be able to access the S3 storage.
 :::
 
