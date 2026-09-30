@@ -7,6 +7,41 @@ tags: [apache,gravitino,metadata,multicloud,model,security,government]
 
 We are glad to announce the release of Apache Gravitino 1.3.1! This is a patch release that focuses on stability, correctness, and security hardening. It carries a large number of fixes across the core server, authorization, Iceberg REST, the Trino, Spark and Flink connectors, and the ClickHouse, Doris, Glue, Hive, JDBC and Lance catalogs. It also completes tag support for views and functions across the Java and Python clients, adds view APIs to the Python client, and introduces extension SPIs that let downstream projects plug in their own catalog adapters.
 
+Although 1.3.1 is a patch release, the Trino and Spark connectors contain several behavior changes that require action before upgrading from 1.3.0. Please read the section below first.
+
+## Upgrade Notes / Behavior Changes
+
+Each of the changes below leaves a cluster looking healthy immediately after the upgrade and fails later, so review them before upgrading rather than after.
+
+### Trino connector
+
+- **Non-REST `lakehouse-iceberg` catalogs are now routed through the Gravitino Iceberg REST service (IRC) by default.** [#12554](https://github.com/apache/gravitino/issues/12554) A metalake with `catalog-backend=jdbc` or `hive` Iceberg catalogs changes behavior on upgrade: the connector now builds an internal Iceberg REST catalog against Gravitino's IRC instead of translating `catalog-backend` into Trino's `jdbc`/`hive_metastore` catalog type. Set `gravitino.iceberg.rest-routing-enabled=false` to keep the previous behavior.
+
+- **If the IRC has authentication enabled, it now requires its own credential, configured separately on every Trino node.** [#12554](https://github.com/apache/gravitino/issues/12554) This credential is not derived from Gravitino catalog properties and does not travel with the generated `CREATE CATALOG` statement. It must be set locally in `catalog.properties` (or through Trino's `${ENV:...}` secret substitution) on the **coordinator and every worker** before upgrading:
+
+  ```properties
+  gravitino.iceberg.rest-catalog.security=OAUTH2
+  gravitino.iceberg.rest-catalog.oauth2.credential=${ENV:IRC_OAUTH_CREDENTIAL}
+  gravitino.iceberg.rest-catalog.oauth2.server-uri=http://your-idp/token
+  gravitino.iceberg.rest-catalog.oauth2.scope=email
+  ```
+
+  Missing this on any node does not fail `CREATE CATALOG` — the catalog registers and lists normally. It surfaces only as an authentication error the first time a query on that node reaches the IRC.
+
+- **The internal JDBC connection credential (`trino.jdbc.password`) is no longer propagated into the catalogs the connector creates.** [#12542](https://github.com/apache/gravitino/issues/12542) It no longer reaches connector logs or the generated catalog properties file.
+
+### Spark connector
+
+- **Non-REST `lakehouse-iceberg` catalogs are now routed through the IRC by default**, matching Trino. [#12709](https://github.com/apache/gravitino/issues/12709) Set `spark.sql.gravitino.iceberg.rest-routing-enabled=false` to keep the previous behavior.
+
+- **When no IRC endpoint can be discovered, the connector now fails with an actionable error instead of silently falling back to Hive/JDBC translation.** [#12709](https://github.com/apache/gravitino/issues/12709) Set `spark.sql.gravitino.iceberg.rest-routing-enabled=false` to restore the old fallback.
+
+- **If the Gravitino client uses OAuth2, the connector reuses that configuration for the IRC connection by default** (`spark.sql.gravitino.iceberg.reuseOAuth2=true`). [#12709](https://github.com/apache/gravitino/issues/12709) Set `reuseOAuth2=false` to configure the IRC's credential separately.
+
+### Trino, Spark and Flink connectors
+
+- **An unconstrained PostgreSQL `NUMERIC` column (no precision or scale) is now read as a string** instead of `Decimal(38, 18)`. [#13040](https://github.com/apache/gravitino/issues/13040) Queries performing arithmetic, aggregation, or comparison on such a column need an explicit cast after upgrading.
+
 ## Improvements
 
 ### Core & Server
@@ -40,6 +75,7 @@ We are glad to announce the release of Apache Gravitino 1.3.1! This is a patch r
   - **Trino connector**: Report catalog registration status through system tables. [#12546](https://github.com/apache/gravitino/issues/12546)
   - **Trino connector**: Route lakehouse-iceberg catalogs through the Iceberg REST server. [#12554](https://github.com/apache/gravitino/issues/12554)
   - **Trino connector**: Support TLS and session role for the internal JDBC connection. [#12542](https://github.com/apache/gravitino/issues/12542)
+  - **Trino connector**: Extend session user forwarding to OAuth2, with per-user credential vending for IRC-backed Iceberg. [#12045](https://github.com/apache/gravitino/pull/12045)
   - **Trino connector**: Log via `io.airlift.log.Logger`. [#12634](https://github.com/apache/gravitino/issues/12634)
   - **Spark connector**: Add a `SparkCatalogExtension` SPI for external catalogs. [#13208](https://github.com/apache/gravitino/issues/13208)
   - **Spark connector**: Route lakehouse-iceberg catalogs through the Iceberg REST server. [#12709](https://github.com/apache/gravitino/issues/12709)
