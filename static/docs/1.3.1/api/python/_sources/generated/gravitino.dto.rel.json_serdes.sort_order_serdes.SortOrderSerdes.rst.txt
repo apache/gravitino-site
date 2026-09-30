@@ -1,0 +1,104 @@
+.. Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+gravitino.dto.rel.json\_serdes.sort\_order\_serdes.SortOrderSerdes
+==================================================================
+
+.. currentmodule:: gravitino.dto.rel.json_serdes.sort_order_serdes
+
+.. autoclass:: SortOrderSerdes
+   :members:                                    
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SortOrderSerdes.__init__
+      ~SortOrderSerdes.deserialize
+      ~SortOrderSerdes.serialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SortOrderSerdes.ASSIGNMENTS_NAME
+      ~SortOrderSerdes.CATALOG_STRING
+      ~SortOrderSerdes.DATA_TYPE
+      ~SortOrderSerdes.DECIMAL_PATTERN
+      ~SortOrderSerdes.DIRECTION
+      ~SortOrderSerdes.EXPRESSION_TYPE
+      ~SortOrderSerdes.EXTERNAL
+      ~SortOrderSerdes.FIELDS
+      ~SortOrderSerdes.FIELD_NAME
+      ~SortOrderSerdes.FIELD_NAMES
+      ~SortOrderSerdes.FIXEDCHAR_PATTERN
+      ~SortOrderSerdes.FIXED_PATTERN
+      ~SortOrderSerdes.FUNCTION_ARGS
+      ~SortOrderSerdes.FUNCTION_NAME
+      ~SortOrderSerdes.IDENTITY_PARTITION_VALUES
+      ~SortOrderSerdes.INDEX_FIELD_NAMES
+      ~SortOrderSerdes.INDEX_NAME
+      ~SortOrderSerdes.INDEX_TYPE
+      ~SortOrderSerdes.LIST
+      ~SortOrderSerdes.LIST_ELEMENT_NULLABLE
+      ~SortOrderSerdes.LIST_ELEMENT_TYPE
+      ~SortOrderSerdes.LIST_PARTITION_LISTS
+      ~SortOrderSerdes.LITERAL_VALUE
+      ~SortOrderSerdes.MAP
+      ~SortOrderSerdes.MAP_KEY_TYPE
+      ~SortOrderSerdes.MAP_VALUE_NULLABLE
+      ~SortOrderSerdes.MAP_VALUE_TYPE
+      ~SortOrderSerdes.NON_PRIMITIVE_TYPES
+      ~SortOrderSerdes.NULL_ORDERING
+      ~SortOrderSerdes.NUMBER
+      ~SortOrderSerdes.NUM_BUCKETS
+      ~SortOrderSerdes.PARTITION_NAME
+      ~SortOrderSerdes.PARTITION_PROPERTIES
+      ~SortOrderSerdes.PARTITION_TYPE
+      ~SortOrderSerdes.PRIMITIVE_AND_NULL_TYPES
+      ~SortOrderSerdes.RANGE_PARTITION_LOWER
+      ~SortOrderSerdes.RANGE_PARTITION_UPPER
+      ~SortOrderSerdes.SORT_TERM
+      ~SortOrderSerdes.STRATEGY
+      ~SortOrderSerdes.STRUCT
+      ~SortOrderSerdes.STRUCT_FIELD_COMMENT
+      ~SortOrderSerdes.STRUCT_FIELD_NAME
+      ~SortOrderSerdes.STRUCT_FIELD_NULLABLE
+      ~SortOrderSerdes.TIMESTAMP_PATTERN
+      ~SortOrderSerdes.TIMESTAMP_TZ_PATTERN
+      ~SortOrderSerdes.TIME_PATTERN
+      ~SortOrderSerdes.TYPE
+      ~SortOrderSerdes.TYPES
+      ~SortOrderSerdes.UNION
+      ~SortOrderSerdes.UNION_TYPES
+      ~SortOrderSerdes.UNPARSED
+      ~SortOrderSerdes.UNPARSED_EXPRESSION
+      ~SortOrderSerdes.UNPARSED_TYPE
+      ~SortOrderSerdes.VARCHAR_PATTERN
+      ~SortOrderSerdes.WIDTH
+   
+   

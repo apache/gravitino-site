@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchFunctionException
+=================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchFunctionException

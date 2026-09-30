@@ -308,11 +308,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'table-maintenance-service/optimizer-quick-start',
-          label: 'Optimizer quick start',
-          type: 'doc'
-        },
-        {
           id: 'table-maintenance-service/optimizer-troubleshooting',
           label: 'Optimizer troubleshooting',
           type: 'doc'
@@ -593,11 +588,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       items: [
         {
-          id: 'security/security',
-          label: 'Overview',
-          type: 'doc'
-        },
-        {
           id: 'security/access-control',
           label: 'Access Control',
           type: 'doc'
@@ -608,8 +598,8 @@ const sidebars: SidebarsConfig = {
           type: 'doc'
         },
         {
-          id: 'security/how-to-use-built-in-idp',
-          label: 'How to use built-in IDP',
+          id: 'security/local-users-and-groups',
+          label: 'Local Users and Groups',
           type: 'doc'
         },
         {

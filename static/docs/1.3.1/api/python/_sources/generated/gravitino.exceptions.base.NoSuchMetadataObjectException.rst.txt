@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchMetadataObjectException
+=======================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchMetadataObjectException
