@@ -1,0 +1,764 @@
+---
+id: test-existing-catalog-connection
+title: "Test an existing catalog connection"
+description: "Runs the provider's smallest meaningful, read-only catalog-level operation using the catalog's stored configuration and effective credentials. Optional proposed catalog changes are applied to a temporary effective configuration for this probe and are not persisted. This fail-fast preflight surfaces configuration and connectivity failures before regular catalog operations, but does not guarantee that every object-level or mutating operation will succeed. Fileset catalogs test all catalog-level `location` and `location-*` targets. Model and Generic catalogs do not support connection testing. Expected test failures are returned as application error codes in an HTTP 200 response. When authorization is enabled, testing with the stored configuration requires the same access as loading the catalog, and testing with proposed changes requires owning the metalake or the catalog, the same as altering it. Callers without that access receive an HTTP 403 response."
+sidebar_label: "Test an existing catalog connection"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: docs/api/rest/gravitino-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test an existing catalog connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/metalakes/{metalake}/catalogs/{catalog}/testConnection"}
+>
+  
+</MethodEndpoint>
+
+
+
+Runs the provider's smallest meaningful, read-only catalog-level operation using the catalog's stored configuration and effective credentials. Optional proposed catalog changes are applied to a temporary effective configuration for this probe and are not persisted. This fail-fast preflight surfaces configuration and connectivity failures before regular catalog operations, but does not guarantee that every object-level or mutating operation will succeed. Fileset catalogs test all catalog-level `location` and `location-*` targets. Model and Generic catalogs do not support connection testing. Expected test failures are returned as application error codes in an HTTP 200 response. When authorization is enabled, testing with the stored configuration requires the same access as loading the catalog, and testing with proposed changes requires owning the metalake or the catalog, the same as altering it. Callers without that access receive an HTTP 403 response.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"metalake","in":"path","description":"The name of the metalake","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"catalog","in":"path","description":"The name of the catalog","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          Optional catalog changes to apply only to this connection test
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  updates
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><div>
+                <span
+                  className={"badge badge--info"}
+                  style={{"marginBottom":"1rem"}}
+                >
+                  oneOf
+                </span><SchemaTabs>
+                  <TabItem
+                    label={"RenameCatalogRequest"}
+                    value={"0-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`rename`]"}
+                      schema={{"type":"string","enum":["rename"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"newName"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The new name of the catalog"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"UpdateCatalogCommentRequest"}
+                    value={"1-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`updateComment`]"}
+                      schema={{"type":"string","enum":["updateComment"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"newComment"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The new comment of the catalog"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"SetCatalogPropertyRequest"}
+                    value={"2-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`setProperty`]"}
+                      schema={{"type":"string","enum":["setProperty"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"property"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The property to set"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The value to set"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem><TabItem
+                    label={"RemoveCatalogPropertyRequest"}
+                    value={"3-item-properties"}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"@type"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={"**Possible values:** [`removeProperty`]"}
+                      schema={{"type":"string","enum":["removeProperty"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"property"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The property to remove"}}
+                    >
+                      
+                    </SchemaItem>
+                  </TabItem>
+                </SchemaTabs>
+              </div><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Connection test completed, including expected test failures
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32","description":"Application status code; 0 indicates success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal exception type when the test fails"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Sanitized failure message"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"type\": \"string\",\n  \"message\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"TestConnectionSuccess"}
+                  value={"TestConnectionSuccess"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"TestConnectionFailed"}
+                  value={"TestConnectionFailed"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1007,\n  \"type\": \"ConnectionFailedException\",\n  \"message\": \"Failed to test Fileset catalog connection: location (access denied)\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"InvalidProbeTarget"}
+                  value={"InvalidProbeTarget"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1001,\n  \"type\": \"IllegalArgumentException\",\n  \"message\": \"Fileset catalog has no catalog-level location to test\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"TestConnectionNotSupported"}
+                  value={"TestConnectionNotSupported"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1006,\n  \"type\": \"UnsupportedOperationException\",\n  \"message\": \"Model catalogs do not define an external catalog-level connection probe\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"CatalogNotFound"}
+                  value={"CatalogNotFound"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"NoSuchCatalogException\",\n  \"message\": \"Catalog my_metalake.my_catalog does not exist\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"CatalogDisabled"}
+                  value={"CatalogDisabled"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1009,\n  \"type\": \"CatalogNotInUseException\",\n  \"message\": \"Catalog my_metalake.my_catalog is not in use\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"400"}
+        value={"400"}
+      >
+        <div>
+          
+          
+          Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure, such as invalid json. Usually serves application/json content, although in some cases simple text/plain content might be returned by the server's middleware.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1003,\n  \"type\": \"BadRequestException\",\n  \"message\": \"Malformed request\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"403"}
+        value={"403"}
+      >
+        <div>
+          
+          
+          Forbidden - The caller cannot load the catalog, or tests proposed changes without owning the metalake or the catalog
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"5xx"}
+        value={"5xx"}
+      >
+        <div>
+          
+          
+          A server-side problem that might not be addressable from the client side. Used for server 5xx errors without more specific documentation in individual routes.
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/vnd.gravitino.v1+json"}
+              value={"application/vnd.gravitino.v1+json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"integer"}
+                        qualifierMessage={"**Possible values:** `>= 1000` and `<= 1100`"}
+                        schema={{"type":"integer","minimum":1000,"maximum":1100,"description":"HTTP response code","example":1002}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Internal type definition of the error"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"A human-readable message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"stack"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string"}}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"string\",\n  \"message\": \"string\",\n  \"stack\": [\n    \"string\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 1002,\n  \"type\": \"RuntimeException\",\n  \"message\": \"Internal Server Error\",\n  \"stack\": [\n    \"java.lang.RuntimeException: Internal Server Error\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
