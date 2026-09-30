@@ -1,0 +1,262 @@
+---
+title: Apache Gravitino 1.3.1
+slug: gravitino-1-3-1-release-notes
+authors: [bharos]
+tags: [apache,gravitino,metadata,multicloud,model,security,government]
+---
+
+We are glad to announce the release of Apache Gravitino 1.3.1! This is a patch release that focuses on stability, correctness, and security hardening. It carries a large number of fixes across the core server, authorization, Iceberg REST, the Trino, Spark and Flink connectors, and the ClickHouse, Doris, Glue, Hive, JDBC and Lance catalogs. It also completes tag support for views and functions across the Java and Python clients, adds view APIs to the Python client, and introduces extension SPIs that let downstream projects plug in their own catalog adapters.
+
+## Improvements
+
+### Core & Server
+
+  - **Locking**: Lock the entity node instead of the schema when creating tables, topics, views and models. [#13206](https://github.com/apache/gravitino/issues/13206)
+  - **Service discovery**: Support an advertised URI for Iceberg REST service discovery. [#13098](https://github.com/apache/gravitino/issues/13098)
+  - **Connection testing**: Allow catalog users to test existing catalog connections with stored configuration. [#13085](https://github.com/apache/gravitino/issues/13085)
+  - **Health reporting**: Report unhealthy status after observed out-of-memory errors. [#13066](https://github.com/apache/gravitino/issues/13066)
+  - **Job status**: Use `entityStore.update()` for job status transitions. [#12669](https://github.com/apache/gravitino/issues/12669)
+  - **Ownership**: Support group owners in `batchGetOwner`. [#12532](https://github.com/apache/gravitino/issues/12532)
+  - **Policies**: Support FUNCTION and VIEW metadata object policies. [#12501](https://github.com/apache/gravitino/issues/12501)
+  - **Catalogs**: Support connection tests with proposed changes. [#12794](https://github.com/apache/gravitino/issues/12794)
+  - **Catalogs**: Support testing existing catalog connections. [#12552](https://github.com/apache/gravitino/issues/12552)
+  - **Indexes**: Add a `properties` field to `TableChange.AddIndex` for custom index parameters. [#11946](https://github.com/apache/gravitino/issues/11946)
+  - **Security**: Harden JDBC unsafe-parameter detection against `connectionProperties` smuggling. [#12024](https://github.com/apache/gravitino/issues/12024)
+
+### Authorization
+
+  - **Performance**: Optimize list authorization. [#11775](https://github.com/apache/gravitino/issues/11775)
+  - **Performance**: Improve the JCasbin permission checks. [#12037](https://github.com/apache/gravitino/issues/12037)
+  - **Diagnostics**: Show the full `NameIdentifier` in denial messages. [#12670](https://github.com/apache/gravitino/issues/12670)
+  - **Refactor**: Reuse the shared user and group authorization expressions. [#12973](https://github.com/apache/gravitino/issues/12973)
+  - **Refactor**: Reuse the shared table authorization expressions. [#12875](https://github.com/apache/gravitino/issues/12875)
+
+### Catalogs & Connectors
+
+  - **Trino connector**: Support Starburst SPI compatibility. [#12526](https://github.com/apache/gravitino/issues/12526)
+  - **Trino connector**: Add a `CatalogConnectorAdapterProvider` SPI for external adapters. [#13211](https://github.com/apache/gravitino/issues/13211)
+  - **Trino connector**: Make `gravitino.metalake` optional. [#13301](https://github.com/apache/gravitino/issues/13301)
+  - **Trino connector**: Defer Iceberg REST passthrough metadata initialization. [#13194](https://github.com/apache/gravitino/issues/13194)
+  - **Trino connector**: Report catalog registration status through system tables. [#12546](https://github.com/apache/gravitino/issues/12546)
+  - **Trino connector**: Route lakehouse-iceberg catalogs through the Iceberg REST server. [#12554](https://github.com/apache/gravitino/issues/12554)
+  - **Trino connector**: Support TLS and session role for the internal JDBC connection. [#12542](https://github.com/apache/gravitino/issues/12542)
+  - **Trino connector**: Log via `io.airlift.log.Logger`. [#12634](https://github.com/apache/gravitino/issues/12634)
+  - **Spark connector**: Add a `SparkCatalogExtension` SPI for external catalogs. [#13208](https://github.com/apache/gravitino/issues/13208)
+  - **Spark connector**: Route lakehouse-iceberg catalogs through the Iceberg REST server. [#12709](https://github.com/apache/gravitino/issues/12709)
+  - **Flink connector**: Recognize catalog types from external `BaseCatalogFactory` jars. [#13213](https://github.com/apache/gravitino/issues/13213)
+  - **Flink connector**: Allow catalogs to customize Flink type conversion. [#12961](https://github.com/apache/gravitino/issues/12961)
+  - **JDBC catalog**: Fail fast with a clear error when the JDBC driver is missing. [#13192](https://github.com/apache/gravitino/issues/13192)
+  - **ClickHouse**: Support setting the data skipping index type. [#11912](https://github.com/apache/gravitino/issues/11912)
+  - **Doris**: Upgrade the type system for Doris 3.0+/4.0.x compatibility. [#11590](https://github.com/apache/gravitino/issues/11590)
+
+### Clients
+
+  - **Java client**: Support tags for views and functions. [#11902](https://github.com/apache/gravitino/issues/11902)
+  - **Python client**: Add view API definitions. [#12039](https://github.com/apache/gravitino/issues/12039)
+  - **Python client**: Implement client-side view models. [#12089](https://github.com/apache/gravitino/issues/12089)
+  - **Python client**: Add view create/drop operations. [#12116](https://github.com/apache/gravitino/issues/12116)
+  - **Python client**: Add view query/alter operations. [#12158](https://github.com/apache/gravitino/issues/12158)
+  - **Python client**: Support tags for views and functions. [#12181](https://github.com/apache/gravitino/issues/12181)
+  - **Tags**: Support tags for views and functions. [#11844](https://github.com/apache/gravitino/issues/11844)
+
+### MCP Server
+
+  - **Authentication**: Fetch and refresh OAuth client-credentials tokens. [#12530](https://github.com/apache/gravitino/issues/12530)
+  - **Security**: Allow the MCP server image to run as a non-root user. [#12448](https://github.com/apache/gravitino/issues/12448)
+
+### Web UI
+
+  - **Session**: Expose UI session timeout settings through server configuration. [#12588](https://github.com/apache/gravitino/issues/12588)
+  - **Login**: Support built-in IdP basic login. [#11681](https://github.com/apache/gravitino/issues/11681)
+
+### Docker & Build
+
+  - **Connector images**: Add UBI-based Docker images for the Trino, Flink and Spark connectors. [#13265](https://github.com/apache/gravitino/issues/13265)
+  - **Connector images**: Bundle the connector image README into the Trino, Flink and Spark images. [#13461](https://github.com/apache/gravitino/issues/13461)
+  - **Kerberos Hive**: Update the `kerberos-hive` image to 0.1.7. [#12730](https://github.com/apache/gravitino/issues/12730)
+  - **Build**: Optimize build test execution. [#12583](https://github.com/apache/gravitino/issues/12583)
+
+### Documentation
+
+  - Restructure the fileset catalog pages around a runnable path. [#12434](https://github.com/apache/gravitino/issues/12434)
+  - Update the security and access control pages. [#12391](https://github.com/apache/gravitino/issues/12391)
+  - Document the health and readiness endpoints. [#12402](https://github.com/apache/gravitino/issues/12402)
+  - Update the server configuration and relational backend storage pages. [#12291](https://github.com/apache/gravitino/issues/12291)
+  - Update the Trino Iceberg REST engine page. [#12242](https://github.com/apache/gravitino/issues/12242)
+  - Update the Doris catalog documentation for 3.0.x/4.0.x compatibility. [#11995](https://github.com/apache/gravitino/issues/11995)
+  - Document the Trino connector `authType=basic` `forwardUser` limitation. [#13472](https://github.com/apache/gravitino/issues/13472)
+
+## Bug Fixes
+
+### Core & Server
+
+  - Keep column ids stable and pass the new schema on cross-schema table rename. [#13309](https://github.com/apache/gravitino/issues/13309)
+  - Keep column tags consistent across column drop and rename. [#13304](https://github.com/apache/gravitino/issues/13304)
+  - Clean up relations, owner and privileges when deleting a tag or policy. [#13311](https://github.com/apache/gravitino/issues/13311)
+  - Validate name and comment length before persisting entities. [#13312](https://github.com/apache/gravitino/issues/13312)
+  - Close catalogs when force-dropping a metalake. [#13296](https://github.com/apache/gravitino/issues/13296)
+  - Clean up missing schemas on explicit cascading drops. [#13278](https://github.com/apache/gravitino/issues/13278)
+  - Batch table column metadata inserts. [#13273](https://github.com/apache/gravitino/issues/13273)
+  - Keep plugin privileges when the external drop returns false. [#13174](https://github.com/apache/gravitino/issues/13174)
+  - Track local jobs only by their owning executor in multi-node deployments. [#13146](https://github.com/apache/gravitino/issues/13146)
+  - Reject Spark jobs at submission when Spark is not available in the local job executor. [#13131](https://github.com/apache/gravitino/issues/13131)
+  - Add a PostgreSQL group-role batch upsert. [#13035](https://github.com/apache/gravitino/issues/13035)
+  - Restore event dispatcher ordering. [#13007](https://github.com/apache/gravitino/issues/13007)
+  - Preserve errors thrown by `PrincipalUtils.doAs`. [#12975](https://github.com/apache/gravitino/issues/12975)
+  - Release the `ClassLoader` of a dropped catalog. [#12986](https://github.com/apache/gravitino/issues/12986)
+  - Defer catalog wrapper cleanup with an operation lease. [#12403](https://github.com/apache/gravitino/issues/12403)
+  - Prevent silent authorization updates on closed catalogs. [#12405](https://github.com/apache/gravitino/issues/12405)
+  - Fix built-in policy `supportedObjectTypes` validation and error message. [#12685](https://github.com/apache/gravitino/issues/12685)
+  - Fix fileset schema location resolution when schema properties omit location. [#12654](https://github.com/apache/gravitino/issues/12654)
+  - Cascade cache invalidation to hierarchical schema descendants. [#12416](https://github.com/apache/gravitino/issues/12416)
+  - Make the drop-event log throttling atomic. [#10169](https://github.com/apache/gravitino/issues/10169)
+  - Make PostgreSQL table version soft delete idempotent. [#12238](https://github.com/apache/gravitino/issues/12238)
+  - Refresh the built-in job template when content drifts even if the version is unchanged. [#11976](https://github.com/apache/gravitino/issues/11976)
+  - Sort column ordinal positions while fetching from the entity store. [#11980](https://github.com/apache/gravitino/issues/11980)
+  - Do not wrap plain `ClassNotFoundException` in `IsolatedClassLoader`. [#12014](https://github.com/apache/gravitino/issues/12014)
+  - Tolerate concurrent directory creation instead of failing spuriously. [#11939](https://github.com/apache/gravitino/issues/11939)
+  - Inject table hook dependencies. [#12201](https://github.com/apache/gravitino/issues/12201)
+
+### Server & REST API
+
+  - Avoid exposing missing metalakes in authorization errors. [#13360](https://github.com/apache/gravitino/issues/13360)
+  - Avoid exposing service admins publicly. [#12777](https://github.com/apache/gravitino/issues/12777)
+  - Check the object before listing roles. [#13326](https://github.com/apache/gravitino/issues/13326)
+  - Suppress verbose JCasbin authorization logs. [#13270](https://github.com/apache/gravitino/issues/13270)
+  - Return 400 for invalid metadata object types. [#12727](https://github.com/apache/gravitino/issues/12727)
+  - Return accurate HTTP statuses for unsupported operations. [#12879](https://github.com/apache/gravitino/issues/12879)
+  - Return JSON errors for the whole pre-resource-method `WebApplicationException` family. [#12783](https://github.com/apache/gravitino/issues/12783)
+  - Move malformed path-parameter handling to a Jersey `ExceptionMapper`. [#12783](https://github.com/apache/gravitino/issues/12783)
+  - Reject null request bodies in the remaining REST operations. [#12834](https://github.com/apache/gravitino/issues/12834)
+  - Reject null request bodies before `validate()` in create/register/add operations. [#12788](https://github.com/apache/gravitino/issues/12788)
+  - Handle null request bodies in `createView`. [#12769](https://github.com/apache/gravitino/issues/12769)
+  - Cover root-mounted servlets with the request-context, audit, and custom filter chain. [#12760](https://github.com/apache/gravitino/issues/12760)
+  - Report dotted metadata names clearly. [#12977](https://github.com/apache/gravitino/issues/12977)
+  - Validate the statistic name length. [#12887](https://github.com/apache/gravitino/issues/12887)
+  - Return visible service admins as a list. [#11836](https://github.com/apache/gravitino/issues/11836)
+  - Add `@ResponseMetered` to `JobOperations#cancelJob`. [#13041](https://github.com/apache/gravitino/issues/13041)
+
+### Authorization & Audit
+
+  - Invalidate function grants after drop. [#12871](https://github.com/apache/gravitino/issues/12871)
+  - Authorize generic view operations. [#12729](https://github.com/apache/gravitino/issues/12729)
+  - Allow catalog owners to grant schema privileges. [#12269](https://github.com/apache/gravitino/issues/12269)
+  - Allow getting the owner of a disabled metalake. [#12848](https://github.com/apache/gravitino/issues/12848)
+  - Evaluate list denies by access path. [#12837](https://github.com/apache/gravitino/issues/12837)
+  - Align group load authorization. [#12112](https://github.com/apache/gravitino/issues/12112)
+  - Add the missing `supportsScheme` to `JdbcCredentialProvider`. [#12642](https://github.com/apache/gravitino/issues/12642)
+  - Reduce owner lookups in user and group lists. [#13261](https://github.com/apache/gravitino/issues/13261)
+  - Handle a missing parent catalog during metadata id resolution. [#12214](https://github.com/apache/gravitino/issues/12214)
+  - Stop a lost JCasbin role policy load from denying forever. [#12230](https://github.com/apache/gravitino/issues/12230)
+  - Clear only role policies on cache eviction. [#12169](https://github.com/apache/gravitino/issues/12169)
+  - Capture and redact request query parameters in audit log entries. [#12872](https://github.com/apache/gravitino/issues/12872)
+  - Include role names in role assignment logs. [#12885](https://github.com/apache/gravitino/issues/12885)
+  - Suppress internal operation audit events. [#12892](https://github.com/apache/gravitino/issues/12892)
+  - Validate and authorize lineage events. [#12840](https://github.com/apache/gravitino/issues/12840)
+
+### Iceberg
+
+  - Discard builder changes when filtering snapshots by refs. [#13452](https://github.com/apache/gravitino/issues/13452)
+  - Set `metadata_location` when loading a table with `snapshots=refs`. [#13290](https://github.com/apache/gravitino/issues/13290)
+  - Map PostgreSQL JDBC auth failures to `ConnectionFailedException`. [#13033](https://github.com/apache/gravitino/issues/13033)
+  - Forward the access-delegation header on federated `loadTable`. [#12949](https://github.com/apache/gravitino/issues/12949)
+  - Share the managed memory catalog in auxiliary mode. [#12851](https://github.com/apache/gravitino/issues/12851)
+  - Inject the GCS FileIO token from `gcs-service-account-file`. [#9418](https://github.com/apache/gravitino/issues/9418)
+  - Support Azure service principal authentication for ADLS FileIO. [#12958](https://github.com/apache/gravitino/issues/12958)
+  - Fix the JDBC `CommunicationsException` after idle timeout for the MySQL backend. [#12589](https://github.com/apache/gravitino/issues/12589)
+  - Relocate Jackson in the Iceberg Aliyun bundle. [#12357](https://github.com/apache/gravitino/issues/12357)
+
+### Catalogs
+
+  - **Hive**: Support NOT NULL and DEFAULT column constraints on the Hive 3 metastore. [#13350](https://github.com/apache/gravitino/issues/13350)
+  - **Hive**: Skip the HMS stats update for property/comment-only `alterTable`. [#13020](https://github.com/apache/gravitino/issues/13020)
+  - **Hive**: Close the Log4j `LoggerContext` in `HiveClientClassLoader#close()` to prevent a Metaspace leak. [#12246](https://github.com/apache/gravitino/issues/12246)
+  - **Glue**: Fail fast and give actionable errors on missing AWS credentials. [#13012](https://github.com/apache/gravitino/issues/13012)
+  - **Glue**: Report rejected AWS credentials clearly. [#13369](https://github.com/apache/gravitino/issues/13369)
+  - **Glue**: Include the AWS error detail in Glue failure messages. [#12990](https://github.com/apache/gravitino/issues/12990)
+  - **Glue**: Do not expose Glue `VIRTUAL_VIEW` objects as tables. [#13010](https://github.com/apache/gravitino/issues/13010)
+  - **Glue**: Derive the table location from the Glue database `LocationUri`. [#12996](https://github.com/apache/gravitino/issues/12996)
+  - **Glue**: Ignore blank AWS static credentials. [#12270](https://github.com/apache/gravitino/issues/12270)
+  - **AWS**: Support MinIO role ARNs in IRSA credential vending. [#11883](https://github.com/apache/gravitino/issues/11883)
+  - **ClickHouse**: Escape single quotes in database and table name SQL to prevent injection. [#11839](https://github.com/apache/gravitino/issues/11839)
+  - **ClickHouse**: Fix type conversion for Decimal, DateTime64, LowCardinality, and IPv4/IPv6. [#11879](https://github.com/apache/gravitino/issues/11879)
+  - **ClickHouse**: Fix GraphiteMergeTree classification and add missing type mappings. [#11910](https://github.com/apache/gravitino/issues/11910)
+  - **ClickHouse**: Distinguish MATERIALIZED/ALIAS from DEFAULT via `default_kind`. [#11881](https://github.com/apache/gravitino/issues/11881)
+  - **ClickHouse**: Preserve the SETTINGS clause on table round-trip. [#11880](https://github.com/apache/gravitino/issues/11880)
+  - **ClickHouse**: Preserve the MergeTree engine parameters through a create-load round-trip. [#12273](https://github.com/apache/gravitino/issues/12273)
+  - **ClickHouse**: Preserve the composite primary key on table load. [#12748](https://github.com/apache/gravitino/issues/12748)
+  - **ClickHouse**: Propagate a clustered table rename. [#12761](https://github.com/apache/gravitino/issues/12761)
+  - **ClickHouse**: Read the sort key from `system.tables`. [#11972](https://github.com/apache/gravitino/issues/11972)
+  - **ClickHouse**: Support user-defined GRANULARITY and validate the shard key type. [#11802](https://github.com/apache/gravitino/issues/11802)
+  - **ClickHouse**: Reject varchar columns without length support.
+  - **Doris**: Fix partition parsing for the Doris 3.0+ format. [#11590](https://github.com/apache/gravitino/issues/11590)
+  - **Doris**: Fix INDEX syntax and support AUTO_INCREMENT for Doris 3.0+. [#11590](https://github.com/apache/gravitino/issues/11590)
+  - **Doris**: Validate ADD INDEX fields. [#12736](https://github.com/apache/gravitino/issues/12736)
+  - **Doris**: Support the replication allocation property. [#11829](https://github.com/apache/gravitino/issues/11829)
+  - **Doris**: Handle missing-table errors from DROP TABLE. [#13343](https://github.com/apache/gravitino/issues/13343)
+  - **Doris**: Preserve table comments when loading tables.
+  - **JDBC**: Resolve PostgreSQL database names before accepting catalogs. [#12938](https://github.com/apache/gravitino/issues/12938)
+  - **JDBC**: Quote comments in generated DDL. [#12007](https://github.com/apache/gravitino/issues/12007)
+  - **PostgreSQL**: Report unconstrained NUMERIC as an external type. [#13040](https://github.com/apache/gravitino/issues/13040)
+  - **PostgreSQL**: Quote the table name in ALTER statements for mixed-case tables. [#13024](https://github.com/apache/gravitino/issues/13024)
+  - **MySQL**: Preserve the full type declaration for lossy MySQL column types. [#13032](https://github.com/apache/gravitino/issues/13032)
+  - **Catalogs**: Return `jdbc-user` in plaintext for Iceberg and Paimon. [#13151](https://github.com/apache/gravitino/issues/13151)
+  - **Catalogs**: Preserve upstream error messages when wrapping exceptions. [#12998](https://github.com/apache/gravitino/issues/12998)
+  - **Catalogs**: Inspect thread targets without resolving subclass fields. [#13075](https://github.com/apache/gravitino/issues/13075)
+
+### Lance
+
+  - Authenticate the Lance REST service to the Gravitino server. [#12255](https://github.com/apache/gravitino/issues/12255)
+  - Reject empty storage option keys. [#13189](https://github.com/apache/gravitino/issues/13189)
+  - Prevent pagination index overflow. [#13185](https://github.com/apache/gravitino/issues/13185)
+  - Reject nonempty Arrow input before table creation. [#12988](https://github.com/apache/gravitino/issues/12988)
+  - Hydrate an empty schema before table alteration. [#12407](https://github.com/apache/gravitino/issues/12407)
+  - Validate the identifier in `ListNamespaces` at schema level. [#12468](https://github.com/apache/gravitino/issues/12468)
+  - Retry the repair-on-load metadata update on an optimistic-lock conflict. [#11891](https://github.com/apache/gravitino/issues/11891)
+  - Add an external table guard to `deregisterTable`. [#11893](https://github.com/apache/gravitino/issues/11893)
+
+### Connectors
+
+  - **Trino**: Fail fast when Iceberg REST routing has no usable authentication. [#13357](https://github.com/apache/gravitino/issues/13357)
+  - **Trino**: Enable Iceberg REST per-user sessions only under OAuth2. [#13068](https://github.com/apache/gravitino/issues/13068)
+  - **Trino**: Reuse service metadata when the user token is missing. [#13096](https://github.com/apache/gravitino/issues/13096)
+  - **Trino**: Build a complete function specification for SQL UDFs. [#13139](https://github.com/apache/gravitino/issues/13139)
+  - **Trino**: Keep the engine types when applying projections. [#12518](https://github.com/apache/gravitino/issues/12518)
+  - **Flink**: Use the catalog database instead of the schema for PostgreSQL JDBC table scans. [#12929](https://github.com/apache/gravitino/issues/12929)
+  - **Flink**: Skip a no-op table alter to avoid "updates must not be empty". [#12734](https://github.com/apache/gravitino/issues/12734)
+  - **Flink**: Exclude vulnerable log4j 2.x from the `hive-common` compile classpath. [#11899](https://github.com/apache/gravitino/issues/11899)
+
+### Maintenance Jobs
+
+  - Authenticate `builtin-iceberg-update-stats` against secured servers. [#13137](https://github.com/apache/gravitino/issues/13137)
+  - Fail Iceberg jobs when the Spark runtime is missing. [#13133](https://github.com/apache/gravitino/issues/13133)
+
+### MCP Server
+
+  - Unify the statistics metadata full-name parameter. [#13122](https://github.com/apache/gravitino/issues/13122)
+  - Return tag details when listing metadata tags. [#13120](https://github.com/apache/gravitino/issues/13120)
+  - Preserve the authorization scheme for static credentials. [#12447](https://github.com/apache/gravitino/issues/12447)
+  - Invoke the isort/black console scripts and pin their versions. [#12660](https://github.com/apache/gravitino/issues/12660)
+
+### Clients & Web UI
+
+  - **Python client**: Serialize the `property` field in `RemoveCatalogPropertyRequest`. [#12324](https://github.com/apache/gravitino/issues/12324)
+  - **OpenAPI**: Restore the `ExternalType` variant to `DataType`. [#11985](https://github.com/apache/gravitino/issues/11985)
+  - **OpenAPI**: Repair three codegen-breaking defects invisible to lint. [#11985](https://github.com/apache/gravitino/issues/11985)
+  - **OpenAPI**: Drop a stray OpenAPI 3.1 null token from the statistics value. [#11985](https://github.com/apache/gravitino/issues/11985)
+  - **Common**: Reject out-of-range numeric statistic values. [#12598](https://github.com/apache/gravitino/issues/12598)
+  - **Common**: Validate statistic entries in `PartitionStatisticsUpdateDTO`. [#12657](https://github.com/apache/gravitino/issues/12657)
+  - **Web UI**: Gate the metalake fetch until the OAuth token is ready. [#12200](https://github.com/apache/gravitino/issues/12200)
+  - **Web UI**: Fix retaining the previous sub-path when switching filesets. [#12289](https://github.com/apache/gravitino/issues/12289)
+
+### Licensing & Packaging
+
+  - Correct legal documents in the Maven artifacts. [#12755](https://github.com/apache/gravitino/issues/12755)
+  - Declare undeclared bundled components in `LICENSE.bin` and `LICENSE.trino`. [#13451](https://github.com/apache/gravitino/issues/13451)
+  - Correct bundled component entries in the LICENSE and NOTICE files. [#13253](https://github.com/apache/gravitino/issues/13253)
+  - Add the bundled Google auth and HTTP Client jars to the LICENSE files. [#13100](https://github.com/apache/gravitino/issues/13100)
+  - Exclude the optional WildFly OpenSSL implementation. [#12755](https://github.com/apache/gravitino/issues/12755)
+  - Upgrade the bundled PostgreSQL JDBC driver. [#11795](https://github.com/apache/gravitino/issues/11795)
+  - Bind-mount `packages/` in `kerberos-hive` so the archives stop shipping in the image. [#12730](https://github.com/apache/gravitino/issues/12730)
+  - Prevent an empty classpath entry in `common.sh`. [#12444](https://github.com/apache/gravitino/issues/12444)
+  - Polish log and error message quality across the Java modules. [#10387](https://github.com/apache/gravitino/issues/10387)
