@@ -1,0 +1,6 @@
+gravitino.exceptions.base.TagAlreadyAssociatedException
+=======================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: TagAlreadyAssociatedException

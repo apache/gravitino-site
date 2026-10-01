@@ -1,0 +1,6 @@
+gravitino.exceptions.base.JobTemplateAlreadyExistsException
+===========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: JobTemplateAlreadyExistsException

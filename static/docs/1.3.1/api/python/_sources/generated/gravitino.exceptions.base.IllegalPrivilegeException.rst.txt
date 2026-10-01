@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalPrivilegeException
+===================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalPrivilegeException

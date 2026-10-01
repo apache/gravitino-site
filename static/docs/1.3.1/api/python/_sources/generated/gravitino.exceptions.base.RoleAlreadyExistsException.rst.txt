@@ -1,0 +1,6 @@
+gravitino.exceptions.base.RoleAlreadyExistsException
+====================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: RoleAlreadyExistsException

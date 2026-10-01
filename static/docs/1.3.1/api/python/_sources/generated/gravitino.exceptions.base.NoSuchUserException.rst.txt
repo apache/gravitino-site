@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchUserException
+=============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchUserException

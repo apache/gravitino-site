@@ -1,0 +1,6 @@
+gravitino.filesystem.gvfs\_utils.extract\_identifier
+====================================================
+
+.. currentmodule:: gravitino.filesystem.gvfs_utils
+
+.. autofunction:: extract_identifier

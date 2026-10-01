@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchGroupException
+==============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchGroupException

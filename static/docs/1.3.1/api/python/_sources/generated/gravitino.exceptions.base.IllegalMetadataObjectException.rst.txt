@@ -1,0 +1,6 @@
+gravitino.exceptions.base.IllegalMetadataObjectException
+========================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: IllegalMetadataObjectException
