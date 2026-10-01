@@ -1,0 +1,6 @@
+gravitino.exceptions.base.GravitinoRuntimeException
+===================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: GravitinoRuntimeException

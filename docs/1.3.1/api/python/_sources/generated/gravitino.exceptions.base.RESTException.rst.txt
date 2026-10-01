@@ -1,0 +1,6 @@
+gravitino.exceptions.base.RESTException
+=======================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: RESTException

@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NonEmptySchemaException
+=================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NonEmptySchemaException

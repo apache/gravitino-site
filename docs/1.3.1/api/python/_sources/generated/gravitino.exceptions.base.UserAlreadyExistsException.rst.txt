@@ -1,0 +1,6 @@
+gravitino.exceptions.base.UserAlreadyExistsException
+====================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: UserAlreadyExistsException

@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NoSuchViewException
+=============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NoSuchViewException

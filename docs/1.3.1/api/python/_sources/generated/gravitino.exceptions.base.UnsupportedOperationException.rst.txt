@@ -1,0 +1,6 @@
+gravitino.exceptions.base.UnsupportedOperationException
+=======================================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: UnsupportedOperationException

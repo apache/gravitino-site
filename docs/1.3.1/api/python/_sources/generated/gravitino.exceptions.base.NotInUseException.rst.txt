@@ -1,0 +1,6 @@
+gravitino.exceptions.base.NotInUseException
+===========================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: NotInUseException

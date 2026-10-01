@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-filesets" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Filesets | Apache Gravitino</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gravitino.apache.org/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://gravitino.apache.org/img/social-card.png"><meta data-rh="true" property="og:url" content="https://gravitino.apache.org/docs/next/filesets"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Filesets | Apache Gravitino"><meta data-rh="true" name="description" content="Introduction"><meta data-rh="true" property="og:description" content="Introduction"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gravitino.apache.org/docs/next/filesets"><link data-rh="true" rel="alternate" href="https://gravitino.apache.org/docs/next/filesets" hreflang="en"><link data-rh="true" rel="alternate" href="https://gravitino.apache.org/docs/next/filesets" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Apache Gravitino RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Apache Gravitino Atom Feed">
+
+
+
+
+
+
+
+
+
+<script src="/js/matomo.js" async></script><link rel="stylesheet" href="/assets/css/styles.697f633f.css">
+<script src="/assets/js/runtime~main.d60a9791.js" defer="defer"></script>
+<script src="/assets/js/main.b3725cab.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_Qjzc" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Logo" class="themedComponent_MU6j themedComponent--light_uY59"><img src="/img/logo.svg" alt="Logo" class="themedComponent_MU6j themedComponent--dark_eHrL"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">Apache Gravitino</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/community">Community</a><a class="navbar__item navbar__link" href="/contrib">Contributing</a><a class="navbar__item navbar__link" href="/downloads">Downloads</a><a class="navbar__item navbar__link" href="/docs/next/">Docs</a><a class="navbar__item navbar__link" href="/blog">Blog</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/docs/next/filesets">ASF</a><ul class="dropdown__menu"><li><a href="https://www.apache.org/" target="_blank" rel="noopener noreferrer" class="dropdown__link">Foundation</a></li><li><a href="https://www.apache.org/licenses/" target="_blank" rel="noopener noreferrer" class="dropdown__link">License</a></li><li><a href="https://www.apache.org/events/current-event.html" target="_blank" rel="noopener noreferrer" class="dropdown__link">Events</a></li><li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank" rel="noopener noreferrer" class="dropdown__link">Privacy</a></li><li><a href="https://www.apache.org/security/" target="_blank" rel="noopener noreferrer" class="dropdown__link">Security</a></li><li><a href="https://www.apache.org/foundation/sponsorship.html" target="_blank" rel="noopener noreferrer" class="dropdown__link">Sponsorship</a></li><li><a href="https://www.apache.org/foundation/thanks.html" target="_blank" rel="noopener noreferrer" class="dropdown__link">Thanks</a></li><li><a href="https://github.com/apache/gravitino/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" class="dropdown__link">Code of Conduct</a></li></ul></div><a href="https://github.com/apache/gravitino" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_GmFD"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_hdOq"><div class="docsWrapper_LOl2"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_JR1m" type="button"></button><div class="docRoot_E69I"><main class="docMainContainer_El0Y docMainContainerEnhanced_TKn3"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_SzeC"><div class="theme-doc-version-banner alert alert--warning margin-bottom--md" role="alert"><div>This is unreleased documentation for <!-- -->Apache Gravitino<!-- --> <b>Next</b> version.</div><div class="margin-top--md">For up-to-date documentation, see the <b><a href="/docs/1.3.1/filesets">latest version</a></b> (<!-- -->1.3.1<!-- -->).</div></div><div class="docItemContainer_b5D9"><article><span class="theme-doc-version-badge badge badge--secondary">Version: Next</span><div class="tocCollapsible_PLQ1 theme-doc-toc-mobile tocMobile_V1wS"><button type="button" class="clean-btn tocCollapsibleButton_PUtM">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Filesets</h1></header><div class="row"><div class="col col--12 markdown"><h2 class="anchor anchorWithStickyNavbar_OkeQ" id="introduction">Introduction<a class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" href="/docs/next/filesets#introduction">​</a></h2>
+<p>A fileset is a named pointer to files. Where a table describes rows and columns, a fileset describes
+a location, so unstructured and semi-structured data gets the same treatment as everything else in
+the catalog: a name, a place in the hierarchy, tags, policies, and an owner.</p>
+<p>The point is indirection. Code that reads a fileset by name does not carry a bucket path, so moving
+data between clusters or storage systems changes the fileset rather than every job that reads it.</p>
+<p>That indirection is delivered by the Gravitino Virtual File System, or GVFS. GVFS is a filesystem
+implementation that resolves a fileset name to its storage location and then reads and writes
+through to the underlying system, whether that is HDFS, S3, GCS, ADLS, or OSS. Paths take the form
+<code>gvfs://fileset/{catalog_name}/{schema_name}/{fileset_name}</code>, so a Spark job, a pandas script, or a
+Hadoop shell command reads a catalog name rather than a bucket URL.</p>
+<p>GVFS comes in two implementations. The Java one implements the Hadoop Compatible File System
+interface, so anything that already speaks HDFS paths works, and it requires Hadoop 3.3.1 or later.
+The Python one is built on fsspec, so it works with pandas, PyArrow, and anything else in that
+ecosystem. There is also a FUSE implementation for mounting a fileset as a local directory.</p>
+<p>Credentials are the other half of it. A caller reaching storage through GVFS can be given
+short-lived credentials vended by Gravitino rather than holding long-lived cloud keys of its own,
+which is what makes the indirection a governance boundary rather than only a convenience. See
+<a href="/docs/next/security/credential-vending">Credential vending</a>.</p>
+<p>Filesets live in a schema inside a fileset catalog. Gravitino manages that catalog itself rather
+than federating an external one, so no provider is needed when creating it.</p>
+<h2 class="anchor anchorWithStickyNavbar_OkeQ" id="quick-start">Quick Start<a class="hash-link" aria-label="Direct link to Quick Start" title="Direct link to Quick Start" href="/docs/next/filesets#quick-start">​</a></h2>
+<p><strong>1. Create a fileset catalog and schema.</strong> See
+<a href="/docs/next/catalogs-and-schemas">Catalogs and Schemas</a>. A fileset catalog usually carries a base
+<code>location</code>, and schemas can narrow it further.</p>
+<p><strong>2. Create the fileset.</strong> Give it a name, a type, and a storage location. Creating a managed
+fileset creates the directory; pointing at an existing path makes it external.</p>
+<p><strong>3. Read it by name.</strong> Engines reach the files through GVFS or the client rather than the raw path.
+See <a href="/docs/next/how-to-use-gvfs">How to use GVFS</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_OkeQ" id="the-fileset-model">The Fileset Model<a class="hash-link" aria-label="Direct link to The Fileset Model" title="Direct link to The Fileset Model" href="/docs/next/filesets#the-fileset-model">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_OkeQ" id="managed-and-external">Managed and External<a class="hash-link" aria-label="Direct link to Managed and External" title="Direct link to Managed and External" href="/docs/next/filesets#managed-and-external">​</a></h3>
+<p>A managed fileset belongs to Gravitino. Creating it creates the directory, and deleting it deletes
+the data.</p>
+<p>An external fileset points at a location that already exists and stays under someone else&#x27;s control.
+Deleting it removes the Gravitino record and leaves the files alone.</p>
+<p>The distinction only matters at deletion time, and it is the single most important thing to get
+right when creating one.</p>
+<h3 class="anchor anchorWithStickyNavbar_OkeQ" id="storage-locations">Storage Locations<a class="hash-link" aria-label="Direct link to Storage Locations" title="Direct link to Storage Locations" href="/docs/next/filesets#storage-locations">​</a></h3>
+<p>A fileset has at least one storage location and can have several, each with a name. The default is
+chosen by the <code>default-location-name</code> property, and a location supplied without a name is recorded
+as <code>unknown</code>.</p>
+<p>Several locations on one fileset is how the same logical dataset is described across clusters or
+regions, with readers selecting the one they should use rather than each carrying its own path.</p>
+<p>Locations can also be inherited: a catalog or schema with a <code>location</code> property supplies a base, and
+a fileset created beneath it can take its placement from that rather than spelling out a full path.</p>
+<p>A location can be a template rather than a fixed path. Placeholders such as <code>{{catalog}}</code>,
+<code>{{schema}}</code>, <code>{{user}}</code>, and <code>{{project}}</code> are filled in when the fileset is created, with values
+supplied by <code>placeholder-</code> properties. One catalog-level template then generates a consistent
+directory layout for every fileset created beneath it, rather than each one being spelled out by
+hand.</p>
+<h3 class="anchor anchorWithStickyNavbar_OkeQ" id="properties">Properties<a class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties" href="/docs/next/filesets#properties">​</a></h3>
+<p>Properties are free-form, with <code>default-location-name</code> and the <code>location-{name}</code> keys reserved for
+placement. Everything else is yours, and travels with the fileset.</p>
+<h2 class="anchor anchorWithStickyNavbar_OkeQ" id="working-with-filesets-in-the-ui">Working With Filesets in the UI<a class="hash-link" aria-label="Direct link to Working With Filesets in the UI" title="Direct link to Working With Filesets in the UI" href="/docs/next/filesets#working-with-filesets-in-the-ui">​</a></h2>
+<p>Opening a fileset catalog lists its schemas and the filesets inside them. A fileset shows its type,
+its storage locations, and its properties.</p>
+<p>Filesets display the tags they carry, including inherited ones, but cannot be tagged from the UI
+today. Attaching a tag to a fileset goes through the API.</p>
+<h2 class="anchor anchorWithStickyNavbar_OkeQ" id="permissions">Permissions<a class="hash-link" aria-label="Direct link to Permissions" title="Direct link to Permissions" href="/docs/next/filesets#permissions">​</a></h2>
+<table><thead><tr><th>Privilege</th><th>Grantable on</th><th>What it allows</th></tr></thead><tbody><tr><td><code>CREATE_FILESET</code></td><td>Metalake, catalog, schema, or fileset</td><td>Creating filesets</td></tr><tr><td><code>READ_FILESET</code></td><td>Metalake, catalog, schema, or fileset</td><td>Reading a fileset&#x27;s files</td></tr><tr><td><code>WRITE_FILESET</code></td><td>Metalake, catalog, schema, or fileset</td><td>Writing a fileset&#x27;s files</td></tr></tbody></table>
+<p>Granting at a wider scope covers everything beneath it. Dropping a fileset is reserved for the
+metalake owner and the object owner.</p>
+<h2 class="anchor anchorWithStickyNavbar_OkeQ" id="using-the-api">Using the API<a class="hash-link" aria-label="Direct link to Using the API" title="Direct link to Using the API" href="/docs/next/filesets#using-the-api">​</a></h2>
+<p>Filesets can be created, listed, altered, and dropped over REST and through the Java and Python
+clients. Endpoints, payload shapes, and worked examples are in
+<a href="/docs/next/manage-fileset-metadata-using-gravitino">Manage Fileset Metadata</a>.</p></div></div></div><div class="row"><div class="col col--12"><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/apache/gravitino-site/tree/main/docs/filesets.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_qCUx" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_Pfhv"></div></div></footer></div></div></article><div class="row"><div class="col col--12"><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div></div></div><div class="col col--3"><div class="tableOfContents_retZ thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#introduction">Introduction</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#quick-start">Quick Start</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#the-fileset-model">The Fileset Model</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#managed-and-external">Managed and External</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#storage-locations">Storage Locations</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#properties">Properties</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#working-with-filesets-in-the-ui">Working With Filesets in the UI</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#permissions">Permissions</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/next/filesets#using-the-api">Using the API</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><div>
+      <p>
+        Copyright © 2026 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. <br>
+        Apache Gravitino, the names of other Apache projects, and the ASF logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+      </p>
+      </div></div></div></div></footer></div>
+</body>
+</html>

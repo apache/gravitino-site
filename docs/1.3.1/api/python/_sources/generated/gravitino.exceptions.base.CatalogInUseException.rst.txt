@@ -1,0 +1,6 @@
+gravitino.exceptions.base.CatalogInUseException
+===============================================
+
+.. currentmodule:: gravitino.exceptions.base
+
+.. autoexception:: CatalogInUseException
