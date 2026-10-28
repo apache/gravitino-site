@@ -16,7 +16,7 @@ Gravitino aims to provide several key features:
 * SSOT (Single Source of Truth) for multi-regional data with geo-distributed architecture support.
 * Unified Data + AI asset management for both users and engines.
 * Security in one place, centralize the security for different sources.
-* Built-in data management + data access management.
+* Built-in meta data management + meta data access management.
 
 ## Architecture
 
