@@ -1,0 +1,145 @@
+---
+title: Apache Gravitino MCP Gateway 0.1.0
+slug: gravitino-mcp-gateway-0-1-0-release-notes
+authors: [bharos]
+tags: [apache,gravitino,mcp,ai,security]
+---
+
+We are glad to announce the first release of the Apache Gravitino MCP Gateway, 0.1.0.
+
+MCP (Model Context Protocol) servers give AI assistants and agents access to an organization's
+data and tools. Without a gateway, each server brings its own credentials, decides on its own who
+may use it, and leaves no shared record of what an agent called.
+
+The MCP Gateway gives all of them one secure entry point. People sign in once with the identity
+provider they already use, such as Okta, Keycloak or Microsoft Entra ID. The gateway carries each
+person's identity through to the servers, with their own token or one exchanged for that server,
+so each call runs as the person who made it and the server's own access control still applies.
+Admins decide in one place who may use which server, and every call goes into an audit log.
+
+Platform and security teams can open more of their systems to AI agents without losing track of
+who can reach what, or what was done. And because the gateway is built on open standards (OAuth
+2.0, token exchange and MCP authorization), it fits the identity provider and MCP clients they
+already run.
+
+The gateway is in beta: its configuration and APIs may change in later releases.
+
+## Highlights
+
+### Sign in once, with your identity provider
+
+People sign in through OAuth with Okta, Keycloak, Microsoft Entra ID or another OpenID Connect
+provider: in the browser, or with the device flow (RFC 8628) from the command line. The gateway
+publishes OAuth protected-resource metadata (RFC 9728), so MCP clients that support MCP
+authorization find the provider and sign in by themselves.
+
+### The right credential for each server
+
+For each MCP server, the gateway sends the credential that server accepts:
+
+- the caller's own token;
+- a token exchanged for the server, with OAuth token exchange (RFC 8693) or the Microsoft Entra ID
+  on-behalf-of flow;
+- a token the person connected to the server's own sign-in;
+- a short-lived token the gateway signs, which the server checks against the gateway's JWKS;
+- basic auth.
+
+Stored tokens are encrypted with AES-256-GCM. The key can live in a file, or in GCP Secret
+Manager, AWS Secrets Manager or Azure Key Vault.
+
+### Decide who may use which server
+
+People ask for access to a server and an admin approves it, or a server is open to everyone. Tool
+filters limit which of a server's tools people see and may call; out of the box, only Gravitino's
+read tools are exposed. Admins manage servers, access requests and service accounts over the
+gateway's REST API.
+
+Service accounts authenticate with GCP or EKS workload identity tokens, and a small SDK helps
+them call the gateway.
+
+### An audit log of every call
+
+The gateway records the calls it passes to MCP servers, the calls it refuses for want of access,
+and admins' changes. Prometheus metrics are served at `/metrics`.
+
+### Gravitino's MCP server, supported out of the box
+
+Set `GRAVITINO_MCP_URL` and the gateway registers the
+[Gravitino MCP server](https://gravitino.apache.org/docs/latest/gravitino-mcp-server) for you, with
+only Gravitino's read tools exposed. It sends each person's own token, or one exchanged for
+Gravitino, so every call runs as that person and Gravitino's access control decides what they may
+do.
+
+### A CLI for AI clients
+
+The `gravitino-mcp` CLI signs in, configures the AI clients installed on your machine, and runs a
+local proxy that adds your token to each MCP call, for clients that can't sign in by themselves.
+
+### Slack, if you want it
+
+The gateway can post access requests and decisions to a Slack channel, invite the people it
+approves to that channel, and let people sign in from Slack with `/gravitino-mcp login`.
+
+## Get started
+
+The gateway, the CLI and the SDK are one Python package, for Python 3.11 or later:
+
+```bash
+pip install apache-gravitino-mcp-gateway==0.1.0
+```
+
+The extras `gcp`, `aws` and `azure` add the cloud secret stores, and `slack` the Slack bot. The
+Docker image runs the gateway with every extra:
+
+```bash
+docker pull apache/gravitino-mcp-gateway:0.1.0
+```
+
+The source release is on the [download page](https://gravitino.apache.org/downloads/). The
+[user documentation](https://github.com/apache/gravitino-mcp-gateway/blob/main/docs/gravitino-mcp-gateway.md)
+covers deploying the gateway, registering MCP servers, service accounts and connecting MCP
+clients. To try it on your laptop,
+[`dev/keycloak`](https://github.com/apache/gravitino-mcp-gateway/tree/main/dev/keycloak) runs
+Keycloak, Gravitino and Gravitino's MCP server in Docker.
+
+## Known limitations
+
+The main ones in this first release:
+
+- MCP servers must speak Streamable HTTP. The gateway offers clients only tools, not a server's
+  prompts or resources, and doesn't pass on notifications.
+- Gravitino's access control doesn't decide MCP access yet: the gateway keeps its own access
+  approvals.
+- The gateway doesn't limit how often anyone calls it. Run it behind a proxy that does.
+- The database schema isn't migrated between releases, so a release that changes it needs a new
+  database.
+
+The [documentation](https://github.com/apache/gravitino-mcp-gateway/blob/main/docs/gravitino-mcp-gateway.md#limitations)
+lists them all.
+
+## Coming next
+
+Gravitino's web console is gaining pages for the gateway, in Gravitino's next release
+([#15108](https://github.com/apache/gravitino/pull/15108)).
+
+## Acknowledgements
+
+The MCP Gateway was developed at Roku, Inc., which donated it to the Apache Software Foundation
+in 2026. Thanks to Roku for the donation, and to the developers who built it:
+
+- Bharath Krishna ([bharos](https://github.com/bharos)): the design, sign-in, the MCP proxy,
+  access control, the audit log, the admin API and token exchange, and preparing the code for
+  the ASF.
+- Nandini Anagondi ([naanagon](https://github.com/naanagon)): service accounts on GCP and EKS,
+  the Slack integration, OAuth discovery, and the CLI's device-flow sign-in.
+- Akshay Thorat ([laserninja](https://github.com/laserninja)): Streamable HTTP for the MCP proxy,
+  the CLI's setup and doctor commands, OAuth for servers with their own sign-in, and the first
+  test suite.
+- Ken McDonnell ([ltken123](https://github.com/ltken123)): gateway-signed tokens, basic auth and
+  admin-only servers.
+
+Thanks also to Jerry Shao ([jerryshao](https://github.com/jerryshao)) for reviewing the code and
+guiding the donation through the ASF, and to the Apache Gravitino PMC and community for their
+reviews and votes.
+
+<sub>Apache and Apache Gravitino are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. Other names may be trademarks of their respective owners.</sub>
